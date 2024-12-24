@@ -2365,8 +2365,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #212529;
-  background-color: #FFCC00;
-  border-color: #FFCC00;
+  background-color: #2558d8;
+  border-color: #2558d8;
 }
 
 .btn-primary:hover {
@@ -4670,7 +4670,7 @@ a.badge:hover, a.badge:focus {
 
 .badge-primary {
   color: #212529;
-  background-color: #FFCC00;
+  background-color: #2558d8;
 }
 
 a.badge-primary:hover, a.badge-primary:focus {
@@ -6094,7 +6094,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #FFCC00 !important;
+  background-color: #2558d8 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -9264,7 +9264,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #FFCC00 !important;
+  color: blue !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -9515,8 +9515,8 @@ h6,
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #1E2024;
-  background: #FFCC00;
+  color: white;
+  background: #2558d8;
 }
 
 @media (max-width: 991.98px) {
@@ -9546,7 +9546,7 @@ h6,
 
 .main-carousel .owl-dot.active {
   width: 40px;
-  background: #FFCC00;
+  background: #2558d8;
 }
 
 .tranding-carousel .owl-nav {
