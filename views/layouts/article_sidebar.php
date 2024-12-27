@@ -2,9 +2,11 @@
 require_once __DIR__ . '/../../models/Article.php';
 require_once __DIR__ . '/../../models/Category.php';
 require_once __DIR__ . '/../../config/app.php';
+require_once __DIR__ . '/../../config/contact.php';
 
 try {
     $articleModel = new Article();
+    $categoryModel = new Category();
     
     // Debug database connection
     if (!$articleModel->hasConnection()) {
@@ -17,163 +19,120 @@ try {
     
     // Get trending articles
     $trendingArticles = $articleModel->getPopular(5);
+
+    // Get categories for tags
+    $categories = $categoryModel->getAll();
     
-    if (empty($latestArticles)) {
-        error_log("No articles found");
-    }
+    // Get social media links from config
+    $socialLinks = isset($contact['social']) ? $contact['social'] : [];
     
 } catch (Exception $e) {
     error_log("Sidebar Error: " . $e->getMessage());
     $latestArticles = [];
     $trendingArticles = [];
+    $categories = [];
+    $socialLinks = [];
 }
-
-// Verify data before display
-// var_dump($latestArticles); // Debug output
 ?>
 
-                <div class="col-lg-4">
-                    <!-- Social Follow Start -->
-                    <div class="mb-3">
-                        <div class="section-title mb-0">
-                            <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
-                        </div>
-                        <div class="bg-white border border-top-0 p-3">
-                            <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #39569E;">
-                                <i class="fab fa-facebook-f text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                                <span class="font-weight-medium">12,345 Fans</span>
-                            </a>
-                            <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #52AAF4;">
-                                <i class="fab fa-twitter text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                                <span class="font-weight-medium">12,345 Followers</span>
-                            </a>
-                            <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #0185AE;">
-                                <i class="fab fa-linkedin-in text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                                <span class="font-weight-medium">12,345 Connects</span>
-                            </a>
-                            <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #C8359D;">
-                                <i class="fab fa-instagram text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                                <span class="font-weight-medium">12,345 Followers</span>
-                            </a>
-                            <a href="" class="d-block w-100 text-white text-decoration-none mb-3" style="background: #DC472E;">
-                                <i class="fab fa-youtube text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                                <span class="font-weight-medium">12,345 Subscribers</span>
-                            </a>
-                            <a href="" class="d-block w-100 text-white text-decoration-none" style="background: #055570;">
-                                <i class="fab fa-vimeo-v text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                                <span class="font-weight-medium">12,345 Followers</span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Social Follow End -->
+<div class="col-lg-4">
+    <!-- Social Follow Start -->
+    <div class="mb-3">
+        <div class="section-title mb-0">
+            <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
+        </div>
+        <div class="bg-white border border-top-0 p-3">
+            <?php if (!empty($socialLinks)): ?>
+                <?php foreach($socialLinks as $platform => $data): ?>
+                    <a href="<?php echo htmlspecialchars($data['url']); ?>" 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="d-block w-100 text-white text-decoration-none mb-3" 
+                       style="background: <?php echo htmlspecialchars($data['color']); ?>">
+                        <i class="fab fa-<?php echo htmlspecialchars($platform); ?> text-center py-4 mr-3" 
+                           style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                        <span class="font-weight-medium">
+                            <?php echo number_format($data['followers']); ?> 
+                            <?php echo htmlspecialchars($data['label']); ?>
+                        </span>
+                    </a>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p class="text-center text-muted">No social media links available</p>
+            <?php endif; ?>
+        </div>
+    </div>
+    <!-- Social Follow End -->
 
-                    <!-- Ads Start -->
-                    <div class="mb-3">
-                        <div class="section-title mb-0">
-                            <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
-                        </div>
-                        <div class="bg-white text-center border border-top-0 p-3">
-                            <a href=""><img class="img-fluid" src="img/news-800x500-2.jpg" alt=""></a>
-                        </div>
-                    </div>
-                    <!-- Ads End -->
+    <!-- Ads Start -->
+    <?php if (isset($app['ads']['sidebar'])): ?>
+    <div class="mb-3">
+        <div class="section-title mb-0">
+            <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
+        </div>
+        <div class="bg-white text-center border border-top-0 p-3">
+            <a href="<?php echo htmlspecialchars($app['ads']['sidebar']['url']); ?>">
+                <img class="img-fluid" 
+                     src="<?php echo htmlspecialchars($app['ads']['sidebar']['image']); ?>" 
+                     alt="Advertisement">
+            </a>
+        </div>
+    </div>
+    <?php endif; ?>
+    <!-- Ads End -->
 
-                    <!-- Popular News Start -->
-                    <div class="mb-3">
-                        <div class="section-title mb-0">
-                            <h4 class="m-0 text-uppercase font-weight-bold">Tranding News</h4>
-                        </div>
-                        <div class="bg-white border border-top-0 p-3">
-                            <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                                <img class="img-fluid" src="img/news-110x110-1.jpg" alt="">
-                                <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                                    <div class="mb-2">
-                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                                    </div>
-                                    <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                                <img class="img-fluid" src="img/news-110x110-2.jpg" alt="">
-                                <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                                    <div class="mb-2">
-                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                                    </div>
-                                    <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                                <img class="img-fluid" src="img/news-110x110-3.jpg" alt="">
-                                <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                                    <div class="mb-2">
-                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                                    </div>
-                                    <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                                <img class="img-fluid" src="img/news-110x110-4.jpg" alt="">
-                                <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                                    <div class="mb-2">
-                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                                    </div>
-                                    <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                                <img class="img-fluid" src="img/news-110x110-5.jpg" alt="">
-                                <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                                    <div class="mb-2">
-                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">Business</a>
-                                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                                    </div>
-                                    <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="">Lorem ipsum dolor sit amet elit...</a>
-                                </div>
-                            </div>
-                        </div>
+    <!-- Trending News Start -->
+    <div class="mb-3">
+        <div class="section-title mb-0">
+            <h4 class="m-0 text-uppercase font-weight-bold">Trending News</h4>
+        </div>
+        <div class="bg-white border border-top-0 p-3">
+            <?php foreach($trendingArticles as $article): ?>
+            <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                <img class="img-fluid" 
+                     src="<?php echo htmlspecialchars($article['image'] ?? '/img/default.jpg'); ?>" 
+                     style="width: 110px; height: 110px; object-fit: cover;" 
+                     alt="<?php echo htmlspecialchars($article['title']); ?>">
+                <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                    <div class="mb-2">
+                        <?php if(isset($article['category'])): ?>
+                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" 
+                           href="/category/<?php echo htmlspecialchars($article['category_id']); ?>">
+                           <?php echo htmlspecialchars($article['category']); ?>
+                        </a>
+                        <?php endif; ?>
+                        <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
                     </div>
-                    <!-- Popular News End -->
+                    <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" 
+                       href="/article/<?php echo htmlspecialchars($article['id']); ?>">
+                       <?php echo htmlspecialchars(substr($article['title'], 0, 50)) . '...'; ?>
+                    </a>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    <!-- Trending News End -->
 
-                    <!-- Newsletter Start -->
-                    <div class="mb-3">
-                        <div class="section-title mb-0">
-                            <h4 class="m-0 text-uppercase font-weight-bold">Newsletter</h4>
-                        </div>
-                        <div class="bg-white text-center border border-top-0 p-3">
-                            <p>Aliqu justo et labore at eirmod justo sea erat diam dolor diam vero kasd</p>
-                            <div class="input-group mb-2" style="width: 100%;">
-                                <input type="text" class="form-control form-control-lg" placeholder="Your Email">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
-                                </div>
-                            </div>
-                            <small>Lorem ipsum dolor sit amet elit</small>
-                        </div>
-                    </div>
-                    <!-- Newsletter End -->
+    <!-- Newsletter Start -->
+    <?php require_once 'newsletter.php'; ?>
+    <!-- Newsletter End -->
 
-                    <!-- Tags Start -->
-                    <div class="mb-3">
-                        <div class="section-title mb-0">
-                            <h4 class="m-0 text-uppercase font-weight-bold">Tags</h4>
-                        </div>
-                        <div class="bg-white border border-top-0 p-3">
-                            <div class="d-flex flex-wrap m-n1">
-                                <a href="" class="btn btn-sm btn-outline-secondary m-1">Politics</a>
-                                <a href="" class="btn btn-sm btn-outline-secondary m-1">Business</a>
-                                <a href="" class="btn btn-sm btn-outline-secondary m-1">Corporate</a>
-                                <a href="" class="btn btn-sm btn-outline-secondary m-1">Business</a>
-                                <a href="" class="btn btn-sm btn-outline-secondary m-1">Health</a>
-                                <a href="" class="btn btn-sm btn-outline-secondary m-1">Education</a>
-                                <a href="" class="btn btn-sm btn-outline-secondary m-1">Science</a>
-                                <a href="" class="btn btn-sm btn-outline-secondary m-1">Business</a>
-                                <a href="" class="btn btn-sm btn-outline-secondary m-1">Foods</a>
-                                <a href="" class="btn btn-sm btn-outline-secondary m-1">Travel</a>
-                            </div>
-                        </div>
-                    
-    <!-- News With Sidebar End -->
+    <!-- Tags Start -->
+    <div class="mb-3">
+        <div class="section-title mb-0">
+            <h4 class="m-0 text-uppercase font-weight-bold">Categories</h4>
+        </div>
+        <div class="bg-white border border-top-0 p-3">
+            <div class="d-flex flex-wrap m-n1">
+                <?php foreach($categories as $category): ?>
+                <a href="/category/<?php echo htmlspecialchars($category['id']); ?>" 
+                   class="btn btn-sm btn-outline-secondary m-1">
+                   <?php echo htmlspecialchars($category['name']); ?>
+                </a>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+    <!-- Tags End -->
+</div>

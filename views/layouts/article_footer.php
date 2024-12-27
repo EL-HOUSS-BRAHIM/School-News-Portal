@@ -1,11 +1,39 @@
 <?php
-$contact = require_once __DIR__ . '/../../config/contact.php';
-$popularArticles = (new Article())->getPopular(3);
-$app = require_once __DIR__ . '/../../config/app.php';
+// Get configurations with error checking
+try {
+    require_once __DIR__ . '/../../models/Article.php';
+    $contact = require __DIR__ . '/../../config/contact.php';
+    $popularArticles = (new Article())->getPopular(3);
+    $app = require __DIR__ . '/../../config/app.php';
+    
+    // Verify $contact is an array and has required keys
+    if (!is_array($contact)) {
+        throw new Exception('Contact configuration must be an array');
+    }
+    
+} catch (Exception $e) {
+    error_log("Article Footer Error: " . $e->getMessage());
+    $contact = [
+        'address' => 'Address not available',
+        'phone' => 'Phone not available', 
+        'email' => 'Email not available',
+        'social' => []
+    ];
+    $popularArticles = [];
+    $app = ['app_name' => 'School News Portal'];
+}
 
-// Add error checking
-if (!is_array($app)) {
-    $app = ['app_name' => 'School News Portal']; // Fallback value
+// Set default values if keys don't exist
+$contact = array_merge([
+    'address' => 'Address not available',
+    'phone' => 'Phone not available',
+    'email' => 'Email not available', 
+    'social' => []
+], $contact ?? []);
+
+// Ensure social is an array
+if (!isset($contact['social']) || !is_array($contact['social'])) {
+    $contact['social'] = [];
 }
 ?>
 <!-- Footer Start -->
@@ -13,23 +41,29 @@ if (!is_array($app)) {
     <div class="row py-4">
         <div class="col-lg-3 col-md-6 mb-5">
             <h5 class="mb-4 text-white text-uppercase font-weight-bold">Get In Touch</h5>
-            <p class="font-weight-medium">
+            <p class="font-weight-medium text-white">
                 <i class="fa fa-map-marker-alt mr-2"></i><?php echo htmlspecialchars($contact['address']); ?>
             </p>
-            <p class="font-weight-medium">
+            <p class="font-weight-medium text-white">
                 <i class="fa fa-phone-alt mr-2"></i><?php echo htmlspecialchars($contact['phone']); ?>
             </p>
-            <p class="font-weight-medium">
+            <p class="font-weight-medium text-white">
                 <i class="fa fa-envelope mr-2"></i><?php echo htmlspecialchars($contact['email']); ?>
             </p>
             
             <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">Follow Us</h6>
             <div class="d-flex justify-content-start">
-                <?php foreach($contact['social'] as $platform => $url): ?>
-                <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="<?php echo htmlspecialchars($url); ?>">
-                    <i class="fab fa-<?php echo $platform; ?>"></i>
-                </a>
-                <?php endforeach; ?>
+                <?php if (!empty($contact['social'])): ?>
+                    <?php foreach($contact['social'] as $platform => $url): ?>
+                        <a class="btn btn-lg btn-secondary btn-lg-square mr-2" 
+                           href="<?php echo htmlspecialchars($url); ?>"
+                           target="_blank">
+                            <i class="fab fa-<?php echo htmlspecialchars($platform); ?>"></i>
+                        </a>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p class="text-white">No social media links available</p>
+                <?php endif; ?>
             </div>
         </div>
         
