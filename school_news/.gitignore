@@ -1,9 +1,0 @@
-.env
-/vendor
-/storage/logs
-/storage/cache
-/storage/sessions
-/node_modules
-.DS_Store
-.idea
-.vscode
