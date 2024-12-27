@@ -2,7 +2,6 @@
 require_once __DIR__ . '/../../models/Article.php';
 require_once __DIR__ . '/../../models/Category.php';
 require_once __DIR__ . '/../../config/app.php';
-require_once __DIR__ . '/../../config/contact.php';
 
 try {
     $articleModel = new Article();
@@ -23,15 +22,45 @@ try {
     // Get categories for tags
     $categories = $categoryModel->getAll();
     
-    // Get social media links from config
-    $socialLinks = isset($contact['social']) ? $contact['social'] : [];
+    // Load contact configuration
+    $contact = require __DIR__ . '/../../config/contact.php';
+    
+    // Social media formatting
+    $socialColors = [
+        'facebook' => '#39569E',
+        'twitter' => '#52AAF4', 
+        'linkedin' => '#0185AE',
+        'instagram' => '#C8359D',
+        'youtube' => '#DC472E'
+    ];
+
+    $socialLabels = [
+        'facebook' => 'Fans',
+        'twitter' => 'Followers',
+        'linkedin' => 'Connects',
+        'instagram' => 'Followers',
+        'youtube' => 'Subscribers'
+    ];
+
+    // Format social media data
+    $formattedSocialLinks = [];
+    if (isset($contact['social']) && is_array($contact['social'])) {
+        foreach ($contact['social'] as $platform => $url) {
+            $formattedSocialLinks[$platform] = [
+                'url' => $url,
+                'color' => $socialColors[$platform] ?? '#666666',
+                'followers' => '12,345', // Default follower count
+                'label' => $socialLabels[$platform] ?? 'Followers'
+            ];
+        }
+    }
     
 } catch (Exception $e) {
     error_log("Sidebar Error: " . $e->getMessage());
     $latestArticles = [];
     $trendingArticles = [];
     $categories = [];
-    $socialLinks = [];
+    $formattedSocialLinks = [];
 }
 ?>
 
@@ -42,17 +71,16 @@ try {
             <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
         </div>
         <div class="bg-white border border-top-0 p-3">
-            <?php if (!empty($socialLinks)): ?>
-                <?php foreach($socialLinks as $platform => $data): ?>
+            <?php if (!empty($formattedSocialLinks)): ?>
+                <?php foreach($formattedSocialLinks as $platform => $data): ?>
                     <a href="<?php echo htmlspecialchars($data['url']); ?>" 
                        target="_blank"
-                       rel="noopener noreferrer"
-                       class="d-block w-100 text-white text-decoration-none mb-3" 
+                       class="d-block w-100 text-white text-decoration-none <?php echo ($platform !== array_key_last($formattedSocialLinks)) ? 'mb-3' : ''; ?>"
                        style="background: <?php echo htmlspecialchars($data['color']); ?>">
                         <i class="fab fa-<?php echo htmlspecialchars($platform); ?> text-center py-4 mr-3" 
                            style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
                         <span class="font-weight-medium">
-                            <?php echo number_format($data['followers']); ?> 
+                            <?php echo $data['followers']; ?> 
                             <?php echo htmlspecialchars($data['label']); ?>
                         </span>
                     </a>

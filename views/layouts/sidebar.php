@@ -18,6 +18,39 @@ try {
     // Get trending articles
     $trendingArticles = $articleModel->getPopular(5);
     
+    // Load contact configuration
+    $contact = require __DIR__ . '/../../config/contact.php';
+    
+    // Social media formatting
+    $socialColors = [
+        'facebook' => '#39569E',
+        'twitter' => '#52AAF4', 
+        'linkedin' => '#0185AE',
+        'instagram' => '#C8359D',
+        'youtube' => '#DC472E'
+    ];
+
+    $socialLabels = [
+        'facebook' => 'Fans',
+        'twitter' => 'Followers',
+        'linkedin' => 'Connects',
+        'instagram' => 'Followers',
+        'youtube' => 'Subscribers'
+    ];
+
+    // Format social media data
+    $formattedSocialLinks = [];
+    if (isset($contact['social']) && is_array($contact['social'])) {
+        foreach ($contact['social'] as $platform => $url) {
+            $formattedSocialLinks[$platform] = [
+                'url' => $url,
+                'color' => $socialColors[$platform] ?? '#666666',
+                'followers' => '12,345', // Default follower count
+                'label' => $socialLabels[$platform] ?? 'Followers'
+            ];
+        }
+    }
+    
     if (empty($latestArticles)) {
         error_log("No articles found");
     }
@@ -26,6 +59,7 @@ try {
     error_log("Sidebar Error: " . $e->getMessage());
     $latestArticles = [];
     $trendingArticles = [];
+    $formattedSocialLinks = [];
 }
 
 // Verify data before display
@@ -125,30 +159,23 @@ try {
                         <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
                     </div>
                     <div class="bg-white border border-top-0 p-3">
-                        <a href class="d-block w-100 text-white text-decoration-none mb-3" style="background: #39569E;">
-                            <i class="fab fa-facebook-f text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                            <span class="font-weight-medium">12,345 Fans</span>
-                        </a>
-                        <a href class="d-block w-100 text-white text-decoration-none mb-3" style="background: #52AAF4;">
-                            <i class="fab fa-twitter text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                            <span class="font-weight-medium">12,345 Followers</span>
-                        </a>
-                        <a href class="d-block w-100 text-white text-decoration-none mb-3" style="background: #0185AE;">
-                            <i class="fab fa-linkedin-in text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                            <span class="font-weight-medium">12,345 Connects</span>
-                        </a>
-                        <a href class="d-block w-100 text-white text-decoration-none mb-3" style="background: #C8359D;">
-                            <i class="fab fa-instagram text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                            <span class="font-weight-medium">12,345 Followers</span>
-                        </a>
-                        <a href class="d-block w-100 text-white text-decoration-none mb-3" style="background: #DC472E;">
-                            <i class="fab fa-youtube text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                            <span class="font-weight-medium">12,345 Subscribers</span>
-                        </a>
-                        <a href class="d-block w-100 text-white text-decoration-none" style="background: #055570;">
-                            <i class="fab fa-vimeo-v text-center py-4 mr-3" style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                            <span class="font-weight-medium">12,345 Followers</span>
-                        </a>
+                        <?php if (!empty($formattedSocialLinks)): ?>
+                            <?php foreach($formattedSocialLinks as $platform => $data): ?>
+                                <a href="<?php echo htmlspecialchars($data['url']); ?>" 
+                                   target="_blank"
+                                   class="d-block w-100 text-white text-decoration-none <?php echo ($platform !== array_key_last($formattedSocialLinks)) ? 'mb-3' : ''; ?>"
+                                   style="background: <?php echo htmlspecialchars($data['color']); ?>">
+                                    <i class="fab fa-<?php echo htmlspecialchars($platform); ?> text-center py-4 mr-3" 
+                                       style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                                    <span class="font-weight-medium">
+                                        <?php echo $data['followers']; ?> 
+                                        <?php echo htmlspecialchars($data['label']); ?>
+                                    </span>
+                                </a>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p class="text-center text-muted">No social media links available</p>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <!-- Social Follow End -->
