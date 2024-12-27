@@ -1,9 +1,9 @@
 <?php
 return [
     'host' => 'sql7.freemysqlhosting.net',
-    'dbname' => 'sql7754299',
-    'username' => 'sql7754299',
-    'password' => 'aaXCWtHM9u',
+    'dbname' => 'sql7754447',
+    'username' => 'sql7754447',
+    'password' => 'WAexlpxk3b',
     'charset' => 'utf8mb4',
     'options' => [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

@@ -57,6 +57,7 @@ class DatabaseSetup {
             user_id INT,
             views INT DEFAULT 0,
             featured BOOLEAN DEFAULT FALSE,
+            breaking BOOLEAN DEFAULT FALSE,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL,
             FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
