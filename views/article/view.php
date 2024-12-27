@@ -1,0 +1,146 @@
+<?php
+require_once __DIR__ . '/../../models/Article.php';
+require_once __DIR__ . '/../../models/Comment.php';
+
+// Get article ID from URL
+$articleId = $_GET['id'] ?? null;
+
+if (!$articleId) {
+    header('Location: /');
+    exit;
+}
+
+try {
+    $articleModel = new Article();
+    $commentModel = new Comment();
+    
+    // Increment view counter
+    $articleModel->incrementViews($articleId);
+    
+    // Get article details
+    $article = $articleModel->getWithDetails($articleId);
+    
+    // Get article comments
+    $comments = $commentModel->getByArticle($articleId);
+    
+    if (!$article) {
+        throw new Exception("Article not found");
+    }
+    
+} catch (Exception $e) {
+    error_log("View Error: " . $e->getMessage());
+    header('Location: /');
+    exit;
+}
+
+require_once __DIR__ . '/../layouts/article_header.php';
+?>
+
+
+
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- News Detail Start -->
+                    <div class="position-relative mb-3">
+                        <img class="img-fluid w-100" 
+                             src="<?php echo htmlspecialchars($article['image'] ?? '/img/default.jpg'); ?>" 
+                             style="object-fit: cover;">
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-3">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" 
+                                   href="/category/<?php echo htmlspecialchars($article['category_id']); ?>">
+                                    <?php echo htmlspecialchars($article['category']); ?>
+                                </a>
+                                <span class="text-body"><?php echo date('M d, Y', strtotime($article['created_at'])); ?></span>
+                            </div>
+                            <h1 class="mb-3 text-secondary text-uppercase font-weight-bold">
+                                <?php echo htmlspecialchars($article['title']); ?>
+                            </h1>
+                            <div class="article-content">
+                                <?php echo nl2br(htmlspecialchars($article['content'])); ?>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                            <div class="d-flex align-items-center">
+                                <span>By <?php echo htmlspecialchars($article['author'] ?? 'Anonymous'); ?></span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="ml-3">
+                                    <i class="far fa-eye mr-2"></i>
+                                    <?php echo (int)($article['views'] ?? 0); ?>
+                                </span>
+                                <span class="ml-3">
+                                    <i class="far fa-comment mr-2"></i>
+                                    <?php echo count($comments ?? []); ?>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- News Detail End -->
+
+                    <!-- Comment List Start -->
+                    <div class="mb-3">
+                        <div class="section-title mb-0">
+                            <h4 class="m-0 text-uppercase font-weight-bold"><?php echo count($comments); ?> Comments</h4>
+                        </div>
+                        <div class="bg-white border border-top-0 p-4">
+                            <?php foreach($comments as $comment): ?>
+                            <div class="media mb-4">
+                                <img src="/img/user.jpg" alt="User" class="img-fluid mr-3 mt-1" style="width: 45px;">
+                                <div class="media-body">
+                                    <h6>
+                                        <span class="text-secondary font-weight-bold">
+                                            <?php echo htmlspecialchars($comment['username']); ?>
+                                        </span> 
+                                        <small><i><?php echo date('M d, Y', strtotime($comment['created_at'])); ?></i></small>
+                                    </h6>
+                                    <p><?php echo nl2br(htmlspecialchars($comment['content'])); ?></p>
+                                </div>
+                            </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <!-- Comment List End -->
+
+                    <!-- Comment Form Start -->
+                    <div class="mb-3">
+                        <div class="section-title mb-0">
+                            <h4 class="m-0 text-uppercase font-weight-bold">Leave a comment</h4>
+                        </div>
+                        <div class="bg-white border border-top-0 p-4">
+                            <form action="/comment/add" method="POST">
+                                <input type="hidden" name="article_id" value="<?php echo $articleId; ?>">
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="content" cols="30" rows="5" class="form-control" required></textarea>
+                                </div>
+                                <div class="form-group mb-0">
+                                    <?php if(isset($_SESSION['user_id'])): ?>
+                                        <button type="submit" class="btn btn-primary font-weight-semi-bold py-2 px-3">
+                                            Leave a comment
+                                        </button>
+                                    <?php else: ?>
+                                        <a href="/login" class="btn btn-primary font-weight-semi-bold py-2 px-3">
+                                            Login to comment
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Comment Form End -->
+                </div>
+
+                
+                <?php require_once __DIR__ . '/../layouts/article_sidebar.php'; ?>
+                
+            </div>
+        </div>
+    </div>
+    <!-- News With Sidebar End -->
+
+
+<?php require_once __DIR__ . '/../layouts/article_footer.php'; ?>
