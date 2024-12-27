@@ -66,39 +66,43 @@ class ArticleController extends Controller
 
     // Add new view method
     public function view()
-    {
-        try {
-            $articleId = $_GET['id'] ?? null;
-            
-            if (!$articleId) {
-                $this->redirect('/');
-                return;
-            }
-
-            $articleModel = new Article();
-            $article = $articleModel->getWithDetails($articleId);
-            
-            if (!$article) {
-                $this->redirect('/');
-                return;
-            }
-
-            // Increment view counter
-            $articleModel->incrementViews($articleId);
-            
-            // Get comments
-            $commentModel = new Comment();
-            $comments = $commentModel->getByArticle($articleId);
-            
-            $this->renderView('article/view', [
-                'article' => $article,
-                'comments' => $comments
-            ]);
-            
-        } catch (Exception $e) {
-            error_log("ArticleController::view Error: " . $e->getMessage());
+{
+    try {
+        $articleId = $_GET['id'] ?? null;
+        
+        if (!$articleId) {
             $this->redirect('/');
+            return;
         }
+
+        $articleModel = new Article();
+        $article = $articleModel->getWithDetails($articleId);
+        
+        // Get breaking news
+        $breakingNews = $articleModel->getBreakingNews(5);
+        
+        if (!$article) {
+            $this->redirect('/');
+            return;
+        }
+
+        // Increment view counter
+        $articleModel->incrementViews($articleId);
+        
+        // Get comments
+        $commentModel = new Comment();
+        $comments = $commentModel->getByArticle($articleId);
+        
+        $this->renderView('article/view', [
+            'article' => $article,
+            'comments' => $comments,
+            'breakingNews' => $breakingNews
+        ]);
+        
+    } catch (Exception $e) {
+        error_log("ArticleController::view Error: " . $e->getMessage());
+        $this->redirect('/');
     }
+}
 }
 ?>

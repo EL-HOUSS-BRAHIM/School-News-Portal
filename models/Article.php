@@ -115,10 +115,9 @@ class Article extends Model
     
     public function getBreakingNews($limit = 5) {
         try {
-            $sql = "SELECT a.*, c.name as category, c.id as category_id
-                    FROM {$this->table} a 
+            $sql = "SELECT a.*, c.name as category, c.id as category_id 
+                    FROM articles a 
                     LEFT JOIN categories c ON a.category_id = c.id 
-                    WHERE a.breaking = TRUE
                     ORDER BY a.created_at DESC 
                     LIMIT ?";
             $stmt = $this->pdo->prepare($sql);

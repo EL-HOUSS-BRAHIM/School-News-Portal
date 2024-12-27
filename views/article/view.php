@@ -38,22 +38,35 @@ require_once __DIR__ . '/../layouts/article_header.php';
 
     <!-- Breaking News Start -->
     <div class="container-fluid mt-5 mb-3 pt-3">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12">
-                        <div class="d-flex justify-content-between">
-                            <div class="section-title border-right-0 mb-0" style="width: 180px;">
-                                <h4 class="m-0 text-uppercase font-weight-bold">Tranding</h4>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <div class="d-flex justify-content-between">
+                    <div class="section-title border-right-0 mb-0" style="width: 180px;">
+                        <h4 class="m-0 text-uppercase font-weight-bold">Breaking News</h4>
+                    </div>
+                    <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center bg-white border border-left-0" 
+                         style="width: calc(100% - 180px); padding-right: 100px;">
+                        <?php if (!empty($breakingNews)): ?>
+                            <?php foreach($breakingNews as $news): ?>
+                                <div class="text-truncate">
+                                    <a class="text-secondary text-uppercase font-weight-semi-bold" 
+                                       href="/article?id=<?php echo htmlspecialchars($news['id']); ?>">
+                                        <?php echo htmlspecialchars($news['title']); ?>
+                                    </a>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <div class="text-truncate">
+                                <span class="text-secondary">No breaking news available</span>
                             </div>
-                            <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center bg-white border border-left-0 owl-loaded owl-drag" style="width: calc(100% - 180px); padding-right: 100px;">
-
-
-                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1325px, 0px, 0px); transition: 2s; width: 4638px;"><div class="owl-item cloned" style="width: 662.516px;"><div class="owl-nav"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div></div><div class="owl-item cloned" style="width: 662.516px;"><div class="owl-dots disabled"></div></div><div class="owl-item active" style="width: 662.516px;"><div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1987px, 0px, 0px); transition: 2s; width: 3976px;"><div class="owl-item cloned" style="width: 662.516px;"><div class="text-truncate"><a class="text-secondary text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div></div><div class="owl-item cloned" style="width: 662.516px;"><div class="text-truncate"><a class="text-secondary text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div></div><div class="owl-item" style="width: 662.516px;"><div class="text-truncate"><a class="text-secondary text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div></div><div class="owl-item active" style="width: 662.516px;"><div class="text-truncate"><a class="text-secondary text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div></div><div class="owl-item cloned" style="width: 662.516px;"><div class="text-truncate"><a class="text-secondary text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div></div><div class="owl-item cloned" style="width: 662.516px;"><div class="text-truncate"><a class="text-secondary text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div></div></div></div></div><div class="owl-item" style="width: 662.516px;"><div class="owl-nav"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div></div><div class="owl-item" style="width: 662.516px;"><div class="owl-dots disabled"></div></div><div class="owl-item cloned" style="width: 662.516px;"><div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1987px, 0px, 0px); transition: 2s; width: 3976px;"><div class="owl-item cloned" style="width: 662.516px;"><div class="text-truncate"><a class="text-secondary text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div></div><div class="owl-item cloned" style="width: 662.516px;"><div class="text-truncate"><a class="text-secondary text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div></div><div class="owl-item" style="width: 662.516px;"><div class="text-truncate"><a class="text-secondary text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div></div><div class="owl-item active" style="width: 662.516px;"><div class="text-truncate"><a class="text-secondary text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div></div><div class="owl-item cloned" style="width: 662.516px;"><div class="text-truncate"><a class="text-secondary text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div></div><div class="owl-item cloned" style="width: 662.516px;"><div class="text-truncate"><a class="text-secondary text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit. Proin interdum lacus eget ante tincidunt, sed faucibus nisl sodales</a></div></div></div></div></div><div class="owl-item cloned" style="width: 662.516px;"><div class="owl-nav"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div></div></div></div><div class="owl-nav"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots disabled"></div></div>
-                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
     <!-- Breaking News End -->
     <!-- News With Sidebar Start -->
     <div class="container-fluid">
