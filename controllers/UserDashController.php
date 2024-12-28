@@ -68,6 +68,11 @@ class UserDashController extends Controller {
         $articles = $articleModel->getByUser($_SESSION['user_id']);
         $categories = $categoryModel->getAll();
         
+        // Debug logging
+        error_log("User ID: " . $_SESSION['user_id']);
+        error_log("Articles found: " . count($articles));
+        error_log("Articles data: " . print_r($articles, true));
+        
         $data = [
             'articles' => $articles,
             'categories' => $categories,

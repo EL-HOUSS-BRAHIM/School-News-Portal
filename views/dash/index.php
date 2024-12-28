@@ -94,161 +94,189 @@
 
         <div class="container-fluid py-4">
             <!-- Statistics Cards -->
-            <div class="row">
-                <div class="col-xl-3 col-sm-6 mb-4">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="numbers">
-                                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Total Articles</p>
-                                        <h5 class="font-weight-bolder mb-0">
-                                            <?php echo htmlspecialchars($totalArticles); ?>
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-end">
-                                    <div class="icon icon-shape bg-gradient-primary shadow text-center">
-                                        <i class="ni ni-collection text-lg opacity-10" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
+            <!-- Statistics Cards -->
+<div class="row">
+    <div class="col-xl-3 col-sm-6 mb-4">
+        <div class="card">
+            <div class="card-body p-3">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="numbers">
+                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Total Articles</p>
+                            <h5 class="font-weight-bolder mb-0">
+                                <?php echo htmlspecialchars($totalArticles); ?>
+                            </h5>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-4">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="numbers">
-                                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Total Views</p>
-                                        <h5 class="font-weight-bolder mb-0">
-                                            <?php echo number_format($totalViews); ?>
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-end">
-                                    <div class="icon icon-shape bg-gradient-success shadow text-center">
-                                        <i class="ni ni-eye text-lg opacity-10" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-4">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="numbers">
-                                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Total Likes</p>
-                                        <h5 class="font-weight-bolder mb-0">
-                                            940
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-end">
-                                    <div class="icon icon-shape bg-gradient-danger shadow text-center">
-                                        <i class="ni ni-like-2 text-lg opacity-10" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-4">
-                    <div class="card">
-                        <div class="card-body p-3">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="numbers">
-                                        <p class="text-sm mb-0 text-capitalize font-weight-bold">Comments</p>
-                                        <h5 class="font-weight-bolder mb-0">
-                                            43
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-end">
-                                    <div class="icon icon-shape bg-gradient-info shadow text-center">
-                                        <i class="ni ni-chat-round text-lg opacity-10" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-4 text-end">
+                        <div class="icon icon-shape bg-gradient-primary shadow text-center">
+                            <i class="ni ni-collection text-lg opacity-10" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6 mb-4">
+        <div class="card">
+            <div class="card-body p-3">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="numbers">
+                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Total Views</p>
+                            <h5 class="font-weight-bolder mb-0">
+                                <?php echo number_format($totalViews); ?>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-4 text-end">
+                        <div class="icon icon-shape bg-gradient-success shadow text-center">
+                            <i class="ni ni-eye text-lg opacity-10" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6 mb-4">
+        <div class="card">
+            <div class="card-body p-3">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="numbers">
+                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Total Likes</p>
+                            <h5 class="font-weight-bolder mb-0">
+                                <?php echo number_format($totalLikes); ?>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-4 text-end">
+                        <div class="icon icon-shape bg-gradient-danger shadow text-center">
+                            <i class="ni ni-like-2 text-lg opacity-10" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6 mb-4">
+        <div class="card">
+            <div class="card-body p-3">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="numbers">
+                            <p class="text-sm mb-0 text-capitalize font-weight-bold">Comments</p>
+                            <h5 class="font-weight-bolder mb-0">
+                                <?php echo number_format($totalComments); ?>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-4 text-end">
+                        <div class="icon icon-shape bg-gradient-info shadow text-center">
+                            <i class="ni ni-chat-round text-lg opacity-10" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-            <!-- Article Management Table -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="card mb-4">
-                        <div class="card-header pb-0">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h6>My Articles</h6>
-                                </div>
-                                <div class="col-6 text-end">
-                                    <a href="/dashboard/article/new" class="btn btn-primary btn-sm">New Article</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body px-0 pt-0 pb-2">
-                            <div class="table-responsive p-0">
-                                <table class="table align-items-center mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Article</th>
-                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
-                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Views</th>
-                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Likes</th>
-                                            <th class="text-secondary opacity-7">Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php foreach($recentArticles as $article): ?>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex px-2 py-1">
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-sm"><?php echo htmlspecialchars($article['title']); ?></h6>
-                                                        <p class="text-xs text-secondary mb-0">
-                                                            Published on: <?php echo date('d M Y', strtotime($article['created_at'])); ?>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span class="badge badge-sm bg-gradient-<?php echo $article['status'] == 'published' ? 'success' : 'warning'; ?>">
-                                                    <?php echo ucfirst(htmlspecialchars($article['status'] ?? 'published')); ?>
-                                                </span>
-                                            </td>
-                                            <td class="align-middle text-center text-sm">
-                                                <span class="text-secondary text-xs font-weight-bold">
-                                                    <?php echo number_format($article['views'] ?? 0); ?>
-                                                </span>
-                                            </td>
-                                            <td class="align-middle text-center">
-                                                <span class="text-secondary text-xs font-weight-bold">
-                                                    <?php echo number_format($article['likes'] ?? 0); ?>
-                                                </span>
-                                            </td>
-                                            <td class="align-middle">
-                                                <a href="/dashboard/article/edit?id=<?php echo $article['id']; ?>" class="text-secondary font-weight-bold text-xs">
-                                                    Edit
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <?php endforeach; ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+<!-- Article Management Table -->
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <div class="row">
+                    <div class="col-6">
+                        <h6>My Articles</h6>
+                    </div>
+                    <div class="col-6 text-end">
+                        <a href="/dashboard/article/new" class="btn btn-primary btn-sm">New Article</a>
                     </div>
                 </div>
             </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                    <table class="table align-items-center mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Article</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Category</th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Performance</th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Created</th>
+                                <th class="text-secondary opacity-7">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach($recentArticles as $article): ?>
+                            <tr>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div>
+                                            <img src="<?php echo $article['image'] ?? '../assets/img/default-article.jpg'; ?>" 
+                                                 class="avatar avatar-sm me-3" alt="article image">
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm"><?php echo htmlspecialchars($article['title']); ?></h6>
+                                            <p class="text-xs text-secondary mb-0">
+                                                <?php echo substr(htmlspecialchars($article['content']), 0, 50) . '...'; ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="badge badge-sm bg-gradient-info">
+                                        <?php echo htmlspecialchars($article['category']); ?>
+                                    </span>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <span class="badge badge-sm bg-gradient-<?php echo Article::getStatusBadgeClass($article['status']); ?>">
+                                        <?php echo ucfirst(htmlspecialchars($article['status'])); ?>
+                                    </span>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <span class="me-2 text-xs font-weight-bold">
+                                            <i class="fas fa-eye text-primary"></i> <?php echo number_format($article['views']); ?>
+                                        </span>
+                                        <span class="text-xs font-weight-bold">
+                                            <i class="fas fa-heart text-danger"></i> <?php echo number_format($article['likes']); ?>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <span class="text-secondary text-xs font-weight-bold">
+                                        <?php echo date('M d, Y', strtotime($article['created_at'])); ?>
+                                    </span>
+                                </td>
+                                <td class="align-middle">
+                                    <div class="ms-auto">
+                                        <a href="/dashboard/article/edit?id=<?php echo $article['id']; ?>" 
+                                           class="btn btn-link text-dark px-3 mb-0">
+                                            <i class="fas fa-pencil-alt text-dark me-2"></i>Edit
+                                        </a>
+                                        <a href="/article?id=<?php echo $article['id']; ?>" 
+                                           class="btn btn-link text-primary px-3 mb-0" target="_blank">
+                                            <i class="fas fa-eye text-primary me-2"></i>View
+                                        </a>
+                                        <button onclick="deleteArticle(<?php echo $article['id']; ?>)" 
+                                                class="btn btn-link text-danger px-3 mb-0">
+                                            <i class="fas fa-trash text-danger me-2"></i>Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
             <!-- Performance Chart -->
             <div class="row mt-4">

@@ -38,8 +38,7 @@ class Article extends Model
         ];
     }
 
-    public function getAll($limit = null)
-    {
+    public function getAll($limit = null) {
         try {
             $sql = "SELECT a.*, c.name as category, c.id as category_id 
                     FROM {$this->table} a 
@@ -64,8 +63,7 @@ class Article extends Model
         }
     }
 
-    public function getByCategory($categoryId)
-    {
+    public function getByCategory($categoryId){
         $stmt = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE category_id = ?");
         $stmt->execute([$categoryId]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -230,8 +228,7 @@ class Article extends Model
             $sql = "SELECT a.*, c.name as category 
                     FROM {$this->table} a 
                     LEFT JOIN categories c ON a.category_id = c.id 
-                    WHERE a.user_id = ? 
-                    AND a.status != ? 
+                    WHERE a.user_id = ?
                     ORDER BY a.created_at DESC";
             
             if ($limit) {
@@ -242,22 +239,26 @@ class Article extends Model
                 $stmt = $this->pdo->prepare($sql);
                 $stmt->execute([$userId]);
             }
-            
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            error_log("getByUser Query: " . $sql);
+            error_log("getByUser Results count: " . count($results));
+            return $results;
         } catch (PDOException $e) {
             error_log("Error getting user articles: " . $e->getMessage());
             return [];
         }
     }
-
+    
     public function getViewsStats($userId) {
         try {
-            $sql = "SELECT DATE(created_at) as date, SUM(views) as views 
-                    FROM {$this->table} 
-                    WHERE user_id = ? 
-                    GROUP BY DATE(created_at) 
-                    ORDER BY date DESC 
-                    LIMIT 30";
+            $sql = "SELECT DATE(created_at) as date, 
+                   COALESCE(SUM(views), 0) as views 
+                   FROM {$this->table} 
+                   WHERE user_id = ? 
+                   GROUP BY DATE(created_at) 
+                   ORDER BY date DESC 
+                   LIMIT 30";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([$userId]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -266,15 +267,16 @@ class Article extends Model
             return [];
         }
     }
-
+    
     public function getLikesStats($userId) {
         try {
-            $sql = "SELECT DATE(created_at) as date, SUM(likes) as likes 
-                    FROM {$this->table} 
-                    WHERE user_id = ? 
-                    GROUP BY DATE(created_at) 
-                    ORDER BY date DESC 
-                    LIMIT 30";
+            $sql = "SELECT DATE(created_at) as date, 
+                   COALESCE(SUM(likes), 0) as likes 
+                   FROM {$this->table} 
+                   WHERE user_id = ? 
+                   GROUP BY DATE(created_at) 
+                   ORDER BY date DESC 
+                   LIMIT 30";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([$userId]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);

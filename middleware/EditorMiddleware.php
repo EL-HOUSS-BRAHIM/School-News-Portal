@@ -5,7 +5,7 @@ class EditorMiddleware {
         // Temporary bypass for testing
         if (!isset($_SESSION['user_id'])) {
             $_SESSION['user_id'] = 1; // Temporary test user ID
-            $_SESSION['user_role'] = 'editor'; // Temporary editor role
+            $_SESSION['user_role'] = 'admin'; // Temporary editor role
         }
         
         // Normal check (uncomment when ready for production)
