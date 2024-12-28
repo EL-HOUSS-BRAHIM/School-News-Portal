@@ -15,7 +15,7 @@ class DatabaseSetup {
             $this->createUsersTable();
             $this->createCategoriesTable();
             $this->createArticlesTable();
-            $this->createCommentsTable(); // Add this line
+            $this->createCommentsTable();
             $this->createSettingsTable();
             $this->createPopularArticlesView();
             
@@ -60,12 +60,15 @@ class DatabaseSetup {
             likes INT DEFAULT 0,
             featured BOOLEAN DEFAULT FALSE,
             breaking BOOLEAN DEFAULT FALSE,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            updated_at TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
+            created_at DATETIME,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
             FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL,
             FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
         )";
         $this->pdo->exec($sql);
+
+        // Set default for existing rows
+        $this->pdo->exec("UPDATE articles SET created_at = NOW() WHERE created_at IS NULL");
     }
 
     private function createCommentsTable() {
