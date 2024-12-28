@@ -1,10 +1,11 @@
 <?php
+require_once __DIR__ . '/../../models/Article.php';
+$contact = require __DIR__ . '/../../config/contact.php';
+$popularArticles = (new Article())->getPopular(3);
+$app = require __DIR__ . '/../../config/app.php';
+
+
 try {
-    require_once __DIR__ . '/../../models/Article.php';
-    $contact = require __DIR__ . '/../../config/contact.php';
-    $popularArticles = (new Article())->getPopular(3);
-    $app = require __DIR__ . '/../../config/app.php';
-    
     // Verify $contact is an array and has required keys
     if (!is_array($contact)) {
         throw new Exception('Contact configuration must be an array');
@@ -107,9 +108,9 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-<script src="/lib/easing/easing.min.js"></script>
-<script src="/lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="/js/main.js"></script>
+<script src="<?php echo $app['constants']['ASSETS_URL']; ?>/lib/easing/easing.min.js"></script>
+<script src="<?php echo $app['constants']['ASSETS_URL']; ?>/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="<?php echo $app['constants']['ASSETS_URL']; ?>/js/main.js"></script>
 <script>
 $(document).ready(function() {
     $(".main-carousel").owlCarousel({

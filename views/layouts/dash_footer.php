@@ -1,3 +1,41 @@
+<?php
+require_once __DIR__ . '/../../models/Article.php';
+$contact = require __DIR__ . '/../../config/contact.php';
+$popularArticles = (new Article())->getPopular(3);
+$app = require __DIR__ . '/../../config/app.php';
+
+
+try {
+    // Verify $contact is an array and has required keys
+    if (!is_array($contact)) {
+        throw new Exception('Contact configuration must be an array');
+    }
+    
+} catch (Exception $e) {
+    error_log("Footer Error: " . $e->getMessage());
+    $contact = [
+        'address' => 'Address not available',
+        'phone' => 'Phone not available', 
+        'email' => 'Email not available',
+        'social' => []
+    ];
+    $popularArticles = [];
+    $app = ['app_name' => 'School News Portal'];
+}
+
+// Set default values if keys don't exist
+$contact = array_merge([
+    'address' => 'Address not available',
+    'phone' => 'Phone not available',
+    'email' => 'Email not available', 
+    'social' => []
+], $contact ?? []);
+
+// Ensure social is an array
+if (!isset($contact['social']) || !is_array($contact['social'])) {
+    $contact['social'] = [];
+}
+?>
 <div class="fixed-plugin">
       <div class="card shadow-lg ">
         <div class="card-header pb-0 pt-3 ">
@@ -54,11 +92,11 @@
       </div>
     </div>
     <!--   Core JS Files   -->
-    <script src="../assets/js/core/popper.min.js"></script>
-    <script src="../assets/js/core/bootstrap.min.js"></script>
-    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
-    <script src="../assets/js/plugins/chartjs.min.js"></script>
+    <script src="<?php echo $app['constants']['ASSETS_URL']; ?>/js/core/popper.min.js"></script>
+    <script src="<?php echo $app['constants']['ASSETS_URL']; ?>/js/core/bootstrap.min.js"></script>
+    <script src="<?php echo $app['constants']['ASSETS_URL']; ?>/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="<?php echo $app['constants']['ASSETS_URL']; ?>/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="<?php echo $app['constants']['ASSETS_URL']; ?>/js/plugins/chartjs.min.js"></script>
 
     <script>
     var win = navigator.platform.indexOf('Win') > -1;
@@ -72,7 +110,7 @@
     <!-- Github buttons -->
     <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="../assets/js/dashboard.min.js?v=1.1.0"></script>
+    <script src="<?php echo $app['constants']['ASSETS_URL']; ?>/js/dashboard.min.js?v=1.1.0"></script>
 
   
 
