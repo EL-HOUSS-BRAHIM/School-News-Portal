@@ -1,7 +1,6 @@
 <?php
 return [
-    'cloud_name' => 'your_cloud_name',
-    'api_key' => 'your_api_key',
-    'api_secret' => 'your_api_secret',
+    'cloud_name' => getenv('CLOUDINARY_CLOUD_NAME'),
+    'api_key' => getenv('CLOUDINARY_API_KEY'), 
+    'api_secret' => getenv('CLOUDINARY_API_SECRET'),
 ];
-?>

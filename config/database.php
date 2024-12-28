@@ -14,23 +14,26 @@ class Database {
 
     private function connect() {
         try {
+            // Debug connection parameters
+            error_log("Attempting database connection with:");
+            error_log("Host: " . $this->config['host']);
+            error_log("Database: " . $this->config['dbname']);
+            error_log("Username: " . $this->config['username']);
+            
             $dsn = sprintf(
-                "mysql:host=%s;dbname=%s;charset=%s",
+                "mysql:host=%s;port=3306;dbname=%s;charset=%s",
                 $this->config['host'],
                 $this->config['dbname'],
                 $this->config['charset']
             );
-            
+    
             $this->pdo = new PDO(
-                $dsn, 
-                $this->config['username'], 
-                $this->config['password'], 
+                $dsn,
+                $this->config['username'],
+                $this->config['password'],
                 $this->config['options']
             );
-            
-            // Test connection
-            $this->pdo->query("SELECT 1");
-            
+    
             return true;
         } catch (PDOException $e) {
             error_log("Database connection failed: " . $e->getMessage());

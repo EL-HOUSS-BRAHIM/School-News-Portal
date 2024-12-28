@@ -96,8 +96,10 @@ class UserDashController extends Controller {
                 'username' => $_SESSION['username'] ?? 'User',
                 'avatar' => $_SESSION['avatar'] ?? '../assets/img/default-avatar.png'
             ],
-            'currentPage' => 'new-article'
+            'currentPage' => 'new'  // Make sure this matches the sidenav condition
         ];
+        
+        error_log("Current Page: " . $data['currentPage']);  // Add this line for debugging
         
         $this->renderView('article/create', $data);
     }

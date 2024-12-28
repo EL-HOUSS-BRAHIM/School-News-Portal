@@ -1,12 +1,12 @@
 <?php
+
 require_once __DIR__ . '/../../config/app.php';
 try {
-    
     // Get app configuration
     $app = require __DIR__ . '/../../config/app.php';
     
-    // Get current page for active state
-    $currentPage = basename($_SERVER['PHP_SELF'], '.php');
+    // Get current page from the passed data instead of PHP_SELF
+    $currentPage = $currentPage ?? '';  // Use the value passed from controller
 } catch (Exception $e) {
     error_log("Header Error: " . $e->getMessage());
     $categories = [];
@@ -46,9 +46,9 @@ try {
 
             <!-- New Article -->
             <li class="nav-item">
-                <a class="nav-link <?php echo $currentPage == 'new-article' ? 'active bg-gradient-primary' : ''; ?>" href="/dashboard/article/new">
+                <a class="nav-link <?php echo $currentPage == 'new' ? 'active bg-gradient-primary' : ''; ?>" href="/dashboard/article/new">
                     <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-plus <?php echo $currentPage == 'new-article' ? 'text-white' : 'text-success'; ?> text-sm opacity-10"></i>
+                        <i class="fas fa-plus <?php echo $currentPage == 'new' ? 'text-white' : 'text-success'; ?> text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-1">New Article</span>
                 </a>
@@ -62,10 +62,6 @@ try {
                     </div>
                     <span class="nav-link-text ms-1">Analytics</span>
                 </a>
-            </li>
-
-            <li class="nav-item mt-3">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account</h6>
             </li>
 
             <!-- Profile -->
