@@ -6,9 +6,36 @@ class Article extends Model
 {
     protected $table = 'articles';
 
+    const STATUS_DRAFT = 'draft';
+    const STATUS_REVIEWING = 'reviewing';
+    const STATUS_PRIVATE = 'private';
+    const STATUS_PUBLISHED = 'published';
+    const STATUS_DISQUALIFIED = 'disqualified';
+
     public function hasConnection()
     {
         return $this->pdo !== null;
+    }
+
+    public static function getStatusBadgeClass($status) {
+        return match($status) {
+            self::STATUS_DRAFT => 'warning',
+            self::STATUS_REVIEWING => 'info',
+            self::STATUS_PRIVATE => 'secondary',
+            self::STATUS_PUBLISHED => 'success',
+            self::STATUS_DISQUALIFIED => 'danger',
+            default => 'light'
+        };
+    }
+
+    public static function getAllStatuses() {
+        return [
+            self::STATUS_DRAFT => 'Draft',
+            self::STATUS_REVIEWING => 'Under Review',
+            self::STATUS_PRIVATE => 'Private',
+            self::STATUS_PUBLISHED => 'Published',
+            self::STATUS_DISQUALIFIED => 'Disqualified'
+        ];
     }
 
     public function getAll($limit = null)
@@ -204,6 +231,7 @@ class Article extends Model
                     FROM {$this->table} a 
                     LEFT JOIN categories c ON a.category_id = c.id 
                     WHERE a.user_id = ? 
+                    AND a.status != ? 
                     ORDER BY a.created_at DESC";
             
             if ($limit) {
@@ -252,6 +280,39 @@ class Article extends Model
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             error_log("Error getting likes stats: " . $e->getMessage());
+            return [];
+        }
+    }
+    public function getRecentActivity($userId, $limit = 5) {
+        try {
+            $sql = "SELECT 
+                        'comment' as type,
+                        c.created_at,
+                        a.title as article_title,
+                        u.username as user_name
+                    FROM comments c
+                    JOIN articles a ON c.article_id = a.id
+                    JOIN users u ON c.user_id = u.id
+                    WHERE a.user_id = ?
+                    
+                    UNION ALL
+                    
+                    SELECT 
+                        'view' as type,
+                        created_at,
+                        title as article_title,
+                        NULL as user_name
+                    FROM article_views
+                    WHERE article_id IN (SELECT id FROM articles WHERE user_id = ?)
+                    
+                    ORDER BY created_at DESC
+                    LIMIT ?";
+                    
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([$userId, $userId, $limit]);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error getting recent activity: " . $e->getMessage());
             return [];
         }
     }

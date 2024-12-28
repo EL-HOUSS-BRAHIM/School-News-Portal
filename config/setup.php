@@ -55,10 +55,13 @@ class DatabaseSetup {
             image VARCHAR(255),
             category_id INT,
             user_id INT,
+            status ENUM('draft', 'reviewing', 'private', 'published', 'disqualified') DEFAULT 'draft',
             views INT DEFAULT 0,
+            likes INT DEFAULT 0,
             featured BOOLEAN DEFAULT FALSE,
             breaking BOOLEAN DEFAULT FALSE,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            updated_at TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
             FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL,
             FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
         )";
