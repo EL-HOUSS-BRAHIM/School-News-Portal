@@ -162,5 +162,98 @@ class Article extends Model
             return [];
         }
     }
+    public function countByUser($userId) {
+        try {
+            $sql = "SELECT COUNT(*) FROM {$this->table} WHERE user_id = ?";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([$userId]);
+            return $stmt->fetchColumn();
+        } catch (PDOException $e) {
+            error_log("Error counting user articles: " . $e->getMessage());
+            return 0;
+        }
+    }
+
+    public function getTotalViewsByUser($userId) {
+        try {
+            $sql = "SELECT COALESCE(SUM(views), 0) FROM {$this->table} WHERE user_id = ?";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([$userId]);
+            return $stmt->fetchColumn();
+        } catch (PDOException $e) {
+            error_log("Error getting total views: " . $e->getMessage());
+            return 0;
+        }
+    }
+
+    public function getTotalLikesByUser($userId) {
+        try {
+            $sql = "SELECT COALESCE(SUM(likes), 0) FROM {$this->table} WHERE user_id = ?";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([$userId]);
+            return $stmt->fetchColumn();
+        } catch (PDOException $e) {
+            error_log("Error getting total likes: " . $e->getMessage());
+            return 0;
+        }
+    }
+
+    public function getByUser($userId, $limit = null) {
+        try {
+            $sql = "SELECT a.*, c.name as category 
+                    FROM {$this->table} a 
+                    LEFT JOIN categories c ON a.category_id = c.id 
+                    WHERE a.user_id = ? 
+                    ORDER BY a.created_at DESC";
+            
+            if ($limit) {
+                $sql .= " LIMIT ?";
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute([$userId, $limit]);
+            } else {
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute([$userId]);
+            }
+            
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error getting user articles: " . $e->getMessage());
+            return [];
+        }
+    }
+
+    public function getViewsStats($userId) {
+        try {
+            $sql = "SELECT DATE(created_at) as date, SUM(views) as views 
+                    FROM {$this->table} 
+                    WHERE user_id = ? 
+                    GROUP BY DATE(created_at) 
+                    ORDER BY date DESC 
+                    LIMIT 30";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([$userId]);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error getting views stats: " . $e->getMessage());
+            return [];
+        }
+    }
+
+    public function getLikesStats($userId) {
+        try {
+            $sql = "SELECT DATE(created_at) as date, SUM(likes) as likes 
+                    FROM {$this->table} 
+                    WHERE user_id = ? 
+                    GROUP BY DATE(created_at) 
+                    ORDER BY date DESC 
+                    LIMIT 30";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([$userId]);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error getting likes stats: " . $e->getMessage());
+            return [];
+        }
+    }
 }
 ?>

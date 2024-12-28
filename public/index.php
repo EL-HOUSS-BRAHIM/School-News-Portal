@@ -11,6 +11,7 @@ require_once __DIR__ . '/../controllers/ArticleController.php';
 require_once __DIR__ . '/../controllers/AuthController.php';
 require_once __DIR__ . '/../controllers/AdminController.php';
 require_once __DIR__ . '/../controllers/CommentController.php';
+require_once __DIR__ . '/../controllers/UserDashController.php';
 
 try {
     $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);

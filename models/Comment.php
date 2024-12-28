@@ -19,4 +19,19 @@ class Comment extends Model {
             return [];
         }
     }
+
+    public function countByUserArticles($userId) {
+        try {
+            $sql = "SELECT COUNT(c.id) 
+                    FROM {$this->table} c 
+                    INNER JOIN articles a ON c.article_id = a.id 
+                    WHERE a.user_id = ?";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([$userId]);
+            return $stmt->fetchColumn();
+        } catch (PDOException $e) {
+            error_log("Error counting comments by user articles: " . $e->getMessage());
+            return 0;
+        }
+    }
 }
