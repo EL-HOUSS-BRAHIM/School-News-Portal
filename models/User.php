@@ -36,11 +36,15 @@ class User extends Model
         return parent::delete($this->table, $id);
     }
 
-    public function findByUsername($username)
-    {
-        $stmt = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE username = ?");
-        $stmt->execute([$username]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+    public function findByUsername($username) {
+        try {
+            $stmt = $this->pdo->prepare("SELECT id, username, password, role, created_at FROM users WHERE username = ?");
+            $stmt->execute([$username]);
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error finding user: " . $e->getMessage());
+            return null;
+        }
     }
 
     public function authenticate($username, $password)

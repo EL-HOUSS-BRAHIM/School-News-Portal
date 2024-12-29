@@ -63,6 +63,33 @@ class UserDashController extends Controller
         $this->renderView('dash/index', $data);
     }
 
+    public function articles()
+    {
+        try {
+            if (!isset($_SESSION['user_id'])) {
+                error_log("No user_id in session for articles page");
+                $this->redirect('/login');
+                return;
+            }
+
+            $articleModel = new Article();
+            $articles = $articleModel->getByUser($_SESSION['user_id']);
+        
+            $data = [
+                'articles' => $articles,
+                'userData' => [
+                'username' => $_SESSION['username'],
+                'role' => $_SESSION['user_role']
+                ],
+                'currentPage' => 'articles'
+            ];
+
+            $this->renderView('article/list', $data);
+        } catch (Exception $e) {
+            error_log("Error in articles method: " . $e->getMessage());
+            $this->redirect('/login');
+        }
+    }
 
     public function index()
     {

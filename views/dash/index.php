@@ -1,4 +1,6 @@
-<?php include '../views/layouts/dash_header.php'; ?>
+<?php 
+
+include '../views/layouts/dash_header.php'; ?>
 <body class="g-sidenav-show  bg-gray-100">
     <?php include '../views/layouts/dash_sidenav.php'; ?>
     <main

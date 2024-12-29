@@ -5,6 +5,7 @@ $routes = [
     '/article' => 'ArticleController@view',
     '/login' => 'AuthController@login',
     '/register' => 'AuthController@register',
+    '/logout' => 'AuthController@logout',
     '/admin' => 'AdminController@index',
     '/comment/add' => 'CommentController@store',
     
@@ -19,7 +20,6 @@ $routes = [
     '/dashboard/article/status' => 'UserDashController@updateStatus',
     '/dashboard/analytics' => 'UserDashController@analytics',
     '/dashboard/profile' => 'UserDashController@profile',
-    '/logout' => 'AuthController@logout'
 ];
 
 function getRoute($url) {
