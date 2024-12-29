@@ -302,15 +302,6 @@ class UserDashController extends Controller
         }
     }
 
-    public function analytics()
-    {
-        $articleModel = new Article();
-        $data = [
-            'viewsChart' => $articleModel->getViewsStats($_SESSION['user_id']),
-            'likesChart' => $articleModel->getLikesStats($_SESSION['user_id'])
-        ];
-        $this->renderView('dash/analytics', $data);
-    }
 
     private function getRecentActivity($userId)
     {
@@ -333,4 +324,128 @@ class UserDashController extends Controller
             // Add more notifications as needed
         ];
     }
+    
+    public function analytics()
+    {
+        try {
+            $articleModel = new Article();
+            $userId = $_SESSION['user_id'];
+    
+            // Get metrics data
+            $metrics = [
+                'total_views' => $articleModel->getTotalViewsByUser($userId),
+                'total_engagement' => $articleModel->getTotalEngagementByUser($userId),
+                'views_trend' => $articleModel->getViewsTrend($userId),
+                'engagement_trend' => $articleModel->getEngagementTrend($userId),
+                'engagement_rate' => $articleModel->getEngagementRate($userId),
+                'top_articles' => $articleModel->getTopArticles($userId),
+                'performance_data' => [
+                    'labels' => $articleModel->getPerformanceLabels($userId),
+                    'views' => $articleModel->getViewsData($userId),
+                    'engagement' => $articleModel->getEngagementData($userId)
+                ]
+            ];
+    
+            $data = [
+                'metrics' => $metrics,
+                'currentPage' => 'analytics',
+                'userData' => [
+                    'username' => $_SESSION['username'],
+                    'role' => $_SESSION['user_role']
+                ]
+            ];
+    
+            $this->renderView('dash/analytics', $data);
+        } catch (Exception $e) {
+            error_log("Analytics Error: " . $e->getMessage());
+            $this->redirect('/dashboard');
+        }
+    }
+
+public function profile()
+{
+    try {
+        $userModel = new User();
+        $articleModel = new Article();
+        $userId = $_SESSION['user_id'];
+
+        // Get user data with null checks
+        $user = $userModel->find($userId);
+        if (!$user) {
+            throw new Exception("User not found");
+        }
+
+        // Get user stats
+        $stats = [
+            'total_articles' => $articleModel->countByUser($userId) ?? 0,
+            'total_views' => $articleModel->getTotalViewsByUser($userId) ?? 0,
+            'total_likes' => $articleModel->getTotalLikesByUser($userId) ?? 0,
+            'avg_engagement' => $articleModel->getEngagementRate($userId) ?? 0
+        ];
+
+        $data = [
+            'userData' => [
+                'username' => $user['username'] ?? 'Unknown',
+                'email' => $user['email'] ?? 'No email',
+                'role' => $user['role'] ?? 'user',
+                'joined_date' => $user['created_at'] ?? date('Y-m-d H:i:s'),
+                'avatar' => $user['avatar'] ?? '../assets/img/default-avatar.png'
+            ],
+            'stats' => $stats,
+            'currentPage' => 'profile'
+        ];
+
+        $this->renderView('dash/profile', $data);
+    } catch (Exception $e) {
+        error_log("Profile Error: " . $e->getMessage());
+        $this->redirect('/dashboard');
+    }
+}
+
+public function updateProfile()
+{
+    try {
+        $userId = $_SESSION['user_id'];
+        $userModel = new User();
+
+        if ($_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
+            $avatar = uploadToCloudinary($_FILES['avatar']['tmp_name']);
+            $userModel->update($userId, ['avatar' => $avatar]);
+        }
+
+        $this->redirect('/dashboard/profile');
+    } catch (Exception $e) {
+        error_log("Profile Update Error: " . $e->getMessage());
+        $this->redirect('/dashboard/profile');
+    }
+}
+
+public function updatePassword()
+{
+    try {
+        $userId = $_SESSION['user_id'];
+        $userModel = new User();
+        $user = $userModel->find($userId);
+
+        $currentPassword = $_POST['current_password'];
+        $newPassword = $_POST['new_password'];
+        $confirmPassword = $_POST['confirm_password'];
+
+        if (!password_verify($currentPassword, $user['password'])) {
+            throw new Exception("Current password is incorrect");
+        }
+
+        if ($newPassword !== $confirmPassword) {
+            throw new Exception("New passwords don't match");
+        }
+
+        $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+        $userModel->update($userId, ['password' => $hashedPassword]);
+
+        $this->redirect('/dashboard/profile');
+    } catch (Exception $e) {
+        error_log("Password Update Error: " . $e->getMessage());
+        $this->redirect('/dashboard/profile');
+    }
+}
 }

@@ -310,83 +310,180 @@ function deleteArticle(id) {
 
             <!-- Performance Chart -->
             <div class="row mt-4">
-                <div class="col-lg-7 mb-lg-0 mb-4">
-                    <div class="card z-index-2">
-                        <div class="card-header pb-0">
-                            <h6>Article Performance</h6>
-                            <p class="text-sm">
-                                <i class="fa fa-arrow-up text-success"></i>
-                                <span class="font-weight-bold">15% more</span>
-                                views this
-                                month
-                            </p>
-                        </div>
-                        <div class="card-body p-3">
-                            <div class="chart">
-                                <canvas id="chart-line" class="chart-canvas"
-                                    height="300"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recent Activity -->
-                <div class="col-lg-5">
-                    <div class="card">
-                        <div class="card-header pb-0">
-                            <h6>Recent Activity</h6>
-                        </div>
-                        <div class="card-body p-3">
-                            <div class="timeline timeline-one-side">
-                                <?php foreach($recentActivity as $activity): ?>
-                                <div class="timeline-block mb-3">
-                                    <span class="timeline-step">
-                                        <i class="ni <?php echo $activity['icon']; ?> text-<?php echo $activity['color']; ?>"></i>
-                                    </span>
-                                    <div class="timeline-content">
-                                        <h6 class="text-dark text-sm font-weight-bold mb-0">
-                                            <?php echo htmlspecialchars($activity['message']); ?>
-                                        </h6>
-                                        <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">
-                                            <?php echo date('d M H:i', strtotime($activity['created_at'])); ?>
-                                        </p>
-                                    </div>
-                                </div>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-                    </div>
+    <div class="col-lg-7 mb-lg-0 mb-4">
+        <div class="card z-index-2">
+            <div class="card-header pb-0">
+                <h6>Article Performance</h6>
+                <?php
+                // Calculate performance change
+                $currentViews = end($viewsData)['views'] ?? 0;
+                $previousViews = reset($viewsData)['views'] ?? 0;
+                $viewsChange = $previousViews > 0 ? 
+                    (($currentViews - $previousViews) / $previousViews) * 100 : 0;
+                ?>
+                <p class="text-sm">
+                    <i class="fa fa-arrow-<?php echo $viewsChange >= 0 ? 'up' : 'down'; ?> 
+                       text-<?php echo $viewsChange >= 0 ? 'success' : 'danger'; ?>"></i>
+                    <span class="font-weight-bold">
+                        <?php echo abs(round($viewsChange)); ?>% 
+                        <?php echo $viewsChange >= 0 ? 'more' : 'less'; ?>
+                    </span>
+                    views this month
+                </p>
+            </div>
+            <div class="card-body p-3">
+                <div class="chart">
+                    <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="col-lg-5">
+        <div class="card">
+            <div class="card-header pb-0">
+                <h6>Recent Activity</h6>
+            </div>
+            <div class="card-body p-3">
+                <div class="timeline timeline-one-side">
+                    <?php if (!empty($recentActivity)): ?>
+                        <?php foreach($recentActivity as $activity): ?>
+                            <div class="timeline-block mb-3">
+                                <span class="timeline-step">
+                                    <?php
+                                    // Define icon and color based on activity type
+                                    $icon = '';
+                                    $color = '';
+                                    switch($activity['type']) {
+                                        case 'comment':
+                                            $icon = 'ni-chat-round';
+                                            $color = 'info';
+                                            break;
+                                        case 'view':
+                                            $icon = 'ni-eye';
+                                            $color = 'success';
+                                            break;
+                                        case 'like':
+                                            $icon = 'ni-like-2';
+                                            $color = 'danger';
+                                            break;
+                                        default:
+                                            $icon = 'ni-bell-55';
+                                            $color = 'primary';
+                                    }
+                                    ?>
+                                    <i class="ni <?php echo $icon; ?> text-<?php echo $color; ?>"></i>
+                                </span>
+                                <div class="timeline-content">
+                                    <h6 class="text-dark text-sm font-weight-bold mb-0">
+                                        <?php
+                                        // Format message based on activity type
+                                        switch($activity['type']) {
+                                            case 'comment':
+                                                echo htmlspecialchars($activity['user_name']) . ' commented on "' . 
+                                                     htmlspecialchars($activity['article_title']) . '"';
+                                                break;
+                                            case 'view':
+                                                echo 'New view on "' . htmlspecialchars($activity['article_title']) . '"';
+                                                break;
+                                            default:
+                                                echo htmlspecialchars($activity['message']);
+                                        }
+                                        ?>
+                                    </h6>
+                                    <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">
+                                        <?php 
+                                        $date = new DateTime($activity['created_at']);
+                                        echo $date->format('d M H:i'); 
+                                        ?>
+                                    </p>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <div class="text-center text-secondary py-3">
+                            No recent activity
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
-      var ctx = document.getElementById("chart-line").getContext("2d");
-      var viewsData = <?php echo json_encode($viewsData); ?>;
-      var likesData = <?php echo json_encode($likesData); ?>;
+var ctx = document.getElementById("chart-line").getContext("2d");
+var viewsData = <?php echo json_encode($viewsData); ?>;
+var likesData = <?php echo json_encode($likesData); ?>;
 
-      new Chart(ctx, {
-        type: "line",
-        data: {
-          labels: viewsData.map(item => item.date),
-          datasets: [{
+new Chart(ctx, {
+    type: "line",
+    data: {
+        labels: viewsData.map(item => {
+            // Format date for display
+            let date = new Date(item.date);
+            return date.toLocaleDateString('default', { month: 'short', day: 'numeric' });
+        }),
+        datasets: [{
             label: "Views",
             data: viewsData.map(item => item.views),
             borderColor: "#4CAF50",
+            tension: 0.4,
             fill: false
-          }, {
+        }, {
             label: "Likes",
             data: likesData.map(item => item.likes),
             borderColor: "#f44336",
+            tension: 0.4,
             fill: false
-          }]
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: true,
+                position: 'top'
+            }
         },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false
+        scales: {
+            y: {
+                beginAtZero: true,
+                grid: {
+                    drawBorder: false,
+                    display: true,
+                    drawOnChartArea: true,
+                    drawTicks: false,
+                    borderDash: [5, 5]
+                },
+                ticks: {
+                    display: true,
+                    padding: 10,
+                    color: '#9ca2b7'
+                }
+            },
+            x: {
+                grid: {
+                    drawBorder: false,
+                    display: true,
+                    drawOnChartArea: true,
+                    drawTicks: true,
+                    borderDash: [5, 5]
+                },
+                ticks: {
+                    display: true,
+                    padding: 10,
+                    color: '#9ca2b7'
+                }
+            }
         }
-      });
-    </script>
+    }
+});
+</script>
 
     <?php include '../views/layouts/dash_footer.php'; ?>

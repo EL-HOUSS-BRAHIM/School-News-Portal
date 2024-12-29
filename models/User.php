@@ -13,9 +13,17 @@ class User extends Model
     }
 
     public function find($id)
-    {
-        return parent::find($this->table, $id);
+{
+    try {
+        $stmt = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE id = ?");
+        $stmt->execute([$id]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result ?: null;
+    } catch (PDOException $e) {
+        error_log("Error finding user: " . $e->getMessage());
+        return null;
     }
+}
 
     public function save($data)
     {

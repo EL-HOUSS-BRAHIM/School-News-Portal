@@ -367,5 +367,157 @@ class Article extends Model
             return [];
         }
     }
+    // Add these methods to Article class
+public function getViewsTrend($userId) 
+{
+    try {
+        $sql = "SELECT 
+                (SELECT COALESCE(SUM(views), 0) FROM articles 
+                 WHERE user_id = ? AND created_at >= DATE_SUB(NOW(), INTERVAL 1 MONTH)) as current_views,
+                (SELECT COALESCE(SUM(views), 0) FROM articles 
+                 WHERE user_id = ? AND created_at BETWEEN DATE_SUB(NOW(), INTERVAL 2 MONTH) AND DATE_SUB(NOW(), INTERVAL 1 MONTH)) as previous_views";
+        
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$userId, $userId]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if ($result['previous_views'] == 0) return 0;
+        return round((($result['current_views'] - $result['previous_views']) / $result['previous_views']) * 100, 1);
+    } catch (PDOException $e) {
+        error_log("Error calculating views trend: " . $e->getMessage());
+        return 0;
+    }
+}
+
+public function getEngagementRate($userId)
+{
+    try {
+        $sql = "SELECT 
+                COALESCE(AVG((views + likes + comments) / NULLIF(views, 0) * 100), 0) as engagement_rate
+                FROM articles WHERE user_id = ?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$userId]);
+        return round($stmt->fetchColumn(), 2);
+    } catch (PDOException $e) {
+        error_log("Error calculating engagement rate: " . $e->getMessage());
+        return 0;
+    }
+}
+
+public function getTopArticles($userId)
+{
+    try {
+        $sql = "SELECT *,
+                ((views + likes + comments) / NULLIF(views, 0) * 100) as engagement
+                FROM articles 
+                WHERE user_id = ?
+                ORDER BY views DESC
+                LIMIT 5";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$userId]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        error_log("Error getting top articles: " . $e->getMessage());
+        return [];
+    }
+}
+// Add these methods to the Article class
+public function getTotalEngagementByUser($userId)
+{
+    try {
+        $sql = "SELECT COALESCE(SUM(views + likes + comments), 0) as total_engagement 
+                FROM {$this->table} 
+                WHERE user_id = ?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$userId]);
+        return $stmt->fetchColumn();
+    } catch (PDOException $e) {
+        error_log("Error getting total engagement: " . $e->getMessage());
+        return 0;
+    }
+}
+
+public function getEngagementTrend($userId)
+{
+    try {
+        $sql = "SELECT 
+                (SELECT COALESCE(SUM(views + likes + comments), 0) 
+                 FROM articles 
+                 WHERE user_id = ? 
+                 AND created_at >= DATE_SUB(NOW(), INTERVAL 1 MONTH)) as current_engagement,
+                (SELECT COALESCE(SUM(views + likes + comments), 0) 
+                 FROM articles 
+                 WHERE user_id = ? 
+                 AND created_at BETWEEN DATE_SUB(NOW(), INTERVAL 2 MONTH) 
+                 AND DATE_SUB(NOW(), INTERVAL 1 MONTH)) as previous_engagement";
+        
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$userId, $userId]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if ($result['previous_engagement'] == 0) return 0;
+        return round((($result['current_engagement'] - $result['previous_engagement']) / $result['previous_engagement']) * 100, 1);
+    } catch (PDOException $e) {
+        error_log("Error calculating engagement trend: " . $e->getMessage());
+        return 0;
+    }
+}
+
+public function getPerformanceLabels($userId)
+{
+    try {
+        $sql = "SELECT DISTINCT DATE(created_at) as date 
+                FROM {$this->table} 
+                WHERE user_id = ? 
+                ORDER BY date DESC 
+                LIMIT 30";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$userId]);
+        return array_map(function($row) {
+            return date('M d', strtotime($row['date']));
+        }, $stmt->fetchAll(PDO::FETCH_ASSOC));
+    } catch (PDOException $e) {
+        error_log("Error getting performance labels: " . $e->getMessage());
+        return [];
+    }
+}
+
+public function getViewsData($userId)
+{
+    try {
+        $sql = "SELECT DATE(created_at) as date, 
+                COALESCE(SUM(views), 0) as views 
+                FROM {$this->table} 
+                WHERE user_id = ? 
+                GROUP BY DATE(created_at) 
+                ORDER BY date DESC 
+                LIMIT 30";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$userId]);
+        return array_column($stmt->fetchAll(PDO::FETCH_ASSOC), 'views');
+    } catch (PDOException $e) {
+        error_log("Error getting views data: " . $e->getMessage());
+        return [];
+    }
+}
+
+public function getEngagementData($userId)
+{
+    try {
+        $sql = "SELECT DATE(created_at) as date, 
+                COALESCE(SUM(views + likes + comments), 0) as engagement 
+                FROM {$this->table} 
+                WHERE user_id = ? 
+                GROUP BY DATE(created_at) 
+                ORDER BY date DESC 
+                LIMIT 30";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$userId]);
+        return array_column($stmt->fetchAll(PDO::FETCH_ASSOC), 'engagement');
+    } catch (PDOException $e) {
+        error_log("Error getting engagement data: " . $e->getMessage());
+        return [];
+    }
+}
 }
 ?>

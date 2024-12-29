@@ -18,8 +18,10 @@ $routes = [
     '/dashboard/article/delete' => 'UserDashController@deleteArticle',
     '/dashboard/article/store' => 'UserDashController@storeArticle',
     '/dashboard/article/status' => 'UserDashController@updateStatus',
-    '/dashboard/analytics' => 'UserDashController@analytics',
     '/dashboard/profile' => 'UserDashController@profile',
+    '/dashboard/profile/update' => 'UserDashController@updateProfile',
+    '/dashboard/profile/password' => 'UserDashController@updatePassword',
+    '/dashboard/analytics' => 'UserDashController@analytics',
 
     // Admin routes
     '/admin/users' => 'AdminController@users',
