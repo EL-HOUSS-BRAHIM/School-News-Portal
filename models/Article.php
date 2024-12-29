@@ -38,6 +38,26 @@ class Article extends Model
         ];
     }
 
+    // Get available statuses based on user role
+    public static function getAvailableStatuses($userRole) {
+        $allStatuses = [
+            self::STATUS_DRAFT => 'Draft',
+            self::STATUS_REVIEWING => 'Under Review',
+            self::STATUS_PRIVATE => 'Private',
+            self::STATUS_PUBLISHED => 'Published',
+            self::STATUS_DISQUALIFIED => 'Disqualified'
+        ];
+
+        if ($userRole === 'admin') {
+            return $allStatuses;
+        }
+
+        // For editors/writers, remove published and disqualified
+        return array_filter($allStatuses, function($key) {
+            return in_array($key, [self::STATUS_DRAFT, self::STATUS_REVIEWING, self::STATUS_PRIVATE]);
+        }, ARRAY_FILTER_USE_KEY);
+    }
+
     public function getAll($limit = null, $status = self::STATUS_PUBLISHED) {
         try {
             $sql = "SELECT a.*, c.name as category, c.id as category_id 

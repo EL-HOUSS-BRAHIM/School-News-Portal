@@ -55,11 +55,14 @@ include '../views/layouts/dash_header.php'; ?>
                                         <!-- Status -->
                                         <div class="form-group mt-3">
                                             <label class="form-control-label">Status</label>
-                                            <select class="form-control" name="status">
-                                                <option value="draft">Draft</option>
-                                                <option value="reviewing">Submit for Review</option>
-                                                <option value="private">Private</option>
-                                            </select>
+                                            <!-- Replace the existing select element with this -->
+<select name="status" class="form-select form-select-sm d-inline w-auto" onchange="showSaveButton(this)">
+    <?php foreach(Article::getAvailableStatuses($_SESSION['user_role']) as $value => $label): ?>
+        <option value="<?php echo $value; ?>">
+            <?php echo htmlspecialchars($label); ?>
+        </option>
+    <?php endforeach; ?>
+</select>
                                         </div>
 
                                         <!-- Image Upload -->

@@ -16,7 +16,12 @@ class AuthController extends Controller
 
     public function login()
     {
-    // Check if user is already logged in
+        // Generate CSRF token if not exists
+        if (!isset($_SESSION['csrf_token'])) {
+            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+        }
+
+        // Check if user is already logged in
         if (isset($_SESSION['user_id']) && isset($_SESSION['user_role'])) {
             $this->redirect('/dashboard');
             return;
@@ -61,7 +66,7 @@ class AuthController extends Controller
                 $this->renderView('auth/login', ['error' => 'Authentication failed']);
             }
         } else {
-            $this->renderView('auth/login');
+            $this->renderView('auth/login', ['csrf_token' => $_SESSION['csrf_token']]);
         }
     }
 

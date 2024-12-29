@@ -255,26 +255,30 @@ class UserDashController extends Controller
         $this->renderView('article/edit', $data);
     }
 
-    public function updateStatus()
-    {
+    public function updateStatus() {
         try {
-            if (!in_array($_POST['status'], array_keys(Article::getAllStatuses()))) {
-                throw new Exception("Invalid status");
+            $id = (int) $_POST['id'];
+            $newStatus = $_POST['status'];
+            $userRole = $_SESSION['user_role'];
+            
+            // Verify permissions
+            $allowedStatuses = Article::getAvailableStatuses($userRole);
+            if (!array_key_exists($newStatus, $allowedStatuses)) {
+                throw new Exception("Unauthorized status change");
             }
 
-            $id = (int) $_POST['id'];
             $articleModel = new Article();
             $article = $articleModel->find($id);
 
+            // Verify ownership
             if (!$article || $article['user_id'] !== $_SESSION['user_id']) {
                 throw new Exception("Unauthorized");
             }
 
-            $articleModel->update($id, ['status' => $_POST['status']]);
-
+            $articleModel->update($id, ['status' => $newStatus]);
             $this->redirect('/dashboard/articles');
         } catch (Exception $e) {
-            error_log("Error updating status: " . $e->getMessage());
+            error_log("Status update error: " . $e->getMessage());
             $this->redirect('/dashboard/articles');
         }
     }

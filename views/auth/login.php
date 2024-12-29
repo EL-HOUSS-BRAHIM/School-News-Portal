@@ -13,6 +13,7 @@ include '../views/layouts/dash_header.php'; ?>
                             <div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
                         <?php endif; ?>
                         <form action="/login" method="POST">
+                            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
                             <div class="form-group">
                                 <label for="username">Username</label>
                                 <input type="text" name="username" id="username" class="form-control" required>

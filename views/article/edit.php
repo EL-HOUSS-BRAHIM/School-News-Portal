@@ -56,13 +56,15 @@ include '../views/layouts/dash_header.php'; ?>
                                         <!-- Status -->
                                         <div class="form-group mt-3">
                                             <label class="form-control-label">Status</label>
-                                            <select class="form-control" name="status">
-                                                <?php foreach(Article::getAllStatuses() as $value => $label): ?>
-                                                    <option value="<?php echo $value; ?>" <?php echo $value == $article['status'] ? 'selected' : ''; ?>>
-                                                        <?php echo htmlspecialchars($label); ?>
-                                                    </option>
-                                                <?php endforeach; ?>
-                                            </select>
+                                            <select name="status" class="form-select form-select-sm d-inline w-auto" onchange="showSaveButton(this)">
+    <?php foreach(Article::getAvailableStatuses($_SESSION['user_role']) as $value => $label): ?>
+        <option value="<?php echo $value; ?>" 
+                <?php echo $value == $article['status'] ? 'selected' : ''; ?>
+                <?php echo !isset(Article::getAvailableStatuses($_SESSION['user_role'])[$value]) ? 'disabled' : ''; ?>>
+            <?php echo htmlspecialchars($label); ?>
+        </option>
+    <?php endforeach; ?>
+</select>
                                         </div>
 
                                         <!-- Image Upload -->

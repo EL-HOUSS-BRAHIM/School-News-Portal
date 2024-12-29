@@ -166,12 +166,14 @@
                                                     <form action="/dashboard/article/status" method="POST" class="d-inline">
                                                         <input type="hidden" name="id" value="<?php echo $article['id']; ?>">
                                                         <select name="status" class="form-select form-select-sm d-inline w-auto" onchange="showSaveButton(this)">
-                                                            <?php foreach(Article::getAllStatuses() as $value => $label): ?>
-                                                                <option value="<?php echo $value; ?>" <?php echo $value == $article['status'] ? 'selected' : ''; ?>>
-                                                                    <?php echo htmlspecialchars($label); ?>
-                                                                </option>
-                                                            <?php endforeach; ?>
-                                                        </select>
+    <?php foreach(Article::getAvailableStatuses($_SESSION['user_role']) as $value => $label): ?>
+        <option value="<?php echo $value; ?>" 
+                <?php echo $value == $article['status'] ? 'selected' : ''; ?>
+                <?php echo !isset(Article::getAvailableStatuses($_SESSION['user_role'])[$value]) ? 'disabled' : ''; ?>>
+            <?php echo htmlspecialchars($label); ?>
+        </option>
+    <?php endforeach; ?>
+</select>
                                                         <div class="d-flex justify-content-center mt-2">
                                                             <button type="submit" class="btn btn-sm btn-primary save-button" style="display: none;">Save</button>
                                                         </div>

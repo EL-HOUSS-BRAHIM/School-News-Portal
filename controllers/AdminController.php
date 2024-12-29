@@ -3,9 +3,17 @@
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/User.php';
 require_once __DIR__ . '/../models/Article.php';
+require_once __DIR__ . '/../middleware/AdminMiddleware.php';
 
 class AdminController extends Controller
 {
+    private $middleware;
+
+    public function __construct() {
+        $this->middleware = new AdminMiddleware();
+        $this->middleware->handle();
+    }
+    
     public function index()
     {
         $userModel = new User();
