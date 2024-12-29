@@ -38,41 +38,39 @@ class Article extends Model
         ];
     }
 
-    public function getAll($limit = null) {
+    public function getAll($limit = null, $status = self::STATUS_PUBLISHED) {
         try {
             $sql = "SELECT a.*, c.name as category, c.id as category_id 
                     FROM {$this->table} a 
                     LEFT JOIN categories c ON a.category_id = c.id 
+                    WHERE a.status = ?
                     ORDER BY a.created_at DESC";
             
             if ($limit) {
                 $sql .= " LIMIT ?";
                 $stmt = $this->pdo->prepare($sql);
-                $stmt->execute([$limit]);
+                $stmt->execute([$status, $limit]);
             } else {
-                $stmt = $this->pdo->query($sql);
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute([$status]);
             }
             
-            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            error_log("SQL Query: " . $sql);
-            error_log("Results count: " . count($results));
-            return $results;
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             error_log("getAll Error: " . $e->getMessage());
             return [];
         }
     }
 
-    public function getByCategory($categoryId){
-        $stmt = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE category_id = ?");
-        $stmt->execute([$categoryId]);
+    public function getByCategory($categoryId, $status = self::STATUS_PUBLISHED){
+        $stmt = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE category_id = ? AND status = ?");
+        $stmt->execute([$categoryId, $status]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getByDate($date)
-    {
-        $stmt = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE DATE(created_at) = ?");
-        $stmt->execute([$date]);
+    public function getByDate($date, $status = self::STATUS_PUBLISHED) {
+        $stmt = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE DATE(created_at) = ? AND status = ?");
+        $stmt->execute([$date, $status]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     public function incrementViews($id) {
@@ -106,31 +104,34 @@ class Article extends Model
         }
     }
 
-    public function getLatest($limit = 4) {
+    
+    public function getLatest($limit = 4, $status = self::STATUS_PUBLISHED) {
         try {
             $sql = "SELECT a.*, c.name as category, c.id as category_id 
                     FROM {$this->table} a 
                     LEFT JOIN categories c ON a.category_id = c.id 
+                    WHERE a.status = ?
                     ORDER BY a.created_at DESC 
                     LIMIT ?";
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([$limit]);
+            $stmt->execute([$status, $limit]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             error_log("Error getting latest articles: " . $e->getMessage());
             return [];
         }
     }
-    public function getLatestFeatured($limit = 3) {
+
+    public function getLatestFeatured($limit = 3, $status = self::STATUS_PUBLISHED) {
         try {
             $sql = "SELECT a.*, c.name as category, c.id as category_id 
                     FROM {$this->table} a 
                     LEFT JOIN categories c ON a.category_id = c.id 
-                    WHERE a.featured = TRUE
+                    WHERE a.featured = TRUE AND a.status = ?
                     ORDER BY a.created_at DESC 
                     LIMIT ?";
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([$limit]);
+            $stmt->execute([$status, $limit]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             error_log("Error getting latest featured articles: " . $e->getMessage());
@@ -138,15 +139,16 @@ class Article extends Model
         }
     }
     
-    public function getBreakingNews($limit = 5) {
+    public function getBreakingNews($limit = 5, $status = self::STATUS_PUBLISHED) {
         try {
             $sql = "SELECT a.*, c.name as category, c.id as category_id 
                     FROM articles a 
                     LEFT JOIN categories c ON a.category_id = c.id 
+                    WHERE a.status = ?
                     ORDER BY a.created_at DESC 
                     LIMIT ?";
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([$limit]);
+            $stmt->execute([$status, $limit]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             error_log("Error getting breaking news: " . $e->getMessage());
@@ -154,16 +156,16 @@ class Article extends Model
         }
     }
     
-    public function getFeatured($limit = 4) {
+    public function getFeatured($limit = 4, $status = self::STATUS_PUBLISHED) {
         try {
             $sql = "SELECT a.*, c.name as category, c.id as category_id
                     FROM {$this->table} a 
                     LEFT JOIN categories c ON a.category_id = c.id 
-                    WHERE a.featured = TRUE
+                    WHERE a.featured = TRUE AND a.status = ?
                     ORDER BY a.created_at DESC 
                     LIMIT ?";
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([$limit]);
+            $stmt->execute([$status, $limit]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             error_log("Error getting featured articles: " . $e->getMessage());
@@ -171,16 +173,17 @@ class Article extends Model
         }
     }
     
-    public function getPopular($limit = 3) {
+    public function getPopular($limit = 3, $status = self::STATUS_PUBLISHED) {
         try {
             $sql = "SELECT a.*, c.name as category, c.id as category_id,
                            COALESCE(a.views, 0) as views 
                     FROM {$this->table} a 
                     LEFT JOIN categories c ON a.category_id = c.id 
+                    WHERE a.status = ?
                     ORDER BY views DESC, a.created_at DESC 
                     LIMIT ?";
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([$limit]);
+            $stmt->execute([$status, $limit]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             error_log("Error getting popular articles: " . $e->getMessage());
