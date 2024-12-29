@@ -102,43 +102,43 @@ class ArticleController extends Controller
 
 
     public function view()
-    {
-        try {
-            $articleId = $_GET['id'] ?? null;
+{
+    try {
+        $articleId = $_GET['id'] ?? null;
 
-            if (!$articleId) {
-                $this->redirect('/');
-                return;
-            }
-
-            $articleModel = new Article();
-            $article = $articleModel->getWithDetails($articleId);
-
-            // Ensure the article is published
-            if (!$article || $article['status'] !== Article::STATUS_PUBLISHED) {
-                $this->redirect('/');
-                return;
-            }
-
-            // Get breaking news
-            $breakingNews = $articleModel->getBreakingNews(5);
-
-            // Increment view counter
-            $articleModel->incrementViews($articleId);
-
-            // Get comments
-            $commentModel = new Comment();
-            $comments = $commentModel->getByArticle($articleId);
-
-            $this->renderView('article/view', [
-                'article' => $article,
-                'comments' => $comments,
-                'breakingNews' => $breakingNews
-            ]);
-
-        } catch (Exception $e) {
-            error_log("ArticleController::view Error: " . $e->getMessage());
+        if (!$articleId) {
             $this->redirect('/');
+            return;
         }
+
+        $articleModel = new Article();
+        $article = $articleModel->getWithDetails($articleId);
+
+        // Allow admins to view unpublished articles
+        if (!$article || ($article['status'] !== Article::STATUS_PUBLISHED && $_SESSION['user_role'] !== 'admin')) {
+            $this->redirect('/');
+            return;
+        }
+
+        // Get breaking news
+        $breakingNews = $articleModel->getBreakingNews(5);
+
+        // Increment view counter
+        $articleModel->incrementViews($articleId);
+
+        // Get comments
+        $commentModel = new Comment();
+        $comments = $commentModel->getByArticle($articleId);
+
+        $this->renderView('article/view', [
+            'article' => $article,
+            'comments' => $comments,
+            'breakingNews' => $breakingNews
+        ]);
+
+    } catch (Exception $e) {
+        error_log("ArticleController::view Error: " . $e->getMessage());
+        $this->redirect('/');
     }
+}
 }

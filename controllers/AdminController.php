@@ -13,7 +13,7 @@ class AdminController extends Controller
         $this->middleware = new AdminMiddleware();
         $this->middleware->handle();
     }
-    
+
     public function index()
     {
         $userModel = new User();
@@ -85,24 +85,59 @@ class AdminController extends Controller
     }
 
     public function review()
-    {
+{
+    try {
         $articleModel = new Article();
-        $articles = $articleModel->getAll(null, Article::STATUS_REVIEWING);
-        $this->renderView('admin/review', ['articles' => $articles]);
+        $articles = $articleModel->getReviewArticles();
+        
+        $data = [
+            'articles' => $articles,
+            'currentPage' => 'review',
+            'userData' => [
+                'username' => $_SESSION['username'] ?? 'Admin',
+                'role' => $_SESSION['user_role']
+            ]
+        ];
+        
+        $this->renderView('admin/review', $data);
+    } catch (Exception $e) {
+        error_log("Admin Review Error: " . $e->getMessage());
+        $this->redirect('/admin/dashboard');
     }
+}
 
-    public function publishArticle($id)
-    {
+public function publishArticle()
+{
+    try {
+        $id = $_GET['id'] ?? null;
+        if (!$id) {
+            throw new Exception("Article ID not provided");
+        }
+
         $articleModel = new Article();
         $articleModel->update($id, ['status' => Article::STATUS_PUBLISHED]);
         $this->redirect('/admin/review');
+    } catch (Exception $e) {
+        error_log("Publish Error: " . $e->getMessage());
+        $this->redirect('/admin/review');
     }
+}
 
-    public function rejectArticle($id)
-    {
+public function rejectArticle()
+{
+    try {
+        $id = $_GET['id'] ?? null;
+        if (!$id) {
+            throw new Exception("Article ID not provided");
+        }
+
         $articleModel = new Article();
         $articleModel->update($id, ['status' => Article::STATUS_DISQUALIFIED]);
         $this->redirect('/admin/review');
+    } catch (Exception $e) {
+        error_log("Reject Error: " . $e->getMessage());
+        $this->redirect('/admin/review');
     }
+}
 }
 ?>

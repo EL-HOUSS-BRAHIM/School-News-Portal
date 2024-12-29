@@ -17,6 +17,32 @@ class Article extends Model
         return $this->pdo !== null;
     }
 
+    public function getReviewArticles() 
+    {
+        try {
+            $sql = "SELECT a.*, 
+                           c.name as category,
+                           u.username,
+                           COALESCE(a.views, 0) as views,
+                           COALESCE(a.likes, 0) as likes
+                    FROM {$this->table} a 
+                    LEFT JOIN categories c ON a.category_id = c.id
+                    LEFT JOIN users u ON a.user_id = u.id 
+                    WHERE a.status = ?
+                    ORDER BY a.created_at DESC";
+                    
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([self::STATUS_REVIEWING]);
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+            error_log("Review Articles Count: " . count($results)); // Debug log
+            return $results;
+        } catch (PDOException $e) {
+            error_log("Error getting review articles: " . $e->getMessage());
+            return [];
+        }
+    }
+
     public static function getStatusBadgeClass($status) {
         return match($status) {
             self::STATUS_DRAFT => 'warning',
