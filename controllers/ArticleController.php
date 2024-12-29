@@ -20,18 +20,38 @@ class ArticleController extends Controller
 
     public function store()
     {
-        $title = sanitizeInput($_POST['title']);
-        $content = sanitizeInput($_POST['content']);
-        $image = uploadToCloudinary($_FILES['image']['tmp_name']);
+        try {
+            $title = sanitizeInput($_POST['title']);
+            $content = sanitizeInput($_POST['content']);
+            $category_id = (int) $_POST['category_id'];
+            $status = sanitizeInput($_POST['status']);
+            $user_id = $_SESSION['user_id'];
 
-        $articleModel = new Article();
-        $articleModel->save([
-            'title' => $title,
-            'content' => $content,
-            'image' => $image,
-        ]);
+            $image = null;
+            if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+                $image = uploadToCloudinary($_FILES['image']['tmp_name']);
+            }
 
-        $this->redirect('/articles');
+            $articleModel = new Article();
+            $articleModel->save([
+                'title' => $title,
+                'content' => $content,
+                'image' => $image,
+                'category_id' => $category_id,
+                'user_id' => $user_id,
+                'status' => $status
+            ]);
+
+            $this->redirect('/dashboard/articles');
+        } catch (Exception $e) {
+            error_log("Error creating article: " . $e->getMessage());
+            error_log("Post Data: " . print_r($_POST, true));
+            error_log("File Data: " . print_r($_FILES, true));
+            $this->renderView('article/create', [
+                'error' => 'Failed to create article',
+                'formData' => $_POST
+            ]);
+        }
     }
 
     public function edit($id)
@@ -43,66 +63,82 @@ class ArticleController extends Controller
 
     public function update($id)
     {
-        $title = sanitizeInput($_POST['title']);
-        $content = sanitizeInput($_POST['content']);
-        $image = uploadToCloudinary($_FILES['image']['tmp_name']);
+        try {
+            $title = sanitizeInput($_POST['title']);
+            $content = sanitizeInput($_POST['content']);
+            $category_id = (int) $_POST['category_id'];
+            $status = sanitizeInput($_POST['status']);
 
-        $articleModel = new Article();
-        $articleModel->update($id, [
-            'title' => $title,
-            'content' => $content,
-            'image' => $image,
-        ]);
+            $image = null;
+            if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+                $image = uploadToCloudinary($_FILES['image']['tmp_name']);
+            }
 
-        $this->redirect('/articles');
+            $articleModel = new Article();
+            $articleModel->update($id, [
+                'title' => $title,
+                'content' => $content,
+                'image' => $image,
+                'category_id' => $category_id,
+                'status' => $status
+            ]);
+
+            $this->redirect('/dashboard/articles');
+        } catch (Exception $e) {
+            error_log("Error updating article: " . $e->getMessage());
+            $this->renderView('article/edit', [
+                'error' => 'Failed to update article',
+                'article' => $articleModel->find($id)
+            ]);
+        }
     }
 
     public function delete($id)
     {
         $articleModel = new Article();
         $articleModel->delete($id);
-        $this->redirect('/articles');
+        $this->redirect('/dashboard/articles');
     }
 
-    // Add new view method
+
     public function view()
-{
-    try {
-        $articleId = $_GET['id'] ?? null;
-        
-        if (!$articleId) {
-            $this->redirect('/');
-            return;
-        }
+    {
+        try {
+            $articleId = $_GET['id'] ?? null;
 
-        $articleModel = new Article();
-        $article = $articleModel->getWithDetails($articleId);
-        
-        // Get breaking news
-        $breakingNews = $articleModel->getBreakingNews(5);
-        
-        if (!$article) {
-            $this->redirect('/');
-            return;
-        }
+            if (!$articleId) {
+                $this->redirect('/');
+                return;
+            }
 
-        // Increment view counter
-        $articleModel->incrementViews($articleId);
-        
-        // Get comments
-        $commentModel = new Comment();
-        $comments = $commentModel->getByArticle($articleId);
-        
-        $this->renderView('article/view', [
-            'article' => $article,
-            'comments' => $comments,
-            'breakingNews' => $breakingNews
-        ]);
-        
-    } catch (Exception $e) {
-        error_log("ArticleController::view Error: " . $e->getMessage());
-        $this->redirect('/');
+            $articleModel = new Article();
+            $article = $articleModel->getWithDetails($articleId);
+
+            // Ensure the article is published
+            if (!$article || $article['status'] !== Article::STATUS_PUBLISHED) {
+                $this->redirect('/');
+                return;
+            }
+
+            // Get breaking news
+            $breakingNews = $articleModel->getBreakingNews(5);
+
+            // Increment view counter
+            $articleModel->incrementViews($articleId);
+
+            // Get comments
+            $commentModel = new Comment();
+            $comments = $commentModel->getByArticle($articleId);
+
+            $this->renderView('article/view', [
+                'article' => $article,
+                'comments' => $comments,
+                'breakingNews' => $breakingNews
+            ]);
+
+        } catch (Exception $e) {
+            error_log("ArticleController::view Error: " . $e->getMessage());
+            $this->redirect('/');
+        }
     }
 }
-}
-?>

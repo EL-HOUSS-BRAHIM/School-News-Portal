@@ -84,7 +84,15 @@ require_once __DIR__ . '/../layouts/article_header.php';
                                    href="/category/<?php echo htmlspecialchars($article['category_id']); ?>">
                                     <?php echo htmlspecialchars($article['category']); ?>
                                 </a>
-                                <span class="text-body"><?php echo date('M d, Y', strtotime($article['created_at'])); ?></span>
+                                <span class="text-body">
+                                    <?php 
+                                    if (!empty($article['created_at'])) {
+                                        echo date('M d, Y', strtotime($article['created_at']));
+                                    } else {
+                                        echo 'N/A';
+                                    } 
+                                    ?>
+                                </span>
                             </div>
                             <h1 class="mb-3 text-secondary text-uppercase font-weight-bold">
                                 <?php echo htmlspecialchars($article['title']); ?>

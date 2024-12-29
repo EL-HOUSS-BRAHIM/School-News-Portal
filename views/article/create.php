@@ -65,12 +65,8 @@ include '../views/layouts/dash_header.php'; ?>
                                         <!-- Image Upload -->
                                         <div class="form-group mt-3">
                                             <label class="form-control-label">Featured Image</label>
-                                            <div class="dropzone mt-2" id="imageUpload">
-                                                <div class="dz-default dz-message">
-                                                    <button class="dz-button" type="button">Drop image here or click to upload</button>
-                                                </div>
-                                            </div>
-                                            <input type="hidden" name="image" id="uploadedImage">
+                                            <input type="file" class="form-control" name="image" id="imageUpload" onchange="previewImage(this);" required>
+                                            <img id="imagePreview" src="#" alt="Image Preview" style="display: none; width: 100%; margin-top: 10px;">
                                         </div>
 
                                         <!-- Submit Buttons -->

@@ -176,7 +176,13 @@
                                                 </td>
                                                 <td class="align-middle text-center">
                                                     <span class="text-secondary text-xs font-weight-bold">
-                                                        <?php echo date('M d, Y', strtotime($article['created_at'])); ?>
+                                                        <?php 
+                                                        if (!empty($article['created_at'])) {
+                                                            echo date('M d, Y', strtotime($article['created_at']));
+                                                        } else {
+                                                            echo 'N/A';
+                                                        }
+                                                        ?>
                                                     </span>
                                                 </td>
                                                 <td class="align-middle">

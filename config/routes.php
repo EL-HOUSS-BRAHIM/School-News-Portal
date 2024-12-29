@@ -1,6 +1,5 @@
 <?php
 $routes = [
-    // Existing routes
     '/' => 'HomeController@index',
     '/articles' => 'ArticleController@index',
     '/article' => 'ArticleController@view',

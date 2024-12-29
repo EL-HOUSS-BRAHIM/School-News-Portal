@@ -29,14 +29,28 @@ class Model
     }
 
     public function save($data)
-    {
+{
+    try {
+        // Ensure created_at is set
+        if (!isset($data['created_at'])) {
+            $data['created_at'] = date('Y-m-d H:i:s');
+        }
+        
         $columns = implode(", ", array_keys($data));
         $values = ":" . implode(", :", array_keys($data));
-        $stmt = $this->pdo->prepare("INSERT INTO {$this->table} ($columns) VALUES ($values)");
+        
+        $sql = "INSERT INTO {$this->table} ($columns) VALUES ($values)";
+        $stmt = $this->pdo->prepare($sql);
+        
         $result = $stmt->execute($data);
-        $stmt->closeCursor(); // Close the cursor to free up the connection
+        $stmt->closeCursor();
+        
         return $result;
+    } catch (PDOException $e) {
+        error_log("Error saving article: " . $e->getMessage());
+        throw $e;
     }
+}
 
     public function update($id, $data)
     {
