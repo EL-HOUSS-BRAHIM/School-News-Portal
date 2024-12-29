@@ -27,6 +27,27 @@ class AdminController extends Controller
         $this->renderView('admin/users', ['users' => $users]);
     }
 
+    public function addUser()
+    {
+        $this->renderView('admin/add_user');
+    }
+
+    public function storeUser()
+    {
+        $username = sanitizeInput($_POST['username']);
+        $password = password_hash(sanitizeInput($_POST['password']), PASSWORD_BCRYPT);
+        $role = sanitizeInput($_POST['role']);
+
+        $userModel = new User();
+        $userModel->save([
+            'username' => $username,
+            'password' => $password,
+            'role' => $role,
+        ]);
+
+        $this->redirect('/admin/users');
+    }
+
     public function editUser($id)
     {
         $userModel = new User();
@@ -53,6 +74,27 @@ class AdminController extends Controller
         $userModel = new User();
         $userModel->delete($id);
         $this->redirect('/admin/users');
+    }
+
+    public function review()
+    {
+        $articleModel = new Article();
+        $articles = $articleModel->getAll(null, Article::STATUS_REVIEWING);
+        $this->renderView('admin/review', ['articles' => $articles]);
+    }
+
+    public function publishArticle($id)
+    {
+        $articleModel = new Article();
+        $articleModel->update($id, ['status' => Article::STATUS_PUBLISHED]);
+        $this->redirect('/admin/review');
+    }
+
+    public function rejectArticle($id)
+    {
+        $articleModel = new Article();
+        $articleModel->update($id, ['status' => Article::STATUS_DISQUALIFIED]);
+        $this->redirect('/admin/review');
     }
 }
 ?>

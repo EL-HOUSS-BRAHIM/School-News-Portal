@@ -20,9 +20,23 @@ $routes = [
     '/dashboard/article/status' => 'UserDashController@updateStatus',
     '/dashboard/analytics' => 'UserDashController@analytics',
     '/dashboard/profile' => 'UserDashController@profile',
+
+    // Admin routes
+    '/admin/users' => 'AdminController@users',
+    '/admin/add_user' => 'AdminController@addUser',
+    '/admin/store_user' => 'AdminController@storeUser',
+    '/admin/review' => 'AdminController@review',
+    '/admin/publish_article' => 'AdminController@publishArticle',
+    '/admin/reject_article' => 'AdminController@rejectArticle',
 ];
 
 function getRoute($url) {
     global $routes;
-    return $routes[$url] ?? null;
+    $parsedUrl = parse_url($url);
+    $path = $parsedUrl['path'];
+    $query = [];
+    if (isset($parsedUrl['query'])) {
+        parse_str($parsedUrl['query'], $query);
+    }
+    return [$routes[$path] ?? null, $query];
 }

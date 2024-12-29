@@ -73,10 +73,14 @@ class UserDashController extends Controller
             }
 
             $articleModel = new Article();
+            $categoryModel = new Category();
+
+            $categories = $categoryModel->getAll();
             $articles = $articleModel->getByUser($_SESSION['user_id']);
         
             $data = [
                 'articles' => $articles,
+                'categories' => $categories,
                 'userData' => [
                 'username' => $_SESSION['username'],
                 'role' => $_SESSION['user_role']

@@ -19,7 +19,7 @@ class User extends Model
 
     public function save($data)
     {
-        return parent::save($this->table, $data);
+        return parent::save($data);
     }
 
     public function update($id, $data)

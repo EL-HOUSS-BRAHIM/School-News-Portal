@@ -29,28 +29,33 @@ class Model
     }
 
     public function save($data)
-{
-    try {
-        // Ensure created_at is set
-        if (!isset($data['created_at'])) {
-            $data['created_at'] = date('Y-m-d H:i:s');
+    {
+        try {
+            // Ensure created_at is set
+            if (!isset($data['created_at'])) {
+                $data['created_at'] = date('Y-m-d H:i:s');
+            }
+            
+            $columns = implode(", ", array_keys($data));
+            $placeholders = ":" . implode(", :", array_keys($data));
+            
+            $sql = "INSERT INTO {$this->table} ($columns) VALUES ($placeholders)";
+            $stmt = $this->pdo->prepare($sql);
+            
+            // Bind parameters
+            foreach ($data as $key => $value) {
+                $stmt->bindValue(":$key", $value);
+            }
+            
+            $result = $stmt->execute();
+            $stmt->closeCursor();
+            
+            return $result;
+        } catch (PDOException $e) {
+            error_log("Error saving data: " . $e->getMessage());
+            throw $e;
         }
-        
-        $columns = implode(", ", array_keys($data));
-        $values = ":" . implode(", :", array_keys($data));
-        
-        $sql = "INSERT INTO {$this->table} ($columns) VALUES ($values)";
-        $stmt = $this->pdo->prepare($sql);
-        
-        $result = $stmt->execute($data);
-        $stmt->closeCursor();
-        
-        return $result;
-    } catch (PDOException $e) {
-        error_log("Error saving article: " . $e->getMessage());
-        throw $e;
     }
-}
 
     public function update($id, $data)
     {

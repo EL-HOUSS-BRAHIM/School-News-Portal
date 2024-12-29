@@ -27,7 +27,7 @@
                         <li class="nav-item d-flex align-items-center">
                             <a href="/dashboard/profile" class="nav-link text-body font-weight-bold px-0">
                                 <i class="fa fa-user me-sm-1"></i>
-                                <span class="d-sm-inline d-none">User</span>
+                                <span class="d-sm-inline d-none"><?php echo htmlspecialchars($userData['username']); ?></span>
                             </a>
                         </li>
                         
@@ -55,24 +55,26 @@
                                 <i class="fa fa-bell cursor-pointer"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
-                                                                                                            <li class="mb-2">
-                                            <a class="dropdown-item border-radius-md" href="#">
-                                                <div class="d-flex py-1">
-                                                    <div class="my-auto">
-                                                        <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3">
-                                                    </div>
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="text-sm font-weight-normal mb-1">
-                                                            <span class="font-weight-bold">New Comment</span>
-                                                            Someone commented on your article                                                        </h6>
-                                                        <p class="text-xs text-secondary mb-0">
-                                                            <i class="fa fa-clock me-1"></i>
-                                                            13 minutes ago                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                                                                                </ul>
+                                <li class="mb-2">
+                                    <a class="dropdown-item border-radius-md" href="#">
+                                        <div class="d-flex py-1">
+                                            <div class="my-auto">
+                                                <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3">
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="text-sm font-weight-normal mb-1">
+                                                    <span class="font-weight-bold">New Comment</span>
+                                                    Someone commented on your article
+                                                </h6>
+                                                <p class="text-xs text-secondary mb-0">
+                                                    <i class="fa fa-clock me-1"></i>
+                                                    13 minutes ago
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -97,22 +99,24 @@
                                 </div>
                             </div>
                             <div class="row mt-3">
-                            <div class="col-md-3">
-                                <select class="form-select" aria-label="Filter by status" name="status_filter">
-                                <option value="">All Status</option>
-                                <?php foreach(Article::getAllStatuses() as $value => $label): ?>
-                                <option value="<?php echo $value; ?>" <?php echo isset($_GET['status']) && $_GET['status'] === $value ? 'selected' : ''; ?>>
-                                <?php echo htmlspecialchars($label); ?>
-                                </option>
-                                <?php endforeach; ?>
-                                </select>
-                            </div>
+                                <div class="col-md-3">
+                                    <select class="form-select" aria-label="Filter by status" name="status_filter">
+                                        <option value="">All Status</option>
+                                        <?php foreach(Article::getAllStatuses() as $value => $label): ?>
+                                            <option value="<?php echo $value; ?>" <?php echo isset($_GET['status']) && $_GET['status'] === $value ? 'selected' : ''; ?>>
+                                                <?php echo htmlspecialchars($label); ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
                                 <div class="col-md-3">
                                     <select class="form-select" aria-label="Filter by category">
                                         <option selected>All Categories</option>
-                                        <?php foreach($categories as $category): ?>
-                                            <option value="<?php echo $category['id']; ?>"><?php echo htmlspecialchars($category['name']); ?></option>
-                                        <?php endforeach; ?>
+                                        <?php if (isset($categories) && is_array($categories)): ?>
+                                            <?php foreach($categories as $category): ?>
+                                                <option value="<?php echo $category['id']; ?>"><?php echo htmlspecialchars($category['name']); ?></option>
+                                            <?php endforeach; ?>
+                                        <?php endif; ?>
                                     </select>
                                 </div>
                                 <div class="col-md-6">
@@ -158,11 +162,20 @@
                                                         <?php echo htmlspecialchars($article['category']); ?>
                                                     </span>
                                                 </td>
-                                                <!-- Status Badge in Table -->
                                                 <td class="align-middle text-center text-sm">
-                                                    <span class="badge badge-sm bg-gradient-<?php echo Article::getStatusBadgeClass($article['status']); ?>">
-                                                    <?php echo ucfirst(htmlspecialchars($article['status'])); ?>
-                                                    </span>
+                                                    <form action="/dashboard/article/status" method="POST" class="d-inline">
+                                                        <input type="hidden" name="id" value="<?php echo $article['id']; ?>">
+                                                        <select name="status" class="form-select form-select-sm d-inline w-auto" onchange="showSaveButton(this)">
+                                                            <?php foreach(Article::getAllStatuses() as $value => $label): ?>
+                                                                <option value="<?php echo $value; ?>" <?php echo $value == $article['status'] ? 'selected' : ''; ?>>
+                                                                    <?php echo htmlspecialchars($label); ?>
+                                                                </option>
+                                                            <?php endforeach; ?>
+                                                        </select>
+                                                        <div class="d-flex justify-content-center mt-2">
+                                                            <button type="submit" class="btn btn-sm btn-primary save-button" style="display: none;">Save</button>
+                                                        </div>
+                                                    </form>
                                                 </td>
                                                 <td class="align-middle text-center">
                                                     <div class="d-flex align-items-center justify-content-center">
@@ -268,6 +281,27 @@
         
         modal.show();
     }
+
+    function showSaveButton(selectElement) {
+        const form = selectElement.closest('form');
+        const saveButton = form.querySelector('.save-button');
+        const originalValue = selectElement.getAttribute('data-original-value');
+
+        if (selectElement.value !== originalValue) {
+            saveButton.style.display = 'inline-block';
+        } else {
+            saveButton.style.display = 'none';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const selects = document.querySelectorAll('select[name="status"]');
+        selects.forEach(select => {
+            select.setAttribute('data-original-value', select.value);
+        });
+    });
     </script>
 
     <?php include '../views/layouts/dash_footer.php'; ?>
+</body>
+</html>

@@ -1,18 +1,3 @@
-<?php
-
-require_once __DIR__ . '/../../config/app.php';
-try {
-    // Get app configuration
-    $app = require __DIR__ . '/../../config/app.php';
-    
-    // Get current page from the passed data instead of PHP_SELF
-    $currentPage = $currentPage ?? '';  // Use the value passed from controller
-} catch (Exception $e) {
-    error_log("Header Error: " . $e->getMessage());
-    $categories = [];
-    $app = ['app_name' => 'School News Portal'];
-}
-?>
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-transparent" id="sidenav-main">
     <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -44,6 +29,28 @@ try {
                 </a>
             </li>
 
+            <!-- Admin Pages -->
+            <?php if ($_SESSION['user_role'] === 'admin'): ?>
+                <!-- Users -->
+                <li class="nav-item">
+                    <a class="nav-link <?php echo $currentPage == 'users' ? 'active bg-gradient-primary' : ''; ?>" href="/admin/users">
+                        <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-users <?php echo $currentPage == 'users' ? 'text-white' : 'text-info'; ?> text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Users</span>
+                    </a>
+                </li>
+
+                <!-- Review Articles -->
+                <li class="nav-item">
+                    <a class="nav-link <?php echo $currentPage == 'review' ? 'active bg-gradient-primary' : ''; ?>" href="/admin/review">
+                        <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-check <?php echo $currentPage == 'review' ? 'text-white' : 'text-success'; ?> text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Review Articles</span>
+                    </a>
+                </li>
+            <?php endif; ?>
             <!-- New Article -->
             <li class="nav-item">
                 <a class="nav-link <?php echo $currentPage == 'new' ? 'active bg-gradient-primary' : ''; ?>" href="/dashboard/article/new">

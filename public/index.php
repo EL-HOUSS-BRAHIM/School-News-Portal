@@ -36,17 +36,23 @@ require_once __DIR__ . '/../controllers/CommentController.php';
 require_once __DIR__ . '/../controllers/UserDashController.php';
 
 try {
-    $requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-    $route = getRoute($requestUri);
-    
+    $url = $_SERVER['REQUEST_URI'];
+    list($route, $params) = getRoute($url);
+
     if ($route) {
-        list($controller, $method) = explode('@', $route);
-        $controllerClass = new $controller();
-        $controllerClass->$method();
+        list($controllerName, $methodName) = explode('@', $route);
+        require_once __DIR__ . "/../controllers/$controllerName.php";
+        $controller = new $controllerName();
+
+        if (method_exists($controller, $methodName)) {
+            // Convert associative array to indexed array
+            $params = array_values($params);
+            call_user_func_array([$controller, $methodName], $params);
+        } else {
+            echo "Method $methodName not found in controller $controllerName.";
+        }
     } else {
-        // Default to home
-        $controller = new HomeController();
-        $controller->index();
+        echo "Route not found.";
     }
 } catch (Exception $e) {
     error_log("Application Error: " . $e->getMessage());
