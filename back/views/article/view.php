@@ -1,43 +1,10 @@
 <?php
-require_once __DIR__ . '/../../models/Article.php';
-require_once __DIR__ . '/../../models/Comment.php';
-
-// Get article ID from URL
-$articleId = $_GET['id'] ?? null;
-
-if (!$articleId) {
-    header('Location: /');
-    exit;
-}
-
-try {
-    $articleModel = new Article();
-    $commentModel = new Comment();
-    
-    // Increment view counter
-    $articleModel->incrementViews($articleId);
-    
-    // Get article details
-    $article = $articleModel->getWithDetails($articleId);
-    
-    // Get article comments
-    $comments = $commentModel->getByArticle($articleId);
-    
-    if (!$article) {
-        throw new Exception("Article not found");
-    }
-    
-} catch (Exception $e) {
-    error_log("View Error: " . $e->getMessage());
-    header('Location: /');
-    exit;
-}
 
 require_once __DIR__ . '/../layouts/article_header.php';
 ?>
 
-    <!-- Breaking News Start -->
-    <div class="container-fluid mt-5 mb-3 pt-3">
+<!-- Breaking News Start -->
+<div class="container-fluid mt-5 mb-3 pt-3">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12">
@@ -51,7 +18,7 @@ require_once __DIR__ . '/../layouts/article_header.php';
                             <?php foreach($breakingNews as $news): ?>
                                 <div class="text-truncate">
                                     <a class="text-secondary text-uppercase font-weight-semi-bold" 
-                                       href="/article?id=<?php echo htmlspecialchars($news['id']); ?>">
+                                       href="/article/<?php echo urlencode($news['title']); ?>">
                                         <?php echo htmlspecialchars($news['title']); ?>
                                     </a>
                                 </div>
@@ -67,12 +34,14 @@ require_once __DIR__ . '/../layouts/article_header.php';
         </div>
     </div>
 </div>
-    <!-- Breaking News End -->
-    <!-- News With Sidebar Start -->
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
+<!-- Breaking News End -->
+
+<!-- News With Sidebar Start -->
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <?php if (isset($article) && $article): ?>
                     <!-- News Detail Start -->
                     <div class="position-relative mb-3">
                         <img class="img-fluid w-100" 
@@ -98,8 +67,8 @@ require_once __DIR__ . '/../layouts/article_header.php';
                                 <?php echo htmlspecialchars($article['title']); ?>
                             </h1>
                             <div class="article-content">
-    <?php echo html_entity_decode($article['content']); ?>
-</div>
+                                <?php echo html_entity_decode($article['content']); ?>
+                            </div>
                         </div>
                         <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                             <div class="d-flex align-items-center">
@@ -150,7 +119,7 @@ require_once __DIR__ . '/../layouts/article_header.php';
                         </div>
                         <div class="bg-white border border-top-0 p-4">
                             <form action="/comment/add" method="POST">
-                                <input type="hidden" name="article_id" value="<?php echo $articleId; ?>">
+                                <input type="hidden" name="article_id" value="<?php echo htmlspecialchars($article['id']); ?>">
                                 <div class="form-group">
                                     <label for="message">Message *</label>
                                     <textarea id="message" name="content" cols="30" rows="5" class="form-control" required></textarea>
@@ -170,15 +139,15 @@ require_once __DIR__ . '/../layouts/article_header.php';
                         </div>
                     </div>
                     <!-- Comment Form End -->
-                </div>
-
-                
-                <?php include __DIR__ . '/../layouts/article_sidebar.php'; ?>
-                
+                <?php else: ?>
+                    <div class="alert alert-warning">Article not found</div>
+                <?php endif; ?>
             </div>
+
+            <?php include __DIR__ . '/../layouts/article_sidebar.php'; ?>
         </div>
     </div>
-    <!-- News With Sidebar End -->
-
+</div>
+<!-- News With Sidebar End -->
 
 <?php include __DIR__ . '/../layouts/article_footer.php'; ?>

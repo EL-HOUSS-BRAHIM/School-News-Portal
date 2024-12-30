@@ -1,177 +1,565 @@
-[30-Dec-2024 13:01:01 UTC] Attempting database connection with:
-[30-Dec-2024 13:01:01 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:01:01 UTC] Database: sql7754447
-[30-Dec-2024 13:01:01 UTC] Username: sql7754447
-[30-Dec-2024 13:01:26 UTC] Attempting database connection with:
-[30-Dec-2024 13:01:26 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:01:26 UTC] Database: sql7754447
-[30-Dec-2024 13:01:26 UTC] Username: sql7754447
-[30-Dec-2024 13:01:46 UTC] Attempting database connection with:
-[30-Dec-2024 13:01:46 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:01:46 UTC] Database: sql7754447
-[30-Dec-2024 13:01:46 UTC] Username: sql7754447
-[30-Dec-2024 13:02:03 UTC] Attempting database connection with:
-[30-Dec-2024 13:02:03 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:02:03 UTC] Database: sql7754447
-[30-Dec-2024 13:02:03 UTC] Username: sql7754447
-[30-Dec-2024 13:02:17 UTC] Attempting database connection with:
-[30-Dec-2024 13:02:17 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:02:17 UTC] Database: sql7754447
-[30-Dec-2024 13:02:17 UTC] Username: sql7754447
-[30-Dec-2024 13:02:29 UTC] Attempting database connection with:
-[30-Dec-2024 13:02:29 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:02:29 UTC] Database: sql7754447
-[30-Dec-2024 13:02:29 UTC] Username: sql7754447
-[30-Dec-2024 13:02:46 UTC] Attempting database connection with:
-[30-Dec-2024 13:02:46 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:02:46 UTC] Database: sql7754447
-[30-Dec-2024 13:02:46 UTC] Username: sql7754447
-[30-Dec-2024 13:46:02 UTC] Attempting database connection with:
-[30-Dec-2024 13:46:02 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:46:02 UTC] Database: sql7754447
-[30-Dec-2024 13:46:02 UTC] Username: sql7754447
-[30-Dec-2024 13:46:08 UTC] Login attempt for username: yassine
-[30-Dec-2024 13:46:08 UTC] Attempting database connection with:
-[30-Dec-2024 13:46:08 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:46:08 UTC] Database: sql7754447
-[30-Dec-2024 13:46:08 UTC] Username: sql7754447
-[30-Dec-2024 13:46:08 UTC] Login successful. Session data: Array
+[30-Dec-2024 19:23:41 UTC] Attempting database connection with:
+[30-Dec-2024 19:23:41 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:23:41 UTC] Database: sql7754447
+[30-Dec-2024 19:23:41 UTC] Username: sql7754447
+[30-Dec-2024 19:23:42 UTC] Attempting database connection with:
+[30-Dec-2024 19:23:42 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:23:42 UTC] Database: sql7754447
+[30-Dec-2024 19:23:42 UTC] Username: sql7754447
+[30-Dec-2024 19:26:34 UTC] viewByTitle called with title: testing7643
+[30-Dec-2024 19:26:34 UTC] Attempting database connection with:
+[30-Dec-2024 19:26:34 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:26:34 UTC] Database: sql7754447
+[30-Dec-2024 19:26:34 UTC] Username: sql7754447
+[30-Dec-2024 19:26:36 UTC] Attempting database connection with:
+[30-Dec-2024 19:26:36 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:26:36 UTC] Database: sql7754447
+[30-Dec-2024 19:26:36 UTC] Username: sql7754447
+[30-Dec-2024 19:27:54 UTC] viewByTitle called with title: testing654
+[30-Dec-2024 19:27:54 UTC] Attempting database connection with:
+[30-Dec-2024 19:27:54 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:27:54 UTC] Database: sql7754447
+[30-Dec-2024 19:27:54 UTC] Username: sql7754447
+[30-Dec-2024 19:27:55 UTC] Attempting database connection with:
+[30-Dec-2024 19:27:55 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:27:55 UTC] Database: sql7754447
+[30-Dec-2024 19:27:55 UTC] Username: sql7754447
+[30-Dec-2024 19:33:09 UTC] Processing URL: /article/testing7643
+[30-Dec-2024 19:33:09 UTC] Checking pattern: /^\/$/ against path: /article/testing7643
+[30-Dec-2024 19:33:09 UTC] Checking pattern: /^\/articles$/ against path: /article/testing7643
+[30-Dec-2024 19:33:09 UTC] Checking pattern: /^\/article$/ against path: /article/testing7643
+[30-Dec-2024 19:33:09 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/testing7643
+[30-Dec-2024 19:33:09 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[30-Dec-2024 19:33:09 UTC] Parameters: Array
 (
-    [csrf_token] => 38b915139e19fda872658a68686503eceee82db1def5885db1c139e6c80529fd
-    [user_id] => 1
-    [username] => yassine
-    [user_role] => admin
+    [0] => testing7643
 )
 
-[30-Dec-2024 13:46:08 UTC] Session data in middleware: Array
+[30-Dec-2024 19:33:09 UTC] viewByTitle called with title: testing7643
+[30-Dec-2024 19:33:09 UTC] Attempting database connection with:
+[30-Dec-2024 19:33:09 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:33:09 UTC] Database: sql7754447
+[30-Dec-2024 19:33:09 UTC] Username: sql7754447
+[30-Dec-2024 19:33:10 UTC] Getting article by title: testing7643
+[30-Dec-2024 19:33:10 UTC] Query result: Array
 (
-    [csrf_token] => 38b915139e19fda872658a68686503eceee82db1def5885db1c139e6c80529fd
+    [id] => 26
+    [title] => testing7643
+    [content] => &lt;p&gt;testingghted4578&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735558658/z9qizu2ws3vwsvkfis9j.jpg
+    [category_id] => 1
     [user_id] => 1
-    [username] => yassine
-    [user_role] => admin
+    [views] => 8
+    [featured] => 0
+    [breaking] => 0
+    [status] => reviewing
+    [likes] => 0
+    [created_at] => 2024-12-30 11:37:37
+    [updated_at] => 2024-12-30 20:27:16
+    [category] => World News
+    [author] => yassine
 )
 
-[30-Dec-2024 13:46:08 UTC] Attempting database connection with:
-[30-Dec-2024 13:46:08 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:46:08 UTC] Database: sql7754447
-[30-Dec-2024 13:46:08 UTC] Username: sql7754447
-[30-Dec-2024 13:46:10 UTC] getByUser Query: SELECT a.*, c.name as category 
-                    FROM articles a 
-                    LEFT JOIN categories c ON a.category_id = c.id 
-                    WHERE a.user_id = ?
-                    ORDER BY a.created_at DESC LIMIT ?
-[30-Dec-2024 13:46:10 UTC] getByUser Results count: 5
-[30-Dec-2024 13:46:14 UTC] Session data in middleware: Array
+[30-Dec-2024 19:33:10 UTC] Article data: Array
 (
-    [csrf_token] => 38b915139e19fda872658a68686503eceee82db1def5885db1c139e6c80529fd
+    [id] => 26
+    [title] => testing7643
+    [content] => &lt;p&gt;testingghted4578&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735558658/z9qizu2ws3vwsvkfis9j.jpg
+    [category_id] => 1
     [user_id] => 1
-    [username] => yassine
-    [user_role] => admin
+    [views] => 8
+    [featured] => 0
+    [breaking] => 0
+    [status] => reviewing
+    [likes] => 0
+    [created_at] => 2024-12-30 11:37:37
+    [updated_at] => 2024-12-30 20:27:16
+    [category] => World News
+    [author] => yassine
 )
 
-[30-Dec-2024 13:46:14 UTC] Attempting database connection with:
-[30-Dec-2024 13:46:14 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:46:14 UTC] Database: sql7754447
-[30-Dec-2024 13:46:14 UTC] Username: sql7754447
-[30-Dec-2024 13:46:14 UTC] Current Page: new
-[30-Dec-2024 13:46:15 UTC] Session data in middleware: Array
+[30-Dec-2024 19:33:11 UTC] Rendering article view with data
+[30-Dec-2024 19:33:11 UTC] PHP Warning:  Undefined variable $articleId in /home/brahim/Desktop/newproject/back/views/article/view.php on line 120
+[30-Dec-2024 19:37:22 UTC] Processing URL: /article/testing7643
+[30-Dec-2024 19:37:22 UTC] Checking pattern: /^\/$/ against path: /article/testing7643
+[30-Dec-2024 19:37:22 UTC] Checking pattern: /^\/articles$/ against path: /article/testing7643
+[30-Dec-2024 19:37:22 UTC] Checking pattern: /^\/article$/ against path: /article/testing7643
+[30-Dec-2024 19:37:22 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/testing7643
+[30-Dec-2024 19:37:22 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[30-Dec-2024 19:37:22 UTC] Parameters: Array
 (
-    [csrf_token] => 38b915139e19fda872658a68686503eceee82db1def5885db1c139e6c80529fd
-    [user_id] => 1
-    [username] => yassine
-    [user_role] => admin
+    [0] => testing7643
 )
 
-[30-Dec-2024 13:46:15 UTC] Attempting database connection with:
-[30-Dec-2024 13:46:15 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:46:15 UTC] Database: sql7754447
-[30-Dec-2024 13:46:15 UTC] Username: sql7754447
-[30-Dec-2024 13:46:15 UTC] Current Page: new
-[30-Dec-2024 13:46:19 UTC] Attempting database connection with:
-[30-Dec-2024 13:46:19 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:46:19 UTC] Database: sql7754447
-[30-Dec-2024 13:46:19 UTC] Username: sql7754447
-[30-Dec-2024 13:46:19 UTC] Review Articles Count: 0
-[30-Dec-2024 13:50:46 UTC] Session data in middleware: Array
+[30-Dec-2024 19:37:22 UTC] viewByTitle called with title: testing7643
+[30-Dec-2024 19:37:22 UTC] Attempting database connection with:
+[30-Dec-2024 19:37:22 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:37:22 UTC] Database: sql7754447
+[30-Dec-2024 19:37:22 UTC] Username: sql7754447
+[30-Dec-2024 19:37:23 UTC] Getting article by title: testing7643
+[30-Dec-2024 19:37:23 UTC] Query result: Array
 (
-    [csrf_token] => 38b915139e19fda872658a68686503eceee82db1def5885db1c139e6c80529fd
+    [id] => 26
+    [title] => testing7643
+    [content] => &lt;p&gt;testingghted4578&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735558658/z9qizu2ws3vwsvkfis9j.jpg
+    [category_id] => 1
     [user_id] => 1
-    [username] => yassine
-    [user_role] => admin
+    [views] => 9
+    [featured] => 0
+    [breaking] => 0
+    [status] => reviewing
+    [likes] => 0
+    [created_at] => 2024-12-30 11:37:37
+    [updated_at] => 2024-12-30 20:33:51
+    [category] => World News
+    [author] => yassine
 )
 
-[30-Dec-2024 13:50:46 UTC] Attempting database connection with:
-[30-Dec-2024 13:50:46 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:50:46 UTC] Database: sql7754447
-[30-Dec-2024 13:50:46 UTC] Username: sql7754447
-[30-Dec-2024 13:50:47 UTC] getByUser Query: SELECT a.*, c.name as category 
-                    FROM articles a 
-                    LEFT JOIN categories c ON a.category_id = c.id 
-                    WHERE a.user_id = ?
-                    ORDER BY a.created_at DESC LIMIT ?
-[30-Dec-2024 13:50:47 UTC] getByUser Results count: 5
-[30-Dec-2024 13:50:56 UTC] Session data in middleware: Array
+[30-Dec-2024 19:37:23 UTC] Article data: Array
 (
-    [csrf_token] => 38b915139e19fda872658a68686503eceee82db1def5885db1c139e6c80529fd
+    [id] => 26
+    [title] => testing7643
+    [content] => &lt;p&gt;testingghted4578&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735558658/z9qizu2ws3vwsvkfis9j.jpg
+    [category_id] => 1
     [user_id] => 1
-    [username] => yassine
-    [user_role] => admin
+    [views] => 9
+    [featured] => 0
+    [breaking] => 0
+    [status] => reviewing
+    [likes] => 0
+    [created_at] => 2024-12-30 11:37:37
+    [updated_at] => 2024-12-30 20:33:51
+    [category] => World News
+    [author] => yassine
 )
 
-[30-Dec-2024 13:50:56 UTC] Attempting database connection with:
-[30-Dec-2024 13:50:56 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:50:56 UTC] Database: sql7754447
-[30-Dec-2024 13:50:56 UTC] Username: sql7754447
-[30-Dec-2024 13:50:57 UTC] getByUser Query: SELECT a.*, c.name as category 
-                    FROM articles a 
-                    LEFT JOIN categories c ON a.category_id = c.id 
-                    WHERE a.user_id = ?
-                    ORDER BY a.created_at DESC
-[30-Dec-2024 13:50:57 UTC] getByUser Results count: 6
-[30-Dec-2024 13:51:04 UTC] Session data in middleware: Array
+[30-Dec-2024 19:37:23 UTC] Rendering article view with data
+[30-Dec-2024 19:37:49 UTC] Processing URL: /article/test233
+[30-Dec-2024 19:37:49 UTC] Checking pattern: /^\/$/ against path: /article/test233
+[30-Dec-2024 19:37:49 UTC] Checking pattern: /^\/articles$/ against path: /article/test233
+[30-Dec-2024 19:37:49 UTC] Checking pattern: /^\/article$/ against path: /article/test233
+[30-Dec-2024 19:37:49 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/test233
+[30-Dec-2024 19:37:49 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[30-Dec-2024 19:37:49 UTC] Parameters: Array
 (
-    [csrf_token] => 38b915139e19fda872658a68686503eceee82db1def5885db1c139e6c80529fd
-    [user_id] => 1
-    [username] => yassine
-    [user_role] => admin
+    [0] => test233
 )
 
-[30-Dec-2024 13:51:04 UTC] Attempting database connection with:
-[30-Dec-2024 13:51:04 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:51:04 UTC] Database: sql7754447
-[30-Dec-2024 13:51:04 UTC] Username: sql7754447
-[30-Dec-2024 13:51:05 UTC] Session data in middleware: Array
+[30-Dec-2024 19:37:49 UTC] viewByTitle called with title: test233
+[30-Dec-2024 19:37:49 UTC] Attempting database connection with:
+[30-Dec-2024 19:37:49 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:37:49 UTC] Database: sql7754447
+[30-Dec-2024 19:37:49 UTC] Username: sql7754447
+[30-Dec-2024 19:37:49 UTC] Getting article by title: test233
+[30-Dec-2024 19:37:49 UTC] Query result: Array
 (
-    [csrf_token] => 38b915139e19fda872658a68686503eceee82db1def5885db1c139e6c80529fd
+    [id] => 23
+    [title] => test233
+    [content] => &lt;p&gt;testing4567 okay&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735501606/ixcffornbkvjcdkaquff.png
+    [category_id] => 1
     [user_id] => 1
-    [username] => yassine
-    [user_role] => admin
+    [views] => 25
+    [featured] => 0
+    [breaking] => 0
+    [status] => published
+    [likes] => 0
+    [created_at] => 2024-12-29 19:46:39
+    [updated_at] => 2024-12-30 13:40:39
+    [category] => World News
+    [author] => yassine
 )
 
-[30-Dec-2024 13:51:05 UTC] Attempting database connection with:
-[30-Dec-2024 13:51:05 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:51:05 UTC] Database: sql7754447
-[30-Dec-2024 13:51:05 UTC] Username: sql7754447
-[30-Dec-2024 13:51:05 UTC] getByUser Query: SELECT a.*, c.name as category 
-                    FROM articles a 
-                    LEFT JOIN categories c ON a.category_id = c.id 
-                    WHERE a.user_id = ?
-                    ORDER BY a.created_at DESC
-[30-Dec-2024 13:51:05 UTC] getByUser Results count: 6
-[30-Dec-2024 13:51:26 UTC] Attempting database connection with:
-[30-Dec-2024 13:51:26 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:51:26 UTC] Database: sql7754447
-[30-Dec-2024 13:51:26 UTC] Username: sql7754447
-[30-Dec-2024 13:51:26 UTC] Review Articles Count: 1
-[30-Dec-2024 13:51:33 UTC] Attempting database connection with:
-[30-Dec-2024 13:51:33 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 13:51:33 UTC] Database: sql7754447
-[30-Dec-2024 13:51:33 UTC] Username: sql7754447
-[30-Dec-2024 14:14:23 UTC] Attempting database connection with:
-[30-Dec-2024 14:14:23 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 14:14:23 UTC] Database: sql7754447
-[30-Dec-2024 14:14:23 UTC] Username: sql7754447
-[30-Dec-2024 14:14:49 UTC] Attempting database connection with:
-[30-Dec-2024 14:14:49 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 14:14:49 UTC] Database: sql7754447
-[30-Dec-2024 14:14:49 UTC] Username: sql7754447
+[30-Dec-2024 19:37:49 UTC] Article data: Array
+(
+    [id] => 23
+    [title] => test233
+    [content] => &lt;p&gt;testing4567 okay&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735501606/ixcffornbkvjcdkaquff.png
+    [category_id] => 1
+    [user_id] => 1
+    [views] => 25
+    [featured] => 0
+    [breaking] => 0
+    [status] => published
+    [likes] => 0
+    [created_at] => 2024-12-29 19:46:39
+    [updated_at] => 2024-12-30 13:40:39
+    [category] => World News
+    [author] => yassine
+)
+
+[30-Dec-2024 19:37:50 UTC] Rendering article view with data
+[30-Dec-2024 19:50:56 UTC] Processing URL: /
+[30-Dec-2024 19:50:56 UTC] Checking pattern: /^\/$/ against path: /
+[30-Dec-2024 19:50:56 UTC] Route matched. Controller action: HomeController@index
+[30-Dec-2024 19:50:56 UTC] Parameters: Array
+(
+)
+
+[30-Dec-2024 19:50:56 UTC] Attempting database connection with:
+[30-Dec-2024 19:50:56 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:50:56 UTC] Database: sql7754447
+[30-Dec-2024 19:50:56 UTC] Username: sql7754447
+[30-Dec-2024 19:55:30 UTC] Processing URL: /
+[30-Dec-2024 19:55:30 UTC] Checking pattern: /^\/$/ against path: /
+[30-Dec-2024 19:55:30 UTC] Route matched. Controller action: HomeController@index
+[30-Dec-2024 19:55:30 UTC] Parameters: Array
+(
+)
+
+[30-Dec-2024 19:55:30 UTC] Attempting database connection with:
+[30-Dec-2024 19:55:30 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:55:30 UTC] Database: sql7754447
+[30-Dec-2024 19:55:30 UTC] Username: sql7754447
+[30-Dec-2024 19:55:42 UTC] Processing URL: /article/Global+Climate+Summit+Reaches+Historic+Agreement
+[30-Dec-2024 19:55:42 UTC] Checking pattern: /^\/$/ against path: /article/Global+Climate+Summit+Reaches+Historic+Agreement
+[30-Dec-2024 19:55:42 UTC] Checking pattern: /^\/articles$/ against path: /article/Global+Climate+Summit+Reaches+Historic+Agreement
+[30-Dec-2024 19:55:42 UTC] Checking pattern: /^\/article$/ against path: /article/Global+Climate+Summit+Reaches+Historic+Agreement
+[30-Dec-2024 19:55:42 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/Global+Climate+Summit+Reaches+Historic+Agreement
+[30-Dec-2024 19:55:42 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[30-Dec-2024 19:55:42 UTC] Parameters: Array
+(
+    [0] => Global+Climate+Summit+Reaches+Historic+Agreement
+)
+
+[30-Dec-2024 19:55:42 UTC] viewByTitle called with title: Global+Climate+Summit+Reaches+Historic+Agreement
+[30-Dec-2024 19:55:42 UTC] Attempting database connection with:
+[30-Dec-2024 19:55:42 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:55:42 UTC] Database: sql7754447
+[30-Dec-2024 19:55:42 UTC] Username: sql7754447
+[30-Dec-2024 19:55:43 UTC] Getting article by title: Global+Climate+Summit+Reaches+Historic+Agreement
+[30-Dec-2024 19:55:43 UTC] Query result: 
+[30-Dec-2024 19:55:43 UTC] Article data: 
+[30-Dec-2024 19:55:43 UTC] Article not found for title: Global+Climate+Summit+Reaches+Historic+Agreement
+[30-Dec-2024 19:55:43 UTC] Processing URL: /
+[30-Dec-2024 19:55:43 UTC] Checking pattern: /^\/$/ against path: /
+[30-Dec-2024 19:55:43 UTC] Route matched. Controller action: HomeController@index
+[30-Dec-2024 19:55:43 UTC] Parameters: Array
+(
+)
+
+[30-Dec-2024 19:55:43 UTC] Attempting database connection with:
+[30-Dec-2024 19:55:43 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:55:43 UTC] Database: sql7754447
+[30-Dec-2024 19:55:43 UTC] Username: sql7754447
+[30-Dec-2024 19:55:48 UTC] Processing URL: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 19:55:48 UTC] Checking pattern: /^\/$/ against path: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 19:55:48 UTC] Checking pattern: /^\/articles$/ against path: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 19:55:48 UTC] Checking pattern: /^\/article$/ against path: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 19:55:48 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 19:55:48 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[30-Dec-2024 19:55:48 UTC] Parameters: Array
+(
+    [0] => New+Educational+Technology+Breakthrough
+)
+
+[30-Dec-2024 19:55:48 UTC] viewByTitle called with title: New+Educational+Technology+Breakthrough
+[30-Dec-2024 19:55:48 UTC] Attempting database connection with:
+[30-Dec-2024 19:55:48 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:55:48 UTC] Database: sql7754447
+[30-Dec-2024 19:55:48 UTC] Username: sql7754447
+[30-Dec-2024 19:55:48 UTC] Getting article by title: New+Educational+Technology+Breakthrough
+[30-Dec-2024 19:55:48 UTC] Query result: 
+[30-Dec-2024 19:55:48 UTC] Article data: 
+[30-Dec-2024 19:55:48 UTC] Article not found for title: New+Educational+Technology+Breakthrough
+[30-Dec-2024 19:55:48 UTC] Processing URL: /
+[30-Dec-2024 19:55:48 UTC] Checking pattern: /^\/$/ against path: /
+[30-Dec-2024 19:55:48 UTC] Route matched. Controller action: HomeController@index
+[30-Dec-2024 19:55:48 UTC] Parameters: Array
+(
+)
+
+[30-Dec-2024 19:55:48 UTC] Attempting database connection with:
+[30-Dec-2024 19:55:48 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:55:48 UTC] Database: sql7754447
+[30-Dec-2024 19:55:48 UTC] Username: sql7754447
+[30-Dec-2024 19:55:53 UTC] Processing URL: /article/test233
+[30-Dec-2024 19:55:53 UTC] Checking pattern: /^\/$/ against path: /article/test233
+[30-Dec-2024 19:55:53 UTC] Checking pattern: /^\/articles$/ against path: /article/test233
+[30-Dec-2024 19:55:53 UTC] Checking pattern: /^\/article$/ against path: /article/test233
+[30-Dec-2024 19:55:53 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/test233
+[30-Dec-2024 19:55:53 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[30-Dec-2024 19:55:53 UTC] Parameters: Array
+(
+    [0] => test233
+)
+
+[30-Dec-2024 19:55:53 UTC] viewByTitle called with title: test233
+[30-Dec-2024 19:55:53 UTC] Attempting database connection with:
+[30-Dec-2024 19:55:53 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:55:53 UTC] Database: sql7754447
+[30-Dec-2024 19:55:53 UTC] Username: sql7754447
+[30-Dec-2024 19:55:54 UTC] Getting article by title: test233
+[30-Dec-2024 19:55:54 UTC] Query result: Array
+(
+    [id] => 23
+    [title] => test233
+    [content] => &lt;p&gt;testing4567 okay&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735501606/ixcffornbkvjcdkaquff.png
+    [category_id] => 1
+    [user_id] => 1
+    [views] => 26
+    [featured] => 0
+    [breaking] => 0
+    [status] => published
+    [likes] => 0
+    [created_at] => 2024-12-29 19:46:39
+    [updated_at] => 2024-12-30 20:38:30
+    [category] => World News
+    [author] => yassine
+)
+
+[30-Dec-2024 19:55:54 UTC] Article data: Array
+(
+    [id] => 23
+    [title] => test233
+    [content] => &lt;p&gt;testing4567 okay&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735501606/ixcffornbkvjcdkaquff.png
+    [category_id] => 1
+    [user_id] => 1
+    [views] => 26
+    [featured] => 0
+    [breaking] => 0
+    [status] => published
+    [likes] => 0
+    [created_at] => 2024-12-29 19:46:39
+    [updated_at] => 2024-12-30 20:38:30
+    [category] => World News
+    [author] => yassine
+)
+
+[30-Dec-2024 19:55:54 UTC] Rendering article view with data
+[30-Dec-2024 19:58:05 UTC] Processing URL: /article/test233
+[30-Dec-2024 19:58:05 UTC] Checking pattern: /^\/$/ against path: /article/test233
+[30-Dec-2024 19:58:05 UTC] Checking pattern: /^\/articles$/ against path: /article/test233
+[30-Dec-2024 19:58:05 UTC] Checking pattern: /^\/article$/ against path: /article/test233
+[30-Dec-2024 19:58:05 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/test233
+[30-Dec-2024 19:58:05 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[30-Dec-2024 19:58:05 UTC] Parameters: Array
+(
+    [0] => test233
+)
+
+[30-Dec-2024 19:58:05 UTC] viewByTitle called with title: test233
+[30-Dec-2024 19:58:05 UTC] Attempting database connection with:
+[30-Dec-2024 19:58:05 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:58:05 UTC] Database: sql7754447
+[30-Dec-2024 19:58:05 UTC] Username: sql7754447
+[30-Dec-2024 19:58:06 UTC] Getting article by title: test233
+[30-Dec-2024 19:58:06 UTC] Query result: Array
+(
+    [id] => 23
+    [title] => test233
+    [content] => &lt;p&gt;testing4567 okay&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735501606/ixcffornbkvjcdkaquff.png
+    [category_id] => 1
+    [user_id] => 1
+    [views] => 27
+    [featured] => 0
+    [breaking] => 0
+    [status] => published
+    [likes] => 0
+    [created_at] => 2024-12-29 19:46:39
+    [updated_at] => 2024-12-30 20:56:35
+    [category] => World News
+    [author] => yassine
+)
+
+[30-Dec-2024 19:58:06 UTC] Article data: Array
+(
+    [id] => 23
+    [title] => test233
+    [content] => &lt;p&gt;testing4567 okay&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735501606/ixcffornbkvjcdkaquff.png
+    [category_id] => 1
+    [user_id] => 1
+    [views] => 27
+    [featured] => 0
+    [breaking] => 0
+    [status] => published
+    [likes] => 0
+    [created_at] => 2024-12-29 19:46:39
+    [updated_at] => 2024-12-30 20:56:35
+    [category] => World News
+    [author] => yassine
+)
+
+[30-Dec-2024 19:58:06 UTC] Rendering article view with data
+[30-Dec-2024 19:59:51 UTC] Processing URL: /article/test233
+[30-Dec-2024 19:59:51 UTC] Checking pattern: /^\/$/ against path: /article/test233
+[30-Dec-2024 19:59:51 UTC] Checking pattern: /^\/articles$/ against path: /article/test233
+[30-Dec-2024 19:59:51 UTC] Checking pattern: /^\/article$/ against path: /article/test233
+[30-Dec-2024 19:59:51 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/test233
+[30-Dec-2024 19:59:51 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[30-Dec-2024 19:59:51 UTC] Parameters: Array
+(
+    [0] => test233
+)
+
+[30-Dec-2024 19:59:51 UTC] viewByTitle called with title: test233
+[30-Dec-2024 19:59:51 UTC] Attempting database connection with:
+[30-Dec-2024 19:59:51 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 19:59:51 UTC] Database: sql7754447
+[30-Dec-2024 19:59:51 UTC] Username: sql7754447
+[30-Dec-2024 19:59:52 UTC] Getting article by title: test233
+[30-Dec-2024 19:59:52 UTC] Query result: Array
+(
+    [id] => 23
+    [title] => test233
+    [content] => &lt;p&gt;testing4567 okay&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735501606/ixcffornbkvjcdkaquff.png
+    [category_id] => 1
+    [user_id] => 1
+    [views] => 28
+    [featured] => 0
+    [breaking] => 0
+    [status] => published
+    [likes] => 0
+    [created_at] => 2024-12-29 19:46:39
+    [updated_at] => 2024-12-30 20:58:47
+    [category] => World News
+    [author] => yassine
+)
+
+[30-Dec-2024 19:59:52 UTC] Article data: Array
+(
+    [id] => 23
+    [title] => test233
+    [content] => &lt;p&gt;testing4567 okay&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735501606/ixcffornbkvjcdkaquff.png
+    [category_id] => 1
+    [user_id] => 1
+    [views] => 28
+    [featured] => 0
+    [breaking] => 0
+    [status] => published
+    [likes] => 0
+    [created_at] => 2024-12-29 19:46:39
+    [updated_at] => 2024-12-30 20:58:47
+    [category] => World News
+    [author] => yassine
+)
+
+[30-Dec-2024 19:59:53 UTC] Rendering article view with data
+[30-Dec-2024 20:00:09 UTC] Processing URL: /article/mytest
+[30-Dec-2024 20:00:09 UTC] Checking pattern: /^\/$/ against path: /article/mytest
+[30-Dec-2024 20:00:09 UTC] Checking pattern: /^\/articles$/ against path: /article/mytest
+[30-Dec-2024 20:00:09 UTC] Checking pattern: /^\/article$/ against path: /article/mytest
+[30-Dec-2024 20:00:09 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/mytest
+[30-Dec-2024 20:00:09 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[30-Dec-2024 20:00:09 UTC] Parameters: Array
+(
+    [0] => mytest
+)
+
+[30-Dec-2024 20:00:09 UTC] viewByTitle called with title: mytest
+[30-Dec-2024 20:00:09 UTC] Attempting database connection with:
+[30-Dec-2024 20:00:09 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 20:00:09 UTC] Database: sql7754447
+[30-Dec-2024 20:00:09 UTC] Username: sql7754447
+[30-Dec-2024 20:00:09 UTC] Getting article by title: mytest
+[30-Dec-2024 20:00:09 UTC] Query result: Array
+(
+    [id] => 22
+    [title] => mytest
+    [content] => &lt;p&gt;this is me&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735493546/hbdri2uknjhhfalurf6s.png
+    [category_id] => 3
+    [user_id] => 4
+    [views] => 2
+    [featured] => 0
+    [breaking] => 0
+    [status] => published
+    [likes] => 0
+    [created_at] => 2024-12-29 17:32:19
+    [updated_at] => 2024-12-29 19:49:07
+    [category] => Sports
+    [author] => testorr
+)
+
+[30-Dec-2024 20:00:09 UTC] Article data: Array
+(
+    [id] => 22
+    [title] => mytest
+    [content] => &lt;p&gt;this is me&lt;/p&gt;
+    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735493546/hbdri2uknjhhfalurf6s.png
+    [category_id] => 3
+    [user_id] => 4
+    [views] => 2
+    [featured] => 0
+    [breaking] => 0
+    [status] => published
+    [likes] => 0
+    [created_at] => 2024-12-29 17:32:19
+    [updated_at] => 2024-12-29 19:49:07
+    [category] => Sports
+    [author] => testorr
+)
+
+[30-Dec-2024 20:00:10 UTC] Rendering article view with data
+[30-Dec-2024 20:00:21 UTC] Processing URL: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:21 UTC] Checking pattern: /^\/$/ against path: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:21 UTC] Checking pattern: /^\/articles$/ against path: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:21 UTC] Checking pattern: /^\/article$/ against path: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:21 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:21 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[30-Dec-2024 20:00:21 UTC] Parameters: Array
+(
+    [0] => New+Educational+Technology+Breakthrough
+)
+
+[30-Dec-2024 20:00:21 UTC] viewByTitle called with title: New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:21 UTC] Attempting database connection with:
+[30-Dec-2024 20:00:21 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 20:00:21 UTC] Database: sql7754447
+[30-Dec-2024 20:00:21 UTC] Username: sql7754447
+[30-Dec-2024 20:00:22 UTC] Getting article by title: New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:22 UTC] Query result: 
+[30-Dec-2024 20:00:22 UTC] Article data: 
+[30-Dec-2024 20:00:22 UTC] Article not found for title: New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:22 UTC] Processing URL: /
+[30-Dec-2024 20:00:22 UTC] Checking pattern: /^\/$/ against path: /
+[30-Dec-2024 20:00:22 UTC] Route matched. Controller action: HomeController@index
+[30-Dec-2024 20:00:22 UTC] Parameters: Array
+(
+)
+
+[30-Dec-2024 20:00:22 UTC] Attempting database connection with:
+[30-Dec-2024 20:00:22 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 20:00:22 UTC] Database: sql7754447
+[30-Dec-2024 20:00:22 UTC] Username: sql7754447
+[30-Dec-2024 20:00:26 UTC] Processing URL: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:26 UTC] Checking pattern: /^\/$/ against path: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:26 UTC] Checking pattern: /^\/articles$/ against path: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:26 UTC] Checking pattern: /^\/article$/ against path: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:26 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:26 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[30-Dec-2024 20:00:26 UTC] Parameters: Array
+(
+    [0] => New+Educational+Technology+Breakthrough
+)
+
+[30-Dec-2024 20:00:26 UTC] viewByTitle called with title: New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:26 UTC] Attempting database connection with:
+[30-Dec-2024 20:00:26 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 20:00:26 UTC] Database: sql7754447
+[30-Dec-2024 20:00:26 UTC] Username: sql7754447
+[30-Dec-2024 20:00:27 UTC] Getting article by title: New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:27 UTC] Query result: 
+[30-Dec-2024 20:00:27 UTC] Article data: 
+[30-Dec-2024 20:00:27 UTC] Article not found for title: New+Educational+Technology+Breakthrough
+[30-Dec-2024 20:00:27 UTC] Processing URL: /
+[30-Dec-2024 20:00:27 UTC] Checking pattern: /^\/$/ against path: /
+[30-Dec-2024 20:00:27 UTC] Route matched. Controller action: HomeController@index
+[30-Dec-2024 20:00:27 UTC] Parameters: Array
+(
+)
+
+[30-Dec-2024 20:00:27 UTC] Attempting database connection with:
+[30-Dec-2024 20:00:27 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 20:00:27 UTC] Database: sql7754447
+[30-Dec-2024 20:00:27 UTC] Username: sql7754447

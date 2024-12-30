@@ -132,7 +132,7 @@ try {
                         <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
                     </div>
                     <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" 
-                       href="/article/<?php echo htmlspecialchars($article['id']); ?>">
+                       href="/article/<?php echo urlencode($article['title']); ?>">
                        <?php echo htmlspecialchars(substr($article['title'], 0, 50)) . '...'; ?>
                     </a>
                 </div>

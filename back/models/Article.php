@@ -17,6 +17,31 @@ class Article extends Model
         return $this->pdo !== null;
     }
 
+    public function getByTitle($title)
+{
+    try {
+        error_log("Getting article by title: " . $title);
+        
+        $sql = "SELECT a.*, c.name as category, u.username as author
+                FROM {$this->table} a
+                LEFT JOIN categories c ON a.category_id = c.id
+                LEFT JOIN users u ON a.user_id = u.id
+                WHERE a.title = ?";
+        
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$title]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        error_log("Query result: " . print_r($result, true));
+        
+        return $result;
+    } catch (PDOException $e) {
+        error_log("Error getting article by title: " . $e->getMessage());
+        error_log("SQL: " . $sql);
+        return null;
+    }
+}
+
     public function getReviewArticles() 
     {
         try {

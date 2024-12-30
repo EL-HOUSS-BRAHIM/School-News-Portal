@@ -3,6 +3,7 @@ $routes = [
     '/' => 'HomeController@index',
     '/articles' => 'ArticleController@index',
     '/article' => 'ArticleController@view',
+    '/article/{title}' => 'ArticleController@viewByTitle', // Ensure this line is present
     '/login' => 'AuthController@login',
     '/register' => 'AuthController@register',
     '/logout' => 'AuthController@logout',
@@ -40,5 +41,25 @@ function getRoute($url) {
     if (isset($parsedUrl['query'])) {
         parse_str($parsedUrl['query'], $query);
     }
+
+    error_log("Processing URL: " . $path);
+
+    // Handle dynamic routes
+    foreach ($routes as $route => $controllerAction) {
+        $pattern = str_replace('/', '\/', $route);
+        $pattern = preg_replace('/\{[^\}]+\}/', '([^\/]+)', $pattern);
+        $pattern = "/^" . $pattern . "$/";
+        
+        error_log("Checking pattern: " . $pattern . " against path: " . $path);
+        
+        if (preg_match($pattern, $path, $matches)) {
+            array_shift($matches); // Remove the full match
+            error_log("Route matched. Controller action: " . $controllerAction);
+            error_log("Parameters: " . print_r($matches, true));
+            return [$controllerAction, $matches];
+        }
+    }
+
+    error_log("No route matched. Falling back to: " . ($routes[$path] ?? 'null'));
     return [$routes[$path] ?? null, $query];
 }

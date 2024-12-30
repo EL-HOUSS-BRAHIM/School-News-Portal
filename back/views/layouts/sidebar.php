@@ -99,7 +99,7 @@ try {
                                         <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
                                     </div>
                                     <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" 
-                                       href="/article?id=<?php echo htmlspecialchars($article['id']); ?>">
+                                       href="/article/<?php echo urlencode($article['title']); ?>">
                                        <?php echo htmlspecialchars($article['title']); ?>
                                     </a>
                                     <?php echo html_entity_decode($article['content']); ?>
@@ -135,7 +135,7 @@ try {
                                         <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
                                     </div>
                                     <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" 
-                                       href="/article?id=<?php echo htmlspecialchars($article['id']); ?>">
+                                       href="/article/<?php echo urlencode($article['title']); ?>">
                                        <?php echo htmlspecialchars(substr($article['title'], 0, 50)) . '...'; ?>
                                     </a>
                                 </div>
@@ -212,7 +212,7 @@ try {
                                     <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
                                 </div>
                                 <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" 
-                                   href="/article?id=<?php echo htmlspecialchars($article['id']); ?>">
+                                   href="/article/<?php echo urlencode($article['title']); ?>">
                                    <?php echo htmlspecialchars(substr($article['title'], 0, 50)) . '...'; ?>
                                 </a>
                             </div>

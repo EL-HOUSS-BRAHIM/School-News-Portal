@@ -132,10 +132,10 @@
                                                            class="btn btn-link text-dark px-3 mb-0">
                                                             <i class="fas fa-pencil-alt text-dark me-2"></i>Edit
                                                         </a>
-                                                        <a href="/article?id=<?php echo $article['id']; ?>" 
-                                                           class="btn btn-link text-primary px-3 mb-0" target="_blank">
-                                                            <i class="fas fa-eye text-primary me-2"></i>View
-                                                        </a>
+                                                        <a href="/article/<?php echo urlencode($article['title']); ?>" 
+   class="btn btn-link text-primary px-3 mb-0" target="_blank">
+    <i class="fas fa-eye text-primary me-2"></i>View
+</a>
                                                         <button onclick="deleteArticle(<?php echo $article['id']; ?>)" 
                                                                 class="btn btn-link text-danger px-3 mb-0">
                                                             <i class="fas fa-trash text-danger me-2"></i>Delete

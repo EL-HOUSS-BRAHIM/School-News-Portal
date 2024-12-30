@@ -14,7 +14,7 @@
                         <div class="overlay">
                             <div class="mb-2">
                                 <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" 
-                                   href="<?php echo $app['constants']['BASE_URL']; ?>/category?id=<?php echo htmlspecialchars($article['category_id']); ?>">
+                                   href="<?php echo $app['constants']['BASE_URL']; ?>/category/<?php echo htmlspecialchars($article['category_id']); ?>">
                                     <?php echo htmlspecialchars($article['category'] ?? 'Uncategorized'); ?>
                                 </a>
                                 <span class="text-white">
@@ -22,7 +22,7 @@
                                 </span>
                             </div>
                             <a class="h2 m-0 text-white text-uppercase font-weight-bold" 
-                               href="<?php echo $app['constants']['BASE_URL']; ?>/article?id=<?php echo htmlspecialchars($article['id']); ?>">
+                               href="<?php echo $app['constants']['BASE_URL']; ?>/article/<?php echo urlencode($article['title']); ?>">
                                 <?php echo htmlspecialchars($article['title']); ?>
                             </a>
                         </div>
@@ -44,7 +44,7 @@
                             <div class="overlay">
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" 
-                                       href="<?php echo $app['constants']['BASE_URL']; ?>/category?id=<?php echo htmlspecialchars($article['category_id']); ?>">
+                                       href="<?php echo $app['constants']['BASE_URL']; ?>/category/<?php echo htmlspecialchars($article['category_id']); ?>">
                                         <?php echo htmlspecialchars($article['category'] ?? 'Uncategorized'); ?>
                                     </a>
                                     <span class="text-white">
@@ -52,7 +52,7 @@
                                     </span>
                                 </div>
                                 <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" 
-                                   href="<?php echo $app['constants']['BASE_URL']; ?>/article?id=<?php echo htmlspecialchars($article['id']); ?>">
+                                   href="<?php echo $app['constants']['BASE_URL']; ?>/article/<?php echo urlencode($article['title']); ?>">
                                     <?php echo htmlspecialchars($article['title']); ?>
                                 </a>
                             </div>
@@ -80,7 +80,7 @@
                             <?php foreach($breakingNews as $article): ?>
                             <div class="text-truncate">
                                 <a class="text-white text-uppercase font-weight-semi-bold" 
-                                   href="<?php echo $app['constants']['BASE_URL']; ?>/article?id=<?php echo htmlspecialchars($article['id']); ?>">
+                                   href="<?php echo $app['constants']['BASE_URL']; ?>/article/<?php echo urlencode($article['title']); ?>">
                                     <?php echo htmlspecialchars($article['title']); ?>
                                 </a>
                             </div>
@@ -110,7 +110,7 @@
                     <div class="overlay">
                         <div class="mb-2">
                             <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" 
-                               href="<?php echo $app['constants']['BASE_URL']; ?>/category?id=<?php echo htmlspecialchars($article['category_id']); ?>">
+                               href="<?php echo $app['constants']['BASE_URL']; ?>/category/<?php echo htmlspecialchars($article['category_id']); ?>">
                                 <?php echo htmlspecialchars($article['category'] ?? 'Uncategorized'); ?>
                             </a>
                             <span class="text-white">
@@ -118,7 +118,7 @@
                             </span>
                         </div>
                         <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" 
-                           href="<?php echo $app['constants']['BASE_URL']; ?>/article?id=<?php echo htmlspecialchars($article['id']); ?>">
+                           href="<?php echo $app['constants']['BASE_URL']; ?>/article/<?php echo urlencode($article['title']); ?>">
                             <?php echo htmlspecialchars($article['title']); ?>
                         </a>
                     </div>

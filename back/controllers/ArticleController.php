@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/Article.php';
 require_once __DIR__ . '/../core/Helpers.php';
+require_once __DIR__ . '/../models/Comment.php';
 
 class ArticleController extends Controller
 {
@@ -18,6 +19,52 @@ class ArticleController extends Controller
         $this->renderView('article/create');
     }
 
+    public function viewByTitle($title)
+{
+    try {
+        error_log("viewByTitle called with title: " . $title);
+
+        $articleModel = new Article();
+        $article = $articleModel->getByTitle($title);
+
+        error_log("Article data: " . print_r($article, true));
+
+        if (!$article) {
+            error_log("Article not found for title: " . $title);
+            $this->redirect('/');
+            return;
+        }
+
+        // Check if article status is published or user is admin
+        if ($article['status'] !== Article::STATUS_PUBLISHED && 
+            (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin')) {
+            error_log("Article not published and user not admin");
+            $this->redirect('/');
+            return;
+        }
+
+        // Get breaking news
+        $breakingNews = $articleModel->getBreakingNews(5);
+
+        // Increment view counter
+        $articleModel->incrementViews($article['id']);
+
+        // Get comments
+        $commentModel = new Comment();
+        $comments = $commentModel->getByArticle($article['id']);
+
+        error_log("Rendering article view with data");
+        $this->renderView('article/view', [
+            'article' => $article,
+            'comments' => $comments,
+            'breakingNews' => $breakingNews
+        ]);
+
+    } catch (Exception $e) {
+        error_log("ArticleController::viewByTitle Error: " . $e->getMessage());
+        $this->redirect('/');
+    }
+}
 
     public function store()
     {
