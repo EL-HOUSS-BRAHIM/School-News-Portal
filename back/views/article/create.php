@@ -80,12 +80,12 @@ include __DIR__ . '/../layouts/dash_header.php'; ?>
     </main>
 
     <?php include __DIR__ . '/../layouts/dash_footer.php'; ?>
+   
+<!-- CKEditor -->
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
 
-    <!-- CKEditor -->
-    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
-    
-    <script>
-        ClassicEditor
+<script>
+    ClassicEditor
         .create(document.querySelector('#editor'), {
             entities: false // Disable auto-encoding
         })
@@ -99,15 +99,15 @@ include __DIR__ . '/../layouts/dash_header.php'; ?>
             console.error(error);
         });
 
-        // Image preview function
-        function previewImage(input) {
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById('imagePreview').src = e.target.result;
-                    document.getElementById('imagePreview').style.display = 'block';
-                };
-                reader.readAsDataURL(input.files[0]);
-            }
+    // Image preview function
+    function previewImage(input) {
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('imagePreview').src = e.target.result;
+                document.getElementById('imagePreview').style.display = 'block';
+            };
+            reader.readAsDataURL(input.files[0]);
         }
-    </script>
+    }
+</script>

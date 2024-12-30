@@ -42,7 +42,7 @@
                                         <div class="d-flex flex-column justify-content-center">
                                             <h6 class="mb-0 text-sm"><?php echo htmlspecialchars($article['title']); ?></h6>
                                             <p class="text-xs text-secondary mb-0">
-                                                <?php echo substr(htmlspecialchars($article['content']), 0, 50) . '...'; ?>
+                                            <?php echo html_entity_decode($article['content']); ?>
                                             </p>
                                         </div>
                                     </div>

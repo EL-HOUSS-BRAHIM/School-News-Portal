@@ -102,9 +102,8 @@ try {
                                        href="/article?id=<?php echo htmlspecialchars($article['id']); ?>">
                                        <?php echo htmlspecialchars($article['title']); ?>
                                     </a>
-                                    <p class="m-0">
-                                        <?php echo htmlspecialchars(substr(strip_tags($article['content']), 0, 100)) . '...'; ?>
-                                    </p>
+                                    <?php echo html_entity_decode($article['content']); ?>
+                                  
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">

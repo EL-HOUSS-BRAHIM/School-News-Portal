@@ -14,7 +14,7 @@ include __DIR__ . '/../layouts/dash_header.php'; ?>
                     <div class="card mb-4">
                         <div class="card-body px-0 pt-0 pb-2">
                             <form action="/dashboard/article/update" method="POST" enctype="multipart/form-data" id="articleForm">
-                            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+                                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                                 <input type="hidden" name="id" value="<?php echo $article['id']; ?>">
                                 <div class="row p-4">
                                     <div class="col-md-8">
@@ -26,11 +26,10 @@ include __DIR__ . '/../layouts/dash_header.php'; ?>
                                         
                                         <!-- Content Editor -->
                                         <div class="form-group mt-3">
-    <label class="form-control-label">Content</label>
-    <!-- Remove htmlspecialchars() from the editor content -->
-    <div id="editor"><?php echo $article['content']; ?></div>
-    <textarea name="content" id="content" style="display: none"></textarea>
-</div>
+                                            <label class="form-control-label">Content</label>
+                                            <div id="editor"><?php echo html_entity_decode($article['content']); ?></div>
+                                            <textarea name="content" id="content" style="display: none"></textarea>
+                                        </div>
                                     </div>
 
                                     <div class="col-md-4">
@@ -50,14 +49,12 @@ include __DIR__ . '/../layouts/dash_header.php'; ?>
                                         <div class="form-group mt-3">
                                             <label class="form-control-label">Status</label>
                                             <select name="status" class="form-select form-select-sm d-inline w-auto" onchange="showSaveButton(this)">
-    <?php foreach(Article::getAvailableStatuses($_SESSION['user_role']) as $value => $label): ?>
-        <option value="<?php echo $value; ?>" 
-                <?php echo $value == $article['status'] ? 'selected' : ''; ?>
-                <?php echo !isset(Article::getAvailableStatuses($_SESSION['user_role'])[$value]) ? 'disabled' : ''; ?>>
-            <?php echo htmlspecialchars($label); ?>
-        </option>
-    <?php endforeach; ?>
-</select>
+                                                <?php foreach(Article::getAvailableStatuses($_SESSION['user_role']) as $value => $label): ?>
+                                                    <option value="<?php echo $value; ?>" <?php echo $value == $article['status'] ? 'selected' : ''; ?>>
+                                                        <?php echo htmlspecialchars($label); ?>
+                                                    </option>
+                                                <?php endforeach; ?>
+                                            </select>
                                         </div>
 
                                         <!-- Image Upload -->
@@ -84,31 +81,31 @@ include __DIR__ . '/../layouts/dash_header.php'; ?>
 
     <?php include __DIR__ . '/../layouts/dash_footer.php'; ?>
 
-    <!-- CKEditor -->
-    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
-    
-    <script>
-        ClassicEditor
-            .create(document.querySelector('#editor'))
-            .then(editor => {
-                // Update hidden content field before form submission
-                document.getElementById('articleForm').addEventListener('submit', function() {
-                    document.getElementById('content').value = editor.getData();
-                });
-            })
-            .catch(error => {
-                console.error(error);
-            });
+<!-- Remove duplicate CKEditor script include -->
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
 
-        // Image preview function
-        function previewImage(input) {
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById('imagePreview').src = e.target.result;
-                    document.getElementById('imagePreview').style.display = 'block';
-                };
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-    </script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            // Remove HTML encoding
+            htmlEncodeOutput: false,
+            entities: false,
+            removePlugins: ['CKFinderUploadAdapter', 'CKFinder', 'EasyImage', 'Image', 'ImageCaption', 'ImageStyle', 'ImageToolbar', 'ImageUpload']
+        })
+        .then(editor => {
+            // Initialize editor with raw content
+            const content = <?php echo json_encode($article['content']); ?>;
+            editor.setData(content);
+
+            // Handle form submission
+            document.getElementById('articleForm').addEventListener('submit', function() {
+                const editorContent = editor.getData();
+                document.getElementById('content').value = editorContent;
+            });
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+</body>
+</html>
