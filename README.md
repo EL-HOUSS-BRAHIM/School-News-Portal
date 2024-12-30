@@ -26,7 +26,7 @@ A dynamic news portal built with PHP that allows schools to manage and publish n
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/school-news-portal.git
+git clone https://github.com/ELGOUMRIYASSINE/newproject
 ```
 
 Here's a complete 
@@ -119,18 +119,12 @@ database.config.php
 ## Directory Structure
 
 ```
-├── config/             # Configuration files
-├── core/              # Core framework files
-├── models/            # Database models
-├── public/            # Public assets and entry point
-├── setup/             # Installation scripts
-├── storage/           # Uploaded files and logs
-└── views/             # View templates
+
 ```
 
 ## Usage
 
-1. Access the admin panel at `/admin`
+1. Access the admin panel at `/dashboard`
 2. Create categories for your articles
 3. Start publishing news articles
 4. Manage comments and user interactions
@@ -149,7 +143,7 @@ database.config.php
 
 ## Contact
 
-BRAHIM EL HOUSS/FULL STACK SOFTWEAR ENGINEER - [@EL-HOUSS-BRAHIM](https://twitter.com/yourusername)
+BRAHIM EL HOUSS/FULL STACK SOFTWEAR ENGINEER - [@EL-HOUSS-BRAHIM](https://github.com/EL-HOUSS-BRAHIM/)
 
-Project Link: [https://github.com/yourusername/school-news-portal](https://github.com/yourusername/school-news-portal)
+Project Link: [https://github.com/ELGOUMRIYASSINE/newproject](https://github.com/ELGOUMRIYASSINE/newproject)
 ```
