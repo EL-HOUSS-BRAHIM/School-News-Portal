@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://collegedarelmaarifa.ma/sitemap.xml
+Sitemap: https://bross-news-website.infinityfreeapp.com/sitemap.xml
 Disallow: /admin/
 Disallow: /dashboard/

@@ -95,6 +95,8 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
             <?php echo htmlspecialchars($app['app_name'] ?? 'Portail des Nouvelles Scolaires'); ?>
         </a>. 
         Tous droits réservés.
+        <br>
+        Développé par <a href="https://github.com/EL-HOUSS-BRAHIM/" target="_blank">Brahim Elhouss</a>.
     </p>
 </div>
 <!-- Footer End -->

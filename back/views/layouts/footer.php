@@ -4,15 +4,13 @@ $contact = require __DIR__ . '/../../config/contact.php';
 $popularArticles = (new Article())->getPopular(3);
 $app = require __DIR__ . '/../../config/app.php';
 
-
 try {
     // Verify $contact is an array and has required keys
     if (!is_array($contact)) {
-        throw new Exception('Contact configuration must be an array');
+        throw new Exception('La configuration du contact doit être un tableau');
     }
-    
 } catch (Exception $e) {
-    error_log("Footer Error: " . $e->getMessage());
+    error_log("Erreur du pied de page de l'article : " . $e->getMessage());
     $contact = [
         'address' => 'Adresse non disponible',
         'phone' => 'Téléphone non disponible', 
@@ -20,7 +18,7 @@ try {
         'social' => []
     ];
     $popularArticles = [];
-    $app = ['app_name' => 'College Dar Bouazza News'];
+    $app = ['app_name' => 'Portail des Nouvelles Scolaires'];
 }
 
 // Set default values if keys don't exist
@@ -36,7 +34,6 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
     $contact['social'] = [];
 }
 ?>
-
 <!-- Footer Start -->
 <div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
     <div class="row py-4">
@@ -77,7 +74,7 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
                         <?php echo htmlspecialchars($article['category']); ?>
                     </a>
                     <a class="text-body" href="">
-                        <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
+                        <small><?php echo date('d M, Y', strtotime($article['created_at'])); ?></small>
                     </a>
                 </div>
                 <a class="small text-body text-uppercase font-weight-medium" href="">
@@ -93,9 +90,11 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
     <p class="m-0 text-center">
         © <?php echo date('Y'); ?> 
         <a href="#">
-            <?php echo htmlspecialchars($app['app_name'] ?? 'College Dar Bouazza News'); ?>
+            <?php echo htmlspecialchars($app['app_name'] ?? 'Portail des Nouvelles Scolaires'); ?>
         </a>. 
         Tous droits réservés.
+        <br>
+        Développé par <a href="https://github.com/EL-HOUSS-BRAHIM/" target="_blank">Brahim Elhouss</a>.
     </p>
 </div>
 <!-- Footer End -->

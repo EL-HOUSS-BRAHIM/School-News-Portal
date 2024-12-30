@@ -4,13 +4,11 @@ $contact = require __DIR__ . '/../../config/contact.php';
 $popularArticles = (new Article())->getPopular(3);
 $app = require __DIR__ . '/../../config/app.php';
 
-
 try {
     // Verify $contact is an array and has required keys
     if (!is_array($contact)) {
         throw new Exception('Contact configuration must be an array');
     }
-    
 } catch (Exception $e) {
     error_log("Footer Error: " . $e->getMessage());
     $contact = [
@@ -84,10 +82,6 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
           <div class="form-check form-switch ps-0">
             <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
           </div>
-          
-          
-          
-          
         </div>
       </div>
     </div>
@@ -112,8 +106,7 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="<?php echo $app['constants']['ASSETS_URL']; ?>/js/dashboard.min.js?v=1.1.0"></script>
 
-  
+
 
 </body>
-
 </html>

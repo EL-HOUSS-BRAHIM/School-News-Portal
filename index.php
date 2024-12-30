@@ -13,19 +13,8 @@ $security->handle();
 require_once __DIR__ . '/back/vendor/autoload.php';
 
 try {
-    // Debug env loading
-    error_log("Current directory: " . __DIR__);
-    error_log("Loading .env from: " . __DIR__ . '/back');
-    
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/back');
     $dotenv->load();
-    
-    // Immediately verify env values 
-    error_log("Environment values after loading:");
-    error_log("DB_HOST: " . ($_ENV['DB_HOST'] ?? 'not set'));
-    error_log("DB_NAME: " . ($_ENV['DB_NAME'] ?? 'not set'));
-    error_log("DB_USER: " . ($_ENV['DB_USER'] ?? 'not set'));
-    
 } catch (Exception $e) {
     error_log("Dotenv Error: " . $e->getMessage());
     die("Environment configuration error");
@@ -58,7 +47,8 @@ try {
             echo "Method $methodName not found in controller $controllerName.";
         }
     } else {
-        echo "Route not found.";
+        // Route not found, show 404 page
+        require_once __DIR__ . '/back/views/404.php';
     }
 } catch (Exception $e) {
     error_log("Application Error: " . $e->getMessage());

@@ -5,10 +5,10 @@ return [
     'site_subtitle' => 'Dar Bouazza News', 
     'site_name_short' => 'College',
     'meta_keywords' => 'collège dar bouazza, actualités éducation, dar bouazza news, actualités dar bouazza',
-    'meta_description' => 'Votre source d\'actualités sur le Collège Dar Bouazza. Restez informé des dernières nouvelles éducatives et événements.',
+    'meta_description' => 'Découvrez les dernières nouvelles et événements éducatifs du Collège Dar Bouazza. Restez informé avec des articles, des mises à jour et des analyses approfondies sur l\'éducation et la communauté scolaire.',
     'constants' => [
-        'BASE_URL' => 'http://localhost:8088',
-        'ASSETS_URL' => 'http://localhost:8088/assets',
+        'BASE_URL' => 'https://bross-news-website.infinityfreeapp.com',
+        'ASSETS_URL' => 'https://bross-news-website.infinityfreeapp.com/assets',
     ],
     'social' => [
         'twitter' => 'https://twitter.com/CollegeDarBouazza',

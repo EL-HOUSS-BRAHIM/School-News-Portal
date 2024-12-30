@@ -325,6 +325,19 @@ function deleteArticle(id) {
     </div>
 </div>
         </div>
+        <!-- Footer Start -->
+    <footer class="footer mt-auto py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <p class="m-0 text-center" style="color: white;">
+            © <?php echo date('Y'); ?> 
+            <a href="#" style="color: orange;">
+                <?php echo htmlspecialchars($app['app_name'] ?? 'School News Portal'); ?>
+            </a>. 
+            Tous droits réservés.
+            <br>
+            Développé par <a href="https://github.com/EL-HOUSS-BRAHIM/" target="_blank" style="color: orange;">Brahim Elhouss</a>.
+        </p>
+    </footer>
+    <!-- Footer End -->
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -398,5 +411,7 @@ new Chart(ctx, {
     }
 });
 </script>
+
+    
 
     <?php include __DIR__ . '/../layouts/dash_footer.php'; ?>

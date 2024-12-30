@@ -2,6 +2,7 @@
 
 <!-- Main News Slider Start -->
 <div class="container-fluid">
+    <h1 class="d-none">Accueil - College Dar Bouazza News</h1> <!-- Add H1 heading -->
     <div class="row">
         <div class="col-lg-7 px-0">
             <div class="owl-carousel main-carousel position-relative">
@@ -139,6 +140,30 @@ if (isset($error)): ?>
     </div>
 </div>
 <?php endif; ?>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "<?php echo htmlspecialchars($article['title']); ?>",
+  "image": [
+    "<?php echo htmlspecialchars($article['image'] ?? '/img/default.jpg'); ?>"
+  ],
+  "datePublished": "<?php echo date('c', strtotime($article['created_at'])); ?>",
+  "dateModified": "<?php echo date('c', strtotime($article['updated_at'] ?? $article['created_at'])); ?>",
+  "author": {
+    "@type": "Person",
+    "name": "<?php echo htmlspecialchars($article['author'] ?? 'Anonyme'); ?>"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "College Dar Bouazza News",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "<?php echo $app['constants']['ASSETS_URL']; ?>/img/logo.png"
+    }
+  },
+  "description": "<?php echo htmlspecialchars($article['description'] ?? ''); ?>"
+}
+</script>
 <?php require_once __DIR__ . '/../layouts/sidebar.php'; ?>
 <?php require_once __DIR__ . '/../layouts/footer.php'; ?>

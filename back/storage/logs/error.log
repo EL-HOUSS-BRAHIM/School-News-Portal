@@ -233,3 +233,56 @@ Stack trace:
 )
 
 [30-Dec-2024 21:49:52 UTC] Rendering article view with data
+[30-Dec-2024 23:29:17 UTC] Processing URL: /dashboard/articles
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/$/ against path: /dashboard/articles
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/articles$/ against path: /dashboard/articles
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/article$/ against path: /dashboard/articles
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /dashboard/articles
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/login$/ against path: /dashboard/articles
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/register$/ against path: /dashboard/articles
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/logout$/ against path: /dashboard/articles
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/admin$/ against path: /dashboard/articles
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/comment\/add$/ against path: /dashboard/articles
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/dashboard$/ against path: /dashboard/articles
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /dashboard/articles
+[30-Dec-2024 23:29:17 UTC] Route matched. Controller action: UserDashController@articles
+[30-Dec-2024 23:29:17 UTC] Parameters: Array
+(
+)
+
+[30-Dec-2024 23:29:17 UTC] Session data in middleware: Array
+(
+    [csrf_token] => c25a3757da6386872e7b44fa488185ff065324ed99ab51369a0a7d847d2db259
+)
+
+[30-Dec-2024 23:29:17 UTC] Missing session data. Redirecting to login.
+[30-Dec-2024 23:29:17 UTC] Processing URL: /login
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/$/ against path: /login
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/articles$/ against path: /login
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/article$/ against path: /login
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /login
+[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/login$/ against path: /login
+[30-Dec-2024 23:29:17 UTC] Route matched. Controller action: AuthController@login
+[30-Dec-2024 23:29:17 UTC] Parameters: Array
+(
+)
+
+[30-Dec-2024 23:29:17 UTC] Attempting database connection with:
+[30-Dec-2024 23:29:17 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 23:29:17 UTC] Database: sql7754447
+[30-Dec-2024 23:29:17 UTC] Username: sql7754447
+[30-Dec-2024 23:36:14 UTC] Processing URL: /login
+[30-Dec-2024 23:36:14 UTC] Checking pattern: /^\/$/ against path: /login
+[30-Dec-2024 23:36:14 UTC] Checking pattern: /^\/articles$/ against path: /login
+[30-Dec-2024 23:36:14 UTC] Checking pattern: /^\/article$/ against path: /login
+[30-Dec-2024 23:36:14 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /login
+[30-Dec-2024 23:36:14 UTC] Checking pattern: /^\/login$/ against path: /login
+[30-Dec-2024 23:36:14 UTC] Route matched. Controller action: AuthController@login
+[30-Dec-2024 23:36:14 UTC] Parameters: Array
+(
+)
+
+[30-Dec-2024 23:36:14 UTC] Attempting database connection with:
+[30-Dec-2024 23:36:14 UTC] Host: sql7.freemysqlhosting.net
+[30-Dec-2024 23:36:14 UTC] Database: sql7754447
+[30-Dec-2024 23:36:14 UTC] Username: sql7754447

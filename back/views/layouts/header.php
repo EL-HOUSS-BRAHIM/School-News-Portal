@@ -26,53 +26,42 @@ try {
 <html lang="<?php echo Translate::getCurrentLang(); ?>">
 <head>
     <meta charset="utf-8">
-    <title><?php echo htmlspecialchars($app['app_name']); ?></title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="<?php echo htmlspecialchars($app['meta_keywords'] ?? ''); ?>" name="keywords">
-        <meta content="<?php echo htmlspecialchars($app['meta_description'] ?? ''); ?>" name="description">
-
-        <!-- Favicon -->
-        <link href="<?php echo $app['constants']['ASSETS_URL']; ?>/assets/img/favicon.ico" rel="icon">
-
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-            rel="stylesheet">
-
-        <!-- SEO Meta Tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo htmlspecialchars($app['app_name']); ?> - <?php echo htmlspecialchars($currentPage); ?></title>
     <meta name="description" content="<?php echo htmlspecialchars($app['meta_description']); ?>">
     <meta name="keywords" content="<?php echo htmlspecialchars($app['meta_keywords']); ?>">
-    <meta name="author" content="College Dar Bouazza">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google-news-tags" content="education, morocco, casablanca">
     <meta property="og:title" content="<?php echo htmlspecialchars($app['app_name']); ?>">
     <meta property="og:description" content="<?php echo htmlspecialchars($app['meta_description']); ?>">
     <meta property="og:image" content="<?php echo $app['constants']['ASSETS_URL']; ?>/img/logo.png">
     <meta property="og:url" content="<?php echo $app['constants']['BASE_URL']; ?>">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="<?php echo $app['constants']['BASE_URL'] . $_SERVER['REQUEST_URI']; ?>">
+    <link href="<?php echo $app['constants']['ASSETS_URL']; ?>/assets/img/favicon.ico" rel="icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="<?php echo $app['constants']['ASSETS_URL']; ?>/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?php echo $app['constants']['ASSETS_URL']; ?>/css/style.css" rel="stylesheet">
+    <link rel="alternate" href="https://bross-news-website.infinityfreeapp.com/" hreflang="fr" />
+    <link rel="alternate" href="https://bross-news-website.infinityfreeapp.com/en" hreflang="en" />
 
-        <!-- Additional Tags -->
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="google-news-tags" content="education, morocco, casablanca">
-    <!-- Font Awesome -->
-        <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
-            rel="stylesheet">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-        <!-- Libraries Stylesheet -->
-        <link href="<?php echo $app['constants']['ASSETS_URL']; ?>/lib/owlcarousel/assets/owl.carousel.min.css"
-            rel="stylesheet">
-
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="<?php echo $app['constants']['ASSETS_URL']; ?>/css/style.css" rel="stylesheet">
-    </head>
-
-    <body>
+        gtag('config', 'UA-XXXXXXXXX-X');
+    </script>
+    <!-- End Google Analytics -->
+</head>
+<body>
         <!-- Topbar Start -->
         <div class="container-fluid d-none d-lg-block">
-
             <div class="row align-items-center bg-white py-3 px-lg-5">
                 <div class="col-lg-4">
                     <a href="<?php echo $app['constants']['BASE_URL']; ?>"
@@ -82,7 +71,6 @@ try {
                                 class="text-secondary font-weight-normal"><?php echo htmlspecialchars($app['site_subtitle'] ?? 'News'); ?></span></h1>
                     </a>
                 </div>
-
             </div>
         </div>
         <!-- Topbar End -->

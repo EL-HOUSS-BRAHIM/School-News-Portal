@@ -3,6 +3,7 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php [QSA,L]
+ErrorDocument 404 /404.php
 
 <FilesMatch "\.(env|log|ini|sh|inc|bak|sql|swp|dist|md|gitignore)$">
     Order allow,deny
