@@ -15,7 +15,7 @@
                             <div class="mb-2">
                                 <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" 
                                    href="<?php echo $app['constants']['BASE_URL']; ?>/category/<?php echo htmlspecialchars($article['category_id']); ?>">
-                                    <?php echo htmlspecialchars($article['category'] ?? 'Uncategorized'); ?>
+                                    <?php echo htmlspecialchars($article['category'] ?? 'Non classé'); ?>
                                 </a>
                                 <span class="text-white">
                                     <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
@@ -45,7 +45,7 @@
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" 
                                        href="<?php echo $app['constants']['BASE_URL']; ?>/category/<?php echo htmlspecialchars($article['category_id']); ?>">
-                                        <?php echo htmlspecialchars($article['category'] ?? 'Uncategorized'); ?>
+                                        <?php echo htmlspecialchars($article['category'] ?? 'Non classé'); ?>
                                     </a>
                                     <span class="text-white">
                                         <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
@@ -73,7 +73,7 @@
             <div class="col-12">
                 <div class="d-flex justify-content-between">
                     <div class="bg-primary text-dark text-center font-weight-medium py-2" 
-                         style="width: 170px;">Breaking News</div>
+                         style="width: 170px;">Dernières Nouvelles</div>
                     <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center ml-3"
                          style="width: calc(100% - 170px); padding-right: 90px;">
                         <?php if (!empty($breakingNews)): ?>
@@ -98,7 +98,7 @@
 <div class="container-fluid pt-5 mb-3">
     <div class="container">
         <div class="section-title">
-            <h4 class="m-0 text-uppercase font-weight-bold">Featured News</h4>
+            <h4 class="m-0 text-uppercase font-weight-bold">Nouvelles en Vedette</h4>
         </div>
         <div class="owl-carousel news-carousel carousel-item-4 position-relative">
             <?php if (!empty($featuredArticles)): ?>
@@ -111,7 +111,7 @@
                         <div class="mb-2">
                             <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" 
                                href="<?php echo $app['constants']['BASE_URL']; ?>/category/<?php echo htmlspecialchars($article['category_id']); ?>">
-                                <?php echo htmlspecialchars($article['category'] ?? 'Uncategorized'); ?>
+                                <?php echo htmlspecialchars($article['category'] ?? 'Non classé'); ?>
                             </a>
                             <span class="text-white">
                                 <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>

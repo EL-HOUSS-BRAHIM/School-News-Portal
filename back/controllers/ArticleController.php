@@ -24,13 +24,17 @@ class ArticleController extends Controller
     try {
         error_log("viewByTitle called with title: " . $title);
 
+        // Decode the title
+        $decodedTitle = urldecode($title);
+        error_log("Decoded title: " . $decodedTitle);
+
         $articleModel = new Article();
-        $article = $articleModel->getByTitle($title);
+        $article = $articleModel->getByTitle($decodedTitle);
 
         error_log("Article data: " . print_r($article, true));
 
         if (!$article) {
-            error_log("Article not found for title: " . $title);
+            error_log("Article not found for title: " . $decodedTitle);
             $this->redirect('/');
             return;
         }

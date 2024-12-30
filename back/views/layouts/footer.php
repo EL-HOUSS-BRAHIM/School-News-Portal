@@ -14,20 +14,20 @@ try {
 } catch (Exception $e) {
     error_log("Footer Error: " . $e->getMessage());
     $contact = [
-        'address' => 'Address not available',
-        'phone' => 'Phone not available', 
-        'email' => 'Email not available',
+        'address' => 'Adresse non disponible',
+        'phone' => 'Téléphone non disponible', 
+        'email' => 'Email non disponible',
         'social' => []
     ];
     $popularArticles = [];
-    $app = ['app_name' => 'School News Portal'];
+    $app = ['app_name' => 'College Dar Bouazza News'];
 }
 
 // Set default values if keys don't exist
 $contact = array_merge([
-    'address' => 'Address not available',
-    'phone' => 'Phone not available',
-    'email' => 'Email not available', 
+    'address' => 'Adresse non disponible',
+    'phone' => 'Téléphone non disponible',
+    'email' => 'Email non disponible', 
     'social' => []
 ], $contact ?? []);
 
@@ -41,7 +41,7 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
 <div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
     <div class="row py-4">
         <div class="col-lg-3 col-md-6 mb-5">
-            <h5 class="mb-4 text-white text-uppercase font-weight-bold">Get In Touch</h5>
+            <h5 class="mb-4 text-white text-uppercase font-weight-bold">Contactez-nous</h5>
             <p class="font-weight-medium text-white">
                 <i class="fa fa-map-marker-alt mr-2"></i><?php echo htmlspecialchars($contact['address']); ?>
             </p>
@@ -52,7 +52,7 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
                 <i class="fa fa-envelope mr-2"></i><?php echo htmlspecialchars($contact['email']); ?>
             </p>
             
-            <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">Follow Us</h6>
+            <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">Suivez-nous</h6>
             <div class="d-flex justify-content-start">
                 <?php if (!empty($contact['social'])): ?>
                     <?php foreach($contact['social'] as $platform => $url): ?>
@@ -63,13 +63,13 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
                         </a>
                     <?php endforeach; ?>
                 <?php else: ?>
-                    <p class="text-white">No social media links available</p>
+                    <p class="text-white">Aucun lien de réseau social disponible</p>
                 <?php endif; ?>
             </div>
         </div>
         
         <div class="col-lg-3 col-md-6 mb-5">
-            <h5 class="mb-4 text-white text-uppercase font-weight-bold">Popular News</h5>
+            <h5 class="mb-4 text-white text-uppercase font-weight-bold">Nouvelles Populaires</h5>
             <?php foreach($popularArticles as $article): ?>
             <div class="mb-3">
                 <div class="mb-2">
@@ -93,9 +93,9 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
     <p class="m-0 text-center">
         © <?php echo date('Y'); ?> 
         <a href="#">
-            <?php echo htmlspecialchars($app['app_name'] ?? 'School News Portal'); ?>
+            <?php echo htmlspecialchars($app['app_name'] ?? 'College Dar Bouazza News'); ?>
         </a>. 
-        All Rights Reserved.
+        Tous droits réservés.
     </p>
 </div>
 <!-- Footer End -->

@@ -13,13 +13,13 @@ try {
     // Get current page for active state
     $currentPage = basename($_SERVER['PHP_SELF'], '.php');
 } catch (Exception $e) {
-    error_log("Header Error: " . $e->getMessage());
+    error_log("Erreur d'en-tête : " . $e->getMessage());
     $categories = [];
-    $app = ['app_name' => 'School News Portal'];
+    $app = ['app_name' => 'Portail des Nouvelles Scolaires'];
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
     <head>
         <meta charset="utf-8">
@@ -53,17 +53,15 @@ try {
     <body>
         <!-- Topbar Start -->
         <div class="container-fluid d-none d-lg-block">
-
             <div class="row align-items-center bg-white py-3 px-lg-5">
                 <div class="col-lg-4">
                     <a href="<?php echo $app['constants']['BASE_URL']; ?>"
                         class="navbar-brand p-0 d-none d-lg-block">
                         <h1
-                            class="m-0 display-4 text-uppercase text-primary"><?php echo htmlspecialchars($app['site_name'] ?? 'School'); ?><span
-                                class="text-secondary font-weight-normal"><?php echo htmlspecialchars($app['site_subtitle'] ?? 'News'); ?></span></h1>
+                            class="m-0 display-4 text-uppercase text-primary"><?php echo htmlspecialchars($app['site_name'] ?? 'École'); ?><span
+                                class="text-secondary font-weight-normal"><?php echo htmlspecialchars($app['site_subtitle'] ?? 'Nouvelles'); ?></span></h1>
                     </a>
                 </div>
-
             </div>
         </div>
         <!-- Topbar End -->
@@ -74,8 +72,8 @@ try {
                 class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
                 <a href="<?php echo $app['constants']['BASE_URL']; ?>" class="navbar-brand d-block d-lg-none">
                     <h1
-                        class="m-0 display-4 text-uppercase text-primary"><?php echo htmlspecialchars($app['site_name_short'] ?? 'School'); ?><span
-                            class="text-white font-weight-normal">News</span></h1>
+                        class="m-0 display-4 text-uppercase text-primary"><?php echo htmlspecialchars($app['site_name_short'] ?? 'École'); ?><span
+                            class="text-white font-weight-normal">Nouvelles</span></h1>
                 </a>
                 <button type="button" class="navbar-toggler"
                     data-toggle="collapse" data-target="#navbarCollapse">
@@ -86,11 +84,11 @@ try {
                     id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
                         <a href="<?php echo $app['constants']['BASE_URL']; ?>"
-                            class="nav-item nav-link <?php echo $currentPage == 'index' ? 'active' : ''; ?>">Home</a>
+                            class="nav-item nav-link <?php echo $currentPage == 'index' ? 'active' : ''; ?>">Accueil</a>
                         
                         <?php if(!empty($categories)): ?>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Catégories</a>
                                 <div class="dropdown-menu rounded-0 m-0">
                                     <?php foreach($categories as $category): ?>
                                     <a href="<?php echo $app['constants']['BASE_URL']; ?>/category/<?php echo htmlspecialchars($category['id']); ?>" 
@@ -107,7 +105,7 @@ try {
                         style="width: 100%; max-width: 300px;">
                         <form action="<?php echo $app['constants']['BASE_URL']; ?>/search" method="GET" class="w-100">
                             <div class="input-group">
-                                <input type="text" name="q" class="form-control border-0" placeholder="Search news...">
+                                <input type="text" name="q" class="form-control border-0" placeholder="Rechercher des nouvelles...">
                                 <div class="input-group-append">
                                     <button class="input-group-text text-dark border-0 px-3" 
                                             style="background-color: #2558d8;">

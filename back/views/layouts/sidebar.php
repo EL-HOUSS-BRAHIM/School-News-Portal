@@ -8,8 +8,8 @@ try {
     
     // Debug database connection
     if (!$articleModel->hasConnection()) {
-        error_log("No database connection");
-        throw new Exception("Database connection failed");
+        error_log("Pas de connexion à la base de données");
+        throw new Exception("Échec de la connexion à la base de données");
     }
     
     // Get latest articles
@@ -32,10 +32,10 @@ try {
 
     $socialLabels = [
         'facebook' => 'Fans',
-        'twitter' => 'Followers',
-        'linkedin' => 'Connects',
-        'instagram' => 'Followers',
-        'youtube' => 'Subscribers'
+        'twitter' => 'Abonnés',
+        'linkedin' => 'Connexions',
+        'instagram' => 'Abonnés',
+        'youtube' => 'Abonnés'
     ];
 
     // Format social media data
@@ -46,17 +46,17 @@ try {
                 'url' => $url,
                 'color' => $socialColors[$platform] ?? '#666666',
                 'followers' => '12,345', // Default follower count
-                'label' => $socialLabels[$platform] ?? 'Followers'
+                'label' => $socialLabels[$platform] ?? 'Abonnés'
             ];
         }
     }
     
     if (empty($latestArticles)) {
-        error_log("No articles found");
+        error_log("Aucun article trouvé");
     }
     
 } catch (Exception $e) {
-    error_log("Sidebar Error: " . $e->getMessage());
+    error_log("Erreur de la barre latérale : " . $e->getMessage());
     $latestArticles = [];
     $trendingArticles = [];
     $formattedSocialLinks = [];
@@ -75,8 +75,8 @@ try {
                 <div class="row">
                     <div class="col-12">
                         <div class="section-title">
-                            <h4 class="m-0 text-uppercase font-weight-bold">Latest News</h4>
-                            <a class="text-secondary font-weight-medium text-decoration-none" href="/articles">View All</a>
+                            <h4 class="m-0 text-uppercase font-weight-bold">Dernières Nouvelles</h4>
+                            <a class="text-secondary font-weight-medium text-decoration-none" href="/articles">Voir Tout</a>
                         </div>
                     </div>
                     
@@ -96,7 +96,7 @@ try {
                                            <?php echo htmlspecialchars($article['category']); ?>
                                         </a>
                                         <?php endif; ?>
-                                        <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
+                                        <small><?php echo date('d M, Y', strtotime($article['created_at'])); ?></small>
                                     </div>
                                     <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" 
                                        href="/article/<?php echo urlencode($article['title']); ?>">
@@ -107,7 +107,7 @@ try {
                                 </div>
                                 <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                                     <div class="d-flex align-items-center">
-                                        <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
+                                        <small><?php echo date('d M, Y', strtotime($article['created_at'])); ?></small>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <small class="ml-3"><i class="far fa-eye mr-2"></i><?php echo $article['views'] ?? 0; ?></small>
@@ -132,7 +132,7 @@ try {
                                            <?php echo htmlspecialchars($article['category']); ?>
                                         </a>
                                         <?php endif; ?>
-                                        <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
+                                        <small><?php echo date('d M, Y', strtotime($article['created_at'])); ?></small>
                                     </div>
                                     <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" 
                                        href="/article/<?php echo urlencode($article['title']); ?>">
@@ -144,7 +144,7 @@ try {
                         <?php endforeach; ?>
                     <?php else: ?>
                         <div class="col-12">
-                            <p class="text-center">No articles found.</p>
+                            <p class="text-center">Aucun article trouvé.</p>
                         </div>
                     <?php endif; ?>
                 </div>
@@ -155,7 +155,7 @@ try {
                 <!-- Social Follow Start -->
                 <div class="mb-3">
                     <div class="section-title mb-0">
-                        <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
+                        <h4 class="m-0 text-uppercase font-weight-bold">Suivez-nous</h4>
                     </div>
                     <div class="bg-white border border-top-0 p-3">
                         <?php if (!empty($formattedSocialLinks)): ?>
@@ -173,7 +173,7 @@ try {
                                 </a>
                             <?php endforeach; ?>
                         <?php else: ?>
-                            <p class="text-center text-muted">No social media links available</p>
+                            <p class="text-center text-muted">Aucun lien de réseau social disponible</p>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -182,7 +182,7 @@ try {
                 <!-- Ads Start -->
                 <div class="mb-3">
                     <div class="section-title mb-0">
-                        <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
+                        <h4 class="m-0 text-uppercase font-weight-bold">Publicité</h4>
                     </div>
                     <div class="bg-white text-center border border-top-0 p-3">
                         <a href><img class="img-fluid" src="img/news-800x500-2.jpg" alt></a>
@@ -193,7 +193,7 @@ try {
                 <!-- Trending News Section -->
                 <div class="mb-3">
                     <div class="section-title mb-0">
-                        <h4 class="m-0 text-uppercase font-weight-bold">Trending News</h4>
+                        <h4 class="m-0 text-uppercase font-weight-bold">Nouvelles Tendance</h4>
                     </div>
                     <div class="bg-white border border-top-0 p-3">
                         <?php foreach($trendingArticles as $article): ?>
@@ -209,7 +209,7 @@ try {
                                        <?php echo htmlspecialchars($article['category']); ?>
                                     </a>
                                     <?php endif; ?>
-                                    <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
+                                    <small><?php echo date('d M, Y', strtotime($article['created_at'])); ?></small>
                                 </div>
                                 <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" 
                                    href="/article/<?php echo urlencode($article['title']); ?>">

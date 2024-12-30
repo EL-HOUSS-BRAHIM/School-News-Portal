@@ -1,13 +1,13 @@
 <?php
 return [
-    'address' => '123 Street, New York, USA',
-    'phone' => '+012 345 67890',
-    'email' => 'info@example.com',
+    'address' => 'Dar Bouazza, Casablanca, Maroc',
+    'phone' => '+212 522-123456',
+    'email' => 'contact@',
     'social' => [
-        'twitter' => 'https://twitter.com/schoolnews',
-        'facebook' => 'https://facebook.com/schoolnews',
-        'linkedin' => 'https://linkedin.com/company/schoolnews',
-        'instagram' => 'https://instagram.com/schoolnews',
-        'youtube' => 'https://youtube.com/schoolnews'
+        'twitter' => 'https://twitter.com/CollegeDarBouazza',
+        'facebook' => 'https://facebook.com/CollegeDarBouazza', 
+        'linkedin' => 'https://linkedin.com/company/college-dar-bouazza',
+        'instagram' => 'https://instagram.com/collegedarbouazza',
+        'youtube' => 'https://youtube.com/c/CollegeDarBouazza'
     ]
 ];

@@ -9,8 +9,8 @@ try {
     
     // Debug database connection
     if (!$articleModel->hasConnection()) {
-        error_log("No database connection");
-        throw new Exception("Database connection failed");
+        error_log("Pas de connexion à la base de données");
+        throw new Exception("Échec de la connexion à la base de données");
     }
     
     // Get latest articles
@@ -36,10 +36,10 @@ try {
 
     $socialLabels = [
         'facebook' => 'Fans',
-        'twitter' => 'Followers',
-        'linkedin' => 'Connects',
-        'instagram' => 'Followers',
-        'youtube' => 'Subscribers'
+        'twitter' => 'Abonnés',
+        'linkedin' => 'Connexions',
+        'instagram' => 'Abonnés',
+        'youtube' => 'Abonnés'
     ];
 
     // Format social media data
@@ -50,13 +50,13 @@ try {
                 'url' => $url,
                 'color' => $socialColors[$platform] ?? '#666666',
                 'followers' => '12,345', // Default follower count
-                'label' => $socialLabels[$platform] ?? 'Followers'
+                'label' => $socialLabels[$platform] ?? 'Abonnés'
             ];
         }
     }
     
 } catch (Exception $e) {
-    error_log("Sidebar Error: " . $e->getMessage());
+    error_log("Erreur de la barre latérale : " . $e->getMessage());
     $latestArticles = [];
     $trendingArticles = [];
     $categories = [];
@@ -68,7 +68,7 @@ try {
     <!-- Social Follow Start -->
     <div class="mb-3">
         <div class="section-title mb-0">
-            <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
+            <h4 class="m-0 text-uppercase font-weight-bold">Suivez-nous</h4>
         </div>
         <div class="bg-white border border-top-0 p-3">
             <?php if (!empty($formattedSocialLinks)): ?>
@@ -86,7 +86,7 @@ try {
                     </a>
                 <?php endforeach; ?>
             <?php else: ?>
-                <p class="text-center text-muted">No social media links available</p>
+                <p class="text-center text-muted">Aucun lien de réseau social disponible</p>
             <?php endif; ?>
         </div>
     </div>
@@ -96,13 +96,13 @@ try {
     <?php if (isset($app['ads']['sidebar'])): ?>
     <div class="mb-3">
         <div class="section-title mb-0">
-            <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
+            <h4 class="m-0 text-uppercase font-weight-bold">Publicité</h4>
         </div>
         <div class="bg-white text-center border border-top-0 p-3">
             <a href="<?php echo htmlspecialchars($app['ads']['sidebar']['url']); ?>">
                 <img class="img-fluid" 
                      src="<?php echo htmlspecialchars($app['ads']['sidebar']['image']); ?>" 
-                     alt="Advertisement">
+                     alt="Publicité">
             </a>
         </div>
     </div>
@@ -112,7 +112,7 @@ try {
     <!-- Trending News Start -->
     <div class="mb-3">
         <div class="section-title mb-0">
-            <h4 class="m-0 text-uppercase font-weight-bold">Trending News</h4>
+            <h4 class="m-0 text-uppercase font-weight-bold">Nouvelles Tendance</h4>
         </div>
         <div class="bg-white border border-top-0 p-3">
             <?php foreach($trendingArticles as $article): ?>
@@ -129,7 +129,7 @@ try {
                            <?php echo htmlspecialchars($article['category']); ?>
                         </a>
                         <?php endif; ?>
-                        <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
+                        <small><?php echo date('d M, Y', strtotime($article['created_at'])); ?></small>
                     </div>
                     <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" 
                        href="/article/<?php echo urlencode($article['title']); ?>">
@@ -149,7 +149,7 @@ try {
     <!-- Tags Start -->
     <div class="mb-3">
         <div class="section-title mb-0">
-            <h4 class="m-0 text-uppercase font-weight-bold">Categories</h4>
+            <h4 class="m-0 text-uppercase font-weight-bold">Catégories</h4>
         </div>
         <div class="bg-white border border-top-0 p-3">
             <div class="d-flex flex-wrap m-n1">

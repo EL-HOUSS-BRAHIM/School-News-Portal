@@ -1,6 +1,10 @@
 <?php
 require_once __DIR__ . '/../../config/app.php';
 require_once __DIR__ . '/../../models/Category.php';
+require_once __DIR__ . '/../../core/Helpers.php'; // Add this line
+
+// Initialize Translate
+Translate::init(); // Add this line
 
 try {
     // Get categories for navigation
@@ -15,16 +19,15 @@ try {
 } catch (Exception $e) {
     error_log("Header Error: " . $e->getMessage());
     $categories = [];
-    $app = ['app_name' => 'School News Portal'];
+    $app = ['app_name' => 'College Dar Bouazza News'];
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="utf-8">
-        <title><?php echo htmlspecialchars($app['app_name']); ?></title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<html lang="<?php echo Translate::getCurrentLang(); ?>">
+<head>
+    <meta charset="utf-8">
+    <title><?php echo htmlspecialchars($app['app_name']); ?></title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="<?php echo htmlspecialchars($app['meta_keywords'] ?? ''); ?>" name="keywords">
         <meta content="<?php echo htmlspecialchars($app['meta_description'] ?? ''); ?>" name="description">
 
@@ -37,7 +40,23 @@ try {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
             rel="stylesheet">
 
-        <!-- Font Awesome -->
+        <!-- SEO Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?php echo htmlspecialchars($app['meta_description']); ?>">
+    <meta name="keywords" content="<?php echo htmlspecialchars($app['meta_keywords']); ?>">
+    <meta name="author" content="College Dar Bouazza">
+    <meta property="og:title" content="<?php echo htmlspecialchars($app['app_name']); ?>">
+    <meta property="og:description" content="<?php echo htmlspecialchars($app['meta_description']); ?>">
+    <meta property="og:image" content="<?php echo $app['constants']['ASSETS_URL']; ?>/img/logo.png">
+    <meta property="og:url" content="<?php echo $app['constants']['BASE_URL']; ?>">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="<?php echo $app['constants']['BASE_URL'] . $_SERVER['REQUEST_URI']; ?>">
+
+        <!-- Additional Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google-news-tags" content="education, morocco, casablanca">
+    <!-- Font Awesome -->
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
             rel="stylesheet">
@@ -59,7 +78,7 @@ try {
                     <a href="<?php echo $app['constants']['BASE_URL']; ?>"
                         class="navbar-brand p-0 d-none d-lg-block">
                         <h1
-                            class="m-0 display-4 text-uppercase text-primary"><?php echo htmlspecialchars($app['site_name'] ?? 'School'); ?><span
+                            class="m-0 display-4 text-uppercase text-primary"><?php echo htmlspecialchars($app['site_name'] ?? 'College'); ?><span
                                 class="text-secondary font-weight-normal"><?php echo htmlspecialchars($app['site_subtitle'] ?? 'News'); ?></span></h1>
                     </a>
                 </div>
@@ -74,7 +93,7 @@ try {
                 class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
                 <a href="<?php echo $app['constants']['BASE_URL']; ?>" class="navbar-brand d-block d-lg-none">
                     <h1
-                        class="m-0 display-4 text-uppercase text-primary"><?php echo htmlspecialchars($app['site_name_short'] ?? 'School'); ?><span
+                        class="m-0 display-4 text-uppercase text-primary"><?php echo htmlspecialchars($app['site_name_short'] ?? 'College'); ?><span
                             class="text-white font-weight-normal">News</span></h1>
                 </a>
                 <button type="button" class="navbar-toggler"
@@ -86,11 +105,11 @@ try {
                     id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
                         <a href="<?php echo $app['constants']['BASE_URL']; ?>"
-                            class="nav-item nav-link <?php echo $currentPage == 'index' ? 'active' : ''; ?>">Home</a>
+                            class="nav-item nav-link <?php echo $currentPage == 'index' ? 'active' : ''; ?>">Accueil</a>
                         
                         <?php if(!empty($categories)): ?>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Catégories</a>
                                 <div class="dropdown-menu rounded-0 m-0">
                                     <?php foreach($categories as $category): ?>
                                     <a href="<?php echo $app['constants']['BASE_URL']; ?>/category/<?php echo htmlspecialchars($category['id']); ?>" 
@@ -107,7 +126,7 @@ try {
                         style="width: 100%; max-width: 300px;">
                         <form action="<?php echo $app['constants']['BASE_URL']; ?>/search" method="GET" class="w-100">
                             <div class="input-group">
-                                <input type="text" name="q" class="form-control border-0" placeholder="Search news...">
+                                <input type="text" name="q" class="form-control border-0" placeholder="Rechercher des nouvelles...">
                                 <div class="input-group-append">
                                     <button class="input-group-text text-dark border-0 px-3" 
                                             style="background-color: #2558d8;">

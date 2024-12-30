@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://collegedarelmaarifa.ma/sitemap.xml
+Disallow: /admin/
+Disallow: /dashboard/

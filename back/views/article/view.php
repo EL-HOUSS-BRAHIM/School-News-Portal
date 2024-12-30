@@ -10,7 +10,7 @@ require_once __DIR__ . '/../layouts/article_header.php';
             <div class="col-12">
                 <div class="d-flex justify-content-between">
                     <div class="section-title border-right-0 mb-0" style="width: 180px;">
-                        <h4 class="m-0 text-uppercase font-weight-bold">Breaking News</h4>
+                        <h4 class="m-0 text-uppercase font-weight-bold">Dernières Nouvelles</h4>
                     </div>
                     <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center bg-white border border-left-0" 
                          style="width: calc(100% - 180px); padding-right: 100px;">
@@ -25,7 +25,7 @@ require_once __DIR__ . '/../layouts/article_header.php';
                             <?php endforeach; ?>
                         <?php else: ?>
                             <div class="text-truncate">
-                                <span class="text-secondary">No breaking news available</span>
+                                <span class="text-secondary">Aucune nouvelle de dernière minute disponible</span>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -72,7 +72,7 @@ require_once __DIR__ . '/../layouts/article_header.php';
                         </div>
                         <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
                             <div class="d-flex align-items-center">
-                                <span>By <?php echo htmlspecialchars($article['author'] ?? 'Anonymous'); ?></span>
+                                <span>Par <?php echo htmlspecialchars($article['author'] ?? 'Anonyme'); ?></span>
                             </div>
                             <div class="d-flex align-items-center">
                                 <span class="ml-3">
@@ -91,7 +91,7 @@ require_once __DIR__ . '/../layouts/article_header.php';
                     <!-- Comment List Start -->
                     <div class="mb-3">
                         <div class="section-title mb-0">
-                            <h4 class="m-0 text-uppercase font-weight-bold"><?php echo count($comments); ?> Comments</h4>
+                            <h4 class="m-0 text-uppercase font-weight-bold"><?php echo count($comments); ?> Commentaires</h4>
                         </div>
                         <div class="bg-white border border-top-0 p-4">
                             <?php foreach($comments as $comment): ?>
@@ -115,7 +115,7 @@ require_once __DIR__ . '/../layouts/article_header.php';
                     <!-- Comment Form Start -->
                     <div class="mb-3">
                         <div class="section-title mb-0">
-                            <h4 class="m-0 text-uppercase font-weight-bold">Leave a comment</h4>
+                            <h4 class="m-0 text-uppercase font-weight-bold">Laissez un commentaire</h4>
                         </div>
                         <div class="bg-white border border-top-0 p-4">
                             <form action="/comment/add" method="POST">
@@ -127,11 +127,11 @@ require_once __DIR__ . '/../layouts/article_header.php';
                                 <div class="form-group mb-0">
                                     <?php if(isset($_SESSION['user_id'])): ?>
                                         <button type="submit" class="btn btn-primary font-weight-semi-bold py-2 px-3">
-                                            Leave a comment
+                                            Laissez un commentaire
                                         </button>
                                     <?php else: ?>
                                         <a href="/login" class="btn btn-primary font-weight-semi-bold py-2 px-3">
-                                            Login to comment
+                                            Connectez-vous pour commenter
                                         </a>
                                     <?php endif; ?>
                                 </div>
@@ -140,7 +140,7 @@ require_once __DIR__ . '/../layouts/article_header.php';
                     </div>
                     <!-- Comment Form End -->
                 <?php else: ?>
-                    <div class="alert alert-warning">Article not found</div>
+                    <div class="alert alert-warning">Article non trouvé</div>
                 <?php endif; ?>
             </div>
 
@@ -151,3 +151,30 @@ require_once __DIR__ . '/../layouts/article_header.php';
 <!-- News With Sidebar End -->
 
 <?php include __DIR__ . '/../layouts/article_footer.php'; ?>
+
+<!-- News Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "<?php echo htmlspecialchars($article['title']); ?>",
+  "image": [
+    "<?php echo htmlspecialchars($article['image'] ?? '/img/default.jpg'); ?>"
+  ],
+  "datePublished": "<?php echo date('c', strtotime($article['created_at'])); ?>",
+  "dateModified": "<?php echo date('c', strtotime($article['updated_at'] ?? $article['created_at'])); ?>",
+  "author": {
+    "@type": "Person",
+    "name": "<?php echo htmlspecialchars($article['author'] ?? 'Anonyme'); ?>"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "College Dar Bouazza News",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "<?php echo $app['constants']['ASSETS_URL']; ?>/img/logo.png"
+    }
+  },
+  "description": "<?php echo htmlspecialchars($article['description'] ?? ''); ?>"
+}
+</script>
