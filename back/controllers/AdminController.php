@@ -15,18 +15,26 @@ class AdminController extends Controller
     }
 
     public function index()
-    {
-        $userModel = new User();
-        $articleModel = new Article();
+{
+    $userModel = new User();
+    $articleModel = new Article();
 
-        $users = $userModel->getAll();
-        $articles = $articleModel->getAll();
+    $users = $userModel->getAll();
+    $articles = $articleModel->getAll();
 
-        $this->renderView('admin/dashboard', [
-            'users' => $users,
-            'articles' => $articles,
-        ]);
-    }
+    $userData = [
+        'username' => $_SESSION['username'] ?? 'Admin',
+        'avatar' => $_SESSION['avatar'] ?? '../assets/img/default-avatar.png',
+        'notifications' => $this->getNotifications($_SESSION['user_id'])
+    ];
+
+    $this->renderView('admin/dashboard', [
+        'users' => $users,
+        'articles' => $articles,
+        'userData' => $userData,
+        'currentPage' => 'dashboard'
+    ]);
+}
 
     public function users()
     {

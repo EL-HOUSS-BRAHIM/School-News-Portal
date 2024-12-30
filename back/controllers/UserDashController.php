@@ -17,51 +17,51 @@ class UserDashController extends Controller
     }
 
     public function dashboard()
-    {
-        $articleModel = new Article();
-        $commentModel = new Comment();
+{
+    $articleModel = new Article();
+    $commentModel = new Comment();
 
-        // Get statistics
-        $totalArticles = $articleModel->countByUser($_SESSION['user_id']);
-        $totalViews = $articleModel->getTotalViewsByUser($_SESSION['user_id']);
-        $totalLikes = $articleModel->getTotalLikesByUser($_SESSION['user_id']);
-        $totalComments = $commentModel->countByUserArticles($_SESSION['user_id']);
+    // Get statistics
+    $totalArticles = $articleModel->countByUser($_SESSION['user_id']);
+    $totalViews = $articleModel->getTotalViewsByUser($_SESSION['user_id']);
+    $totalLikes = $articleModel->getTotalLikesByUser($_SESSION['user_id']);
+    $totalComments = $commentModel->countByUserArticles($_SESSION['user_id']);
 
-        // Get recent articles
-        $recentArticles = $articleModel->getByUser($_SESSION['user_id'], 5);
+    // Get recent articles
+    $recentArticles = $articleModel->getByUser($_SESSION['user_id'], 5);
 
-        // Get performance data for chart
-        $viewsData = $articleModel->getViewsStats($_SESSION['user_id']);
-        $likesData = $articleModel->getLikesStats($_SESSION['user_id']);
+    // Get performance data for chart
+    $viewsData = $articleModel->getViewsStats($_SESSION['user_id']);
+    $likesData = $articleModel->getLikesStats($_SESSION['user_id']);
 
-        // Get recent activity
-        $recentActivity = $this->getRecentActivity($_SESSION['user_id']);
+    // Get recent activity
+    $recentActivity = $this->getRecentActivity($_SESSION['user_id']);
 
-        $data = [
-            'totalArticles' => $totalArticles,
-            'totalViews' => $totalViews,
-            'totalLikes' => $totalLikes,
-            'totalComments' => $totalComments,
-            'recentArticles' => $recentArticles,
-            'viewsData' => $viewsData,
-            'likesData' => $likesData,
-            'recentActivity' => $recentActivity
-        ];
+    $data = [
+        'totalArticles' => $totalArticles,
+        'totalViews' => $totalViews,
+        'totalLikes' => $totalLikes,
+        'totalComments' => $totalComments,
+        'recentArticles' => $recentArticles,
+        'viewsData' => $viewsData,
+        'likesData' => $likesData,
+        'recentActivity' => $recentActivity
+    ];
 
-        // Get user data
-        $userData = [
-            'username' => $_SESSION['username'] ?? 'User',
-            'avatar' => $_SESSION['avatar'] ?? '../assets/img/default-avatar.png',
-            'notifications' => $this->getNotifications($_SESSION['user_id'])
-        ];
+    // Get user data
+    $userData = [
+        'username' => $_SESSION['username'] ?? 'User',
+        'avatar' => $_SESSION['avatar'] ?? '../assets/img/default-avatar.png',
+        'notifications' => $this->getNotifications($_SESSION['user_id'])
+    ];
 
-        $data = array_merge($data, [
-            'userData' => $userData,
-            'currentPage' => 'dashboard'
-        ]);
+    $data = array_merge($data, [
+        'userData' => $userData,
+        'currentPage' => 'dashboard'
+    ]);
 
-        $this->renderView('dash/index', $data);
-    }
+    $this->renderView('dash/index', $data);
+}
 
     public function articles()
     {

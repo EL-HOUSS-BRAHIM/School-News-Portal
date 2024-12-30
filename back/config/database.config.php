@@ -1,8 +1,8 @@
 <?php
 return [
-    'host' => $_ENV['DB_HOST'] ?? 'localhost',
-    'dbname' => $_ENV['DB_NAME'] ?? 'database',
-    'username' => $_ENV['DB_USER'] ?? 'root',
+    'host' => $_ENV['DB_HOST'] ?? 'sql307.com',
+    'dbname' => $_ENV['DB_NAME'] ?? '',
+    'username' => $_ENV['DB_USER'] ?? '',
     'password' => $_ENV['DB_PASS'] ?? '',
     'charset' => 'utf8mb4',
     'options' => [

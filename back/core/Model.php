@@ -29,26 +29,30 @@ class Model
     }
 
     public function save($data)
-    {
-        try {
-            if (isset($data['content'])) {
-                // Decode HTML entities and ensure proper HTML
-                $data['content'] = html_entity_decode($data['content'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
-            }
-    
-            $columns = implode(', ', array_keys($data));
-            $values = implode(', ', array_fill(0, count($data), '?'));
-            
-            $sql = "INSERT INTO {$this->table} ($columns) VALUES ($values)";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute(array_values($data));
-            
-            return $this->pdo->lastInsertId();
-        } catch (PDOException $e) {
-            error_log("Error saving article: " . $e->getMessage());
-            throw $e;
+{
+    try {
+        // Generate UUID if not provided
+        if (!isset($data['id'])) {
+            $data['id'] = generateUUID();
         }
+
+        if (isset($data['content'])) {
+            $data['content'] = html_entity_decode($data['content'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        }
+
+        $columns = implode(', ', array_keys($data));
+        $values = implode(', ', array_fill(0, count($data), '?'));
+        
+        $sql = "INSERT INTO {$this->table} ($columns) VALUES ($values)";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute(array_values($data));
+        
+        return $data['id']; // Return the UUID instead of lastInsertId()
+    } catch (PDOException $e) {
+        error_log("Error saving record: " . $e->getMessage());
+        throw $e;
     }
+}
     
     public function update($id, $data)
     {
