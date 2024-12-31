@@ -139,7 +139,12 @@ database.config.php
 
 ## License
 
-**MIT License**
+**License**
+Copyright (c) 2024 BRAHIM EL HOUSS
+
+All rights reserved.
+
+Permission is not granted to any person to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software and associated documentation files (the "Software"), without explicit written permission from the copyright holder.
 
 ## Contact
 
