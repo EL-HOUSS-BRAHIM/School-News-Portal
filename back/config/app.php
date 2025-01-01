@@ -7,8 +7,8 @@ return [
     'meta_keywords' => 'collège dar bouazza, actualités éducation, dar bouazza news, actualités dar bouazza',
     'meta_description' => 'Découvrez les dernières nouvelles et événements éducatifs du Collège Dar Bouazza. Restez informé avec des articles, des mises à jour et des analyses approfondies sur l\'éducation et la communauté scolaire.',
     'constants' => [
-        'BASE_URL' => 'https://bross-news-website.infinityfreeapp.com',
-        'ASSETS_URL' => 'https://bross-news-website.infinityfreeapp.com/assets',
+        'BASE_URL' => 'http://localhost:8088',
+        'ASSETS_URL' => 'http://localhost:8088/assets',
     ],
     'social' => [
         'twitter' => 'https://twitter.com/CollegeDarBouazza',

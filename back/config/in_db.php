@@ -18,7 +18,7 @@ try {
         $adminId = generateUUID();
         $password = password_hash('admin123', PASSWORD_DEFAULT);
         $stmt = $pdo->prepare("INSERT INTO users (id, username, password, role) VALUES (?, ?, ?, ?)");
-        $stmt->execute([$adminId, 'admin', $password, 'admin']);
+        $stmt->execute([$adminId, 'bross', $password, 'admin']);
         echo "Admin user created successfully!\n";
         
         // Insert default categories in French
@@ -54,3 +54,4 @@ try {
     echo "Error: " . $e->getMessage() . "\n";
     exit(1);
 }
+?>

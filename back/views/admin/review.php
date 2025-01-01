@@ -52,11 +52,12 @@
                                         <?php echo htmlspecialchars($article['category']); ?>
                                     </span>
                                 </td>
-                                <td>
-                                    <span class="text-secondary text-xs font-weight-bold">
-                                        <?php echo htmlspecialchars($article['username'] ?? 'Unknown'); ?>
-                                    </span>
-                                </td>
+                                <!-- Replace this line in the author column -->
+<td>
+    <span class="text-secondary text-xs font-weight-bold">
+        <?php echo htmlspecialchars($article['author'] ?? 'Unknown'); ?>
+    </span>
+</td>
                                 <td class="align-middle text-center">
                                     <div class="d-flex align-items-center justify-content-center">
                                         <span class="me-2 text-xs font-weight-bold">

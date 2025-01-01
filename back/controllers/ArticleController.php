@@ -136,12 +136,24 @@ public function edit($id)
     $this->renderView('article/edit', ['article' => $article]);
 }
 
-    public function delete($id)
-    {
+public function delete($id)
+{
+    try {
+        $id = (int) $_POST['id']; // Change from $_GET to $_POST
         $articleModel = new Article();
-        $articleModel->delete($id);
+        $article = $articleModel->find($id);
+
+        // Verify ownership
+        if ($article && $article['user_id'] === $_SESSION['user_id']) {
+            $articleModel->delete($id);
+        }
+
+        $this->redirect('/dashboard/articles');
+    } catch (Exception $e) {
+        error_log("Error deleting article: " . $e->getMessage());
         $this->redirect('/dashboard/articles');
     }
+}
 
 
     public function view()

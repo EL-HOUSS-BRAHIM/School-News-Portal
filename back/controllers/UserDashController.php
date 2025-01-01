@@ -262,52 +262,98 @@ class UserDashController extends Controller
         $this->renderView('article/edit', $data);
     }
 
-    public function updateStatus() {
-        try {
-            $id = (int) $_POST['id'];
-            $newStatus = $_POST['status'];
-            $userRole = $_SESSION['user_role'];
-            
-            // Verify permissions
-            $allowedStatuses = Article::getAvailableStatuses($userRole);
-            if (!array_key_exists($newStatus, $allowedStatuses)) {
-                throw new Exception("Unauthorized status change");
-            }
-
-            $articleModel = new Article();
-            $article = $articleModel->find($id);
-
-            // Verify ownership
-            if (!$article || $article['user_id'] !== $_SESSION['user_id']) {
-                throw new Exception("Unauthorized");
-            }
-
-            $articleModel->update($id, ['status' => $newStatus]);
-            $this->redirect('/dashboard/articles');
-        } catch (Exception $e) {
-            error_log("Status update error: " . $e->getMessage());
-            $this->redirect('/dashboard/articles');
+    public function updateStatus() 
+{
+    try {
+        if (!isset($_POST['csrf_token']) || !isset($_SESSION['csrf_token']) || 
+            !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+            throw new Exception("CSRF token validation failed");
         }
-    }
 
-    public function deleteArticle()
-    {
-        try {
-            $id = (int) $_GET['id'];
-            $articleModel = new Article();
-            $article = $articleModel->find($id);
+        $id = $_POST['id'];
+        $newStatus = $_POST['status'];
+        $userRole = $_SESSION['user_role'];
+        
+        $articleModel = new Article();
+        $article = $articleModel->find($id);
 
-            // Verify ownership
-            if ($article && $article['user_id'] === $_SESSION['user_id']) {
-                $articleModel->delete($id);
-            }
-
-            $this->redirect('/dashboard/articles');
-        } catch (Exception $e) {
-            error_log("Error deleting article: " . $e->getMessage());
-            $this->redirect('/dashboard/articles');
+        if (!$article) {
+            throw new Exception("Article not found");
         }
+
+        // Check permissions
+        $allowedStatuses = Article::getAvailableStatuses($userRole);
+        if (!array_key_exists($newStatus, $allowedStatuses)) {
+            throw new Exception("Status change not allowed");
+        }
+
+        // Verify ownership
+        if ($article['user_id'] != $_SESSION['user_id'] && $userRole !== 'admin') {
+            throw new Exception("Unauthorized access");
+        }
+
+        if ($articleModel->update($id, ['status' => $newStatus])) {
+            $_SESSION['success'] = "Status updated successfully";
+        } else {
+            throw new Exception("Failed to update status");
+        }
+
+        $this->redirect('/dashboard/articles');
+    } catch (Exception $e) {
+        error_log("Status update error: " . $e->getMessage());
+        $_SESSION['error'] = $e->getMessage();
+        $this->redirect('/dashboard/articles');
     }
+}
+
+public function deleteArticle()
+{
+    try {
+        // Check if article ID is provided
+        if (!isset($_POST['id'])) {
+            throw new Exception("Article ID not provided");
+        }
+
+        // Verify CSRF token
+        if (!isset($_POST['csrf_token'])) {
+            throw new Exception("CSRF token not provided");
+        }
+
+        if (!isset($_SESSION['csrf_token'])) {
+            throw new Exception("Session CSRF token not found");
+        }
+
+        if (!hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+            throw new Exception("Invalid CSRF token");
+        }
+
+        $id = $_POST['id'];
+        $articleModel = new Article();
+        $article = $articleModel->find($id);
+
+        // Verify article exists
+        if (!$article) {
+            throw new Exception("Article not found");
+        }
+
+        // Verify ownership or admin rights
+        if ($article['user_id'] !== $_SESSION['user_id'] && $_SESSION['user_role'] !== 'admin') {
+            throw new Exception("Unauthorized access");
+        }
+
+        // Delete the article
+        if (!$articleModel->delete($id)) {
+            throw new Exception("Failed to delete article");
+        }
+
+        $_SESSION['success'] = "Article deleted successfully";
+        $this->redirect('/dashboard/articles');
+    } catch (Exception $e) {
+        error_log("Error deleting article: " . $e->getMessage());
+        $_SESSION['error'] = $e->getMessage();
+        $this->redirect('/dashboard/articles');
+    }
+}
 
 
     private function getRecentActivity($userId)

@@ -1,288 +1,533 @@
-[30-Dec-2024 21:26:54 UTC] Processing URL: /
-[30-Dec-2024 21:26:54 UTC] Checking pattern: /^\/$/ against path: /
-[30-Dec-2024 21:26:54 UTC] Route matched. Controller action: HomeController@index
-[30-Dec-2024 21:26:54 UTC] Parameters: Array
+[31-Dec-2024 19:30:26 America/New_York] Processing URL: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/articles$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/article$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/login$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/register$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/logout$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/admin$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/dashboard$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/dashboard\/article\/new$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/dashboard\/article\/update$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/dashboard\/article\/store$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/dashboard\/article\/status$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/dashboard\/profile$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/dashboard\/analytics$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/admin\/users$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/admin\/add_user$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/admin\/store_user$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Checking pattern: /^\/admin\/review$/ against path: /admin/review
+[31-Dec-2024 19:30:26 America/New_York] Route matched. Controller action: AdminController@review
+[31-Dec-2024 19:30:26 America/New_York] Parameters: Array
 (
 )
 
-[30-Dec-2024 21:26:54 UTC] Attempting database connection with:
-[30-Dec-2024 21:26:54 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 21:26:54 UTC] Database: sql7754447
-[30-Dec-2024 21:26:54 UTC] Username: sql7754447
-[30-Dec-2024 21:26:56 UTC] PHP Fatal error:  Uncaught Error: Cannot access private property Translate::$currentLang in /home/brahim/Desktop/newproject/back/views/layouts/header.php:22
-Stack trace:
-#0 /home/brahim/Desktop/newproject/back/views/home/index.php(1): require_once()
-#1 /home/brahim/Desktop/newproject/back/core/Controller.php(8): require_once('...')
-#2 /home/brahim/Desktop/newproject/back/controllers/HomeController.php(69): Controller->renderView()
-#3 /home/brahim/Desktop/newproject/index.php(56): HomeController->index()
-#4 {main}
-  thrown in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 22
-[30-Dec-2024 21:31:48 UTC] Processing URL: /
-[30-Dec-2024 21:31:48 UTC] Checking pattern: /^\/$/ against path: /
-[30-Dec-2024 21:31:48 UTC] Route matched. Controller action: HomeController@index
-[30-Dec-2024 21:31:48 UTC] Parameters: Array
+[31-Dec-2024 19:30:26 America/New_York] Attempting database connection with:
+[31-Dec-2024 19:30:26 America/New_York] Host: sql307.infinityfree.com
+[31-Dec-2024 19:30:26 America/New_York] Database: if0_38006148_news
+[31-Dec-2024 19:30:26 America/New_York] Username: if0_38006148
+[31-Dec-2024 19:30:28 America/New_York] Processing URL: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/articles$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/login$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/register$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/logout$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/admin$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/dashboard$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/dashboard\/article\/new$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/dashboard\/article\/update$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/dashboard\/article\/store$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/dashboard\/article\/status$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/dashboard\/profile$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/dashboard\/analytics$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/admin\/users$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/admin\/add_user$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/admin\/store_user$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/admin\/review$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/admin\/publish_article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] Checking pattern: /^\/admin\/reject_article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:28 America/New_York] No route matched. Falling back to: null
+[31-Dec-2024 19:30:31 America/New_York] Processing URL: /dashboard/articles
+[31-Dec-2024 19:30:31 America/New_York] Checking pattern: /^\/$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:31 America/New_York] Checking pattern: /^\/articles$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:31 America/New_York] Checking pattern: /^\/article$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:31 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:31 America/New_York] Checking pattern: /^\/login$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:31 America/New_York] Checking pattern: /^\/register$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:31 America/New_York] Checking pattern: /^\/logout$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:31 America/New_York] Checking pattern: /^\/admin$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:31 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:31 America/New_York] Checking pattern: /^\/dashboard$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:31 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:31 America/New_York] Route matched. Controller action: UserDashController@articles
+[31-Dec-2024 19:30:31 America/New_York] Parameters: Array
 (
 )
 
-[30-Dec-2024 21:31:48 UTC] Attempting database connection with:
-[30-Dec-2024 21:31:48 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 21:31:48 UTC] Database: sql7754447
-[30-Dec-2024 21:31:48 UTC] Username: sql7754447
-[30-Dec-2024 21:33:42 UTC] Processing URL: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/articles$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/article$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/login$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/register$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/logout$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/admin$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/comment\/add$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/dashboard$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/admin\/users$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/admin\/review$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /contact
-[30-Dec-2024 21:33:42 UTC] No route matched. Falling back to: null
-[30-Dec-2024 21:33:57 UTC] Processing URL: /article/Global+Climate+Summit+Reaches+Historic+Agreement
-[30-Dec-2024 21:33:57 UTC] Checking pattern: /^\/$/ against path: /article/Global+Climate+Summit+Reaches+Historic+Agreement
-[30-Dec-2024 21:33:57 UTC] Checking pattern: /^\/articles$/ against path: /article/Global+Climate+Summit+Reaches+Historic+Agreement
-[30-Dec-2024 21:33:57 UTC] Checking pattern: /^\/article$/ against path: /article/Global+Climate+Summit+Reaches+Historic+Agreement
-[30-Dec-2024 21:33:57 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/Global+Climate+Summit+Reaches+Historic+Agreement
-[30-Dec-2024 21:33:57 UTC] Route matched. Controller action: ArticleController@viewByTitle
-[30-Dec-2024 21:33:57 UTC] Parameters: Array
+[31-Dec-2024 19:30:31 America/New_York] Session data in middleware: Array
 (
-    [0] => Global+Climate+Summit+Reaches+Historic+Agreement
+    [csrf_token] => 3e71e76a0778db778c1876f0dd701948c2232c223a012d9b9d58efd1ea4b18e7
+    [user_id] => b383c26a-15b5-482a-9440-fa26db9711b6
+    [username] => bross
+    [user_role] => admin
 )
 
-[30-Dec-2024 21:33:57 UTC] viewByTitle called with title: Global+Climate+Summit+Reaches+Historic+Agreement
-[30-Dec-2024 21:33:57 UTC] Decoded title: Global Climate Summit Reaches Historic Agreement
-[30-Dec-2024 21:33:57 UTC] Attempting database connection with:
-[30-Dec-2024 21:33:57 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 21:33:57 UTC] Database: sql7754447
-[30-Dec-2024 21:33:57 UTC] Username: sql7754447
-[30-Dec-2024 21:33:57 UTC] Getting article by title: Global Climate Summit Reaches Historic Agreement
-[30-Dec-2024 21:33:57 UTC] Query result: Array
-(
-    [id] => 14
-    [title] => Global Climate Summit Reaches Historic Agreement
-    [content] => World leaders from 195 countries have reached a landmark agreement at the 2024 Global Climate Summit. The unprecedented deal commits nations to reduce carbon emissions by 60% before 2030. The agreement includes: - Massive investment in renewable energy - Phase-out of coal power plants - Creation of a $100 billion climate fund - Strict penalties for non-compliance
-    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735555175/kekduceqcboqwc0vxsbm.jpg
-    [category_id] => 1
-    [user_id] => 1
-    [views] => 390
-    [featured] => 1
-    [breaking] => 1
-    [status] => published
-    [likes] => 0
-    [created_at] => 2024-12-28 18:36:09
-    [updated_at] => 2024-12-30 20:17:37
-    [category] => World News
-    [author] => yassine
-)
-
-[30-Dec-2024 21:33:57 UTC] Article data: Array
-(
-    [id] => 14
-    [title] => Global Climate Summit Reaches Historic Agreement
-    [content] => World leaders from 195 countries have reached a landmark agreement at the 2024 Global Climate Summit. The unprecedented deal commits nations to reduce carbon emissions by 60% before 2030. The agreement includes: - Massive investment in renewable energy - Phase-out of coal power plants - Creation of a $100 billion climate fund - Strict penalties for non-compliance
-    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735555175/kekduceqcboqwc0vxsbm.jpg
-    [category_id] => 1
-    [user_id] => 1
-    [views] => 390
-    [featured] => 1
-    [breaking] => 1
-    [status] => published
-    [likes] => 0
-    [created_at] => 2024-12-28 18:36:09
-    [updated_at] => 2024-12-30 20:17:37
-    [category] => World News
-    [author] => yassine
-)
-
-[30-Dec-2024 21:33:58 UTC] Rendering article view with data
-[30-Dec-2024 21:34:46 UTC] Processing URL: /
-[30-Dec-2024 21:34:46 UTC] Checking pattern: /^\/$/ against path: /
-[30-Dec-2024 21:34:46 UTC] Route matched. Controller action: HomeController@index
-[30-Dec-2024 21:34:46 UTC] Parameters: Array
+[31-Dec-2024 19:30:31 America/New_York] Attempting database connection with:
+[31-Dec-2024 19:30:31 America/New_York] Host: sql307.infinityfree.com
+[31-Dec-2024 19:30:31 America/New_York] Database: if0_38006148_news
+[31-Dec-2024 19:30:31 America/New_York] Username: if0_38006148
+[31-Dec-2024 19:30:31 America/New_York] getByUser Query: SELECT a.*, c.name as category 
+                    FROM articles a 
+                    LEFT JOIN categories c ON a.category_id = c.id 
+                    WHERE a.user_id = ?
+                    ORDER BY a.created_at DESC
+[31-Dec-2024 19:30:31 America/New_York] getByUser Results count: 3
+[31-Dec-2024 19:30:32 America/New_York] Processing URL: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/articles$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/login$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/register$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/logout$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/admin$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/dashboard$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/dashboard\/article\/new$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/dashboard\/article\/update$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/dashboard\/article\/store$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/dashboard\/article\/status$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/dashboard\/profile$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/dashboard\/analytics$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/admin\/users$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/admin\/add_user$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/admin\/store_user$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/admin\/review$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/admin\/publish_article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] Checking pattern: /^\/admin\/reject_article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:32 America/New_York] No route matched. Falling back to: null
+[31-Dec-2024 19:30:36 America/New_York] Processing URL: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/articles$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/article$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/login$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/register$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/logout$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/admin$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/dashboard$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/dashboard\/article\/new$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/dashboard\/article\/update$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:36 America/New_York] Route matched. Controller action: UserDashController@deleteArticle
+[31-Dec-2024 19:30:36 America/New_York] Parameters: Array
 (
 )
 
-[30-Dec-2024 21:34:46 UTC] Attempting database connection with:
-[30-Dec-2024 21:34:46 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 21:34:46 UTC] Database: sql7754447
-[30-Dec-2024 21:34:46 UTC] Username: sql7754447
-[30-Dec-2024 21:35:28 UTC] Processing URL: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/articles$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/article$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/login$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/register$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/logout$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/admin$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/comment\/add$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/dashboard$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/admin\/users$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/admin\/review$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /ar/
-[30-Dec-2024 21:35:28 UTC] No route matched. Falling back to: null
-[30-Dec-2024 21:35:32 UTC] Processing URL: /
-[30-Dec-2024 21:35:32 UTC] Checking pattern: /^\/$/ against path: /
-[30-Dec-2024 21:35:32 UTC] Route matched. Controller action: HomeController@index
-[30-Dec-2024 21:35:32 UTC] Parameters: Array
+[31-Dec-2024 19:30:36 America/New_York] Session data in middleware: Array
+(
+    [csrf_token] => 3e71e76a0778db778c1876f0dd701948c2232c223a012d9b9d58efd1ea4b18e7
+    [user_id] => b383c26a-15b5-482a-9440-fa26db9711b6
+    [username] => bross
+    [user_role] => admin
+)
+
+[31-Dec-2024 19:30:36 America/New_York] Attempting database connection with:
+[31-Dec-2024 19:30:36 America/New_York] Host: sql307.infinityfree.com
+[31-Dec-2024 19:30:36 America/New_York] Database: if0_38006148_news
+[31-Dec-2024 19:30:36 America/New_York] Username: if0_38006148
+[31-Dec-2024 19:30:36 America/New_York] Error deleting article: Unauthorized access
+[31-Dec-2024 19:30:36 America/New_York] Processing URL: /dashboard/articles
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/articles$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/article$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/login$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/register$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/logout$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/admin$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/dashboard$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:36 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:36 America/New_York] Route matched. Controller action: UserDashController@articles
+[31-Dec-2024 19:30:36 America/New_York] Parameters: Array
 (
 )
 
-[30-Dec-2024 21:35:32 UTC] Attempting database connection with:
-[30-Dec-2024 21:35:32 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 21:35:32 UTC] Database: sql7754447
-[30-Dec-2024 21:35:32 UTC] Username: sql7754447
-[30-Dec-2024 21:49:32 UTC] Processing URL: /
-[30-Dec-2024 21:49:32 UTC] Checking pattern: /^\/$/ against path: /
-[30-Dec-2024 21:49:32 UTC] Route matched. Controller action: HomeController@index
-[30-Dec-2024 21:49:32 UTC] Parameters: Array
+[31-Dec-2024 19:30:36 America/New_York] Session data in middleware: Array
+(
+    [csrf_token] => 3e71e76a0778db778c1876f0dd701948c2232c223a012d9b9d58efd1ea4b18e7
+    [user_id] => b383c26a-15b5-482a-9440-fa26db9711b6
+    [username] => bross
+    [user_role] => admin
+    [error] => Unauthorized access
+)
+
+[31-Dec-2024 19:30:36 America/New_York] Attempting database connection with:
+[31-Dec-2024 19:30:36 America/New_York] Host: sql307.infinityfree.com
+[31-Dec-2024 19:30:36 America/New_York] Database: if0_38006148_news
+[31-Dec-2024 19:30:36 America/New_York] Username: if0_38006148
+[31-Dec-2024 19:30:36 America/New_York] getByUser Query: SELECT a.*, c.name as category 
+                    FROM articles a 
+                    LEFT JOIN categories c ON a.category_id = c.id 
+                    WHERE a.user_id = ?
+                    ORDER BY a.created_at DESC
+[31-Dec-2024 19:30:36 America/New_York] getByUser Results count: 3
+[31-Dec-2024 19:30:37 America/New_York] Processing URL: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/articles$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/login$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/register$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/logout$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/admin$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/dashboard$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/dashboard\/article\/new$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/dashboard\/article\/update$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/dashboard\/article\/store$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/dashboard\/article\/status$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/dashboard\/profile$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/dashboard\/analytics$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/admin\/users$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/admin\/add_user$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/admin\/store_user$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/admin\/review$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/admin\/publish_article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] Checking pattern: /^\/admin\/reject_article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:37 America/New_York] No route matched. Falling back to: null
+[31-Dec-2024 19:30:44 America/New_York] Processing URL: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/articles$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/article$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/login$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/register$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/logout$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/admin$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/dashboard$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/dashboard\/article\/new$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/dashboard\/article\/update$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/dashboard\/article\/store$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/dashboard\/article\/status$/ against path: /dashboard/article/status
+[31-Dec-2024 19:30:44 America/New_York] Route matched. Controller action: UserDashController@updateStatus
+[31-Dec-2024 19:30:44 America/New_York] Parameters: Array
 (
 )
 
-[30-Dec-2024 21:49:32 UTC] Attempting database connection with:
-[30-Dec-2024 21:49:32 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 21:49:32 UTC] Database: sql7754447
-[30-Dec-2024 21:49:32 UTC] Username: sql7754447
-[30-Dec-2024 21:49:51 UTC] Processing URL: /article/New+Educational+Technology+Breakthrough
-[30-Dec-2024 21:49:51 UTC] Checking pattern: /^\/$/ against path: /article/New+Educational+Technology+Breakthrough
-[30-Dec-2024 21:49:51 UTC] Checking pattern: /^\/articles$/ against path: /article/New+Educational+Technology+Breakthrough
-[30-Dec-2024 21:49:51 UTC] Checking pattern: /^\/article$/ against path: /article/New+Educational+Technology+Breakthrough
-[30-Dec-2024 21:49:51 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/New+Educational+Technology+Breakthrough
-[30-Dec-2024 21:49:51 UTC] Route matched. Controller action: ArticleController@viewByTitle
-[30-Dec-2024 21:49:51 UTC] Parameters: Array
+[31-Dec-2024 19:30:44 America/New_York] Session data in middleware: Array
 (
-    [0] => New+Educational+Technology+Breakthrough
+    [csrf_token] => 3e71e76a0778db778c1876f0dd701948c2232c223a012d9b9d58efd1ea4b18e7
+    [user_id] => b383c26a-15b5-482a-9440-fa26db9711b6
+    [username] => bross
+    [user_role] => admin
+    [error] => Unauthorized access
 )
 
-[30-Dec-2024 21:49:51 UTC] viewByTitle called with title: New+Educational+Technology+Breakthrough
-[30-Dec-2024 21:49:51 UTC] Decoded title: New Educational Technology Breakthrough
-[30-Dec-2024 21:49:51 UTC] Attempting database connection with:
-[30-Dec-2024 21:49:51 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 21:49:51 UTC] Database: sql7754447
-[30-Dec-2024 21:49:51 UTC] Username: sql7754447
-[30-Dec-2024 21:49:51 UTC] Getting article by title: New Educational Technology Breakthrough
-[30-Dec-2024 21:49:52 UTC] Query result: Array
-(
-    [id] => 13
-    [title] => New Educational Technology Breakthrough
-    [content] => Recent developments in educational technology have revolutionized the way students learn in the digital age. Scientists at the Educational Research Institute have unveiled a groundbreaking AI-powered learning platform that adapts to individual student needs in real-time. The system, dubbed &quot;SmartLearn,&quot; uses advanced machine learning algorithms to analyze student performance and adjust teaching methods accordingly. Early trials show a 40% improvement in student engagement and comprehension rates. Key features include: - Personalized learning paths - Real-time feedback systems - Interactive 3D visualizations - Collaborative learning spaces
-    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735555149/i5orxikhgomqye7vakca.jpg
-    [category_id] => 4
-    [user_id] => 1
-    [views] => 190
-    [featured] => 1
-    [breaking] => 0
-    [status] => published
-    [likes] => 0
-    [created_at] => 2024-12-28 18:36:09
-    [updated_at] => 2024-12-30 14:14:19
-    [category] => Education
-    [author] => yassine
-)
-
-[30-Dec-2024 21:49:52 UTC] Article data: Array
-(
-    [id] => 13
-    [title] => New Educational Technology Breakthrough
-    [content] => Recent developments in educational technology have revolutionized the way students learn in the digital age. Scientists at the Educational Research Institute have unveiled a groundbreaking AI-powered learning platform that adapts to individual student needs in real-time. The system, dubbed &quot;SmartLearn,&quot; uses advanced machine learning algorithms to analyze student performance and adjust teaching methods accordingly. Early trials show a 40% improvement in student engagement and comprehension rates. Key features include: - Personalized learning paths - Real-time feedback systems - Interactive 3D visualizations - Collaborative learning spaces
-    [image] => https://res.cloudinary.com/db5vr8dot/image/upload/v1735555149/i5orxikhgomqye7vakca.jpg
-    [category_id] => 4
-    [user_id] => 1
-    [views] => 190
-    [featured] => 1
-    [breaking] => 0
-    [status] => published
-    [likes] => 0
-    [created_at] => 2024-12-28 18:36:09
-    [updated_at] => 2024-12-30 14:14:19
-    [category] => Education
-    [author] => yassine
-)
-
-[30-Dec-2024 21:49:52 UTC] Rendering article view with data
-[30-Dec-2024 23:29:17 UTC] Processing URL: /dashboard/articles
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/$/ against path: /dashboard/articles
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/articles$/ against path: /dashboard/articles
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/article$/ against path: /dashboard/articles
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /dashboard/articles
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/login$/ against path: /dashboard/articles
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/register$/ against path: /dashboard/articles
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/logout$/ against path: /dashboard/articles
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/admin$/ against path: /dashboard/articles
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/comment\/add$/ against path: /dashboard/articles
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/dashboard$/ against path: /dashboard/articles
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /dashboard/articles
-[30-Dec-2024 23:29:17 UTC] Route matched. Controller action: UserDashController@articles
-[30-Dec-2024 23:29:17 UTC] Parameters: Array
+[31-Dec-2024 19:30:44 America/New_York] Attempting database connection with:
+[31-Dec-2024 19:30:44 America/New_York] Host: sql307.infinityfree.com
+[31-Dec-2024 19:30:44 America/New_York] Database: if0_38006148_news
+[31-Dec-2024 19:30:44 America/New_York] Username: if0_38006148
+[31-Dec-2024 19:30:44 America/New_York] Processing URL: /dashboard/articles
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/articles$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/article$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/login$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/register$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/logout$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/admin$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/dashboard$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:44 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:44 America/New_York] Route matched. Controller action: UserDashController@articles
+[31-Dec-2024 19:30:44 America/New_York] Parameters: Array
 (
 )
 
-[30-Dec-2024 23:29:17 UTC] Session data in middleware: Array
+[31-Dec-2024 19:30:44 America/New_York] Session data in middleware: Array
 (
-    [csrf_token] => c25a3757da6386872e7b44fa488185ff065324ed99ab51369a0a7d847d2db259
+    [csrf_token] => 3e71e76a0778db778c1876f0dd701948c2232c223a012d9b9d58efd1ea4b18e7
+    [user_id] => b383c26a-15b5-482a-9440-fa26db9711b6
+    [username] => bross
+    [user_role] => admin
+    [error] => Unauthorized access
+    [success] => Status updated successfully
 )
 
-[30-Dec-2024 23:29:17 UTC] Missing session data. Redirecting to login.
-[30-Dec-2024 23:29:17 UTC] Processing URL: /login
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/$/ against path: /login
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/articles$/ against path: /login
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/article$/ against path: /login
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /login
-[30-Dec-2024 23:29:17 UTC] Checking pattern: /^\/login$/ against path: /login
-[30-Dec-2024 23:29:17 UTC] Route matched. Controller action: AuthController@login
-[30-Dec-2024 23:29:17 UTC] Parameters: Array
+[31-Dec-2024 19:30:44 America/New_York] Attempting database connection with:
+[31-Dec-2024 19:30:44 America/New_York] Host: sql307.infinityfree.com
+[31-Dec-2024 19:30:44 America/New_York] Database: if0_38006148_news
+[31-Dec-2024 19:30:44 America/New_York] Username: if0_38006148
+[31-Dec-2024 19:30:44 America/New_York] getByUser Query: SELECT a.*, c.name as category 
+                    FROM articles a 
+                    LEFT JOIN categories c ON a.category_id = c.id 
+                    WHERE a.user_id = ?
+                    ORDER BY a.created_at DESC
+[31-Dec-2024 19:30:44 America/New_York] getByUser Results count: 3
+[31-Dec-2024 19:30:46 America/New_York] Processing URL: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/articles$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/login$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/register$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/logout$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/admin$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/dashboard$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/dashboard\/article\/new$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/dashboard\/article\/update$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/dashboard\/article\/store$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/dashboard\/article\/status$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/dashboard\/profile$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/dashboard\/analytics$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/admin\/users$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/admin\/add_user$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/admin\/store_user$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/admin\/review$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/admin\/publish_article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] Checking pattern: /^\/admin\/reject_article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:30:46 America/New_York] No route matched. Falling back to: null
+[31-Dec-2024 19:30:59 America/New_York] Processing URL: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/articles$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/article$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/login$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/register$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/logout$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/admin$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/dashboard$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/dashboard\/article\/new$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/dashboard\/article\/update$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:30:59 America/New_York] Route matched. Controller action: UserDashController@deleteArticle
+[31-Dec-2024 19:30:59 America/New_York] Parameters: Array
 (
 )
 
-[30-Dec-2024 23:29:17 UTC] Attempting database connection with:
-[30-Dec-2024 23:29:17 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 23:29:17 UTC] Database: sql7754447
-[30-Dec-2024 23:29:17 UTC] Username: sql7754447
-[30-Dec-2024 23:36:14 UTC] Processing URL: /login
-[30-Dec-2024 23:36:14 UTC] Checking pattern: /^\/$/ against path: /login
-[30-Dec-2024 23:36:14 UTC] Checking pattern: /^\/articles$/ against path: /login
-[30-Dec-2024 23:36:14 UTC] Checking pattern: /^\/article$/ against path: /login
-[30-Dec-2024 23:36:14 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /login
-[30-Dec-2024 23:36:14 UTC] Checking pattern: /^\/login$/ against path: /login
-[30-Dec-2024 23:36:14 UTC] Route matched. Controller action: AuthController@login
-[30-Dec-2024 23:36:14 UTC] Parameters: Array
+[31-Dec-2024 19:30:59 America/New_York] Session data in middleware: Array
+(
+    [csrf_token] => 3e71e76a0778db778c1876f0dd701948c2232c223a012d9b9d58efd1ea4b18e7
+    [user_id] => b383c26a-15b5-482a-9440-fa26db9711b6
+    [username] => bross
+    [user_role] => admin
+    [error] => Unauthorized access
+    [success] => Status updated successfully
+)
+
+[31-Dec-2024 19:30:59 America/New_York] Attempting database connection with:
+[31-Dec-2024 19:30:59 America/New_York] Host: sql307.infinityfree.com
+[31-Dec-2024 19:30:59 America/New_York] Database: if0_38006148_news
+[31-Dec-2024 19:30:59 America/New_York] Username: if0_38006148
+[31-Dec-2024 19:30:59 America/New_York] Error deleting article: Unauthorized access
+[31-Dec-2024 19:30:59 America/New_York] Processing URL: /dashboard/articles
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/articles$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/article$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/login$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/register$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/logout$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/admin$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/dashboard$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:59 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /dashboard/articles
+[31-Dec-2024 19:30:59 America/New_York] Route matched. Controller action: UserDashController@articles
+[31-Dec-2024 19:30:59 America/New_York] Parameters: Array
 (
 )
 
-[30-Dec-2024 23:36:14 UTC] Attempting database connection with:
-[30-Dec-2024 23:36:14 UTC] Host: sql7.freemysqlhosting.net
-[30-Dec-2024 23:36:14 UTC] Database: sql7754447
-[30-Dec-2024 23:36:14 UTC] Username: sql7754447
+[31-Dec-2024 19:30:59 America/New_York] Session data in middleware: Array
+(
+    [csrf_token] => 3e71e76a0778db778c1876f0dd701948c2232c223a012d9b9d58efd1ea4b18e7
+    [user_id] => b383c26a-15b5-482a-9440-fa26db9711b6
+    [username] => bross
+    [user_role] => admin
+    [error] => Unauthorized access
+    [success] => Status updated successfully
+)
+
+[31-Dec-2024 19:30:59 America/New_York] Attempting database connection with:
+[31-Dec-2024 19:30:59 America/New_York] Host: sql307.infinityfree.com
+[31-Dec-2024 19:30:59 America/New_York] Database: if0_38006148_news
+[31-Dec-2024 19:30:59 America/New_York] Username: if0_38006148
+[31-Dec-2024 19:30:59 America/New_York] getByUser Query: SELECT a.*, c.name as category 
+                    FROM articles a 
+                    LEFT JOIN categories c ON a.category_id = c.id 
+                    WHERE a.user_id = ?
+                    ORDER BY a.created_at DESC
+[31-Dec-2024 19:30:59 America/New_York] getByUser Results count: 3
+[31-Dec-2024 19:31:00 America/New_York] Processing URL: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/articles$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/login$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/register$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/logout$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/admin$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/dashboard$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/dashboard\/article\/new$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/dashboard\/article\/update$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/dashboard\/article\/store$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/dashboard\/article\/status$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/dashboard\/profile$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/dashboard\/analytics$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/admin\/users$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/admin\/add_user$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/admin\/store_user$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/admin\/review$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/admin\/publish_article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] Checking pattern: /^\/admin\/reject_article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:00 America/New_York] No route matched. Falling back to: null
+[31-Dec-2024 19:31:03 America/New_York] Processing URL: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/articles$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/article$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/login$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/register$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/logout$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/admin$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/article\/new$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/article\/update$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /dashboard/article/delete
+[31-Dec-2024 19:31:03 America/New_York] Route matched. Controller action: UserDashController@deleteArticle
+[31-Dec-2024 19:31:03 America/New_York] Parameters: Array
+(
+)
+
+[31-Dec-2024 19:31:03 America/New_York] Session data in middleware: Array
+(
+    [csrf_token] => 3e71e76a0778db778c1876f0dd701948c2232c223a012d9b9d58efd1ea4b18e7
+    [user_id] => b383c26a-15b5-482a-9440-fa26db9711b6
+    [username] => bross
+    [user_role] => admin
+    [error] => Unauthorized access
+    [success] => Status updated successfully
+)
+
+[31-Dec-2024 19:31:03 America/New_York] Attempting database connection with:
+[31-Dec-2024 19:31:03 America/New_York] Host: sql307.infinityfree.com
+[31-Dec-2024 19:31:03 America/New_York] Database: if0_38006148_news
+[31-Dec-2024 19:31:03 America/New_York] Username: if0_38006148
+[31-Dec-2024 19:31:03 America/New_York] Error deleting article: Unauthorized access
+[31-Dec-2024 19:31:03 America/New_York] Processing URL: /dashboard/articles
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/$/ against path: /dashboard/articles
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/articles$/ against path: /dashboard/articles
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/article$/ against path: /dashboard/articles
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /dashboard/articles
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/login$/ against path: /dashboard/articles
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/register$/ against path: /dashboard/articles
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/logout$/ against path: /dashboard/articles
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/admin$/ against path: /dashboard/articles
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /dashboard/articles
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard$/ against path: /dashboard/articles
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /dashboard/articles
+[31-Dec-2024 19:31:03 America/New_York] Route matched. Controller action: UserDashController@articles
+[31-Dec-2024 19:31:03 America/New_York] Parameters: Array
+(
+)
+
+[31-Dec-2024 19:31:03 America/New_York] Session data in middleware: Array
+(
+    [csrf_token] => 3e71e76a0778db778c1876f0dd701948c2232c223a012d9b9d58efd1ea4b18e7
+    [user_id] => b383c26a-15b5-482a-9440-fa26db9711b6
+    [username] => bross
+    [user_role] => admin
+    [error] => Unauthorized access
+    [success] => Status updated successfully
+)
+
+[31-Dec-2024 19:31:03 America/New_York] Attempting database connection with:
+[31-Dec-2024 19:31:03 America/New_York] Host: sql307.infinityfree.com
+[31-Dec-2024 19:31:03 America/New_York] Database: if0_38006148_news
+[31-Dec-2024 19:31:03 America/New_York] Username: if0_38006148
+[31-Dec-2024 19:31:03 America/New_York] getByUser Query: SELECT a.*, c.name as category 
+                    FROM articles a 
+                    LEFT JOIN categories c ON a.category_id = c.id 
+                    WHERE a.user_id = ?
+                    ORDER BY a.created_at DESC
+[31-Dec-2024 19:31:03 America/New_York] getByUser Results count: 3
+[31-Dec-2024 19:31:03 America/New_York] Processing URL: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/articles$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/article\/([^\/]+)$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/login$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/register$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/logout$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/admin$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/comment\/add$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/articles$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/article\/new$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/article\/update$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/article\/store$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/article\/status$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/profile$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/dashboard\/analytics$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/admin\/users$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/admin\/add_user$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/admin\/store_user$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/admin\/review$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/admin\/publish_article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] Checking pattern: /^\/admin\/reject_article$/ against path: /assets/img/favicon.ico
+[31-Dec-2024 19:31:03 America/New_York] No route matched. Falling back to: null

@@ -17,23 +17,25 @@ class DatabaseSetup {
             $this->createArticlesTable();
             $this->createCommentsTable();
             $this->createSettingsTable();
-            $this->createPopularArticlesView();
+            $this->addConstraints();
             
             $this->pdo->commit();
         } catch (PDOException $e) {
-            $this->pdo->rollBack();
+            if ($this->pdo->inTransaction()) {
+                $this->pdo->rollBack();
+            }
             throw $e;
         }
     }
 
     private function createUsersTable() {
         $sql = "CREATE TABLE IF NOT EXISTS users (
-            id CHAR(36) PRIMARY KEY,
+            id INT AUTO_INCREMENT PRIMARY KEY,
             username VARCHAR(255) NOT NULL UNIQUE,
             password VARCHAR(255) NOT NULL,
             role ENUM('admin', 'editor', 'user') DEFAULT 'user',
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )";
+        ) ENGINE=InnoDB DEFAULT CHARSET=latin1";
         $this->pdo->exec($sql);
     }
 
@@ -43,7 +45,7 @@ class DatabaseSetup {
             name VARCHAR(255) NOT NULL,
             slug VARCHAR(255) NOT NULL UNIQUE,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )";
+        ) ENGINE=InnoDB DEFAULT CHARSET=latin1";
         $this->pdo->exec($sql);
     }
 
@@ -51,24 +53,21 @@ class DatabaseSetup {
         $sql = "CREATE TABLE IF NOT EXISTS articles (
             id INT AUTO_INCREMENT PRIMARY KEY,
             title VARCHAR(255) NOT NULL,
-            content TEXT NOT NULL,
+            content TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
             image VARCHAR(255),
             category_id INT,
             user_id INT,
-            status ENUM('draft', 'reviewing', 'private', 'published', 'disqualified') DEFAULT 'draft',
             views INT DEFAULT 0,
+            featured TINYINT(1) DEFAULT 0,
+            breaking TINYINT(1) DEFAULT 0,
+            status ENUM('draft', 'reviewing', 'private', 'published', 'disqualified') DEFAULT 'draft',
             likes INT DEFAULT 0,
-            featured BOOLEAN DEFAULT FALSE,
-            breaking BOOLEAN DEFAULT FALSE,
             created_at DATETIME,
             updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
             FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL,
             FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-        )";
+        ) ENGINE=InnoDB DEFAULT CHARSET=latin1";
         $this->pdo->exec($sql);
-
-        // Set default for existing rows
-        $this->pdo->exec("UPDATE articles SET created_at = NOW() WHERE created_at IS NULL");
     }
 
     private function createCommentsTable() {
@@ -80,7 +79,7 @@ class DatabaseSetup {
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE,
             FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-        )";
+        ) ENGINE=InnoDB DEFAULT CHARSET=latin1";
         $this->pdo->exec($sql);
     }
 
@@ -90,15 +89,21 @@ class DatabaseSetup {
             name VARCHAR(255) NOT NULL,
             value TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )";
+        ) ENGINE=InnoDB DEFAULT CHARSET=latin1";
         $this->pdo->exec($sql);
     }
 
-    private function createPopularArticlesView() {
-        $sql = "CREATE OR REPLACE VIEW popular_articles AS 
-                SELECT * FROM articles 
-                ORDER BY views DESC, created_at DESC 
-                LIMIT 3";
+    private function addConstraints() {
+        $sql = "ALTER TABLE articles
+                ADD CONSTRAINT articles_ibfk_1 FOREIGN KEY (category_id) REFERENCES categories (id) ON DELETE SET NULL,
+                ADD CONSTRAINT articles_ibfk_2 FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
+                ADD CONSTRAINT fk_category FOREIGN KEY (category_id) REFERENCES categories (id) ON DELETE SET NULL,
+                ADD CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE";
+        $this->pdo->exec($sql);
+
+        $sql = "ALTER TABLE comments
+                ADD CONSTRAINT comments_ibfk_1 FOREIGN KEY (article_id) REFERENCES articles (id) ON DELETE CASCADE,
+                ADD CONSTRAINT comments_ibfk_2 FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE";
         $this->pdo->exec($sql);
     }
 }

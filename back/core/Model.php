@@ -20,13 +20,20 @@ class Model
     }
 
     public function find($id)
-    {
-        $stmt = $this->pdo->prepare("SELECT * FROM {$this->table} WHERE id = :id");
-        $stmt->execute(['id' => $id]);
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        $stmt->closeCursor(); // Close the cursor to free up the connection
-        return $result;
+{
+    try {
+        $sql = "SELECT a.*, u.username as author 
+                FROM {$this->table} a
+                LEFT JOIN users u ON a.user_id = u.id 
+                WHERE a.id = ?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        error_log("Error finding article: " . $e->getMessage());
+        return null;
     }
+}
 
     public function save($data)
 {
@@ -77,10 +84,15 @@ class Model
 
     public function delete($id)
     {
-        $stmt = $this->pdo->prepare("DELETE FROM {$this->table} WHERE id = ?");
-        $result = $stmt->execute([$id]);
-        $stmt->closeCursor(); // Close the cursor to free up the connection
-        return $result;
+        try {
+            $stmt = $this->pdo->prepare("DELETE FROM {$this->table} WHERE id = ?");
+            $result = $stmt->execute([$id]);
+            $stmt->closeCursor(); // Close the cursor to free up the connection
+            return $result;
+        } catch (PDOException $e) {
+            error_log("Error deleting record: " . $e->getMessage());
+            throw $e;
+        }
     }
 }
 ?>
