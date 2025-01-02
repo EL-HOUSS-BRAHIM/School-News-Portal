@@ -13,8 +13,49 @@ class Category extends Model
         $stmt->closeCursor();
         return $result;
     }
+    
+    public function delete($id)
+    {
+        try {
+            // Start transaction
+            $this->pdo->beginTransaction();
 
-    // Remove duplicate methods since they're inherited from Model class
-    // The parent class methods will use $this->table
+            // First update all articles in this category
+            $sql = "UPDATE articles 
+                   SET status = ?, category_id = NULL 
+                   WHERE category_id = ?";
+            
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([Article::STATUS_DRAFT, $id]);
+            
+            // Then delete the category
+            $sql = "DELETE FROM {$this->table} WHERE id = ?";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([$id]);
+
+            // Commit transaction
+            $this->pdo->commit();
+            return true;
+
+        } catch (PDOException $e) {
+            // Rollback on error
+            $this->pdo->rollBack();
+            error_log("Error deleting category: " . $e->getMessage());
+            throw $e;
+        }
+    }
+    public function uploadImage($id, $imagePath)
+{
+    $sql = "UPDATE {$this->table} SET image = ? WHERE id = ?";
+    $stmt = $this->pdo->prepare($sql);
+    return $stmt->execute([$imagePath, $id]);
+}
+
+public function deleteImage($id)
+{
+    $sql = "UPDATE {$this->table} SET image = NULL WHERE id = ?";
+    $stmt = $this->pdo->prepare($sql);
+    return $stmt->execute([$id]);
+}
 }
 ?>

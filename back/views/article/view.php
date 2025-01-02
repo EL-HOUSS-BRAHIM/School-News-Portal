@@ -1,43 +1,10 @@
+<?php require_once __DIR__ . '/../layouts/article_header.php'; ?>
 <?php
-
-require_once __DIR__ . '/../layouts/article_header.php';
+$recaptchaKey = $_ENV['RECAPTCHA_SITE_KEY'];
 ?>
 
-<!-- Breaking News Start -->
-<div class="container-fluid mt-5 mb-3 pt-3">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12">
-                <div class="d-flex justify-content-between">
-                    <div class="section-title border-right-0 mb-0" style="width: 180px;">
-                        <h4 class="m-0 text-uppercase font-weight-bold">Dernières Nouvelles</h4>
-                    </div>
-                    <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center bg-white border border-left-0" 
-                         style="width: calc(100% - 180px); padding-right: 100px;">
-                        <?php if (!empty($breakingNews)): ?>
-                            <?php foreach($breakingNews as $news): ?>
-                                <div class="text-truncate">
-                                    <a class="text-secondary text-uppercase font-weight-semi-bold" 
-                                       href="/article/<?php echo urlencode($news['title']); ?>">
-                                        <?php echo htmlspecialchars($news['title']); ?>
-                                    </a>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <div class="text-truncate">
-                                <span class="text-secondary">Aucune nouvelle de dernière minute disponible</span>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Breaking News End -->
-
 <!-- News With Sidebar Start -->
-<div class="container-fluid">
+<div class="container-fluid py-3">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -47,134 +14,109 @@ require_once __DIR__ . '/../layouts/article_header.php';
                         <img class="img-fluid w-100" 
                              src="<?php echo htmlspecialchars($article['image'] ?? '/img/default.jpg'); ?>" 
                              style="object-fit: cover;">
-                        <div class="bg-white border border-top-0 p-4">
+                        <div class="overlay position-relative bg-light">
                             <div class="mb-3">
-                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" 
-                                   href="/category/<?php echo htmlspecialchars($article['category_id']); ?>">
+                                <a href="/category/<?php echo htmlspecialchars($article['category_id']); ?>">
                                     <?php echo htmlspecialchars($article['category']); ?>
                                 </a>
-                                <span class="text-body">
-                                    <?php 
-                                    if (!empty($article['created_at'])) {
-                                        echo date('M d, Y', strtotime($article['created_at']));
-                                    } else {
-                                        echo 'N/A';
-                                    } 
-                                    ?>
-                                </span>
+                                <span class="px-1">/</span>
+                                <span><?php echo date('F d, Y', strtotime($article['created_at'])); ?></span>
                             </div>
-                            <h1 class="mb-3 text-secondary text-uppercase font-weight-bold">
-                                <?php echo htmlspecialchars($article['title']); ?>
-                            </h1>
-                            <div class="article-content">
-                                <?php echo html_entity_decode($article['content']); ?>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
-                            <div class="d-flex align-items-center">
-                                <span>Par <?php echo htmlspecialchars($article['author'] ?? 'Anonyme'); ?></span>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <span class="ml-3">
-                                    <i class="far fa-eye mr-2"></i>
-                                    <?php echo (int)($article['views'] ?? 0); ?>
-                                </span>
-                                <span class="ml-3">
-                                    <i class="far fa-comment mr-2"></i>
-                                    <?php echo count($comments ?? []); ?>
-                                </span>
+                            <div>
+                                <h3 class="mb-3"><?php echo htmlspecialchars($article['title']); ?></h3>
+                                <div class="article-content">
+                                    <?php echo $article['content']; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- News Detail End -->
 
                     <!-- Comment List Start -->
-                    <div class="mb-3">
-                        <div class="section-title mb-0">
-                            <h4 class="m-0 text-uppercase font-weight-bold"><?php echo count($comments); ?> Commentaires</h4>
-                        </div>
-                        <div class="bg-white border border-top-0 p-4">
-                            <?php foreach($comments as $comment): ?>
+                    <div class="bg-light mb-3" style="padding: 30px;">
+                        <h3 class="mb-4"><?php echo count($comments); ?> Comments</h3>
+                        <?php foreach($comments as $comment): ?>
                             <div class="media mb-4">
                                 <img src="/img/user.jpg" alt="User" class="img-fluid mr-3 mt-1" style="width: 45px;">
                                 <div class="media-body">
                                     <h6>
-                                        <span class="text-secondary font-weight-bold">
-                                            <?php echo htmlspecialchars($comment['username']); ?>
-                                        </span> 
+                                        <?php echo htmlspecialchars($comment['name']); ?>
                                         <small><i><?php echo date('M d, Y', strtotime($comment['created_at'])); ?></i></small>
                                     </h6>
                                     <p><?php echo nl2br(htmlspecialchars($comment['content'])); ?></p>
                                 </div>
                             </div>
-                            <?php endforeach; ?>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                     <!-- Comment List End -->
 
                     <!-- Comment Form Start -->
-                    <div class="mb-3">
-                        <div class="section-title mb-0">
-                            <h4 class="m-0 text-uppercase font-weight-bold">Laissez un commentaire</h4>
-                        </div>
-                        <div class="bg-white border border-top-0 p-4">
-                            <form action="/comment/add" method="POST">
-                                <input type="hidden" name="article_id" value="<?php echo htmlspecialchars($article['id']); ?>">
-                                <div class="form-group">
-                                    <label for="message">Message *</label>
-                                    <textarea id="message" name="content" cols="30" rows="5" class="form-control" required></textarea>
-                                </div>
-                                <div class="form-group mb-0">
-                                    <?php if(isset($_SESSION['user_id'])): ?>
-                                        <button type="submit" class="btn btn-primary font-weight-semi-bold py-2 px-3">
-                                            Laissez un commentaire
-                                        </button>
-                                    <?php else: ?>
-                                        <a href="/login" class="btn btn-primary font-weight-semi-bold py-2 px-3">
-                                            Connectez-vous pour commenter
-                                        </a>
-                                    <?php endif; ?>
-                                </div>
-                            </form>
-                        </div>
+                    <div class="bg-light mb-3" style="padding: 30px;">
+                        <h3 class="mb-4">Leave a comment</h3>
+                        <form action="/comment/add" method="POST">
+                        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+                        <input type="hidden" name="article_id" value="<?php echo htmlspecialchars($article['id']); ?>">
+                            
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="content" cols="30" rows="5" class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="<?php echo htmlspecialchars($recaptchaKey); ?>"></div>
+                            </div>
+                            <div class="form-group mb-0">
+                                <button type="submit" class="btn btn-primary font-weight-semi-bold py-2 px-3">
+                                    Leave a comment
+                                </button>
+                            </div>
+                        </form>
                     </div>
                     <!-- Comment Form End -->
                 <?php else: ?>
-                    <div class="alert alert-warning">Article non trouvé</div>
+                    <div class="alert alert-warning">Article not found</div>
                 <?php endif; ?>
             </div>
 
-            <?php include __DIR__ . '/../layouts/article_sidebar.php'; ?>
+            <?php require_once __DIR__ . '/../layouts/article_sidebar.php'; ?>
         </div>
     </div>
 </div>
 <!-- News With Sidebar End -->
 
-<?php include __DIR__ . '/../layouts/article_footer.php'; ?>
+<?php include __DIR__ . '/../layouts/footer.php'; ?>
+
+<!-- Add reCAPTCHA Script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <!-- News Article Schema -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "<?php echo htmlspecialchars($article['title']); ?>",
-  "image": [
-    "<?php echo htmlspecialchars($article['image'] ?? '/img/default.jpg'); ?>"
-  ],
-  "datePublished": "<?php echo date('c', strtotime($article['created_at'])); ?>",
-  "dateModified": "<?php echo date('c', strtotime($article['updated_at'] ?? $article['created_at'])); ?>",
-  "author": {
-    "@type": "Person",
-    "name": "<?php echo htmlspecialchars($article['author'] ?? 'Anonyme'); ?>"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "College Dar Bouazza News",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "<?php echo $app['constants']['ASSETS_URL']; ?>/img/logo.png"
-    }
-  },
-  "description": "<?php echo htmlspecialchars($article['description'] ?? ''); ?>"
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "<?php echo htmlspecialchars($article['title']); ?>",
+    "image": ["<?php echo htmlspecialchars($article['image'] ?? '/img/default.jpg'); ?>"],
+    "datePublished": "<?php echo date('c', strtotime($article['created_at'])); ?>",
+    "dateModified": "<?php echo date('c', strtotime($article['updated_at'] ?? $article['created_at'])); ?>",
+    "author": {
+        "@type": "Person",
+        "name": "<?php echo htmlspecialchars($article['author'] ?? 'Anonymous'); ?>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "College Dar Bouazza News",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "<?php echo $app['constants']['ASSETS_URL']; ?>/img/logo.png"
+        }
+    },
+    "description": "<?php echo htmlspecialchars($article['description'] ?? ''); ?>"
 }
 </script>

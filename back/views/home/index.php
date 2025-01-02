@@ -1,169 +1,93 @@
 <?php require_once __DIR__ . '/../layouts/header.php'; ?>
 
-<!-- Main News Slider Start -->
-<div class="container-fluid">
-    <h1 class="d-none">Accueil - College Dar Bouazza News</h1> <!-- Add H1 heading -->
-    <div class="row">
-        <div class="col-lg-7 px-0">
-            <div class="owl-carousel main-carousel position-relative">
-                <?php if (!empty($mainSliderArticles)): ?>
-                    <?php foreach($mainSliderArticles as $article): ?>
-                    <div class="position-relative overflow-hidden" style="height: 500px;">
-                        <img class="img-fluid h-100" 
-                             src="<?php echo htmlspecialchars($article['image'] ?? '/assets/assets/img/default.jpg'); ?>" 
-                             style="object-fit: cover;">
-                        <div class="overlay">
-                            <div class="mb-2">
-                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" 
-                                   href="<?php echo $app['constants']['BASE_URL']; ?>/category/<?php echo htmlspecialchars($article['category_id']); ?>">
-                                    <?php echo htmlspecialchars($article['category'] ?? 'Non classé'); ?>
-                                </a>
-                                <span class="text-white">
-                                    <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
-                                </span>
-                            </div>
-                            <a class="h2 m-0 text-white text-uppercase font-weight-bold" 
-                               href="<?php echo $app['constants']['BASE_URL']; ?>/article/<?php echo urlencode($article['title']); ?>">
-                                <?php echo htmlspecialchars($article['title']); ?>
-                            </a>
-                        </div>
-                    </div>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-            </div>
-        </div>
-        
-        <div class="col-lg-5 px-0">
-            <div class="row mx-0">
-                <?php if (!empty($topArticles)): ?>
-                    <?php foreach(array_slice($topArticles, 0, 4) as $article): ?>
-                    <div class="col-md-6 px-0">
-                        <div class="position-relative overflow-hidden" style="height: 250px;">
-                            <img class="img-fluid w-100 h-100" 
-                                 src="<?php echo htmlspecialchars($article['image'] ?? '/assets/img/default.jpg'); ?>" 
-                                 style="object-fit: cover;">
-                            <div class="overlay">
-                                <div class="mb-2">
-                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" 
-                                       href="<?php echo $app['constants']['BASE_URL']; ?>/category/<?php echo htmlspecialchars($article['category_id']); ?>">
-                                        <?php echo htmlspecialchars($article['category'] ?? 'Non classé'); ?>
-                                    </a>
-                                    <span class="text-white">
-                                        <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
-                                    </span>
-                                </div>
-                                <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" 
-                                   href="<?php echo $app['constants']['BASE_URL']; ?>/article/<?php echo urlencode($article['title']); ?>">
-                                    <?php echo htmlspecialchars($article['title']); ?>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Main News Slider End -->
+<?php
+// Fetch data from the database
+$articleModel = new Article();
+$categoryModel = new Category();
 
-<!-- Breaking News Start -->
-<div class="container-fluid bg-dark py-3 mb-3">
-    <div class="container">
-        <div class="row align-items-center bg-dark">
-            <div class="col-12">
-                <div class="d-flex justify-content-between">
-                    <div class="bg-primary text-dark text-center font-weight-medium py-2" 
-                         style="width: 170px;">Dernières Nouvelles</div>
-                    <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center ml-3"
-                         style="width: calc(100% - 170px); padding-right: 90px;">
-                        <?php if (!empty($breakingNews)): ?>
-                            <?php foreach($breakingNews as $article): ?>
-                            <div class="text-truncate">
-                                <a class="text-white text-uppercase font-weight-semi-bold" 
-                                   href="<?php echo $app['constants']['BASE_URL']; ?>/article/<?php echo urlencode($article['title']); ?>">
-                                    <?php echo htmlspecialchars($article['title']); ?>
-                                </a>
-                            </div>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Breaking News End -->
+$featuredArticles = $articleModel->getFeatured(5);
+$categories = $categoryModel->getAll();
+?>
 
 <!-- Featured News Slider Start -->
-<div class="container-fluid pt-5 mb-3">
+<div class="container-fluid py-3">
     <div class="container">
-        <div class="section-title">
-            <h4 class="m-0 text-uppercase font-weight-bold">Nouvelles en Vedette</h4>
+        <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+            <h3 class="m-0">Featured</h3>
+            <a class="text-secondary font-weight-medium text-decoration-none" href="/articles">View All</a>
         </div>
-        <div class="owl-carousel news-carousel carousel-item-4 position-relative">
-            <?php if (!empty($featuredArticles)): ?>
-                <?php foreach($featuredArticles as $article): ?>
-                <div class="position-relative overflow-hidden" style="height: 300px;">
-                    <img class="img-fluid h-100" 
-                         src="<?php echo htmlspecialchars($article['image'] ?? '/assets/assets/img/default.jpg'); ?>" 
-                         style="object-fit: cover;">
-                    <div class="overlay">
-                        <div class="mb-2">
-                            <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" 
-                               href="<?php echo $app['constants']['BASE_URL']; ?>/category/<?php echo htmlspecialchars($article['category_id']); ?>">
-                                <?php echo htmlspecialchars($article['category'] ?? 'Non classé'); ?>
-                            </a>
-                            <span class="text-white">
-                                <small><?php echo date('M d, Y', strtotime($article['created_at'])); ?></small>
-                            </span>
+        <?php if (!empty($featuredArticles)): ?>
+            <div class="owl-carousel owl-carousel-2 carousel-item-4 position-relative">
+                <?php foreach ($featuredArticles as $article): ?>
+                    <div class="position-relative overflow-hidden" style="height: 300px;">
+                        <img class="img-fluid w-100 h-100" src="<?php echo htmlspecialchars($article['image'] ?? $app['constants']['ASSETS_URL'] . '/img/default.jpg'); ?>" style="object-fit: cover;">
+                        <div class="overlay">
+                            <div class="mb-1" style="font-size: 13px;">
+                                <a class="text-white" href="/category/<?php echo htmlspecialchars($article['category_id']); ?>"><?php echo htmlspecialchars($article['category']); ?></a>
+                                <span class="px-1 text-white">/</span>
+                                <a class="text-white" href="/article/<?php echo urlencode($article['title']); ?>"><?php echo date('F d, Y', strtotime($article['created_at'])); ?></a>
+                            </div>
+                            <a class="h4 m-0 text-white" href="/article/<?php echo urlencode($article['title']); ?>"><?php echo htmlspecialchars($article['title']); ?></a>
                         </div>
-                        <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" 
-                           href="<?php echo $app['constants']['BASE_URL']; ?>/article/<?php echo urlencode($article['title']); ?>">
-                            <?php echo htmlspecialchars($article['title']); ?>
-                        </a>
                     </div>
-                </div>
                 <?php endforeach; ?>
-            <?php endif; ?>
-        </div>
+            </div>
+        <?php else: ?>
+            <p>No featured articles available at the moment.</p>
+        <?php endif; ?>
     </div>
 </div>
 <!-- Featured News Slider End -->
 
-<?php 
-// Show error message if exists
-if (isset($error)): ?>
-<div class="container">
-    <div class="alert alert-danger">
-        <?php echo htmlspecialchars($error); ?>
+<!-- Category News Slider Start -->
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <?php if (!empty($categories)): ?>
+                <?php foreach ($categories as $category): ?>
+                    <div class="col-lg-6 py-3">
+                        <div class="bg-light py-2 px-4 mb-3">
+                            <h3 class="m-0"><?php echo htmlspecialchars($category['name']); ?></h3>
+                        </div>
+                        <?php $categoryArticles = $articleModel->getByCategory($category['id']); error_log("Category {$category['name']}: " . count($categoryArticles) . " articles found"); if (!empty($categoryArticles)): ?>
+                            <div class="owl-carousel owl-carousel-3 carousel-item-2 position-relative">
+                                <?php foreach ($categoryArticles as $article): ?>
+                                    <div class="position-relative">
+                                        <img class="img-fluid w-100" 
+                                             src="<?php echo htmlspecialchars($article['image'] ?? $app['constants']['ASSETS_URL'] . '/img/default.jpg'); ?>" 
+                                             style="object-fit: cover;">
+                                        <div class="overlay position-relative bg-light">
+                                            <div class="mb-2" style="font-size: 13px;">
+                                                <a href="/category/<?php echo htmlspecialchars($category['id']); ?>">
+                                                    <?php echo htmlspecialchars($category['name']); ?>
+                                                </a>
+                                                <span class="px-1">/</span>
+                                                <span><?php echo date('F d, Y', strtotime($article['created_at'])); ?></span>
+                                            </div>
+                                            <a class="h4 m-0" href="/article/<?php echo urlencode($article['title']); ?>">
+                                                <?php echo htmlspecialchars($article['title']); ?>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php else: ?>
+                            <p>No articles available in <?php echo htmlspecialchars($category['name']); ?></p>
+                        <?php endif; ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>No categories available at the moment.</p>
+            <?php endif; ?>
+        </div>
     </div>
 </div>
-<?php endif; ?>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "headline": "<?php echo htmlspecialchars($article['title']); ?>",
-  "image": [
-    "<?php echo htmlspecialchars($article['image'] ?? '/img/default.jpg'); ?>"
-  ],
-  "datePublished": "<?php echo date('c', strtotime($article['created_at'])); ?>",
-  "dateModified": "<?php echo date('c', strtotime($article['updated_at'] ?? $article['created_at'])); ?>",
-  "author": {
-    "@type": "Person",
-    "name": "<?php echo htmlspecialchars($article['author'] ?? 'Anonyme'); ?>"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "College Dar Bouazza News",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "<?php echo $app['constants']['ASSETS_URL']; ?>/img/logo.png"
-    }
-  },
-  "description": "<?php echo htmlspecialchars($article['description'] ?? ''); ?>"
-}
-</script>
-<?php require_once __DIR__ . '/../layouts/sidebar.php'; ?>
+<!-- Category News Slider End -->
+
+<!-- News With Sidebar Start -->
+<div class="container-fluid py-3">
+    <?php require_once __DIR__ . '/../layouts/sidebar.php'; ?>
+</div>
+<!-- News With Sidebar End -->
+
 <?php require_once __DIR__ . '/../layouts/footer.php'; ?>

@@ -11,11 +11,37 @@ class Article extends Model
     const STATUS_PRIVATE = 'private';
     const STATUS_PUBLISHED = 'published';
     const STATUS_DISQUALIFIED = 'disqualified';
+    const LANG_AR = 'ar';
+    const LANG_FR = 'fr';
+    const LANG_EN = 'en';
 
     public function hasConnection()
     {
         return $this->pdo !== null;
     }
+
+    public function query($sql, $params = [])
+{
+    try {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($params);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        error_log("Query Error: " . $e->getMessage());
+        return [];
+    }
+}
+
+public static function getAllStatuses()
+{
+    return [
+        self::STATUS_DRAFT => 'Draft',
+        self::STATUS_REVIEWING => 'Under Review',
+        self::STATUS_PRIVATE => 'Private',
+        self::STATUS_PUBLISHED => 'Published',
+        self::STATUS_DISQUALIFIED => 'Disqualified'
+    ];
+}
 
     public function getByTitle($title)
 {
@@ -74,16 +100,6 @@ public function getReviewArticles()
             self::STATUS_DISQUALIFIED => 'danger',
             default => 'light'
         };
-    }
-
-    public static function getAllStatuses() {
-        return [
-            self::STATUS_DRAFT => 'Draft',
-            self::STATUS_REVIEWING => 'Under Review',
-            self::STATUS_PRIVATE => 'Private',
-            self::STATUS_PUBLISHED => 'Published',
-            self::STATUS_DISQUALIFIED => 'Disqualified'
-        ];
     }
 
     // Get available statuses based on user role

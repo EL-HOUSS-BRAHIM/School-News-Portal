@@ -1,16 +1,22 @@
 <?php
 require_once __DIR__ . '/../../models/Article.php';
+require_once __DIR__ . '/../../models/Category.php';
 $contact = require __DIR__ . '/../../config/contact.php';
 $popularArticles = (new Article())->getPopular(3);
 $app = require __DIR__ . '/../../config/app.php';
 
 try {
+    // Get categories for both Categories and Tags sections
+    $categoryModel = new Category();
+    $categories = $categoryModel->getAll();
+
     // Verify $contact is an array and has required keys
     if (!is_array($contact)) {
         throw new Exception('La configuration du contact doit être un tableau');
     }
 } catch (Exception $e) {
-    error_log("Erreur du pied de page de l'article : " . $e->getMessage());
+    error_log("Erreur du pied de page : " . $e->getMessage());
+    $categories = [];
     $contact = [
         'address' => 'Adresse non disponible',
         'phone' => 'Téléphone non disponible', 
@@ -21,75 +27,94 @@ try {
     $app = ['app_name' => 'Portail des Nouvelles Scolaires'];
 }
 
-// Set default values if keys don't exist
-$contact = array_merge([
-    'address' => 'Adresse non disponible',
-    'phone' => 'Téléphone non disponible',
-    'email' => 'Email non disponible', 
-    'social' => []
-], $contact ?? []);
+// Define social media platforms with their icons
+$socialPlatforms = [
+    'twitter' => 'fab fa-twitter',
+    'facebook' => 'fab fa-facebook-f',
+    'linkedin' => 'fab fa-linkedin-in',
+    'instagram' => 'fab fa-instagram',
+    'youtube' => 'fab fa-youtube'
+];
 
-// Ensure social is an array
-if (!isset($contact['social']) || !is_array($contact['social'])) {
-    $contact['social'] = [];
-}
+// Define quick links
+$quickLinks = [
+    'about' => ['url' => '/about', 'text' => 'À propos'],
+    'advertise' => ['url' => '/advertise', 'text' => 'Publicité'],
+    'privacy' => ['url' => '/privacy', 'text' => 'Politique de confidentialité'],
+    'terms' => ['url' => '/terms', 'text' => 'Conditions d\'utilisation'],
+    'contact' => ['url' => '/contact', 'text' => 'Contact']
+];
 ?>
 <!-- Footer Start -->
-<div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
-    <div class="row py-4">
+<div class="container-fluid bg-light pt-5 px-sm-3 px-md-5">
+    <div class="row">
+        <!-- Brand and Social Media -->
         <div class="col-lg-3 col-md-6 mb-5">
-            <h5 class="mb-4 text-white text-uppercase font-weight-bold">Contactez-nous</h5>
-            <p class="font-weight-medium text-white">
-                <i class="fa fa-map-marker-alt mr-2"></i><?php echo htmlspecialchars($contact['address']); ?>
-            </p>
-            <p class="font-weight-medium text-white">
-                <i class="fa fa-phone-alt mr-2"></i><?php echo htmlspecialchars($contact['phone']); ?>
-            </p>
-            <p class="font-weight-medium text-white">
-                <i class="fa fa-envelope mr-2"></i><?php echo htmlspecialchars($contact['email']); ?>
-            </p>
-            
-            <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">Suivez-nous</h6>
-            <div class="d-flex justify-content-start">
-                <?php if (!empty($contact['social'])): ?>
-                    <?php foreach($contact['social'] as $platform => $url): ?>
-                        <a class="btn btn-lg btn-secondary btn-lg-square mr-2" 
-                           href="<?php echo htmlspecialchars($url); ?>"
+            <a href="/" class="navbar-brand">
+                <h1 class="mb-2 mt-n2 display-5 text-uppercase">
+                    <span class="text-primary" style="white-space: wrap;"><?php echo htmlspecialchars($app['app_name'] ?? ''); ?></span>
+                </h1>
+            </a>
+            <p><?php echo htmlspecialchars($app['description'] ?? ''); ?></p>
+            <div class="d-flex justify-content-start mt-4">
+                <?php foreach ($socialPlatforms as $platform => $icon): ?>
+                    <?php if (!empty($contact['social'][$platform])): ?>
+                        <a class="btn btn-outline-secondary text-center mr-2 px-0" 
+                           style="width: 38px; height: 38px;" 
+                           href="<?php echo htmlspecialchars($contact['social'][$platform]); ?>"
                            target="_blank">
-                            <i class="fab fa-<?php echo htmlspecialchars($platform); ?>"></i>
+                            <i class="<?php echo $icon; ?>"></i>
                         </a>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <p class="text-white">Aucun lien de réseau social disponible</p>
-                <?php endif; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
         </div>
-        
+
+        <!-- Categories -->
         <div class="col-lg-3 col-md-6 mb-5">
-            <h5 class="mb-4 text-white text-uppercase font-weight-bold">Nouvelles Populaires</h5>
-            <?php foreach($popularArticles as $article): ?>
-            <div class="mb-3">
-                <div class="mb-2">
-                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" href="">
-                        <?php echo htmlspecialchars($article['category']); ?>
+            <h4 class="font-weight-bold mb-4">Categories</h4>
+            <div class="d-flex flex-wrap m-n1">
+                <?php foreach ($categories as $category): ?>
+                    <a href="/category/<?php echo urlencode($category['slug']); ?>" 
+                       class="btn btn-sm btn-outline-secondary m-1">
+                        <?php echo htmlspecialchars($category['name']); ?>
                     </a>
-                    <a class="text-body" href="">
-                        <small><?php echo date('d M, Y', strtotime($article['created_at'])); ?></small>
-                    </a>
-                </div>
-                <a class="small text-body text-uppercase font-weight-medium" href="">
-                    <?php echo htmlspecialchars(substr($article['title'], 0, 50)) . '...'; ?>
-                </a>
+                <?php endforeach; ?>
             </div>
-            <?php endforeach; ?>
+        </div>
+
+        <!-- Tags (using categories) -->
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="font-weight-bold mb-4">Tags</h4>
+            <div class="d-flex flex-wrap m-n1">
+                <?php foreach ($categories as $category): ?>
+                    <a href="/tag/<?php echo urlencode($category['slug']); ?>" 
+                       class="btn btn-sm btn-outline-secondary m-1">
+                        <?php echo htmlspecialchars($category['name']); ?>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="font-weight-bold mb-4">Liens rapides</h4>
+            <div class="d-flex flex-column justify-content-start">
+                <?php foreach ($quickLinks as $link): ?>
+                    <a class="text-secondary mb-2" href="<?php echo $link['url']; ?>">
+                        <i class="fa fa-angle-right text-dark mr-2"></i><?php echo htmlspecialchars($link['text']); ?>
+                    </a>
+                <?php endforeach; ?>
+            </div>
         </div>
     </div>
 </div>
 
+<!-- Copyright -->
 <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
     <p class="m-0 text-center">
         © <?php echo date('Y'); ?> 
-        <a href="#">
+        <a href="/">
             <?php echo htmlspecialchars($app['app_name'] ?? 'Portail des Nouvelles Scolaires'); ?>
         </a>. 
         Tous droits réservés.
@@ -97,12 +122,9 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
         Développé par <a href="https://github.com/EL-HOUSS-BRAHIM/" target="_blank">Brahim Elhouss</a>.
     </p>
 </div>
-<!-- Footer End -->
 
 <!-- Back to Top -->
-<a href="#" class="btn btn-primary btn-square back-to-top">
-    <i class="fa fa-arrow-up"></i>
-</a>
+<a href="#" class="btn btn-dark back-to-top"><i class="fa fa-angle-up"></i></a>
 
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -110,21 +132,5 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
 <script src="<?php echo $app['constants']['ASSETS_URL']; ?>/lib/easing/easing.min.js"></script>
 <script src="<?php echo $app['constants']['ASSETS_URL']; ?>/lib/owlcarousel/owl.carousel.min.js"></script>
 <script src="<?php echo $app['constants']['ASSETS_URL']; ?>/js/main.js"></script>
-<script>
-$(document).ready(function() {
-    $(".main-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1500,
-        items: 1,
-        dots: true,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="fa fa-angle-left"></i>',
-            '<i class="fa fa-angle-right"></i>'
-        ]
-    });
-});
-</script>
 </body>
 </html>

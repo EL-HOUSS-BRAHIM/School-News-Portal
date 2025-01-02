@@ -156,41 +156,39 @@ public function delete($id)
 }
 
 
-    public function view()
+public function view($id)
 {
     try {
-        $articleId = $_GET['id'] ?? null;
-
-        if (!$articleId) {
-            $this->redirect('/');
-            return;
-        }
-
         $articleModel = new Article();
-        $article = $articleModel->getWithDetails($articleId);
+        $article = $articleModel->getWithDetails($id);
 
-        // Allow admins to view unpublished articles
-        if (!$article || ($article['status'] !== Article::STATUS_PUBLISHED && $_SESSION['user_role'] !== 'admin')) {
-            $this->redirect('/');
-            return;
+        if (!$article) {
+            return $this->renderView('article/view', ['article' => null]);
         }
 
-        // Get breaking news
-        $breakingNews = $articleModel->getBreakingNews(5);
+        // Check article status
+        if ($article['status'] !== Article::STATUS_PUBLISHED && 
+            (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin')) {
+            return $this->renderView('article/view', ['article' => null]);
+        }
+
+        // Get all necessary data
+        $commentModel = new Comment();
+        $data = [
+            'article' => $article,
+            'comments' => $commentModel->getByArticle($article['id']),
+            'breakingNews' => $articleModel->getBreakingNews(5),
+            'popularArticles' => $articleModel->getPopular(5),
+            'tags' => $articleModel->getTags(),
+            'socialStats' => $articleModel->getSocialStats(),
+            'relatedArticles' => $articleModel->getByCategory($article['category_id'], 3),
+            'recaptchaKey' => $app['constants']['RECAPTCHA_SITE_KEY']
+        ];
 
         // Increment view counter
-        $articleModel->incrementViews($articleId);
+        $articleModel->incrementViews($article['id']);
 
-        // Get comments
-        $commentModel = new Comment();
-        $comments = $commentModel->getByArticle($articleId);
-
-        $this->renderView('article/view', [
-            'article' => $article,
-            'comments' => $comments,
-            'breakingNews' => $breakingNews
-        ]);
-
+        $this->renderView('article/view', $data);
     } catch (Exception $e) {
         error_log("ArticleController::view Error: " . $e->getMessage());
         $this->redirect('/');

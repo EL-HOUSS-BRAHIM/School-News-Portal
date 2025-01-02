@@ -19,18 +19,12 @@
                 </a>
             </li>
 
-            <!-- Articles -->
-            <li class="nav-item">
-                <a class="nav-link <?php echo $currentPage == 'articles' ? 'active bg-gradient-primary' : ''; ?>" href="/dashboard/articles">
-                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-newspaper <?php echo $currentPage == 'articles' ? 'text-white' : 'text-warning'; ?> text-sm opacity-10"></i>
-                    </div>
-                    <span class="nav-link-text ms-1">My Articles</span>
-                </a>
-            </li>
-
             <!-- Admin Pages -->
             <?php if ($_SESSION['user_role'] === 'admin'): ?>
+                <li class="nav-item mt-3">
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Admin</h6>
+                </li>
+
                 <!-- Users -->
                 <li class="nav-item">
                     <a class="nav-link <?php echo $currentPage == 'users' ? 'active bg-gradient-primary' : ''; ?>" href="/admin/users">
@@ -38,6 +32,16 @@
                             <i class="fas fa-users <?php echo $currentPage == 'users' ? 'text-white' : 'text-info'; ?> text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">Users</span>
+                    </a>
+                </li>
+
+                <!-- All Articles -->
+                <li class="nav-item">
+                    <a class="nav-link <?php echo $currentPage == 'list_articles' ? 'active bg-gradient-primary' : ''; ?>" href="/admin/articles">
+                        <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-newspaper <?php echo $currentPage == 'list_articles' ? 'text-white' : 'text-primary'; ?> text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">All Articles</span>
                     </a>
                 </li>
 
@@ -50,7 +54,33 @@
                         <span class="nav-link-text ms-1">Review Articles</span>
                     </a>
                 </li>
+
+                <!-- Manage Categories -->
+                <li class="nav-item">
+                    <a class="nav-link <?php echo $currentPage == 'manage_categories' ? 'active bg-gradient-primary' : ''; ?>" href="/admin/manage_categories">
+                        <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-list <?php echo $currentPage == 'manage_categories' ? 'text-white' : 'text-warning'; ?> text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Manage Categories</span>
+                    </a>
+                </li>
             <?php endif; ?>
+
+            <!-- Content Management -->
+            <li class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Content</h6>
+            </li>
+
+            <!-- My Articles -->
+            <li class="nav-item">
+                <a class="nav-link <?php echo $currentPage == 'articles' ? 'active bg-gradient-primary' : ''; ?>" href="/dashboard/articles">
+                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fas fa-file-alt <?php echo $currentPage == 'articles' ? 'text-white' : 'text-warning'; ?> text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">My Articles</span>
+                </a>
+            </li>
+
             <!-- New Article -->
             <li class="nav-item">
                 <a class="nav-link <?php echo $currentPage == 'new' ? 'active bg-gradient-primary' : ''; ?>" href="/dashboard/article/new">

@@ -6,6 +6,17 @@ use Cloudinary\Cloudinary;
 use Cloudinary\Configuration\Configuration;
 use Cloudinary\Api\Upload\UploadApi;
 
+function getStatusColor($status) {
+    return match($status) {
+        'draft' => '#ffc107',
+        'reviewing' => '#17a2b8',
+        'private' => '#6c757d',
+        'published' => '#28a745',
+        'disqualified' => '#dc3545',
+        default => '#6c757d'
+    };
+}
+
 function sanitizeInput($input)
 {
     return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');

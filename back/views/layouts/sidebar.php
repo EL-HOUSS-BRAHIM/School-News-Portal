@@ -5,6 +5,7 @@ require_once __DIR__ . '/../../config/app.php';
 
 try {
     $articleModel = new Article();
+    $categoryModel = new Category();
     
     // Debug database connection
     if (!$articleModel->hasConnection()) {
@@ -32,10 +33,10 @@ try {
 
     $socialLabels = [
         'facebook' => 'Fans',
-        'twitter' => 'Abonnés',
-        'linkedin' => 'Connexions',
-        'instagram' => 'Abonnés',
-        'youtube' => 'Abonnés'
+        'twitter' => 'Followers',
+        'linkedin' => 'Connections',
+        'instagram' => 'Followers',
+        'youtube' => 'Subscribers'
     ];
 
     // Format social media data
@@ -46,7 +47,7 @@ try {
                 'url' => $url,
                 'color' => $socialColors[$platform] ?? '#666666',
                 'followers' => '12,345', // Default follower count
-                'label' => $socialLabels[$platform] ?? 'Abonnés'
+                'label' => $socialLabels[$platform] ?? 'Followers'
             ];
         }
     }
@@ -66,164 +67,159 @@ try {
 // var_dump($latestArticles); // Debug output
 ?>
 
-<!-- News With Sidebar Start -->
-<div class="container-fluid">
-    <div class="container">
-        <div class="row">
-            <!-- Latest Articles Section -->
-            <div class="col-lg-8">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-title">
-                            <h4 class="m-0 text-uppercase font-weight-bold">Dernières Nouvelles</h4>
-                            <a class="text-secondary font-weight-medium text-decoration-none" href="/articles">Voir Tout</a>
-                        </div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+                        <h3 class="m-0">Popular</h3>
+                        <a class="text-secondary font-weight-medium text-decoration-none" href="/articles">View All</a>
                     </div>
-                    
-                    <?php if (!empty($latestArticles)): ?>
-                        <!-- First 4 Latest Articles (Large Format) -->
-                        <?php foreach(array_slice($latestArticles, 0, 4) as $article): ?>
+                </div>
+                <?php if (!empty($trendingArticles)): ?>
+                    <?php foreach ($trendingArticles as $article): ?>
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
-                                <img class="img-fluid w-100" 
-                                     src="<?php echo htmlspecialchars($article['image'] ?? '/img/default.jpg'); ?>" 
-                                     style="object-fit: cover; height: 300px;">
-                                <div class="bg-white border border-top-0 p-4">
-                                    <div class="mb-2">
-                                        <?php if(isset($article['category'])): ?>
-                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2" 
-                                           href="/category/<?php echo htmlspecialchars($article['category_id']); ?>">
-                                           <?php echo htmlspecialchars($article['category']); ?>
-                                        </a>
-                                        <?php endif; ?>
-                                        <small><?php echo date('d M, Y', strtotime($article['created_at'])); ?></small>
+                                <img class="img-fluid w-100" src="<?php echo htmlspecialchars($article['image'] ?? $app['constants']['ASSETS_URL'] . '/img/default.jpg'); ?>" style="object-fit: cover;">
+                                <div class="overlay position-relative bg-light">
+                                    <div class="mb-2" style="font-size: 14px;">
+                                        <a href="/category/<?php echo htmlspecialchars($article['category_id']); ?>"><?php echo htmlspecialchars($article['category']); ?></a>
+                                        <span class="px-1">/</span>
+                                        <span><?php echo date('F d, Y', strtotime($article['created_at'])); ?></span>
                                     </div>
-                                    <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" 
-                                       href="/article/<?php echo urlencode($article['title']); ?>">
-                                       <?php echo htmlspecialchars($article['title']); ?>
-                                    </a>
-                                    <?php echo html_entity_decode($article['content']); ?>
-                                  
-                                </div>
-                                <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
-                                    <div class="d-flex align-items-center">
-                                        <small><?php echo date('d M, Y', strtotime($article['created_at'])); ?></small>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <small class="ml-3"><i class="far fa-eye mr-2"></i><?php echo $article['views'] ?? 0; ?></small>
-                                    </div>
+                                    <a class="h4" href="/article/<?php echo urlencode($article['title']); ?>"><?php echo htmlspecialchars($article['title']); ?></a>
+                                    <p class="m-0"><?php echo htmlspecialchars(strip_tags($article['content'])); ?></p>
                                 </div>
                             </div>
                         </div>
-                        <?php endforeach; ?>
-
-                        <!-- Next 4 Latest Articles (Compact Format) -->
-                        <?php foreach(array_slice($latestArticles, 4, 4) as $article): ?>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No popular articles available at the moment.</p>
+                <?php endif; ?>
+            </div>
+            
+            <div class="mb-3 pb-3">
+                <a href=""><img class="img-fluid w-100" src="<?php echo $app['constants']['ASSETS_URL']; ?>/img/ads-700x70.jpg" alt=""></a>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+                        <h3 class="m-0">Latest</h3>
+                        <a class="text-secondary font-weight-medium text-decoration-none" href="/articles">View All</a>
+                    </div>
+                </div>
+                <?php if (!empty($latestArticles)): ?>
+                    <?php foreach ($latestArticles as $article): ?>
                         <div class="col-lg-6">
-                            <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                                <img class="img-fluid" 
-                                     src="<?php echo htmlspecialchars($article['image'] ?? '/img/default.jpg'); ?>" 
-                                     style="width: 110px; height: 110px; object-fit: cover;">
-                                <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                                    <div class="mb-2">
-                                        <?php if(isset($article['category'])): ?>
-                                        <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" 
-                                           href="/category/<?php echo htmlspecialchars($article['category_id']); ?>">
-                                           <?php echo htmlspecialchars($article['category']); ?>
-                                        </a>
-                                        <?php endif; ?>
-                                        <small><?php echo date('d M, Y', strtotime($article['created_at'])); ?></small>
+                            <div class="position-relative mb-3">
+                                <img class="img-fluid w-100" src="<?php echo htmlspecialchars($article['image'] ?? $app['constants']['ASSETS_URL'] . '/img/default.jpg'); ?>" style="object-fit: cover;">
+                                <div class="overlay position-relative bg-light">
+                                    <div class="mb-2" style="font-size: 14px;">
+                                        <a href="/category/<?php echo htmlspecialchars($article['category_id']); ?>"><?php echo htmlspecialchars($article['category']); ?></a>
+                                        <span class="px-1">/</span>
+                                        <span><?php echo date('F d, Y', strtotime($article['created_at'])); ?></span>
                                     </div>
-                                    <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" 
-                                       href="/article/<?php echo urlencode($article['title']); ?>">
-                                       <?php echo htmlspecialchars(substr($article['title'], 0, 50)) . '...'; ?>
-                                    </a>
+                                    <a class="h4" href="/article/<?php echo urlencode($article['title']); ?>"><?php echo htmlspecialchars($article['title']); ?></a>
+                                    <p class="m-0"><?php echo htmlspecialchars(strip_tags(substr($article['content'], 0, 100))); ?>...</p>
                                 </div>
                             </div>
                         </div>
-                        <?php endforeach; ?>
-                    <?php else: ?>
-                        <div class="col-12">
-                            <p class="text-center">Aucun article trouvé.</p>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No latest articles available at the moment.</p>
+                <?php endif; ?>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 pt-3 pt-lg-0">
+            <!-- Social Follow Start -->
+            <div class="pb-3">
+                <div class="bg-light py-2 px-4 mb-3">
+                    <h3 class="m-0">Follow Us</h3>
+                </div>
+                <?php if (!empty($formattedSocialLinks)): ?>
+                    <?php foreach ($formattedSocialLinks as $platform => $link): ?>
+                        <div class="d-flex mb-3">
+                            <a href="<?php echo htmlspecialchars($link['url']); ?>" class="d-block w-50 py-2 px-3 text-white text-decoration-none mr-2" style="background: <?php echo htmlspecialchars($link['color']); ?>;">
+                                <small class="fab fa-<?php echo htmlspecialchars($platform); ?> mr-2"></small><small><?php echo htmlspecialchars($link['followers']); ?> <?php echo htmlspecialchars($link['label']); ?></small>
+                            </a>
                         </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No social media links available at the moment.</p>
+                <?php endif; ?>
+            </div>
+            <!-- Social Follow End -->
+
+            <!-- Newsletter Start -->
+            <div class="pb-3">
+                <div class="bg-light py-2 px-4 mb-3">
+                    <h3 class="m-0">Newsletter</h3>
+                </div>
+                <div class="bg-light text-center p-4 mb-3">
+                    <p>Aliqu justo et labore at eirmod justo sea erat diam dolor diam vero kasd</p>
+                    <div class="input-group" style="width: 100%;">
+                        <input type="text" class="form-control form-control-lg" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </div>
+                    <small>Sit eirmod nonumy kasd eirmod</small>
+                </div>
+            </div>
+            <!-- Newsletter End -->
+
+            <!-- Ads Start -->
+            <div class="mb-3 pb-3">
+                <a href=""><img class="img-fluid" src="<?php echo $app['constants']['ASSETS_URL']; ?>/img/news-500x280-4.jpg" alt=""></a>
+            </div>
+            <!-- Ads End -->
+
+            <!-- Popular News Start -->
+            <div class="pb-3">
+                <div class="bg-light py-2 px-4 mb-3">
+                    <h3 class="m-0">Trending</h3>
+                </div>
+                <?php if (!empty($trendingArticles)): ?>
+                    <?php foreach ($trendingArticles as $article): ?>
+                        <div class="d-flex mb-3">
+                            <img src="<?php echo htmlspecialchars($article['image'] ?? $app['constants']['ASSETS_URL'] . '/img/default.jpg'); ?>" style="width: 100px; height: 100px; object-fit: cover;">
+                            <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
+                                <div class="mb-1" style="font-size: 13px;">
+                                    <a href="/category/<?php echo htmlspecialchars($article['category_id']); ?>"><?php echo htmlspecialchars($article['category']); ?></a>
+                                    <span class="px-1">/</span>
+                                    <span><?php echo date('F d, Y', strtotime($article['created_at'])); ?></span>
+                                </div>
+                                <a class="h6 m-0" href="/article/<?php echo urlencode($article['title']); ?>"><?php echo htmlspecialchars($article['title']); ?></a>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No trending articles available at the moment.</p>
+                <?php endif; ?>
+            </div>
+            <!-- Popular News End -->
+
+            <!-- Tags Start -->
+            <div class="pb-3">
+                <div class="bg-light py-2 px-4 mb-3">
+                    <h3 class="m-0">Tags</h3>
+                </div>
+                <div class="d-flex flex-wrap m-n1">
+                    <?php
+                    $categories = $categoryModel->getAll();
+                    if (!empty($categories)):
+                        foreach ($categories as $category): ?>
+                            <a href="/category/<?php echo urlencode($category['slug']); ?>" class="btn btn-sm btn-outline-secondary m-1"><?php echo htmlspecialchars($category['name']); ?></a>
+                        <?php endforeach;
+                    else: ?>
+                        <p>No tags available at the moment.</p>
                     <?php endif; ?>
                 </div>
             </div>
-
-            <!-- Sidebar Section -->
-            <div class="col-lg-4">
-                <!-- Social Follow Start -->
-                <div class="mb-3">
-                    <div class="section-title mb-0">
-                        <h4 class="m-0 text-uppercase font-weight-bold">Suivez-nous</h4>
-                    </div>
-                    <div class="bg-white border border-top-0 p-3">
-                        <?php if (!empty($formattedSocialLinks)): ?>
-                            <?php foreach($formattedSocialLinks as $platform => $data): ?>
-                                <a href="<?php echo htmlspecialchars($data['url']); ?>" 
-                                   target="_blank"
-                                   class="d-block w-100 text-white text-decoration-none <?php echo ($platform !== array_key_last($formattedSocialLinks)) ? 'mb-3' : ''; ?>"
-                                   style="background: <?php echo htmlspecialchars($data['color']); ?>">
-                                    <i class="fab fa-<?php echo htmlspecialchars($platform); ?> text-center py-4 mr-3" 
-                                       style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
-                                    <span class="font-weight-medium">
-                                        <?php echo $data['followers']; ?> 
-                                        <?php echo htmlspecialchars($data['label']); ?>
-                                    </span>
-                                </a>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <p class="text-center text-muted">Aucun lien de réseau social disponible</p>
-                        <?php endif; ?>
-                    </div>
-                </div>
-                <!-- Social Follow End -->
-
-                <!-- Ads Start -->
-                <div class="mb-3">
-                    <div class="section-title mb-0">
-                        <h4 class="m-0 text-uppercase font-weight-bold">Publicité</h4>
-                    </div>
-                    <div class="bg-white text-center border border-top-0 p-3">
-                        <a href><img class="img-fluid" src="img/news-800x500-2.jpg" alt></a>
-                    </div>
-                </div>
-                <!-- Ads End -->
-
-                <!-- Trending News Section -->
-                <div class="mb-3">
-                    <div class="section-title mb-0">
-                        <h4 class="m-0 text-uppercase font-weight-bold">Nouvelles Tendance</h4>
-                    </div>
-                    <div class="bg-white border border-top-0 p-3">
-                        <?php foreach($trendingArticles as $article): ?>
-                        <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
-                            <img class="img-fluid" 
-                                 src="<?php echo htmlspecialchars($article['image'] ?? '/img/default.jpg'); ?>" 
-                                 style="width: 110px; height: 110px; object-fit: cover;">
-                            <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                                <div class="mb-2">
-                                    <?php if(isset($article['category'])): ?>
-                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2" 
-                                       href="/category/<?php echo htmlspecialchars($article['category_id']); ?>">
-                                       <?php echo htmlspecialchars($article['category']); ?>
-                                    </a>
-                                    <?php endif; ?>
-                                    <small><?php echo date('d M, Y', strtotime($article['created_at'])); ?></small>
-                                </div>
-                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" 
-                                   href="/article/<?php echo urlencode($article['title']); ?>">
-                                   <?php echo htmlspecialchars(substr($article['title'], 0, 50)) . '...'; ?>
-                                </a>
-                            </div>
-                        </div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-
-                <?php require_once 'newsletter.php'; ?>
-            </div>
+            <!-- Tags End -->
         </div>
     </div>
 </div>
-<!-- News With Sidebar End -->

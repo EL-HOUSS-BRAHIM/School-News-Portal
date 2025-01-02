@@ -30,7 +30,15 @@ $routes = [
     '/admin/store_user' => 'AdminController@storeUser',
     '/admin/review' => 'AdminController@review',
     '/admin/publish_article' => 'AdminController@publishArticle',
+    '/admin/articles' => 'AdminController@listArticles',
+    '/admin/article/delete' => 'AdminController@deleteArticle',
+    '/admin/article/status' => 'AdminController@updateArticleStatus',
     '/admin/reject_article' => 'AdminController@rejectArticle',
+    '/admin/manage_categories' => 'AdminController@manageCategories',
+    '/admin/store_category' => 'AdminController@storeCategory',
+    '/admin/delete_category' => 'AdminController@deleteCategory',
+    '/admin/upload_category_image' => 'AdminController@uploadCategoryImage',
+    '/admin/delete_category_image' => 'AdminController@deleteCategoryImage',
 ];
 
 function getRoute($url) {
