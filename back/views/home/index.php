@@ -20,14 +20,28 @@ $categories = $categoryModel->getAll();
             <div class="owl-carousel owl-carousel-2 carousel-item-4 position-relative">
                 <?php foreach ($featuredArticles as $article): ?>
                     <div class="position-relative overflow-hidden" style="height: 300px;">
-                        <img class="img-fluid w-100 h-100" src="<?php echo htmlspecialchars($article['image'] ?? $app['constants']['ASSETS_URL'] . '/img/default.jpg'); ?>" style="object-fit: cover;">
+                        <img class="img-fluid w-100 h-100"
+                             src="<?php echo htmlspecialchars($article['image'] ?? $app['constants']['ASSETS_URL'] . '/img/default.jpg'); ?>"
+                             style="object-fit: cover;">
                         <div class="overlay">
                             <div class="mb-1" style="font-size: 13px;">
-                                <a class="text-white" href="/category/<?php echo htmlspecialchars($article['category_id']); ?>"><?php echo htmlspecialchars($article['category']); ?></a>
+                                <?php
+                                $categoryName = $article['category_name'] ?? 'Uncategorized';
+                                ?>
+                                <a class="text-white" href="/category/<?php echo htmlspecialchars($article['category_id']); ?>">
+                                    <?php echo htmlspecialchars($categoryName); ?>
+                                </a>
                                 <span class="px-1 text-white">/</span>
-                                <a class="text-white" href="/article/<?php echo urlencode($article['title']); ?>"><?php echo date('F d, Y', strtotime($article['created_at'])); ?></a>
+                                <a class="text-white" href="/article/<?php echo urlencode($article['title']); ?>">
+                                    <?php echo date('F d, Y', strtotime($article['created_at'] ?? 'now')); ?>
+                                </a>
                             </div>
-                            <a class="h4 m-0 text-white" href="/article/<?php echo urlencode($article['title']); ?>"><?php echo htmlspecialchars($article['title']); ?></a>
+                            <a class="h4 m-0 text-white" href="/article/<?php echo urlencode($article['title']); ?>">
+                                <?php
+                                // Use language-based fallback or default to 'Untitled'
+                                echo htmlspecialchars($article['title'] ?? 'Untitled');
+                                ?>
+                            </a>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -49,12 +63,15 @@ $categories = $categoryModel->getAll();
                         <div class="bg-light py-2 px-4 mb-3">
                             <h3 class="m-0"><?php echo htmlspecialchars($category['name']); ?></h3>
                         </div>
-                        <?php $categoryArticles = $articleModel->getByCategory($category['id']); error_log("Category {$category['name']}: " . count($categoryArticles) . " articles found"); if (!empty($categoryArticles)): ?>
+                        <?php
+                        $categoryArticles = $articleModel->getByCategory($category['id']);
+                        error_log("Category {$category['name']}: " . count($categoryArticles) . " articles found");
+                        if (!empty($categoryArticles)): ?>
                             <div class="owl-carousel owl-carousel-3 carousel-item-2 position-relative">
                                 <?php foreach ($categoryArticles as $article): ?>
                                     <div class="position-relative">
-                                        <img class="img-fluid w-100" 
-                                             src="<?php echo htmlspecialchars($article['image'] ?? $app['constants']['ASSETS_URL'] . '/img/default.jpg'); ?>" 
+                                        <img class="img-fluid w-100"
+                                             src="<?php echo htmlspecialchars($article['image'] ?? $app['constants']['ASSETS_URL'] . '/img/default.jpg'); ?>"
                                              style="object-fit: cover;">
                                         <div class="overlay position-relative bg-light">
                                             <div class="mb-2" style="font-size: 13px;">
@@ -62,11 +79,23 @@ $categories = $categoryModel->getAll();
                                                     <?php echo htmlspecialchars($category['name']); ?>
                                                 </a>
                                                 <span class="px-1">/</span>
-                                                <span><?php echo date('F d, Y', strtotime($article['created_at'])); ?></span>
+                                                <span><?php echo date('F d, Y', strtotime($article['created_at'] ?? 'now')); ?></span>
                                             </div>
                                             <a class="h4 m-0" href="/article/<?php echo urlencode($article['title']); ?>">
-                                                <?php echo htmlspecialchars($article['title']); ?>
+                                                <?php echo htmlspecialchars($article['title'] ?? 'Untitled'); ?>
                                             </a>
+                                            <p class="m-0" dir="<?php echo $article['language'] === 'ar' ? 'rtl' : 'ltr'; ?>">
+                                                <?php 
+                                                // Double decode HTML entities since content is double encoded
+                                                $content = html_entity_decode(
+                                                    html_entity_decode($article['content'], ENT_QUOTES | ENT_HTML5, 'UTF-8'),
+                                                    ENT_QUOTES | ENT_HTML5, 
+                                                    'UTF-8'
+                                                );
+                                                $content = strip_tags($content);
+                                                echo htmlspecialchars(substr($content, 0, 100)) . '...'; 
+                                                ?>
+                                            </p>
                                         </div>
                                     </div>
                                 <?php endforeach; ?>

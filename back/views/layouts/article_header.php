@@ -1,4 +1,8 @@
 <?php
+if (!function_exists('basename') || !function_exists('urlencode')) {
+    die('Required PHP extensions are not loaded. Please enable them in php.ini');
+}
+
 require_once __DIR__ . '/../../config/app.php';
 require_once __DIR__ . '/../../models/Category.php';
 require_once __DIR__ . '/../../models/Article.php';
@@ -30,6 +34,7 @@ try {
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo Translate::getCurrentLang(); ?>">
+
 <head>
     <meta charset="utf-8">
     <title><?php echo htmlspecialchars($app['app_name']); ?> - <?php echo htmlspecialchars($currentPage); ?></title>
@@ -49,7 +54,8 @@ try {
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
-    <link href="<?php echo $app['constants']['ASSETS_URL']; ?>/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?php echo $app['constants']['ASSETS_URL']; ?>/lib/owlcarousel/assets/owl.carousel.min.css"
+        rel="stylesheet">
     <link href="<?php echo $app['constants']['ASSETS_URL']; ?>/css/style.css" rel="stylesheet">
     <link rel="alternate" href="https://bross-news-website.infinityfreeapp.com/" hreflang="fr" />
     <link rel="alternate" href="https://bross-news-website.infinityfreeapp.com/en" hreflang="en" />
@@ -57,14 +63,18 @@ try {
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
 
-        gtag('config', 'UA-XXXXXXXXX-X');
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-XXXXXXXXX-X');
     </script>
     <!-- End Google Analytics -->
 </head>
+
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid">
@@ -72,13 +82,25 @@ try {
             <div class="col-12 col-md-8">
                 <div class="d-flex justify-content-between">
                     <div class="bg-primary text-white text-center py-2" style="width: 100px;">Trending</div>
-                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3" style="width: calc(100% - 100px); padding-left: 90px;">
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                        style="width: calc(100% - 100px); padding-left: 90px;">
                         <?php if (!empty($trendingArticles)): ?>
-                            <?php foreach ($trendingArticles as $article): ?>
-                                <div class="text-truncate"><a class="text-secondary" href="/article/<?php echo urlencode($article['title']); ?>"><?php echo htmlspecialchars($article['title']); ?></a></div>
-                            <?php endforeach; ?>
+                        <?php foreach ($trendingArticles as $article): ?>
+                        <div class="text-truncate"><a class="text-secondary"
+                                href="/article/<?php echo urlencode($article['title']); ?>">
+                                <?php 
+                                $title = html_entity_decode(
+                        html_entity_decode($article['title'], ENT_QUOTES | ENT_HTML5, 'UTF-8'),
+                        ENT_QUOTES | ENT_HTML5, 
+                    'UTF-8'
+    );
+    echo htmlspecialchars($title); 
+    ?>
+                            </a></div>
+                        <?php endforeach; ?>
                         <?php else: ?>
-                            <div class="text-truncate"><a class="text-secondary" href="#">No trending articles available</a></div>
+                        <div class="text-truncate"><a class="text-secondary" href="#">No trending articles available</a>
+                        </div>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -90,10 +112,11 @@ try {
         <div class="row align-items-center py-2 px-lg-5">
             <div class="col-lg-4">
                 <a href="/" class="navbar-brand d-none d-lg-block">
-                    <h1 class="m-0 display-5 text-uppercase"><span class="text-primary"><?php echo htmlspecialchars($app['app_name'] ?? ''); ?></span></h1>
+                    <h1 class="m-0 display-5 text-uppercase"><span
+                            class="text-primary"><?php echo htmlspecialchars($app['app_name'] ?? ''); ?></span></h1>
                 </a>
             </div>
-            
+
         </div>
     </div>
     <!-- Topbar End -->
@@ -109,13 +132,23 @@ try {
             </button>
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="/" class="nav-item nav-link <?php echo $currentPage == 'index' ? 'active' : ''; ?>">Home</a>
+                    <a href="/"
+                        class="nav-item nav-link <?php echo $currentPage == 'index' ? 'active' : ''; ?>">Home</a>
                     <?php if (!empty($categories)): ?>
-                        <?php foreach ($categories as $category): ?>
-                            <a href="/category/<?php echo urlencode($category['slug']); ?>" class="nav-item nav-link"><?php echo htmlspecialchars($category['name']); ?></a>
-                        <?php endforeach; ?>
+                    <?php foreach ($categories as $category): ?>
+                    <a href="/category/<?php echo urlencode($category['slug']); ?>" class="nav-item nav-link">
+                        <?php 
+                                $name = html_entity_decode(
+                                    html_entity_decode($category['name'], ENT_QUOTES | ENT_HTML5, 'UTF-8'),
+                                    ENT_QUOTES | ENT_HTML5, 
+                                    'UTF-8'
+                                );
+                                echo htmlspecialchars($name); 
+                                ?>
+                    </a>
+                    <?php endforeach; ?>
                     <?php else: ?>
-                        <a href="#" class="nav-item nav-link">No categories available</a>
+                    <a href="#" class="nav-item nav-link">No categories available</a>
                     <?php endif; ?>
                     <a href="/contact" class="nav-item nav-link">Contact</a>
                 </div>

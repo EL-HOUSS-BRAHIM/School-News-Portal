@@ -20,74 +20,91 @@ class Model
     }
 
     public function find($id)
-{
-    try {
-        $sql = "SELECT a.*, u.username as author 
-                FROM {$this->table} a
-                LEFT JOIN users u ON a.user_id = u.id 
-                WHERE a.id = ?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$id]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        error_log("Error finding article: " . $e->getMessage());
-        return null;
+    {
+        try {
+            // Updated to include all new fields from articles table
+            $sql = "SELECT a.*, u.username as author,
+                          c.name as category_name
+                   FROM {$this->table} a
+                   LEFT JOIN users u ON a.user_id = u.id 
+                   LEFT JOIN categories c ON a.category_id = c.id
+                   WHERE a.id = ?";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([$id]);
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error finding record: " . $e->getMessage());
+            return null;
+        }
     }
-}
 
     public function save($data)
 {
     try {
-        // Generate UUID if not provided
-        if (!isset($data['id'])) {
-            $data['id'] = generateUUID();
+        // Ensure boolean fields are properly converted
+        $data['featured'] = isset($data['featured']) ? (int)$data['featured'] : 0;
+        $data['breaking'] = isset($data['breaking']) ? (int)$data['breaking'] : 0;
+
+        // Ensure language is set
+        if (!isset($data['language']) || empty($data['language'])) {
+            $data['language'] = 'fr';
         }
 
-        if (isset($data['content'])) {
-            $data['content'] = html_entity_decode($data['content'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        // Only encode title, leave content as HTML
+        if (isset($data['title'])) {
+            $data['title'] = htmlspecialchars($data['title'], ENT_QUOTES, 'UTF-8');
         }
-
+        // Don't encode content to allow HTML and images
+        
         $columns = implode(', ', array_keys($data));
         $values = implode(', ', array_fill(0, count($data), '?'));
-        
+
         $sql = "INSERT INTO {$this->table} ($columns) VALUES ($values)";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute(array_values($data));
-        
-        return $data['id']; // Return the UUID instead of lastInsertId()
+
+        $result = $stmt->execute(array_values($data));
+
+        if (!$result) {
+            error_log("Error executing query: " . print_r($stmt->errorInfo(), true));
+        }
+
+        return $result;
     } catch (PDOException $e) {
-        error_log("Error saving record: " . $e->getMessage());
+        error_log("Error saving article: " . $e->getMessage());
         throw $e;
     }
 }
-    
-    public function update($id, $data)
-    {
-        try {
-            if (isset($data['content'])) {
-                // Decode HTML entities and ensure proper HTML
-                $data['content'] = html_entity_decode($data['content'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
-            }
-    
-            $set = implode("=?, ", array_keys($data)) . "=?";
-            $values = array_values($data);
-            $values[] = $id;
-            $stmt = $this->pdo->prepare("UPDATE {$this->table} SET $set WHERE id = ?");
-            $result = $stmt->execute($values);
-            $stmt->closeCursor();
-            return $result;
-        } catch (PDOException $e) {
-            error_log("Error updating article: " . $e->getMessage());
-            throw $e;
+
+public function update($id, $data)
+{
+    try {
+        // Encode title and content
+        if (isset($data['title'])) {
+            $data['title'] = htmlspecialchars($data['title'], ENT_QUOTES, 'UTF-8');
         }
+        if (isset($data['content'])) {
+            $data['content'] = htmlspecialchars($data['content'], ENT_QUOTES, 'UTF-8');
+        }
+
+        $set = implode("=?, ", array_keys($data)) . "=?";
+        $values = array_values($data);
+        $values[] = $id;
+
+        $sql = "UPDATE {$this->table} SET $set WHERE id = ?";
+        $stmt = $this->pdo->prepare($sql);
+        return $stmt->execute($values);
+    } catch (PDOException $e) {
+        error_log("Error updating record: " . $e->getMessage());
+        throw $e;
     }
+}
 
     public function delete($id)
     {
         try {
             $stmt = $this->pdo->prepare("DELETE FROM {$this->table} WHERE id = ?");
             $result = $stmt->execute([$id]);
-            $stmt->closeCursor(); // Close the cursor to free up the connection
+            $stmt->closeCursor();
             return $result;
         } catch (PDOException $e) {
             error_log("Error deleting record: " . $e->getMessage());
@@ -95,4 +112,3 @@ class Model
         }
     }
 }
-?>

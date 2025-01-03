@@ -37,9 +37,9 @@
 
                 <!-- All Articles -->
                 <li class="nav-item">
-                    <a class="nav-link <?php echo $currentPage == 'list_articles' ? 'active bg-gradient-primary' : ''; ?>" href="/admin/articles">
+                    <a class="nav-link <?php echo $currentPage == 'all_articles' ? 'active bg-gradient-primary' : ''; ?>" href="/admin/all_articles">
                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="fas fa-newspaper <?php echo $currentPage == 'list_articles' ? 'text-white' : 'text-primary'; ?> text-sm opacity-10"></i>
+                            <i class="fas fa-newspaper <?php echo $currentPage == 'all_articles' ? 'text-white' : 'text-primary'; ?> text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">All Articles</span>
                     </a>

@@ -17,7 +17,7 @@
                                         <select class="form-control" id="statusFilter">
                                             <option value="">All Statuses</option>
                                             <?php foreach(Article::getAllStatuses() as $value => $label): ?>
-                                                <option value="<?php echo $value; ?>"><?php echo $label; ?></option>
+                                                <option value="<?php echo $value; ?>"><?php echo htmlspecialchars($label); ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                     </div>
@@ -47,12 +47,12 @@
                                                 <td>
                                                     <div class="d-flex px-2 py-1">
                                                         <div>
-                                                            <img src="<?php echo $article['image'] ?? '../assets/img/default-article.jpg'; ?>" 
+                                                            <img src="<?php echo htmlspecialchars($article['image'] ?? '../assets/img/default-article.jpg'); ?>" 
                                                                  class="avatar avatar-sm me-3" alt="article image">
                                                         </div>
                                                         <div class="d-flex flex-column justify-content-center">
                                                             <h6 class="mb-0 text-sm"><?php echo htmlspecialchars($article['title']); ?></h6>
-                                                            <p class="text-xs text-secondary mb-0">
+                                                            <p class="text-xs text-secondary mb-0" dir="<?php echo $article['language'] === 'ar' ? 'rtl' : 'ltr'; ?>">
                                                                 <?php echo substr(strip_tags(html_entity_decode($article['content'])), 0, 50) . '...'; ?>
                                                             </p>
                                                         </div>
@@ -63,7 +63,7 @@
                                                 </td>
                                                 <td class="align-middle text-center text-sm">
                                                     <span class="badge badge-sm bg-gradient-info">
-                                                        <?php echo htmlspecialchars($article['category'] ?? 'unknown'); ?>
+                                                        <?php echo htmlspecialchars($article['category']); ?>
                                                     </span>
                                                 </td>
                                                 <td class="align-middle text-center">
@@ -76,47 +76,44 @@
                                                             <?php foreach(Article::getAllStatuses() as $value => $label): ?>
                                                                 <option value="<?php echo $value; ?>" 
                                                                         <?php echo $value === $article['status'] ? 'selected' : ''; ?>>
-                                                                    <?php echo $label; ?>
+                                                                    <?php echo htmlspecialchars($label); ?>
                                                                 </option>
                                                             <?php endforeach; ?>
                                                         </select>
                                                     </form>
                                                 </td>
-                                                <!-- Update metrics display with null checks -->
-<td class="align-middle text-center">
-    <div class="d-flex justify-content-center gap-2">
-        <span class="text-xs font-weight-bold">
-            <i class="fas fa-eye text-primary"></i> <?php echo number_format($article['views'] ?? 0); ?>
-        </span>
-        <span class="text-xs font-weight-bold">
-            <i class="fas fa-heart text-danger"></i> <?php echo number_format($article['likes'] ?? 0); ?>
-        </span>
-        <span class="text-xs font-weight-bold">
-            <i class="fas fa-comment text-success"></i> <?php echo number_format($article['comments'] ?? 0); ?>
-        </span>
-    </div>
-</td>
-<td class="align-middle text-center">
-    <span class="text-secondary text-xs font-weight-bold">
-        <?php echo $article['created_at'] ? date('M d, Y', strtotime($article['created_at'])) : 'N/A'; ?>
-    </span>
-</td>
-<td class="align-middle">
-    <div class="ms-auto">
-        <a href="/article/<?php echo urlencode($article['title'] ?? ''); ?>" 
-           class="btn btn-link text-primary px-3 mb-0" 
-           target="_blank"
-           <?php echo empty($article['title']) ? 'disabled' : ''; ?>>
-            <i class="fas fa-eye text-primary me-2"></i>View
-        </a>
-        <button type="button" 
-                onclick="confirmDelete('<?php echo $article['id'] ?? ''; ?>')"
-                class="btn btn-link text-danger px-3 mb-0"
-                <?php echo empty($article['id']) ? 'disabled' : ''; ?>>
-            <i class="far fa-trash-alt me-2"></i>Delete
-        </button>
-    </div>
-</td>
+                                                <td class="align-middle text-center">
+                                                    <div class="d-flex justify-content-center gap-2">
+                                                        <span class="text-xs font-weight-bold">
+                                                            <i class="fas fa-eye text-primary"></i> <?php echo number_format($article['views'] ?? 0); ?>
+                                                        </span>
+                                                        <span class="text-xs font-weight-bold">
+                                                            <i class="fas fa-heart text-danger"></i> <?php echo number_format($article['likes'] ?? 0); ?>
+                                                        </span>
+                                                        <span class="text-xs font-weight-bold">
+                                                            <i class="fas fa-comment text-success"></i> <?php echo number_format($article['comments'] ?? 0); ?>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle text-center">
+                                                    <span class="text-secondary text-xs font-weight-bold">
+                                                        <?php echo $article['created_at'] ? date('M d, Y', strtotime($article['created_at'])) : 'N/A'; ?>
+                                                    </span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <div class="ms-auto">
+                                                        <a href="/article/<?php echo urlencode($article['title']); ?>" 
+                                                           class="btn btn-link text-primary px-3 mb-0" 
+                                                           target="_blank">
+                                                            <i class="fas fa-eye text-primary me-2"></i>View
+                                                        </a>
+                                                        <button type="button" 
+                                                                onclick="confirmDelete('<?php echo $article['id']; ?>')"
+                                                                class="btn btn-link text-danger px-3 mb-0">
+                                                            <i class="far fa-trash-alt me-2"></i>Delete
+                                                        </button>
+                                                    </div>
+                                                </td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>

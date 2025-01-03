@@ -315,7 +315,7 @@ public function listArticles() {
 
         $data = [
             'articles' => $articles,
-            'currentPage' => 'list_articles',
+            'currentPage' => 'all_articles',
             'userData' => [
                 'username' => $_SESSION['username'] ?? 'Admin',
                 'avatar' => $_SESSION['avatar'] ?? '../assets/img/default-avatar.png'

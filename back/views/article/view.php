@@ -22,10 +22,16 @@ $recaptchaKey = $_ENV['RECAPTCHA_SITE_KEY'];
                                 <span class="px-1">/</span>
                                 <span><?php echo date('F d, Y', strtotime($article['created_at'])); ?></span>
                             </div>
-                            <div>
-                                <h3 class="mb-3"><?php echo htmlspecialchars($article['title']); ?></h3>
+                            <div <?php echo $article['language'] === 'ar' ? 'dir="rtl"' : 'dir="ltr"'; ?>>
+                                <h3 class="mb-3">
+                                    <?php echo htmlspecialchars($article['title']); ?>
+                                </h3>
                                 <div class="article-content">
-                                    <?php echo $article['content']; ?>
+                                    <?php 
+                                    $content = html_entity_decode($article['content'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+                                    $content = trim($content);
+                                    echo $content; 
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -54,8 +60,8 @@ $recaptchaKey = $_ENV['RECAPTCHA_SITE_KEY'];
                     <div class="bg-light mb-3" style="padding: 30px;">
                         <h3 class="mb-4">Leave a comment</h3>
                         <form action="/comment/add" method="POST">
-                        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-                        <input type="hidden" name="article_id" value="<?php echo htmlspecialchars($article['id']); ?>">
+                            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+                            <input type="hidden" name="article_id" value="<?php echo htmlspecialchars($article['id']); ?>">
                             
                             <div class="form-group">
                                 <label for="name">Name *</label>
@@ -120,3 +126,38 @@ $recaptchaKey = $_ENV['RECAPTCHA_SITE_KEY'];
     "description": "<?php echo htmlspecialchars($article['description'] ?? ''); ?>"
 }
 </script>
+
+<!-- Add CSS for article content -->
+<style>
+    .article-content {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .article-content figure.image {
+        margin: 1em 0;
+        width: 100% !important;
+        text-align: center;
+    }
+    
+    .article-content figure.image img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 4px;
+    }
+    
+    /* Optional: Add shadow and hover effect */
+    .article-content figure.image img:hover {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    /* Handle image captions if present */
+    .article-content figure.image figcaption {
+        font-size: 0.9em;
+        color: #666;
+        margin-top: 0.5em;
+    }
+</style>

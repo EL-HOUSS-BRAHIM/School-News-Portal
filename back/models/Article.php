@@ -43,27 +43,23 @@ public static function getAllStatuses()
     ];
 }
 
-    public function getByTitle($title)
-{
+public function getByTitle($title) {
     try {
-        error_log("Getting article by title: " . $title);
-        
-        $sql = "SELECT a.*, c.name as category, u.username as author
-                FROM {$this->table} a
-                LEFT JOIN categories c ON a.category_id = c.id
-                LEFT JOIN users u ON a.user_id = u.id
-                WHERE a.title = ?";
+        $sql = "SELECT a.*, 
+                   c.name as category, 
+                   u.username as author,
+                   COALESCE(a.views, 0) as views,
+                   COALESCE(a.likes, 0) as likes
+            FROM {$this->table} a
+            LEFT JOIN categories c ON a.category_id = c.id
+            LEFT JOIN users u ON a.user_id = u.id
+            WHERE a.title = ?";
         
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$title]);
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        
-        error_log("Query result: " . print_r($result, true));
-        
-        return $result;
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
         error_log("Error getting article by title: " . $e->getMessage());
-        error_log("SQL: " . $sql);
         return null;
     }
 }
@@ -167,27 +163,6 @@ public function getReviewArticles()
             return false;
         }
     }
-
-    public function getWithDetails($id) {
-        try {
-            $sql = "SELECT a.*, 
-                           c.name as category, 
-                           c.id as category_id, 
-                           u.username as author,
-                           COALESCE(a.views, 0) as views
-                    FROM {$this->table} a 
-                    LEFT JOIN categories c ON a.category_id = c.id 
-                    LEFT JOIN users u ON a.user_id = u.id 
-                    WHERE a.id = ?";
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([$id]);
-            return $stmt->fetch(PDO::FETCH_ASSOC);
-        } catch (PDOException $e) {
-            error_log("Error getting article details: " . $e->getMessage());
-            return null;
-        }
-    }
-
     
     public function getLatest($limit = 4, $status = self::STATUS_PUBLISHED) {
         try {
@@ -225,12 +200,16 @@ public function getReviewArticles()
     
     public function getBreakingNews($limit = 5, $status = self::STATUS_PUBLISHED) {
         try {
-            $sql = "SELECT a.*, c.name as category, c.id as category_id 
-                    FROM articles a 
-                    LEFT JOIN categories c ON a.category_id = c.id 
-                    WHERE a.status = ?
-                    ORDER BY a.created_at DESC 
-                    LIMIT ?";
+            $sql = "SELECT a.*, 
+                       c.name as category,
+                       c.id as category_id,
+                       COALESCE(a.views, 0) as views,
+                       COALESCE(a.likes, 0) as likes 
+                FROM {$this->table} a 
+                LEFT JOIN categories c ON a.category_id = c.id 
+                WHERE a.breaking = 1 AND a.status = ?
+                ORDER BY a.created_at DESC 
+                LIMIT ?";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute([$status, $limit]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -555,6 +534,26 @@ public function getEngagementData($userId)
     } catch (PDOException $e) {
         error_log("Error getting engagement data: " . $e->getMessage());
         return [];
+    }
+}
+public function getWithDetails($id) {
+    try {
+        $sql = "SELECT a.*, 
+                   c.name as category, 
+                   c.id as category_id,
+                   u.username as author,
+                   COALESCE(a.views, 0) as views,
+                   COALESCE(a.likes, 0) as likes
+            FROM {$this->table} a 
+            LEFT JOIN categories c ON a.category_id = c.id 
+            LEFT JOIN users u ON a.user_id = u.id 
+            WHERE a.id = ?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        error_log("Error getting article details: " . $e->getMessage());
+        return null;
     }
 }
 }

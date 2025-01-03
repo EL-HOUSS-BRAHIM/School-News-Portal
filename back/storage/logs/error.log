@@ -1,0 +1,111 @@
+[03-Jan-2025 23:36:32 UTC] Processing URL: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/articles$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/article$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/login$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/register$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/logout$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/admin$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/comment\/add$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/dashboard$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/admin\/users$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/admin\/review$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /admin/all_articles
+[03-Jan-2025 23:36:32 UTC] Route matched. Controller action: AdminController@listArticles
+[03-Jan-2025 23:36:32 UTC] Parameters: Array
+(
+)
+
+[03-Jan-2025 23:36:32 UTC] Attempting database connection with:
+[03-Jan-2025 23:36:32 UTC] Host: sql7.freemysqlhosting.net
+[03-Jan-2025 23:36:32 UTC] Database: sql7754447
+[03-Jan-2025 23:36:32 UTC] Username: sql7754447
+[03-Jan-2025 23:37:15 UTC] Processing URL: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/articles$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/article$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/login$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/register$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/logout$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/admin$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/comment\/add$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/dashboard$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/admin\/users$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/admin\/review$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /admin/all_articles
+[03-Jan-2025 23:37:15 UTC] Route matched. Controller action: AdminController@listArticles
+[03-Jan-2025 23:37:15 UTC] Parameters: Array
+(
+)
+
+[03-Jan-2025 23:37:15 UTC] Attempting database connection with:
+[03-Jan-2025 23:37:15 UTC] Host: sql7.freemysqlhosting.net
+[03-Jan-2025 23:37:15 UTC] Database: sql7754447
+[03-Jan-2025 23:37:15 UTC] Username: sql7754447
+[03-Jan-2025 23:40:48 UTC] Processing URL: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/articles$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/article$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/login$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/register$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/logout$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/admin$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/comment\/add$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/dashboard$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/admin\/users$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/admin\/review$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /admin/all_articles
+[03-Jan-2025 23:40:48 UTC] Route matched. Controller action: AdminController@listArticles
+[03-Jan-2025 23:40:48 UTC] Parameters: Array
+(
+)
+
+[03-Jan-2025 23:40:48 UTC] Attempting database connection with:
+[03-Jan-2025 23:40:48 UTC] Host: sql7.freemysqlhosting.net
+[03-Jan-2025 23:40:48 UTC] Database: sql7754447
+[03-Jan-2025 23:40:48 UTC] Username: sql7754447

@@ -28,9 +28,8 @@
                                     <select class="form-select" aria-label="Filter by status" name="status_filter">
                                         <option value="">All Status</option>
                                         <?php foreach(Article::getAllStatuses() as $value => $label): ?>
-                                            <option value="<?php echo $value; ?>" <?php echo isset($_GET['status']) && $_GET['status'] === $value ? 'selected' : ''; ?>>
-                                                <?php echo htmlspecialchars($label); ?>
-                                            </option>
+                                        <option value="<?php echo $value; ?>"><?php echo htmlspecialchars($label); ?>
+                                        </option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
@@ -38,9 +37,10 @@
                                     <select class="form-select" aria-label="Filter by category">
                                         <option selected>All Categories</option>
                                         <?php if (isset($categories) && is_array($categories)): ?>
-                                            <?php foreach($categories as $category): ?>
-                                                <option value="<?php echo $category['id']; ?>"><?php echo htmlspecialchars($category['name']); ?></option>
-                                            <?php endforeach; ?>
+                                        <?php foreach($categories as $category): ?>
+                                        <option value="<?php echo $category['id']; ?>">
+                                            <?php echo htmlspecialchars($category['name']); ?></option>
+                                        <?php endforeach; ?>
                                         <?php endif; ?>
                                     </select>
                                 </div>
@@ -57,106 +57,117 @@
                                 <table class="table align-items-center mb-0">
                                     <thead>
                                         <tr>
-                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Article</th>
-                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Category</th>
-                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Performance</th>
-                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Created</th>
-                                            <th class="text-secondary opacity-7">Actions</th>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Title</th>
+                                            <th
+                                                class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                Category</th>
+                                            <th
+                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Status</th>
+                                            <th
+                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Views & Likes</th>
+                                            <th
+                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                Created At</th>
+                                            <th class="text-secondary opacity-7"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-    <?php foreach($articles as $article): ?>
-        <tr>
-            <td>
-                <div class="d-flex px-2 py-1">
-                    <div>
-                        <img src="<?php echo $article['image'] ?? '../assets/img/default-article.jpg'; ?>" 
-                             class="avatar avatar-sm me-3" alt="article image">
-                    </div>
-                    <div class="d-flex flex-column justify-content-center">
-                        <h6 class="mb-0 text-sm"><?php echo htmlspecialchars($article['title']); ?></h6>
-                        <p class="text-xs text-secondary mb-0">
-                            <?php echo substr(strip_tags(html_entity_decode($article['content'])), 0, 50) . '...'; ?>
-                        </p>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <span class="badge badge-sm bg-gradient-info">
-                    <?php echo htmlspecialchars($article['category']); ?>
-                </span>
-            </td>
-            <td class="align-middle text-center text-sm">
-                <!-- Update status form -->
-<form action="/dashboard/article/status" method="POST" class="d-inline status-form">
-    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-    <input type="hidden" name="id" value="<?php echo $article['id']; ?>">
-    <select name="status" class="form-select form-select-sm d-inline w-auto" onchange="submitStatusForm(this)">
-        <?php foreach(Article::getAvailableStatuses($_SESSION['user_role']) as $value => $label): ?>
-            <option value="<?php echo $value; ?>" 
-                    <?php echo $value == $article['status'] ? 'selected' : ''; ?>>
-                <?php echo htmlspecialchars($label); ?>
-            </option>
-        <?php endforeach; ?>
-    </select>
-</form>
-
-<!-- Add this JavaScript -->
-<script>
-function submitStatusForm(selectElement) {
-    const form = selectElement.closest('form');
-    form.submit();
-}
-</script>
-                    <div class="d-flex justify-content-center mt-2">
-                        <button type="submit" class="btn btn-sm btn-primary save-button" style="display: none;">Save</button>
-                    </div>
-                </form>
-            </td>
-            <td class="align-middle text-center">
-                <div class="d-flex align-items-center justify-content-center">
-                    <span class="me-2 text-xs font-weight-bold">
-                        <i class="fas fa-eye text-primary"></i> <?php echo number_format($article['views']); ?>
-                    </span>
-                    <span class="text-xs font-weight-bold">
-                        <i class="fas fa-heart text-danger"></i> <?php echo number_format($article['likes']); ?>
-                    </span>
-                </div>
-            </td>
-            <td class="align-middle text-center">
-                <span class="text-secondary text-xs font-weight-bold">
-                    <?php 
-                    if (!empty($article['created_at'])) {
-                        echo date('M d, Y', strtotime($article['created_at']));
-                    } else {
-                        echo 'N/A';
-                    }
-                    ?>
-                </span>
-            </td>
-            <td class="align-middle">
-                <div class="ms-auto">
-                    <a href="/dashboard/article/edit?id=<?php echo $article['id']; ?>" 
-                       class="btn btn-link text-dark px-3 mb-0">
-                        <i class="fas fa-pencil-alt text-dark me-2"></i>Edit
-                    </a>
-                    <a href="/article/<?php echo urlencode($article['title']); ?>" 
-                       class="btn btn-link text-primary px-3 mb-0" target="_blank">
-                        <i class="fas fa-eye text-primary me-2"></i>View
-                    </a>
-                    <form action="/dashboard/article/delete" method="POST" class="d-inline">
-    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-    <input type="hidden" name="id" value="<?php echo $article['id']; ?>">
-    <button type="button" class="btn btn-link text-danger px-3 mb-0" onclick="confirmDelete(this)">
-        <i class="fas fa-trash text-danger me-2"></i>Delete
-    </button>
-</form>
-                </div>
-            </td>
-        </tr>
-    <?php endforeach; ?>
-</tbody>
+                                        <?php foreach($articles as $article): ?>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex px-2 py-1">
+                                                    <div>
+                                                        <img src="<?php echo $article['image'] ?? '../assets/img/default-article.jpg'; ?>"
+                                                            class="avatar avatar-sm me-3" alt="article image">
+                                                    </div>
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <p class="text-xs text-secondary mb-0"
+                                                            dir="<?php echo $article['language'] === 'ar' ? 'rtl' : 'ltr'; ?>">
+                                                            <?php 
+                                                // Double decode HTML entities since content is double encoded
+                                                $content = html_entity_decode(
+                                                    html_entity_decode($article['content'], ENT_QUOTES | ENT_HTML5, 'UTF-8'),
+                                                    ENT_QUOTES | ENT_HTML5, 
+                                                    'UTF-8'
+                                                );
+                                                $content = strip_tags($content);
+                                                echo htmlspecialchars(substr($content, 0, 50)) . '...'; 
+                                                ?>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-sm bg-gradient-info">
+                                                    <?php echo htmlspecialchars($article['category_name']); ?>
+                                                </span>
+                                            </td>
+                                            <td class="align-middle text-center text-sm">
+                                                <form action="/dashboard/article/status" method="POST"
+                                                    class="d-inline status-form">
+                                                    <input type="hidden" name="csrf_token"
+                                                        value="<?php echo $_SESSION['csrf_token']; ?>">
+                                                    <input type="hidden" name="id"
+                                                        value="<?php echo $article['id']; ?>">
+                                                    <select name="status"
+                                                        class="form-select form-select-sm d-inline w-auto"
+                                                        onchange="submitStatusForm(this)">
+                                                        <?php foreach(Article::getAvailableStatuses($_SESSION['user_role']) as $value => $label): ?>
+                                                        <option value="<?php echo $value; ?>"
+                                                            <?php echo $value == $article['status'] ? 'selected' : ''; ?>>
+                                                            <?php echo htmlspecialchars($label); ?>
+                                                        </option>
+                                                        <?php endforeach; ?>
+                                                    </select>
+                                                </form>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <span class="me-2 text-xs font-weight-bold">
+                                                        <i class="fas fa-eye text-primary"></i>
+                                                        <?php echo number_format($article['views']); ?>
+                                                    </span>
+                                                    <span class="text-xs font-weight-bold">
+                                                        <i class="fas fa-heart text-danger"></i>
+                                                        <?php echo number_format($article['likes']); ?>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold">
+                                                    <?php echo date('M d, Y', strtotime($article['created_at'])); ?>
+                                                </span>
+                                            </td>
+                                            <td class="align-middle">
+                                                <div class="ms-auto">
+                                                    <a href="/dashboard/article/edit?id=<?php echo $article['id']; ?>"
+                                                        class="btn btn-link text-dark px-3 mb-0">
+                                                        <i class="fas fa-pencil-alt text-dark me-2"></i>Edit
+                                                    </a>
+                                                    <a href="/article/<?php echo urlencode($article['title']); ?>"
+                                                        class="btn btn-link text-primary px-3 mb-0" target="_blank">
+                                                        <i class="fas fa-eye text-primary me-2"></i>View
+                                                    </a>
+                                                    <form action="/dashboard/article/delete" method="POST"
+                                                        class="d-inline">
+                                                        <input type="hidden" name="csrf_token"
+                                                            value="<?php echo $_SESSION['csrf_token']; ?>">
+                                                        <input type="hidden" name="id"
+                                                            value="<?php echo $article['id']; ?>">
+                                                        <button type="button" class="btn btn-link text-danger px-3 mb-0"
+                                                            onclick="confirmDelete(this)">
+                                                            <i class="fas fa-trash text-danger me-2"></i>Delete
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
@@ -190,18 +201,19 @@ function submitStatusForm(selectElement) {
             </div>
         </div>
         <!-- Footer Start -->
-    <footer class="footer mt-auto py-4 px-sm-3 px-md-5" style="background: #111111;">
-        <p class="m-0 text-center" style="color: white;">
-            © <?php echo date('Y'); ?> 
-            <a href="#" style="color: orange;">
-                <?php echo htmlspecialchars($app['app_name'] ?? 'School News Portal'); ?>
-            </a>. 
-            Tous droits réservés.
-            <br>
-            Développé par <a href="https://github.com/EL-HOUSS-BRAHIM/" target="_blank" style="color: orange;">Brahim Elhouss</a>.
-        </p>
-    </footer>
-    <!-- Footer End -->
+        <footer class="footer mt-auto py-4 px-sm-3 px-md-5" style="background: #111111;">
+            <p class="m-0 text-center" style="color: white;">
+                © <?php echo date('Y'); ?>
+                <a href="#" style="color: orange;">
+                    <?php echo htmlspecialchars($app['app_name'] ?? 'School News Portal'); ?>
+                </a>.
+                Tous droits réservés.
+                <br>
+                Développé par <a href="https://github.com/EL-HOUSS-BRAHIM/" target="_blank"
+                    style="color: orange;">Brahim Elhouss</a>.
+            </p>
+        </footer>
+        <!-- Footer End -->
     </main>
 
     <!-- Delete Confirmation Modal -->
@@ -227,25 +239,25 @@ function submitStatusForm(selectElement) {
     function deleteArticle(id) {
         const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
         const confirmBtn = document.getElementById('confirmDelete');
-        
+
         confirmBtn.onclick = function() {
             window.location.href = `/dashboard/article/delete?id=${id}`;
         }
-        
+
         modal.show();
     }
 
     function confirmDelete(button) {
-    const form = button.closest('form');
-    const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
-    const confirmBtn = document.getElementById('confirmDelete');
+        const form = button.closest('form');
+        const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
+        const confirmBtn = document.getElementById('confirmDelete');
 
-    confirmBtn.onclick = function() {
-        form.submit();
+        confirmBtn.onclick = function() {
+            form.submit();
+        }
+
+        modal.show();
     }
-
-    modal.show();
-}
 
     function showSaveButton(selectElement) {
         const form = selectElement.closest('form');
@@ -259,6 +271,11 @@ function submitStatusForm(selectElement) {
         }
     }
 
+    function submitStatusForm(selectElement) {
+        const form = selectElement.closest('form');
+        form.submit();
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
         const selects = document.querySelectorAll('select[name="status"]');
         selects.forEach(select => {
@@ -269,4 +286,5 @@ function submitStatusForm(selectElement) {
 
     <?php include __DIR__ . '/../layouts/dash_footer.php'; ?>
 </body>
+
 </html>

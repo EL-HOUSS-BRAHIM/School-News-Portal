@@ -29,6 +29,7 @@ require_once __DIR__ . '/back/controllers/AuthController.php';
 require_once __DIR__ . '/back/controllers/AdminController.php';
 require_once __DIR__ . '/back/controllers/CommentController.php';
 require_once __DIR__ . '/back/controllers/UserDashController.php';
+require_once __DIR__ . '/back/controllers/UploadController.php';
 
 try {
     $url = $_SERVER['REQUEST_URI'];

@@ -133,11 +133,26 @@ include __DIR__ . '/../layouts/dash_header.php'; ?>
                                                  class="avatar avatar-sm me-3" alt="article image">
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm"><?php echo htmlspecialchars($article['title']); ?></h6>
-                                            <p class="text-xs text-secondary mb-0">
-    <?php echo substr(strip_tags(html_entity_decode($article['content'])), 0, 50) . '...'; ?>
-</p>
-                                        </div>
+    <h6 class="mb-0 text-sm"><?php echo htmlspecialchars($article['title'] ?? ''); ?></h6>
+    <p class="text-xs text-secondary mb-0">
+    <?php 
+    // Get content in the article's language or fallback languages
+    $content = '';
+    if (!empty($article['lang'])) {
+        $content = $article["content_{$article['lang']}"] ?? 
+                  $article['content_fr'] ?? 
+                  $article['content_en'] ?? 
+                  $article['content_ar'] ?? 
+                  $article['content'] ?? 
+                  '';
+    }
+
+    // Safely convert and trim the content
+    $content = strip_tags(html_entity_decode($content));
+    echo htmlspecialchars(substr($content, 0, 50)) . '...';
+    ?>
+    </p>
+</div>
                                     </div>
                                 </td>
                                 <td>

@@ -63,78 +63,84 @@ class UserDashController extends Controller
     $this->renderView('dash/index', $data);
 }
 
-    public function articles()
-    {
-        try {
-            if (!isset($_SESSION['user_id'])) {
-                error_log("No user_id in session for articles page");
-                $this->redirect('/login');
-                return;
-            }
 
-            $articleModel = new Article();
-            $categoryModel = new Category();
+public function articles()
+{
+    try {
+        if (!isset($_SESSION['user_id'])) {
+            $this->redirect('/login');
+            return;
+        }
 
-            $categories = $categoryModel->getAll();
-            $articles = $articleModel->getByUser($_SESSION['user_id']);
-        
-            $data = [
-                'articles' => $articles,
-                'categories' => $categories,
-                'userData' => [
+        $articleModel = new Article();
+        $categoryModel = new Category();
+
+        // Get articles with all necessary fields
+        $sql = "SELECT 
+                a.*,
+                c.name as category_name,
+                u.username as author_name,
+                COALESCE(
+                    (SELECT COUNT(*) FROM comments WHERE article_id = a.id), 
+                    0
+                ) as comment_count
+            FROM articles a
+            LEFT JOIN categories c ON a.category_id = c.id
+            LEFT JOIN users u ON a.user_id = u.id
+            WHERE a.user_id = :user_id
+            ORDER BY a.created_at DESC";
+
+        $articles = $articleModel->query($sql, [':user_id' => $_SESSION['user_id']]);
+        $categories = $categoryModel->getAll();
+
+        $data = [
+            'articles' => $articles,
+            'categories' => $categories,
+            'userData' => [
                 'username' => $_SESSION['username'],
                 'role' => $_SESSION['user_role']
-                ],
-                'currentPage' => 'articles'
-            ];
+            ],
+            'currentPage' => 'articles'
+        ];
 
-            $this->renderView('article/list', $data);
-        } catch (Exception $e) {
-            error_log("Error in articles method: " . $e->getMessage());
-            $this->redirect('/login');
-        }
+        $this->renderView('article/list', $data);
+    } catch (Exception $e) {
+        error_log("Error in articles method: " . $e->getMessage());
+        $this->redirect('/login');
     }
+}
 
-    public function index()
-    {
-        try {
-            $articleModel = new Article();
 
-            $data = [
-                'mainSliderArticles' => $articleModel->getLatestFeatured(3, Article::STATUS_PUBLISHED) ?? [],
-                'topArticles' => $articleModel->getLatest(4, Article::STATUS_PUBLISHED) ?? [],
-                'breakingNews' => $articleModel->getBreakingNews(5, Article::STATUS_PUBLISHED) ?? [],
-                'featuredArticles' => $articleModel->getFeatured(8, Article::STATUS_PUBLISHED) ?? [],
-                'latestArticles' => $articleModel->getAll(8, Article::STATUS_PUBLISHED) ?? [],
-                'popularArticles' => $articleModel->getPopular(4, Article::STATUS_PUBLISHED) ?? []
-            ];
+public function index()
+{
+    try {
+        $articleModel = new Article();
 
-            // Ensure all arrays are initialized
-            foreach ($data as $key => $value) {
-                if (!is_array($value)) {
-                    $data[$key] = [];
-                }
-            }
+        $data = [
+            'mainSliderArticles' => $articleModel->getLatestFeatured(3, 'published') ?? [],
+            'topArticles' => $articleModel->getLatest(4, 'published') ?? [],
+            'breakingNews' => $articleModel->getBreakingNews(5, 'published') ?? [],
+            'featuredArticles' => $articleModel->getFeatured(8, 'published') ?? [],
+            'latestArticles' => $articleModel->getAll(8, 'published') ?? [],
+            'popularArticles' => $articleModel->getPopular(4, 'published') ?? []
+        ];
 
-            // Add error handling for empty data
-            if (
-                empty($data['mainSliderArticles']) &&
-                empty($data['topArticles']) &&
-                empty($data['breakingNews']) &&
-                empty($data['featuredArticles'])
-            ) {
-                error_log("No articles found in any category");
-                $data['error'] = 'No articles available at the moment.';
-            }
-
-            $this->renderView('home/index', $data);
-        } catch (Exception $e) {
-            error_log("HomeController Error: " . $e->getMessage());
-            $this->renderView('home/index', [
-                'error' => 'Database error occurred. Please try again later.'
-            ]);
+        // Add language filter if needed
+        $currentLang = Translate::getCurrentLang();
+        foreach ($data as $key => $articles) {
+            $data[$key] = array_filter($articles, function($article) use ($currentLang) {
+                return $article['language'] === $currentLang;
+            });
         }
+
+        $this->renderView('home/index', $data);
+    } catch (Exception $e) {
+        error_log("HomeController Error: " . $e->getMessage());
+        $this->renderView('home/index', [
+            'error' => 'Database error occurred. Please try again later.'
+        ]);
     }
+}
 
     public function newArticle()
     {
@@ -159,79 +165,74 @@ class UserDashController extends Controller
     public function storeArticle()
 {
     try {
-        // Verify CSRF token first
-        if (!isset($_POST['csrf_token']) || !isset($_SESSION['csrf_token']) || 
-            !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
-            throw new Exception("CSRF token validation failed");
-        }
-
-        $status = in_array($_POST['status'], [Article::STATUS_DRAFT, Article::STATUS_REVIEWING, Article::STATUS_PRIVATE]) 
-            ? $_POST['status'] : Article::STATUS_DRAFT;
-
         $data = [
-            'title' => sanitizeInput($_POST['title']),
-            'content' => sanitizeInput($_POST['content']),
-            'category_id' => (int) $_POST['category_id'],
+            'title' => $_POST['title'],
+            'content' => $_POST['content'],
+            'category_id' => $_POST['category_id'],
+            'language' => $_POST['language'],
             'user_id' => $_SESSION['user_id'],
-            'status' => $status,
-            'created_at' => date('Y-m-d H:i:s')
+            'status' => $_POST['status'],
+            'featured' => isset($_POST['featured']) && $_POST['featured'] == '1' ? 1 : 0,
+            'breaking' => isset($_POST['breaking']) && $_POST['breaking'] == '1' ? 1 : 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'views' => 0,
+            'likes' => 0
         ];
 
-        if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+        // Debug logging
+        error_log("POST data: " . print_r($_POST, true));
+        error_log("Processed data: " . print_r($data, true));
+
+        if ($_FILES['image']['error'] === UPLOAD_ERR_OK) {
             $data['image'] = uploadToCloudinary($_FILES['image']['tmp_name']);
         }
 
         $articleModel = new Article();
-        $articleModel->save($data);
-
-        $this->redirect('/dashboard/articles');
+        if ($articleModel->save($data)) {
+            $this->redirect('/dashboard/articles');
+        } else {
+            throw new Exception("Failed to save article");
+        }
     } catch (Exception $e) {
-        error_log("Error creating article: " . $e->getMessage());
-        $this->renderView('article/create', [
-            'error' => 'Failed to create article',
-            'formData' => $_POST
-        ]);
+        error_log("Error in storeArticle: " . $e->getMessage());
+        $this->redirect('/dashboard/article/new');
     }
 }
 
-    public function updateArticle()
-    {
-        try {
-            $id = (int) $_POST['id'];
-            $articleModel = new Article();
-            $article = $articleModel->find($id);
+public function updateArticle()
+{
+    try {
+        $id = (int)$_POST['id'];
+        $articleModel = new Article();
+        $article = $articleModel->find($id);
 
-            // Verify ownership
-            if (!$article || $article['user_id'] !== $_SESSION['user_id']) {
-                $this->redirect('/dashboard/articles');
-                return;
-            }
-
-            $status = in_array($_POST['status'], [Article::STATUS_DRAFT, Article::STATUS_REVIEWING, Article::STATUS_PRIVATE]) ? $_POST['status'] : $article['status'];
-
-            $updateData = [
-                'title' => sanitizeInput($_POST['title']),
-                'content' => sanitizeInput($_POST['content']),
-                'category_id' => (int) $_POST['category_id'],
-                'status' => $status
-            ];
-
-            // Handle image upload if new image provided
-            if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
-                $updateData['image'] = uploadToCloudinary($_FILES['image']['tmp_name']);
-            }
-
-            $articleModel->update($id, $updateData);
+        if (!$article || $article['user_id'] !== $_SESSION['user_id']) {
             $this->redirect('/dashboard/articles');
-
-        } catch (Exception $e) {
-            error_log("Error updating article: " . $e->getMessage());
-            $this->renderView('article/edit', [
-                'error' => 'Failed to update article',
-                'article' => $articleModel->find($id)
-            ]);
+            return;
         }
+
+        $updateData = [
+            'title' => sanitizeInput($_POST['title']),
+            'content' => sanitizeInput($_POST['content']),
+            'category_id' => (int)$_POST['category_id'],
+            'featured' => isset($_POST['featured']) ? 1 : 0,
+            'breaking' => isset($_POST['breaking']) ? 1 : 0,
+            'status' => $_POST['status'],
+            'language' => $_POST['language'] ?? 'fr'
+        ];
+
+        if ($_FILES['image']['error'] === UPLOAD_ERR_OK) {
+            $updateData['image'] = uploadToCloudinary($_FILES['image']['tmp_name']);
+        }
+
+        $articleModel->update($id, $updateData);
+        $this->redirect('/dashboard/articles');
+
+    } catch (Exception $e) {
+        error_log("Error updating article: " . $e->getMessage());
+        $this->redirect('/dashboard/articles');
     }
+}
 
     public function editArticle()
     {
