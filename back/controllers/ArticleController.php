@@ -102,6 +102,9 @@ class ArticleController extends Controller
     public function update($id)
     {
         try {
+            // Sanitize content but preserve HTML
+            $_POST['content'] = filter_var($_POST['content'], FILTER_UNSAFE_RAW);
+            
             $articleModel = new Article();
             $article = $articleModel->find($id);
     
@@ -111,17 +114,13 @@ class ArticleController extends Controller
     
             $updateData = [
                 'title' => $_POST['title'],
-                'content' => $_POST['content'], // No need to encode here, it will be encoded in the model
+                'content' => $_POST['content'],
                 'category_id' => (int) $_POST['category_id'],
                 'status' => $_POST['status'],
-                'language' => $_POST['language'] ?? 'fr',
+                'language' => $_POST['language'],
                 'featured' => isset($_POST['featured']) ? 1 : 0,
                 'breaking' => isset($_POST['breaking']) ? 1 : 0
             ];
-    
-            if ($_FILES['image']['error'] === UPLOAD_ERR_OK) {
-                $updateData['image'] = uploadToCloudinary($_FILES['image']['tmp_name']);
-            }
     
             $articleModel->update($id, $updateData);
             $this->redirect('/dashboard/articles');
