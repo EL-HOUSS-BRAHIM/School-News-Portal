@@ -45,7 +45,7 @@ include __DIR__ . '/../layouts/dash_header.php'; ?>
                                             <label>Content</label>
                                             <div id="editor"
                                                 dir="<?php echo $article['language'] === 'ar' ? 'rtl' : 'ltr'; ?>">
-                                                <?php echo htmlspecialchars_decode($article['content']); ?>
+                                                <?php echo html_entity_decode($article['content']); ?>
                                             </div>
                                             <textarea name="content" id="content" style="display: none"></textarea>
                                         </div>
@@ -142,10 +142,6 @@ include __DIR__ . '/../layouts/dash_header.php'; ?>
 
     <?php include __DIR__ . '/../layouts/dash_footer.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap4-toggle@3.6.1/js/bootstrap-toggle.min.js"></script>
-    <!-- CKEditor -->
-    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
-
-    <!-- Add this style in the head section -->
     <style>
     .ck-editor__editable {
         min-height: 300px;
@@ -165,91 +161,172 @@ include __DIR__ . '/../layouts/dash_header.php'; ?>
     }
     </style>
 
-    <!-- Replace the existing editor initialization script -->
+    <!-- Replace existing CKEditor script -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
     <script>
+    class MyUploadAdapter {
+        constructor(loader) {
+            this.loader = loader;
+        }
+
+        upload() {
+            return this.loader.file
+                .then(file => new Promise((resolve, reject) => {
+                    this._initRequest();
+                    this._initListeners(resolve, reject, file);
+                    this._sendRequest(file);
+                }));
+        }
+
+        abort() {
+            if (this.xhr) {
+                this.xhr.abort();
+            }
+        }
+
+        _initRequest() {
+            const xhr = this.xhr = new XMLHttpRequest();
+            xhr.open('POST', '/upload/image', true);
+            xhr.responseType = 'json';
+
+            // Get CSRF token
+            const csrfToken = document.querySelector('input[name="csrf_token"]').value;
+            xhr.setRequestHeader('X-CSRF-Token', csrfToken);
+        }
+
+        _sendRequest(file) {
+            // Create FormData and append both file and CSRF token
+            const data = new FormData();
+            data.append('upload', file);
+            data.append('csrf_token', document.querySelector('input[name="csrf_token"]').value);
+            this.xhr.send(data);
+        }
+
+        _initListeners(resolve, reject, file) {
+            const xhr = this.xhr;
+            const loader = this.loader;
+            const genericErrorText = `Couldn't upload file: ${file.name}.`;
+
+            xhr.addEventListener('error', () => reject(genericErrorText));
+            xhr.addEventListener('abort', () => reject());
+            xhr.addEventListener('load', () => {
+                const response = xhr.response;
+
+                if (!response || response.error) {
+                    return reject(response && response.error ? response.error.message : genericErrorText);
+                }
+
+                resolve({
+                    default: response.url
+                });
+            });
+
+            if (xhr.upload) {
+                xhr.upload.addEventListener('progress', evt => {
+                    if (evt.lengthComputable) {
+                        loader.uploadTotal = evt.total;
+                        loader.uploaded = evt.loaded;
+                    }
+                });
+            }
+        }
+    }
+
+    function MyCustomUploadAdapterPlugin(editor) {
+        editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
+            return new MyUploadAdapter(loader);
+        };
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        // Initialize CKEditor with enhanced configuration
+        const form = document.getElementById('articleForm');
+        const languageSelect = document.getElementById('languageSelect');
+        const titleInput = document.querySelector('input[name="title"]');
+        const csrfToken = document.querySelector('input[name="csrf_token"]').value;
+
         ClassicEditor
             .create(document.querySelector('#editor'), {
-                language: 'en',
-                height: '400px',
+                language: languageSelect.value,
+                extraPlugins: [MyCustomUploadAdapterPlugin],
                 toolbar: {
                     items: [
-                        'heading',
-                        '|',
-                        'bold',
-                        'italic',
-                        'underline',
-                        'strikethrough',
-                        '|',
-                        'link',
-                        'bulletedList',
-                        'numberedList',
-                        '|',
-                        'alignment',
-                        'indent',
-                        'outdent',
-                        '|',
-                        'blockQuote',
-                        'insertTable',
-                        'mediaEmbed',
-                        'imageUpload',
-                        '|',
-                        'fontSize',
-                        'fontColor',
-                        'fontBackgroundColor',
-                        '|',
-                        'undo',
-                        'redo'
+                        'heading', '|',
+                        'bold', 'italic', 'underline', 'strikethrough', '|',
+                        'link', 'bulletedList', 'numberedList', '|',
+                        'indent', 'outdent', '|',
+                        'imageUpload', 'blockQuote', '|',
+                        'undo', 'redo'
                     ],
                     shouldNotGroupWhenFull: true
                 },
-                placeholder: 'Start writing your article here...',
-                removePlugins: ['MediaEmbedToolbar'],
                 image: {
                     toolbar: [
                         'imageTextAlternative',
-                        'imageStyle:full',
+                        'imageStyle:inline',
+                        'imageStyle:block',
                         'imageStyle:side'
                     ]
                 },
-                table: {
-                    contentToolbar: [
-                        'tableColumn',
-                        'tableRow',
-                        'mergeTableCells'
-                    ]
+                htmlSupport: {
+                    allow: [{
+                        name: /.*/,
+                        attributes: true,
+                        classes: true,
+                        styles: true
+                    }]
                 }
             })
             .then(editor => {
                 window.editor = editor;
+                // Set initial content without encoding
+                editor.setData(<?php echo json_encode(html_entity_decode($article['content'])); ?>);
+                updateDirection(languageSelect.value);
+
                 editor.model.document.on('change:data', () => {
                     document.querySelector('#content').value = editor.getData();
                 });
-
-                // Set initial content if exists
-                const initialContent = document.querySelector('#content').value;
-                if (initialContent) {
-                    editor.setData(initialContent);
-                }
             })
             .catch(error => {
-                console.error('CKEditor initialization error:', error);
-                document.querySelector('#editor').innerHTML = 
-                    '<p class="text-danger">Error loading editor. Please refresh the page.</p>';
+                console.error('CKEditor error:', error);
             });
 
-        // Form submit handler with validation
-        document.getElementById('articleForm').addEventListener('submit', function(e) {
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
-            if (!window.editor || !window.editor.getData().trim()) {
-                alert('Please add some content to the article');
-                return;
-            }
-            document.getElementById('content').value = window.editor.getData();
+            document.querySelector('#content').value = window.editor.getData();
             this.submit();
         });
+
+        languageSelect.addEventListener('change', function() {
+            updateDirection(this.value);
+        });
+
+        function updateDirection(lang) {
+            const isRTL = lang === 'ar';
+            const direction = isRTL ? 'rtl' : 'ltr';
+
+            titleInput.dir = direction;
+            titleInput.style.textAlign = isRTL ? 'right' : 'left';
+
+            if (window.editor) {
+                window.editor.editing.view.change(writer => {
+                    writer.setAttribute('dir', direction, window.editor.editing.view.document
+                        .getRoot());
+                });
+            }
+        }
     });
+
+    function previewImage(input) {
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('imagePreview').src = e.target.result;
+                document.getElementById('imagePreview').style.display = 'block';
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
     </script>
 </body>
 
