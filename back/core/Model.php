@@ -78,12 +78,15 @@ class Model
 public function update($id, $data)
 {
     try {
-        // Encode title and content
+        // Do not encode HTML content
+        if (isset($data['content'])) {
+            // Only sanitize, don't encode HTML
+            $data['content'] = filter_var($data['content'], FILTER_UNSAFE_RAW);
+        }
+        
+        // HTML encode only the title and other non-HTML fields
         if (isset($data['title'])) {
             $data['title'] = htmlspecialchars($data['title'], ENT_QUOTES, 'UTF-8');
-        }
-        if (isset($data['content'])) {
-            $data['content'] = htmlspecialchars($data['content'], ENT_QUOTES, 'UTF-8');
         }
 
         $set = implode("=?, ", array_keys($data)) . "=?";
