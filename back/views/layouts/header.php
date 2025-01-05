@@ -76,7 +76,7 @@ try {
 </head>
 
 <body>
-<!-- Topbar Start -->
+    <!-- Topbar Start -->
     <div class="container-fluid">
         <div class="row align-items-center bg-light px-lg-5">
             <div class="col-12 col-md-8">
@@ -112,8 +112,9 @@ try {
         <div class="row align-items-center py-2 px-lg-5">
             <div class="col-lg-4">
                 <a href="/" class="navbar-brand d-none d-lg-block">
-                    <h1 class="m-0 display-5 text-uppercase"><span
-                            class="text-primary"><?php echo htmlspecialchars($app['app_name'] ?? ''); ?></span></h1>
+                    <h1 class="m-0 display-5 text-uppercase"><span class="text-primary"
+                            style="white-space: wrap;"><?php echo htmlspecialchars($app['app_name'] ?? ''); ?></span>
+                    </h1>
                 </a>
             </div>
 
@@ -125,7 +126,8 @@ try {
     <div class="container-fluid p-0 mb-3">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
             <a href="/" class="navbar-brand d-block d-lg-none">
-                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">News</span>Room</h1>
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary"
+                        style="white-space: wrap;"><?php echo htmlspecialchars($app['app_name'] ?? ''); ?></span></h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
