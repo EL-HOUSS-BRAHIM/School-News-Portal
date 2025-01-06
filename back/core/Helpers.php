@@ -59,29 +59,3 @@ function generateUUID() {
         mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff)
     );
 }
-
-class Translate {
-    private static $translations = [];
-    private static $currentLang = 'fr';
-    
-    public static function init() {
-        $langFile = __DIR__ . '/../lang/' . self::$currentLang . '.php';
-        if (file_exists($langFile)) {
-            self::$translations = require $langFile;
-        }
-    }
-    
-    public static function get($key, $default = null) {
-        return self::$translations[$key] ?? $default ?? $key;
-    }
-    
-    public static function setLang($lang) {
-        self::$currentLang = $lang;
-        self::init();
-    }
-    
-    // Add this getter method
-    public static function getCurrentLang() {
-        return self::$currentLang;
-    }
-}
