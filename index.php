@@ -1,5 +1,7 @@
 <?php
 session_start();
+require_once __DIR__ . '/back/core/Translate.php';
+Translate::init();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
