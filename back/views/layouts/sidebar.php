@@ -73,8 +73,8 @@ try {
             <div class="row mb-3">
                 <div class="col-12">
                     <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
-                        <h3 class="m-0">Popular</h3>
-                        <a class="text-secondary font-weight-medium text-decoration-none" href="/articles">View All</a>
+                        <h3 class="m-0"><?php echo Translate::get('popular'); ?></h3>
+                        <a class="text-secondary font-weight-medium text-decoration-none" href="/articles"><?php echo Translate::get('view_all'); ?></a>
                     </div>
                 </div>
                 <?php if (!empty($trendingArticles)): ?>
@@ -120,7 +120,7 @@ try {
                 </div>
                 <?php endforeach; ?>
                 <?php else: ?>
-                <p>No popular articles available at the moment.</p>
+                <p><?php echo Translate::get('no_popular_articles'); ?></p>
                 <?php endif; ?>
             </div>
 
@@ -132,8 +132,8 @@ try {
             <div class="row">
                 <div class="col-12">
                     <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
-                        <h3 class="m-0">Latest</h3>
-                        <a class="text-secondary font-weight-medium text-decoration-none" href="/articles">View All</a>
+                        <h3 class="m-0"><?php echo Translate::get('latest'); ?></h3>
+                        <a class="text-secondary font-weight-medium text-decoration-none" href="/articles"><?php echo Translate::get('view_all'); ?></a>
                     </div>
                 </div>
                 <?php if (!empty($latestArticles)): ?>
@@ -172,7 +172,7 @@ try {
                 </div>
                 <?php endforeach; ?>
                 <?php else: ?>
-                <p>No latest articles available at the moment.</p>
+                <p><?php echo Translate::get('no_latest_articles'); ?></p>
                 <?php endif; ?>
             </div>
         </div>
@@ -181,7 +181,7 @@ try {
             <!-- Social Follow Start -->
             <div class="pb-3">
                 <div class="bg-light py-2 px-4 mb-3">
-                    <h3 class="m-0">Follow Us</h3>
+                    <h3 class="m-0"><?php echo Translate::get('follow_us'); ?></h3>
                 </div>
                 <?php if (!empty($formattedSocialLinks)): ?>
                 <?php foreach ($formattedSocialLinks as $platform => $link): ?>
@@ -196,7 +196,7 @@ try {
                 </div>
                 <?php endforeach; ?>
                 <?php else: ?>
-                <p>No social media links available at the moment.</p>
+                <p><?php echo Translate::get('no_social_links'); ?></p>
                 <?php endif; ?>
             </div>
             <!-- Social Follow End -->
@@ -204,17 +204,17 @@ try {
             <!-- Newsletter Start -->
             <div class="pb-3">
                 <div class="bg-light py-2 px-4 mb-3">
-                    <h3 class="m-0">Newsletter</h3>
+                    <h3 class="m-0"><?php echo Translate::get('newsletter'); ?></h3>
                 </div>
                 <div class="bg-light text-center p-4 mb-3">
-                    <p>Aliqu justo et labore at eirmod justo sea erat diam dolor diam vero kasd</p>
+                    <p><?php echo Translate::get('newsletter_description'); ?></p>
                     <div class="input-group" style="width: 100%;">
-                        <input type="text" class="form-control form-control-lg" placeholder="Your Email">
+                        <input type="text" class="form-control form-control-lg" placeholder="<?php echo Translate::get('your_email'); ?>">
                         <div class="input-group-append">
-                            <button class="btn btn-primary">Sign Up</button>
+                            <button class="btn btn-primary"><?php echo Translate::get('sign_up'); ?></button>
                         </div>
                     </div>
-                    <small>Sit eirmod nonumy kasd eirmod</small>
+                    <small><?php echo Translate::get('newsletter_note'); ?></small>
                 </div>
             </div>
             <!-- Newsletter End -->
@@ -229,7 +229,7 @@ try {
             <!-- Popular News Start -->
             <div class="pb-3">
                 <div class="bg-light py-2 px-4 mb-3">
-                    <h3 class="m-0">Trending</h3>
+                    <h3 class="m-0"><?php echo Translate::get('trending'); ?></h3>
                 </div>
                 <?php if (!empty($trendingArticles)): ?>
                 <?php foreach ($trendingArticles as $article): ?>
@@ -261,7 +261,7 @@ try {
                 </div>
                 <?php endforeach; ?>
                 <?php else: ?>
-                <p>No trending articles available at the moment.</p>
+                <p><?php echo Translate::get('no_trending_articles'); ?></p>
                 <?php endif; ?>
             </div>
             <!-- Popular News End -->
@@ -269,7 +269,7 @@ try {
             <!-- Tags Start -->
             <div class="pb-3">
                 <div class="bg-light py-2 px-4 mb-3">
-                    <h3 class="m-0">Tags</h3>
+                    <h3 class="m-0"><?php echo Translate::get('tags'); ?></h3>
                 </div>
                 <div class="d-flex flex-wrap m-n1">
                     <?php
@@ -280,7 +280,7 @@ try {
                         class="btn btn-sm btn-outline-secondary m-1"><?php echo htmlspecialchars($category['name']); ?></a>
                     <?php endforeach;
                     else: ?>
-                    <p>No tags available at the moment.</p>
+                    <p><?php echo Translate::get('no_tags'); ?></p>
                     <?php endif; ?>
                 </div>
             </div>

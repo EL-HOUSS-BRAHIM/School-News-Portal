@@ -18,13 +18,13 @@ try {
     error_log("Erreur du pied de page : " . $e->getMessage());
     $categories = [];
     $contact = [
-        'address' => 'Adresse non disponible',
-        'phone' => 'Téléphone non disponible', 
-        'email' => 'Email non disponible',
+        'address' => Translate::get('address_not_available'),
+        'phone' => Translate::get('phone_not_available'), 
+        'email' => Translate::get('email_not_available'),
         'social' => []
     ];
     $popularArticles = [];
-    $app = ['app_name' => 'Portail des Nouvelles Scolaires'];
+    $app = ['app_name' => Translate::get('news_portal')];
 }
 
 // Define social media platforms with their icons
@@ -38,11 +38,11 @@ $socialPlatforms = [
 
 // Define quick links
 $quickLinks = [
-    'about' => ['url' => '/about', 'text' => 'À propos'],
-    'advertise' => ['url' => '/advertise', 'text' => 'Publicité'],
-    'privacy' => ['url' => '/privacy', 'text' => 'Politique de confidentialité'],
-    'terms' => ['url' => '/terms', 'text' => 'Conditions d\'utilisation'],
-    'contact' => ['url' => '/contact', 'text' => 'Contact']
+    'about' => ['url' => '/about', 'text' => Translate::get('about')],
+    'advertise' => ['url' => '/advertise', 'text' => Translate::get('advertise')],
+    'privacy' => ['url' => '/privacy', 'text' => Translate::get('privacy_policy')],
+    'terms' => ['url' => '/terms', 'text' => Translate::get('terms_of_use')],
+    'contact' => ['url' => '/contact', 'text' => Translate::get('contact')]
 ];
 ?>
 <!-- Footer Start -->
@@ -72,7 +72,7 @@ $quickLinks = [
 
         <!-- Categories -->
         <div class="col-lg-3 col-md-6 mb-5">
-            <h4 class="font-weight-bold mb-4">Categories</h4>
+            <h4 class="font-weight-bold mb-4"><?php echo Translate::get('categories'); ?></h4>
             <div class="d-flex flex-wrap m-n1">
                 <?php foreach ($categories as $category): ?>
                     <a href="/category/<?php echo urlencode($category['slug']); ?>" 
@@ -85,7 +85,7 @@ $quickLinks = [
 
         <!-- Tags (using categories) -->
         <div class="col-lg-3 col-md-6 mb-5">
-            <h4 class="font-weight-bold mb-4">Tags</h4>
+            <h4 class="font-weight-bold mb-4"><?php echo Translate::get('tags'); ?></h4>
             <div class="d-flex flex-wrap m-n1">
                 <?php foreach ($categories as $category): ?>
                     <a href="/tag/<?php echo urlencode($category['slug']); ?>" 
@@ -98,7 +98,7 @@ $quickLinks = [
 
         <!-- Quick Links -->
         <div class="col-lg-3 col-md-6 mb-5">
-            <h4 class="font-weight-bold mb-4">Liens rapides</h4>
+            <h4 class="font-weight-bold mb-4"><?php echo Translate::get('quick_links'); ?></h4>
             <div class="d-flex flex-column justify-content-start">
                 <?php foreach ($quickLinks as $link): ?>
                     <a class="text-secondary mb-2" href="<?php echo $link['url']; ?>">
@@ -115,11 +115,11 @@ $quickLinks = [
     <p class="m-0 text-center">
         © <?php echo date('Y'); ?> 
         <a href="/">
-            <?php echo htmlspecialchars($app['app_name'] ?? 'Portail des Nouvelles Scolaires'); ?>
+            <?php echo htmlspecialchars($app['app_name'] ?? Translate::get('news_portal')); ?>
         </a>. 
-        Tous droits réservés.
+        <?php echo Translate::get('all_rights_reserved'); ?>.
         <br>
-        Développé par <a href="https://github.com/EL-HOUSS-BRAHIM/" target="_blank">Brahim Elhouss</a>.
+        <?php echo Translate::get('developed_by'); ?> <a href="https://github.com/EL-HOUSS-BRAHIM/" target="_blank">Brahim Elhouss</a>.
     </p>
 </div>
 

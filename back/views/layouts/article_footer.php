@@ -14,20 +14,20 @@ try {
 } catch (Exception $e) {
     error_log("Erreur du pied de page de l'article : " . $e->getMessage());
     $contact = [
-        'address' => 'Adresse non disponible',
-        'phone' => 'Téléphone non disponible', 
-        'email' => 'Email non disponible',
+        'address' => Translate::get('address_not_available'),
+        'phone' => Translate::get('phone_not_available'), 
+        'email' => Translate::get('email_not_available'),
         'social' => []
     ];
     $popularArticles = [];
-    $app = ['app_name' => 'Portail des Nouvelles Scolaires'];
+    $app = ['app_name' => Translate::get('news_portal')];
 }
 
 // Set default values if keys don't exist
 $contact = array_merge([
-    'address' => 'Adresse non disponible',
-    'phone' => 'Téléphone non disponible',
-    'email' => 'Email non disponible', 
+    'address' => Translate::get('address_not_available'),
+    'phone' => Translate::get('phone_not_available'),
+    'email' => Translate::get('email_not_available'), 
     'social' => []
 ], $contact ?? []);
 
@@ -57,7 +57,7 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
         </div>
 
         <div class="col-lg-3 col-md-6 mb-5">
-            <h4 class="font-weight-bold mb-4">Categories</h4>
+            <h4 class="font-weight-bold mb-4"><?php echo Translate::get('categories'); ?></h4>
             <div class="d-flex flex-wrap m-n1">
                 <?php foreach ($categories as $category): ?>
                     <a href="/category/<?php echo urlencode($category['slug']); ?>" 
@@ -69,7 +69,7 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
         </div>
 
         <div class="col-lg-3 col-md-6 mb-5">
-            <h4 class="font-weight-bold mb-4">Tags</h4>
+            <h4 class="font-weight-bold mb-4"><?php echo Translate::get('tags'); ?></h4>
             <div class="d-flex flex-wrap m-n1">
                 <?php foreach ($categories as $category): ?>
                     <a href="/tag/<?php echo urlencode($category['slug']); ?>" 
@@ -81,13 +81,13 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
         </div>
 
         <div class="col-lg-3 col-md-6 mb-5">
-            <h4 class="font-weight-bold mb-4">Quick Links</h4>
+            <h4 class="font-weight-bold mb-4"><?php echo Translate::get('quick_links'); ?></h4>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-secondary mb-2" href="/about"><i class="fa fa-angle-right text-dark mr-2"></i>About</a>
-                <a class="text-secondary mb-2" href="/advertise"><i class="fa fa-angle-right text-dark mr-2"></i>Advertise</a>
-                <a class="text-secondary mb-2" href="/privacy"><i class="fa fa-angle-right text-dark mr-2"></i>Privacy & policy</a>
-                <a class="text-secondary mb-2" href="/terms"><i class="fa fa-angle-right text-dark mr-2"></i>Terms & conditions</a>
-                <a class="text-secondary" href="/contact"><i class="fa fa-angle-right text-dark mr-2"></i>Contact</a>
+                <a class="text-secondary mb-2" href="/about"><i class="fa fa-angle-right text-dark mr-2"></i><?php echo Translate::get('about'); ?></a>
+                <a class="text-secondary mb-2" href="/advertise"><i class="fa fa-angle-right text-dark mr-2"></i><?php echo Translate::get('advertise'); ?></a>
+                <a class="text-secondary mb-2" href="/privacy"><i class="fa fa-angle-right text-dark mr-2"></i><?php echo Translate::get('privacy_policy'); ?></a>
+                <a class="text-secondary mb-2" href="/terms"><i class="fa fa-angle-right text-dark mr-2"></i><?php echo Translate::get('terms_of_use'); ?></a>
+                <a class="text-secondary" href="/contact"><i class="fa fa-angle-right text-dark mr-2"></i><?php echo Translate::get('contact'); ?></a>
             </div>
         </div>
     </div>
@@ -99,9 +99,9 @@ if (!isset($contact['social']) || !is_array($contact['social'])) {
         <a href="/">
             <?php echo htmlspecialchars($app['app_name']); ?>
         </a>. 
-        Tous droits réservés.
+        <?php echo Translate::get('all_rights_reserved'); ?>.
         <br>
-        Développé par <a href="https://github.com/EL-HOUSS-BRAHIM/" target="_blank">Brahim Elhouss</a>.
+        <?php echo Translate::get('developed_by'); ?> <a href="https://github.com/EL-HOUSS-BRAHIM/" target="_blank">Brahim Elhouss</a>.
     </p>
 </div>
 <!-- Footer End -->

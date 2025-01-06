@@ -81,7 +81,7 @@ try {
         <div class="row align-items-center bg-light px-lg-5">
             <div class="col-12 col-md-8">
                 <div class="d-flex justify-content-between">
-                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Trending</div>
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;"><?php echo Translate::get('trending'); ?></div>
                     <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
                         style="width: calc(100% - 100px); padding-left: 90px;">
                         <?php if (!empty($trendingArticles)): ?>
@@ -99,7 +99,7 @@ try {
                             </a></div>
                         <?php endforeach; ?>
                         <?php else: ?>
-                        <div class="text-truncate"><a class="text-secondary" href="#">No trending articles available</a>
+                        <div class="text-truncate"><a class="text-secondary" href="#"><?php echo Translate::get('no_trending_articles'); ?></a>
                         </div>
                         <?php endif; ?>
                     </div>
@@ -135,7 +135,7 @@ try {
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
                     <a href="/"
-                        class="nav-item nav-link <?php echo $currentPage == 'index' ? 'active' : ''; ?>">Home</a>
+                        class="nav-item nav-link <?php echo $currentPage == 'index' ? 'active' : ''; ?>"><?php echo Translate::get('home'); ?></a>
                     <?php if (!empty($categories)): ?>
                     <?php foreach ($categories as $category): ?>
                     <a href="/category/<?php echo urlencode($category['slug']); ?>" class="nav-item nav-link">
@@ -150,12 +150,12 @@ try {
                     </a>
                     <?php endforeach; ?>
                     <?php else: ?>
-                    <a href="#" class="nav-item nav-link">No categories available</a>
+                    <a href="#" class="nav-item nav-link"><?php echo Translate::get('no_categories'); ?></a>
                     <?php endif; ?>
-                    <a href="/contact" class="nav-item nav-link">Contact</a>
+                    <a href="/contact" class="nav-item nav-link"><?php echo Translate::get('contact'); ?></a>
                 </div>
                 <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
-                    <input type="text" class="form-control" placeholder="Keyword">
+                    <input type="text" class="form-control" placeholder="<?php echo Translate::get('search'); ?>">
                     <div class="input-group-append">
                         <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
                     </div>
