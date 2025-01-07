@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../core/Controller.php';
 require_once __DIR__ . '/../models/Article.php';
+require_once __DIR__ . '/../models/Category.php';
 
 class HomeController extends Controller
 {
@@ -24,6 +25,24 @@ class HomeController extends Controller
         } catch (Exception $e) {
             error_log("Home Controller Error: " . $e->getMessage());
             $this->renderView('home/index', ['error' => 'An error occurred loading the page']);
+        }
+    }
+
+    public function about() {
+        try {
+            $this->renderView('home/about');
+        } catch (Exception $e) {
+            error_log("About Page Error: " . $e->getMessage());
+            $this->renderView('home/about', ['error' => 'An error occurred loading the page']);
+        }
+    }
+
+    public function contact() {
+        try {
+            $this->renderView('home/contact');
+        } catch (Exception $e) {
+            error_log("Contact Page Error: " . $e->getMessage());
+            $this->renderView('home/contact', ['error' => 'An error occurred loading the page']);
         }
     }
 
