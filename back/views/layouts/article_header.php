@@ -33,7 +33,7 @@ try {
 }
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo Translate::getCurrentLang(); ?>">
+<html >
 
 <head>
     <meta charset="utf-8">

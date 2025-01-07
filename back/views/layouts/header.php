@@ -81,7 +81,8 @@ try {
         <div class="row align-items-center bg-light px-lg-5">
             <div class="col-12 col-md-8">
                 <div class="d-flex justify-content-between">
-                    <div class="bg-primary text-white text-center py-2" style="width: 100px;"><?php echo Translate::get('trending'); ?></div>
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">
+                        <?php echo Translate::get('trending'); ?></div>
                     <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
                         style="width: calc(100% - 100px); padding-left: 90px;">
                         <?php if (!empty($trendingArticles)): ?>
@@ -99,7 +100,8 @@ try {
                             </a></div>
                         <?php endforeach; ?>
                         <?php else: ?>
-                        <div class="text-truncate"><a class="text-secondary" href="#"><?php echo Translate::get('no_trending_articles'); ?></a>
+                        <div class="text-truncate"><a class="text-secondary"
+                                href="#"><?php echo Translate::get('no_trending_articles'); ?></a>
                         </div>
                         <?php endif; ?>
                     </div>
@@ -126,41 +128,49 @@ try {
     <div class="container-fluid p-0 mb-3">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
             <a href="/" class="navbar-brand d-block d-lg-none">
-            <h1 class="m-0 display-5 text-uppercase"><span class="text-primary"
-                style="white-space: wrap;"><?php echo htmlspecialchars($app['app_name'] ?? ''); ?></span></h1>
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary"
+                        style="white-space: wrap;"><?php echo htmlspecialchars($app['app_name'] ?? ''); ?></span></h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
-            <div class="navbar-nav mr-auto py-0">
-                <a href="/"
-                class="nav-item nav-link <?php echo $currentPage == 'index' ? 'active' : ''; ?>"><?php echo Translate::get('home'); ?></a>
-                <?php if (!empty($categories)): ?>
-                <?php foreach ($categories as $category): ?>
-                <a href="/category/<?php echo urlencode($category['slug']); ?>"
-                class="nav-item nav-link"><?php echo htmlspecialchars($category['name']); ?></a>
-                <?php endforeach; ?>
-                <?php else: ?>
-                <a href="#" class="nav-item nav-link"><?php echo Translate::get('no_categories'); ?></a>
-                <?php endif; ?>
-                <a href="/contact" class="nav-item nav-link"><?php echo Translate::get('contact'); ?></a>
-            </div>
-            <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
-                <input type="text" class="form-control" placeholder="<?php echo Translate::get('search'); ?>">
-                <div class="input-group-append">
-                <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="/"
+                        class="nav-item nav-link <?php echo $currentPage == 'index' ? 'active' : ''; ?>"><?php echo Translate::get('home'); ?></a>
+                    <?php if (!empty($categories)): ?>
+                    <?php foreach ($categories as $category): ?>
+                    <a href="/category/<?php echo urlencode($category['slug']); ?>"
+                        class="nav-item nav-link"><?php echo htmlspecialchars($category['name']); ?></a>
+                    <?php endforeach; ?>
+                    <?php else: ?>
+                    <a href="#" class="nav-item nav-link"><?php echo Translate::get('no_categories'); ?></a>
+                    <?php endif; ?>
+                    <a href="/contact"
+                        class="nav-item nav-link <?php echo $currentPage == 'contact' ? 'active' : ''; ?>"><?php echo Translate::get('contact'); ?></a>
+                    <a href="/about"
+                        class="nav-item nav-link <?php echo $currentPage == 'about' ? 'active' : ''; ?>"><?php echo Translate::get('about'); ?></a>
                 </div>
-            </div>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                <?php echo Translate::getCurrentLang() === 'fr' ? 'FR' : 'عربي'; ?>
-                </a>
-                <div class="dropdown-menu">
-                <a class="dropdown-item" href="?lang=fr"><?php echo Translate::get('french'); ?></a>
-                <a class="dropdown-item" href="?lang=ar"><?php echo Translate::get('arabic'); ?></a>
+                <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control" placeholder="<?php echo Translate::get('search'); ?>">
+                    <div class="input-group-append">
+                        <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
+                    </div>
                 </div>
-            </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <?php 
+                    $currentLang = Translate::getCurrentLang();
+                    echo strtoupper($currentLang);
+                ?>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="?lang=fr"><?php echo Translate::get('french'); ?></a>
+                        <a class="dropdown-item" href="?lang=ar"><?php echo Translate::get('arabic'); ?></a>
+                        <a class="dropdown-item" href="?lang=en"><?php echo Translate::get('english'); ?></a>
+                    </div>
+                </div>
+
             </div>
         </nav>
     </div>
@@ -193,7 +203,8 @@ try {
                 <?php else: ?>
                 <div class="d-flex">
                     <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
-                        <a class="text-secondary font-weight-semi-bold" href="#"><?php echo Translate::get('no_top_news'); ?></a>
+                        <a class="text-secondary font-weight-semi-bold"
+                            href="#"><?php echo Translate::get('no_top_news'); ?></a>
                     </div>
                 </div>
                 <?php endif; ?>
@@ -217,7 +228,7 @@ try {
                             <div class="overlay">
                                 <div class="mb-1">
                                     <?php
-        $categoryName = $article['category_name'] ?? 'Uncategorized';
+        $categoryName = $article['category'] ?? 'Uncategorized';
         $categoryId = $article['category_id'] ?? '';
         ?>
                                     <a class="text-white" href="/category/<?php echo htmlspecialchars($categoryId); ?>">
@@ -252,7 +263,8 @@ try {
                         <?php else: ?>
                         <div class="position-relative overflow-hidden" style="height: 435px;">
                             <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
-                                <a class="text-secondary font-weight-semi-bold" href="#"><?php echo Translate::get('no_main_news'); ?></a>
+                                <a class="text-secondary font-weight-semi-bold"
+                                    href="#"><?php echo Translate::get('no_main_news'); ?></a>
                             </div>
                         </div>
                         <?php endif; ?>
@@ -261,7 +273,8 @@ try {
                 <div class="col-lg-4">
                     <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
                         <h3 class="m-0"><?php echo Translate::get('categories'); ?></h3>
-                        <a class="text-secondary font-weight-medium text-decoration-none" href="/categories"><?php echo Translate::get('view_all'); ?></a>
+                        <a class="text-secondary font-weight-medium text-decoration-none"
+                            href="/categories"><?php echo Translate::get('view_all'); ?></a>
                     </div>
                     <?php if (!empty($categories)): ?>
                     <?php foreach ($categories as $category): ?>
@@ -284,7 +297,8 @@ try {
                     <?php else: ?>
                     <div class="position-relative overflow-hidden mb-3" style="height: 80px;">
                         <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
-                            <a class="text-secondary font-weight-semi-bold" href="#"><?php echo Translate::get('no_categories'); ?></a>
+                            <a class="text-secondary font-weight-semi-bold"
+                                href="#"><?php echo Translate::get('no_categories'); ?></a>
                         </div>
                     </div>
                     <?php endif; ?>
