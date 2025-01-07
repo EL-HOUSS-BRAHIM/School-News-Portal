@@ -1,0 +1,27 @@
+<?php
+return [
+    'home' => 'Home',
+    'categories' => 'Categories',
+    'popular' => 'Popular',
+    'trending' => 'Trending',
+    'latest' => 'Latest Articles',
+    'featured' => 'Featured',
+    'view_all' => 'View All',
+    'follow_us' => 'Follow Us',
+    'newsletter' => 'Newsletter',
+    'tags' => 'Tags',
+    'quick_links' => 'Quick Links',
+    'search' => 'Search',
+    'about_us' => 'About Us',
+    'about_us_description' => 'We are a dedicated news portal committed to delivering the latest news and articles across various categories. Our goal is to keep our audience informed with accurate and timely information.',
+    'our_mission' => 'Our Mission',
+    'our_mission_description' => 'Our mission is to provide accurate, timely, and comprehensive news coverage to our audience. We strive to be a reliable source of information, offering insights and analysis on current events.',
+    'our_team' => 'Our Team',
+    'our_team_description' => 'Our team consists of experienced journalists, editors, and contributors who are passionate about delivering high-quality news content. We work tirelessly to bring you the latest updates and in-depth stories.',
+    'contact_us' => 'Contact Us',
+    'contact_us_description' => 'If you have any inquiries, comments, or feedback, please fill out the form below. We value your input and look forward to hearing from you.',
+    'name' => 'Name',
+    'email' => 'Email',
+    'message' => 'Message',
+    'send_message' => 'Send Message'
+];

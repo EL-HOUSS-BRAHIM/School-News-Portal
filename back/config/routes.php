@@ -1,9 +1,8 @@
 <?php
 $routes = [
     '/' => 'HomeController@index',
-    '/articles' => 'ArticleController@index',
     '/article' => 'ArticleController@view',
-    '/article/{title}' => 'ArticleController@viewByTitle', // Ensure this line is present
+    '/article/{title}' => 'ArticleController@viewByTitle',
     '/login' => 'AuthController@login',
     '/register' => 'AuthController@register',
     '/logout' => 'AuthController@logout',
@@ -40,8 +39,11 @@ $routes = [
     '/admin/upload_category_image' => 'AdminController@uploadCategoryImage',
     '/admin/delete_category_image' => 'AdminController@deleteCategoryImage',
 
-
     '/upload/image' => 'UploadController@uploadImage',
+
+    // New routes for about and contact pages
+    '/about' => 'HomeController@about',
+    '/contact' => 'HomeController@contact',
 ];
 
 function getRoute($url) {

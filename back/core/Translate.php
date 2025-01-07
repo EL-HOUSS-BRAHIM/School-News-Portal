@@ -5,7 +5,7 @@ class Translate {
     private static $translations = [];
     
     public static function init() {
-        if (isset($_GET['lang']) && in_array($_GET['lang'], ['fr', 'ar'])) {
+        if (isset($_GET['lang']) && in_array($_GET['lang'], ['fr', 'ar', 'en'])) {
             self::$lang = $_GET['lang'];
             $_SESSION['lang'] = self::$lang;
         } elseif (isset($_SESSION['lang'])) {
@@ -13,6 +13,14 @@ class Translate {
         }
         
         self::loadTranslations();
+    }
+    
+    public static function setLang($lang) {
+        if (in_array($lang, ['fr', 'ar', 'en'])) {
+            self::$lang = $lang;
+            $_SESSION['lang'] = self::$lang;
+            self::loadTranslations();
+        }
     }
     
     private static function loadTranslations() {

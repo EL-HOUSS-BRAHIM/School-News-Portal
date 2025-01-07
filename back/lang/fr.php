@@ -11,5 +11,17 @@ return [
     'newsletter' => 'Newsletter',
     'tags' => 'Tags',
     'quick_links' => 'Liens Rapides',
-    'search' => 'Rechercher'
+    'search' => 'Rechercher',
+    'about_us' => 'À propos de nous',
+    'about_us_description' => 'Nous sommes un portail d\'actualités dédié à fournir les dernières nouvelles et articles dans diverses catégories. Notre objectif est de tenir notre public informé avec des informations précises et opportunes.',
+    'our_mission' => 'Notre mission',
+    'our_mission_description' => 'Notre mission est de fournir une couverture d\'actualités précise, opportune et complète à notre public. Nous nous efforçons d\'être une source fiable d\'informations, offrant des perspectives et des analyses sur les événements actuels.',
+    'our_team' => 'Notre équipe',
+    'our_team_description' => 'Notre équipe est composée de journalistes, rédacteurs et contributeurs expérimentés et passionnés par la fourniture de contenu d\'actualités de haute qualité. Nous travaillons sans relâche pour vous apporter les dernières mises à jour et des histoires approfondies.',
+    'contact_us' => 'Contactez-nous',
+    'contact_us_description' => 'Si vous avez des questions, des commentaires ou des retours, veuillez remplir le formulaire ci-dessous. Nous apprécions vos contributions et attendons avec impatience de vous entendre.',
+    'name' => 'Nom',
+    'email' => 'Email',
+    'message' => 'Message',
+    'send_message' => 'Envoyer le message'
 ];

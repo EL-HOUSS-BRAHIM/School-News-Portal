@@ -1795,3 +1795,1909 @@
 [05-Jan-2025 00:29:18 UTC] Database: sql7754447
 [05-Jan-2025 00:29:18 UTC] Username: sql7754447
 [05-Jan-2025 00:29:21 UTC] Category World News: 1 articles found
+[07-Jan-2025 11:28:11 UTC] Processing URL: /
+[07-Jan-2025 11:28:11 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 11:28:11 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 11:28:11 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 11:28:11 UTC] Attempting database connection with:
+[07-Jan-2025 11:28:11 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 11:28:11 UTC] Database: sql7754447
+[07-Jan-2025 11:28:11 UTC] Username: sql7754447
+[07-Jan-2025 11:28:15 UTC] Category World News: 1 articles found
+[07-Jan-2025 11:28:24 UTC] Processing URL: /
+[07-Jan-2025 11:28:24 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 11:28:24 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 11:28:24 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 11:28:24 UTC] Attempting database connection with:
+[07-Jan-2025 11:28:24 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 11:28:24 UTC] Database: sql7754447
+[07-Jan-2025 11:28:24 UTC] Username: sql7754447
+[07-Jan-2025 11:28:28 UTC] Category World News: 1 articles found
+[07-Jan-2025 11:29:02 UTC] Processing URL: /
+[07-Jan-2025 11:29:02 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 11:29:02 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 11:29:02 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 11:29:02 UTC] Attempting database connection with:
+[07-Jan-2025 11:29:02 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 11:29:02 UTC] Database: sql7754447
+[07-Jan-2025 11:29:02 UTC] Username: sql7754447
+[07-Jan-2025 11:29:05 UTC] Category World News: 1 articles found
+[07-Jan-2025 11:36:29 UTC] Processing URL: /
+[07-Jan-2025 11:36:29 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 11:36:29 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 11:36:29 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 11:36:29 UTC] Attempting database connection with:
+[07-Jan-2025 11:36:29 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 11:36:29 UTC] Database: sql7754447
+[07-Jan-2025 11:36:29 UTC] Username: sql7754447
+[07-Jan-2025 11:36:45 UTC] Category World News: 1 articles found
+[07-Jan-2025 11:37:02 UTC] Processing URL: /
+[07-Jan-2025 11:37:02 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 11:37:02 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 11:37:02 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 11:37:02 UTC] Attempting database connection with:
+[07-Jan-2025 11:37:02 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 11:37:02 UTC] Database: sql7754447
+[07-Jan-2025 11:37:02 UTC] Username: sql7754447
+[07-Jan-2025 11:37:13 UTC] Category World News: 1 articles found
+[07-Jan-2025 11:38:11 UTC] Processing URL: /
+[07-Jan-2025 11:38:11 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 11:38:11 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 11:38:11 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 11:38:11 UTC] Attempting database connection with:
+[07-Jan-2025 11:38:11 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 11:38:11 UTC] Database: sql7754447
+[07-Jan-2025 11:38:11 UTC] Username: sql7754447
+[07-Jan-2025 11:38:14 UTC] Category World News: 1 articles found
+[07-Jan-2025 11:38:30 UTC] Processing URL: /
+[07-Jan-2025 11:38:30 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 11:38:30 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 11:38:30 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 11:38:30 UTC] Attempting database connection with:
+[07-Jan-2025 11:38:30 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 11:38:30 UTC] Database: sql7754447
+[07-Jan-2025 11:38:30 UTC] Username: sql7754447
+[07-Jan-2025 11:38:34 UTC] Category World News: 1 articles found
+[07-Jan-2025 11:42:19 UTC] Processing URL: /
+[07-Jan-2025 11:42:19 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 11:42:19 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 11:42:19 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 11:42:19 UTC] Attempting database connection with:
+[07-Jan-2025 11:42:19 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 11:42:19 UTC] Database: sql7754447
+[07-Jan-2025 11:42:19 UTC] Username: sql7754447
+[07-Jan-2025 11:42:23 UTC] Category World News: 1 articles found
+[07-Jan-2025 11:44:54 UTC] Processing URL: /
+[07-Jan-2025 11:44:54 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 11:44:54 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 11:44:54 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 11:44:54 UTC] Attempting database connection with:
+[07-Jan-2025 11:44:54 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 11:44:54 UTC] Database: sql7754447
+[07-Jan-2025 11:44:54 UTC] Username: sql7754447
+[07-Jan-2025 11:44:58 UTC] Category World News: 1 articles found
+[07-Jan-2025 11:46:23 UTC] Processing URL: /
+[07-Jan-2025 11:46:23 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 11:46:23 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 11:46:23 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 11:46:23 UTC] Attempting database connection with:
+[07-Jan-2025 11:46:23 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 11:46:23 UTC] Database: sql7754447
+[07-Jan-2025 11:46:23 UTC] Username: sql7754447
+[07-Jan-2025 11:46:27 UTC] PHP Warning:  Undefined array key "category" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 142
+[07-Jan-2025 11:46:27 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 142
+[07-Jan-2025 11:46:28 UTC] Category World News: 1 articles found
+[07-Jan-2025 11:47:10 UTC] Processing URL: /
+[07-Jan-2025 11:47:10 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 11:47:10 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 11:47:10 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 11:47:10 UTC] Attempting database connection with:
+[07-Jan-2025 11:47:10 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 11:47:10 UTC] Database: sql7754447
+[07-Jan-2025 11:47:10 UTC] Username: sql7754447
+[07-Jan-2025 11:47:13 UTC] Category World News: 1 articles found
+[07-Jan-2025 12:21:11 UTC] Processing URL: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/articles$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/article$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/login$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/register$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/logout$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/comment\/add$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/dashboard$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/users$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/review$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/upload\/image$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/about$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Checking pattern: /^\/contact$/ against path: /contact
+[07-Jan-2025 12:21:11 UTC] Route matched. Controller action: HomeController@contact
+[07-Jan-2025 12:21:11 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 12:21:11 UTC] Attempting database connection with:
+[07-Jan-2025 12:21:11 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 12:21:11 UTC] Database: sql7754447
+[07-Jan-2025 12:21:11 UTC] Username: sql7754447
+[07-Jan-2025 12:21:30 UTC] Processing URL: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/articles$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/article$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/login$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/register$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/logout$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/comment\/add$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/dashboard$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/users$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/review$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/upload\/image$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Checking pattern: /^\/about$/ against path: /about
+[07-Jan-2025 12:21:30 UTC] Route matched. Controller action: HomeController@about
+[07-Jan-2025 12:21:30 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 12:21:30 UTC] Attempting database connection with:
+[07-Jan-2025 12:21:30 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 12:21:30 UTC] Database: sql7754447
+[07-Jan-2025 12:21:30 UTC] Username: sql7754447
+[07-Jan-2025 12:44:23 UTC] Processing URL: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/articles$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/article$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/login$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/register$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/logout$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/comment\/add$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/dashboard$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/users$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/review$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/upload\/image$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Checking pattern: /^\/about$/ against path: /about
+[07-Jan-2025 12:44:23 UTC] Route matched. Controller action: HomeController@about
+[07-Jan-2025 12:44:23 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 12:44:23 UTC] Attempting database connection with:
+[07-Jan-2025 12:44:23 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 12:44:23 UTC] Database: sql7754447
+[07-Jan-2025 12:44:23 UTC] Username: sql7754447
+[07-Jan-2025 12:58:53 UTC] Processing URL: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/articles$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/article$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/login$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/register$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/logout$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/comment\/add$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/dashboard$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/users$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/review$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/upload\/image$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Checking pattern: /^\/about$/ against path: /about
+[07-Jan-2025 12:58:53 UTC] Route matched. Controller action: HomeController@about
+[07-Jan-2025 12:58:53 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 12:58:53 UTC] Attempting database connection with:
+[07-Jan-2025 12:58:53 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 12:58:53 UTC] Database: sql7754447
+[07-Jan-2025 12:58:53 UTC] Username: sql7754447
+[07-Jan-2025 12:59:57 UTC] Processing URL: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/articles$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/article$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/login$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/register$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/logout$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/comment\/add$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/dashboard$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/users$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/review$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/upload\/image$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Checking pattern: /^\/about$/ against path: /about
+[07-Jan-2025 12:59:57 UTC] Route matched. Controller action: HomeController@about
+[07-Jan-2025 12:59:57 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 12:59:57 UTC] Attempting database connection with:
+[07-Jan-2025 12:59:57 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 12:59:57 UTC] Database: sql7754447
+[07-Jan-2025 12:59:57 UTC] Username: sql7754447
+[07-Jan-2025 13:00:06 UTC] Processing URL: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/articles$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/article$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/login$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/register$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/logout$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/comment\/add$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/dashboard$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/users$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/review$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/upload\/image$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Checking pattern: /^\/about$/ against path: /about
+[07-Jan-2025 13:00:06 UTC] Route matched. Controller action: HomeController@about
+[07-Jan-2025 13:00:06 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 13:00:06 UTC] Attempting database connection with:
+[07-Jan-2025 13:00:06 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 13:00:06 UTC] Database: sql7754447
+[07-Jan-2025 13:00:06 UTC] Username: sql7754447
+[07-Jan-2025 15:37:52 UTC] Processing URL: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/articles$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/article$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/login$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/register$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/logout$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/comment\/add$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/dashboard$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/users$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/review$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/upload\/image$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Checking pattern: /^\/about$/ against path: /about
+[07-Jan-2025 15:37:52 UTC] Route matched. Controller action: HomeController@about
+[07-Jan-2025 15:37:52 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:37:52 UTC] Attempting database connection with:
+[07-Jan-2025 15:37:52 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:37:52 UTC] Database: sql7754447
+[07-Jan-2025 15:37:52 UTC] Username: sql7754447
+[07-Jan-2025 15:38:00 UTC] Processing URL: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/articles$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/article$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/login$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/register$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/logout$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/comment\/add$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/dashboard$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/users$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/review$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/upload\/image$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Checking pattern: /^\/about$/ against path: /about
+[07-Jan-2025 15:38:00 UTC] Route matched. Controller action: HomeController@about
+[07-Jan-2025 15:38:00 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:38:00 UTC] Attempting database connection with:
+[07-Jan-2025 15:38:00 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:38:00 UTC] Database: sql7754447
+[07-Jan-2025 15:38:00 UTC] Username: sql7754447
+[07-Jan-2025 15:38:19 UTC] Processing URL: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/articles$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/article$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/login$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/register$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/logout$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/comment\/add$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/dashboard$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/users$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/review$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/upload\/image$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Checking pattern: /^\/about$/ against path: /about
+[07-Jan-2025 15:38:19 UTC] Route matched. Controller action: HomeController@about
+[07-Jan-2025 15:38:19 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:38:19 UTC] Attempting database connection with:
+[07-Jan-2025 15:38:19 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:38:19 UTC] Database: sql7754447
+[07-Jan-2025 15:38:19 UTC] Username: sql7754447
+[07-Jan-2025 15:38:50 UTC] Processing URL: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/articles$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/article$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/login$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/register$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/logout$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/comment\/add$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/dashboard$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/users$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/review$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/upload\/image$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Checking pattern: /^\/about$/ against path: /about
+[07-Jan-2025 15:38:50 UTC] Route matched. Controller action: HomeController@about
+[07-Jan-2025 15:38:50 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:38:50 UTC] Attempting database connection with:
+[07-Jan-2025 15:38:50 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:38:50 UTC] Database: sql7754447
+[07-Jan-2025 15:38:50 UTC] Username: sql7754447
+[07-Jan-2025 15:39:01 UTC] Processing URL: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/articles$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/article$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/login$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/register$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/logout$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/comment\/add$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/dashboard$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/users$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/review$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/upload\/image$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Checking pattern: /^\/about$/ against path: /about
+[07-Jan-2025 15:39:01 UTC] Route matched. Controller action: HomeController@about
+[07-Jan-2025 15:39:01 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:39:01 UTC] Attempting database connection with:
+[07-Jan-2025 15:39:01 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:39:01 UTC] Database: sql7754447
+[07-Jan-2025 15:39:01 UTC] Username: sql7754447
+[07-Jan-2025 15:40:47 UTC] Processing URL: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/articles$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/article$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/login$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/register$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/logout$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/comment\/add$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/dashboard$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/users$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/review$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/upload\/image$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Checking pattern: /^\/about$/ against path: /about
+[07-Jan-2025 15:40:47 UTC] Route matched. Controller action: HomeController@about
+[07-Jan-2025 15:40:47 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:40:47 UTC] Attempting database connection with:
+[07-Jan-2025 15:40:47 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:40:47 UTC] Database: sql7754447
+[07-Jan-2025 15:40:47 UTC] Username: sql7754447
+[07-Jan-2025 15:41:39 UTC] Processing URL: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/articles$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/article$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/login$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/register$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/logout$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/comment\/add$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/dashboard$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/users$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/review$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/upload\/image$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Checking pattern: /^\/about$/ against path: /about
+[07-Jan-2025 15:41:39 UTC] Route matched. Controller action: HomeController@about
+[07-Jan-2025 15:41:39 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:41:39 UTC] Attempting database connection with:
+[07-Jan-2025 15:41:39 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:41:39 UTC] Database: sql7754447
+[07-Jan-2025 15:41:39 UTC] Username: sql7754447
+[07-Jan-2025 15:45:42 UTC] Processing URL: /
+[07-Jan-2025 15:45:42 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 15:45:42 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 15:45:42 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:45:42 UTC] Attempting database connection with:
+[07-Jan-2025 15:45:42 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:45:42 UTC] Database: sql7754447
+[07-Jan-2025 15:45:42 UTC] Username: sql7754447
+[07-Jan-2025 15:45:45 UTC] Category World News: 1 articles found
+[07-Jan-2025 15:46:05 UTC] Processing URL: /
+[07-Jan-2025 15:46:05 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 15:46:05 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 15:46:05 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:46:05 UTC] Attempting database connection with:
+[07-Jan-2025 15:46:05 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:46:05 UTC] Database: sql7754447
+[07-Jan-2025 15:46:05 UTC] Username: sql7754447
+[07-Jan-2025 15:46:08 UTC] Category World News: 1 articles found
+[07-Jan-2025 15:46:18 UTC] Processing URL: /
+[07-Jan-2025 15:46:18 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 15:46:18 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 15:46:18 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:46:18 UTC] Attempting database connection with:
+[07-Jan-2025 15:46:18 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:46:18 UTC] Database: sql7754447
+[07-Jan-2025 15:46:18 UTC] Username: sql7754447
+[07-Jan-2025 15:46:20 UTC] Category World News: 1 articles found
+[07-Jan-2025 15:47:28 UTC] Processing URL: /
+[07-Jan-2025 15:47:28 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 15:47:28 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 15:47:28 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:47:28 UTC] Attempting database connection with:
+[07-Jan-2025 15:47:28 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:47:28 UTC] Database: sql7754447
+[07-Jan-2025 15:47:28 UTC] Username: sql7754447
+[07-Jan-2025 15:47:35 UTC] Category World News: 1 articles found
+[07-Jan-2025 15:47:44 UTC] Processing URL: /
+[07-Jan-2025 15:47:44 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 15:47:44 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 15:47:44 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:47:44 UTC] Attempting database connection with:
+[07-Jan-2025 15:47:44 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:47:44 UTC] Database: sql7754447
+[07-Jan-2025 15:47:44 UTC] Username: sql7754447
+[07-Jan-2025 15:47:52 UTC] Category World News: 1 articles found
+[07-Jan-2025 15:48:42 UTC] Processing URL: /
+[07-Jan-2025 15:48:42 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 15:48:42 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 15:48:42 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:48:42 UTC] Attempting database connection with:
+[07-Jan-2025 15:48:42 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:48:42 UTC] Database: sql7754447
+[07-Jan-2025 15:48:42 UTC] Username: sql7754447
+[07-Jan-2025 15:48:49 UTC] Category World News: 1 articles found
+[07-Jan-2025 15:49:23 UTC] Processing URL: /articles
+[07-Jan-2025 15:49:23 UTC] Checking pattern: /^\/$/ against path: /articles
+[07-Jan-2025 15:49:23 UTC] Checking pattern: /^\/articles$/ against path: /articles
+[07-Jan-2025 15:49:23 UTC] Route matched. Controller action: ArticleController@index
+[07-Jan-2025 15:49:23 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:49:23 UTC] Attempting database connection with:
+[07-Jan-2025 15:49:23 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:49:23 UTC] Database: sql7754447
+[07-Jan-2025 15:49:23 UTC] Username: sql7754447
+[07-Jan-2025 15:49:24 UTC] PHP Warning:  Undefined array key "user_role" in /home/brahim/Desktop/newproject/back/views/layouts/dash_sidenav.php on line 23
+[07-Jan-2025 15:49:24 UTC] PHP Warning:  Undefined array key "category_name" in /home/brahim/Desktop/newproject/back/views/article/list.php on line 106
+[07-Jan-2025 15:49:24 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/article/list.php on line 106
+[07-Jan-2025 15:49:24 UTC] PHP Warning:  Undefined array key "user_role" in /home/brahim/Desktop/newproject/back/views/article/list.php on line 119
+[07-Jan-2025 15:49:38 UTC] Processing URL: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/articles$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/article$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/login$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/register$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/logout$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/admin$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/comment\/add$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/dashboard$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /dashboard/profile
+[07-Jan-2025 15:49:38 UTC] Route matched. Controller action: UserDashController@profile
+[07-Jan-2025 15:49:38 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:49:38 UTC] Session data in middleware: Array
+(
+    [lang] => ar
+    [csrf_token] => 6839c457bd544c5e32eb5a8581f30bf1b225b95e8c332b7c65f6e7108c301281
+)
+
+[07-Jan-2025 15:49:38 UTC] Missing session data. Redirecting to login.
+[07-Jan-2025 15:49:38 UTC] Processing URL: /login
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/$/ against path: /login
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/articles$/ against path: /login
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/article$/ against path: /login
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /login
+[07-Jan-2025 15:49:38 UTC] Checking pattern: /^\/login$/ against path: /login
+[07-Jan-2025 15:49:38 UTC] Route matched. Controller action: AuthController@login
+[07-Jan-2025 15:49:38 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:49:38 UTC] Attempting database connection with:
+[07-Jan-2025 15:49:38 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:49:38 UTC] Database: sql7754447
+[07-Jan-2025 15:49:38 UTC] Username: sql7754447
+[07-Jan-2025 15:52:20 UTC] Processing URL: /articles
+[07-Jan-2025 15:52:20 UTC] Checking pattern: /^\/$/ against path: /articles
+[07-Jan-2025 15:52:20 UTC] Checking pattern: /^\/articles$/ against path: /articles
+[07-Jan-2025 15:52:20 UTC] Route matched. Controller action: ArticleController@index
+[07-Jan-2025 15:52:20 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:52:20 UTC] Attempting database connection with:
+[07-Jan-2025 15:52:20 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:52:20 UTC] Database: sql7754447
+[07-Jan-2025 15:52:20 UTC] Username: sql7754447
+[07-Jan-2025 15:52:21 UTC] PHP Warning:  Undefined array key "user_role" in /home/brahim/Desktop/newproject/back/views/layouts/dash_sidenav.php on line 23
+[07-Jan-2025 15:52:21 UTC] PHP Warning:  Undefined array key "category_name" in /home/brahim/Desktop/newproject/back/views/article/list.php on line 106
+[07-Jan-2025 15:52:21 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/article/list.php on line 106
+[07-Jan-2025 15:52:21 UTC] PHP Warning:  Undefined array key "user_role" in /home/brahim/Desktop/newproject/back/views/article/list.php on line 119
+[07-Jan-2025 15:53:07 UTC] Processing URL: /articles
+[07-Jan-2025 15:53:07 UTC] Checking pattern: /^\/$/ against path: /articles
+[07-Jan-2025 15:53:07 UTC] Checking pattern: /^\/articles$/ against path: /articles
+[07-Jan-2025 15:53:07 UTC] Route matched. Controller action: ArticleController@index
+[07-Jan-2025 15:53:07 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:53:07 UTC] Attempting database connection with:
+[07-Jan-2025 15:53:07 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:53:07 UTC] Database: sql7754447
+[07-Jan-2025 15:53:07 UTC] Username: sql7754447
+[07-Jan-2025 15:53:09 UTC] PHP Warning:  Undefined array key "user_role" in /home/brahim/Desktop/newproject/back/views/layouts/dash_sidenav.php on line 23
+[07-Jan-2025 15:53:09 UTC] PHP Warning:  Undefined array key "category_name" in /home/brahim/Desktop/newproject/back/views/article/list.php on line 106
+[07-Jan-2025 15:53:09 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/article/list.php on line 106
+[07-Jan-2025 15:53:09 UTC] PHP Warning:  Undefined array key "user_role" in /home/brahim/Desktop/newproject/back/views/article/list.php on line 119
+[07-Jan-2025 15:53:13 UTC] Processing URL: /
+[07-Jan-2025 15:53:13 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 15:53:13 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 15:53:13 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:53:13 UTC] Attempting database connection with:
+[07-Jan-2025 15:53:13 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:53:13 UTC] Database: sql7754447
+[07-Jan-2025 15:53:13 UTC] Username: sql7754447
+[07-Jan-2025 15:53:18 UTC] Category World News: 1 articles found
+[07-Jan-2025 15:53:39 UTC] Processing URL: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/article$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/login$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/register$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/logout$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/comment\/add$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/dashboard$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/dashboard\/articles$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/dashboard\/article\/new$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/dashboard\/article\/edit$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/dashboard\/article\/update$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/dashboard\/article\/delete$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/dashboard\/article\/store$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/dashboard\/article\/status$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/dashboard\/profile$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/dashboard\/profile\/update$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/dashboard\/profile\/password$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/dashboard\/analytics$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/users$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/add_user$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/store_user$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/review$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/publish_article$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/all_articles$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/article\/delete$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/article\/status$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/reject_article$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/manage_categories$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/store_category$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/delete_category$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/upload_category_image$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/admin\/delete_category_image$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/upload\/image$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/about$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] Checking pattern: /^\/contact$/ against path: /articles
+[07-Jan-2025 15:53:39 UTC] No route matched. Falling back to: null
+[07-Jan-2025 15:53:39 UTC] Attempting database connection with:
+[07-Jan-2025 15:53:39 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:53:39 UTC] Database: sql7754447
+[07-Jan-2025 15:53:39 UTC] Username: sql7754447
+[07-Jan-2025 15:53:45 UTC] Processing URL: /
+[07-Jan-2025 15:53:45 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 15:53:45 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 15:53:45 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:53:45 UTC] Attempting database connection with:
+[07-Jan-2025 15:53:45 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:53:45 UTC] Database: sql7754447
+[07-Jan-2025 15:53:45 UTC] Username: sql7754447
+[07-Jan-2025 15:53:53 UTC] Category World News: 1 articles found
+[07-Jan-2025 15:53:59 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 15:53:59 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 15:53:59 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 15:53:59 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 15:53:59 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 15:53:59 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 15:53:59 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 15:53:59 UTC] Attempting database connection with:
+[07-Jan-2025 15:53:59 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:53:59 UTC] Database: sql7754447
+[07-Jan-2025 15:53:59 UTC] Username: sql7754447
+[07-Jan-2025 15:54:04 UTC] Rendering article view with data
+[07-Jan-2025 15:57:13 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 15:57:13 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 15:57:13 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 15:57:13 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 15:57:13 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 15:57:13 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 15:57:13 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 15:57:13 UTC] Attempting database connection with:
+[07-Jan-2025 15:57:13 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:57:13 UTC] Database: sql7754447
+[07-Jan-2025 15:57:13 UTC] Username: sql7754447
+[07-Jan-2025 15:57:15 UTC] Rendering article view with data
+[07-Jan-2025 15:59:44 UTC] Processing URL: /
+[07-Jan-2025 15:59:44 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 15:59:44 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 15:59:44 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 15:59:44 UTC] Attempting database connection with:
+[07-Jan-2025 15:59:44 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 15:59:44 UTC] Database: sql7754447
+[07-Jan-2025 15:59:44 UTC] Username: sql7754447
+[07-Jan-2025 15:59:49 UTC] Category World News: 1 articles found
+[07-Jan-2025 16:02:02 UTC] Processing URL: /
+[07-Jan-2025 16:02:02 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 16:02:02 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 16:02:02 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 16:02:02 UTC] Attempting database connection with:
+[07-Jan-2025 16:02:02 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 16:02:02 UTC] Database: sql7754447
+[07-Jan-2025 16:02:02 UTC] Username: sql7754447
+[07-Jan-2025 16:02:05 UTC] Category World News: 1 articles found
+[07-Jan-2025 16:04:34 UTC] Processing URL: /
+[07-Jan-2025 16:04:34 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 16:04:34 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 16:04:34 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 16:04:34 UTC] Attempting database connection with:
+[07-Jan-2025 16:04:34 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 16:04:34 UTC] Database: sql7754447
+[07-Jan-2025 16:04:34 UTC] Username: sql7754447
+[07-Jan-2025 16:04:40 UTC] Category World News: 1 articles found
+[07-Jan-2025 16:06:25 UTC] Processing URL: /
+[07-Jan-2025 16:06:25 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 16:06:25 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 16:06:25 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 16:06:25 UTC] Attempting database connection with:
+[07-Jan-2025 16:06:25 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 16:06:25 UTC] Database: sql7754447
+[07-Jan-2025 16:06:25 UTC] Username: sql7754447
+[07-Jan-2025 16:06:28 UTC] Category World News: 1 articles found
+[07-Jan-2025 16:09:13 UTC] Processing URL: /
+[07-Jan-2025 16:09:13 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 16:09:13 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 16:09:13 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 16:09:13 UTC] Attempting database connection with:
+[07-Jan-2025 16:09:13 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 16:09:13 UTC] Database: sql7754447
+[07-Jan-2025 16:09:13 UTC] Username: sql7754447
+[07-Jan-2025 16:09:17 UTC] Category World News: 1 articles found
+[07-Jan-2025 16:10:05 UTC] Processing URL: /
+[07-Jan-2025 16:10:05 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 16:10:05 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 16:10:05 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 16:10:05 UTC] Attempting database connection with:
+[07-Jan-2025 16:10:05 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 16:10:05 UTC] Database: sql7754447
+[07-Jan-2025 16:10:05 UTC] Username: sql7754447
+[07-Jan-2025 16:10:08 UTC] Category World News: 1 articles found
+[07-Jan-2025 16:15:02 UTC] Processing URL: /
+[07-Jan-2025 16:15:02 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 16:15:02 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 16:15:02 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 16:15:02 UTC] Attempting database connection with:
+[07-Jan-2025 16:15:02 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 16:15:02 UTC] Database: sql7754447
+[07-Jan-2025 16:15:02 UTC] Username: sql7754447
+[07-Jan-2025 16:15:05 UTC] Category World News: 1 articles found
+[07-Jan-2025 16:41:52 UTC] Processing URL: /
+[07-Jan-2025 16:41:52 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 16:41:52 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 16:41:52 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 16:41:52 UTC] Attempting database connection with:
+[07-Jan-2025 16:41:52 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 16:41:52 UTC] Database: sql7754447
+[07-Jan-2025 16:41:52 UTC] Username: sql7754447
+[07-Jan-2025 16:41:56 UTC] Category World News: 1 articles found
+[07-Jan-2025 16:46:21 UTC] Processing URL: /
+[07-Jan-2025 16:46:21 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 16:46:21 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 16:46:21 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 16:46:21 UTC] Attempting database connection with:
+[07-Jan-2025 16:46:21 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 16:46:21 UTC] Database: sql7754447
+[07-Jan-2025 16:46:21 UTC] Username: sql7754447
+[07-Jan-2025 16:46:25 UTC] Category World News: 1 articles found
+[07-Jan-2025 16:47:18 UTC] Processing URL: /
+[07-Jan-2025 16:47:18 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 16:47:18 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 16:47:18 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 16:47:18 UTC] Attempting database connection with:
+[07-Jan-2025 16:47:18 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 16:47:18 UTC] Database: sql7754447
+[07-Jan-2025 16:47:18 UTC] Username: sql7754447
+[07-Jan-2025 16:47:21 UTC] Category World News: 1 articles found
+[07-Jan-2025 17:16:40 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 17:16:40 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 17:16:40 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 17:16:40 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 17:16:40 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 17:16:40 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 17:16:40 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 17:16:40 UTC] Attempting database connection with:
+[07-Jan-2025 17:16:40 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 17:16:40 UTC] Database: sql7754447
+[07-Jan-2025 17:16:40 UTC] Username: sql7754447
+[07-Jan-2025 17:16:43 UTC] Rendering article view with data
+[07-Jan-2025 17:20:24 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 17:20:24 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 17:20:24 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 17:20:24 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 17:20:24 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 17:20:24 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 17:20:24 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 17:20:24 UTC] Attempting database connection with:
+[07-Jan-2025 17:20:24 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 17:20:24 UTC] Database: sql7754447
+[07-Jan-2025 17:20:24 UTC] Username: sql7754447
+[07-Jan-2025 17:20:26 UTC] Rendering article view with data
+[07-Jan-2025 19:56:56 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 19:56:56 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 19:56:56 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 19:56:56 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 19:56:56 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 19:56:56 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 19:56:56 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 19:56:56 UTC] Attempting database connection with:
+[07-Jan-2025 19:56:56 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 19:56:56 UTC] Database: sql7754447
+[07-Jan-2025 19:56:56 UTC] Username: sql7754447
+[07-Jan-2025 19:57:04 UTC] Rendering article view with data
+[07-Jan-2025 20:11:23 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:11:23 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:11:23 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:11:23 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:11:23 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:11:23 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:11:23 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:11:23 UTC] Attempting database connection with:
+[07-Jan-2025 20:11:23 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:11:23 UTC] Database: sql7754447
+[07-Jan-2025 20:11:23 UTC] Username: sql7754447
+[07-Jan-2025 20:11:27 UTC] Rendering article view with data
+[07-Jan-2025 20:12:54 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:12:54 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:12:54 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:12:54 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:12:54 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:12:54 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:12:54 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:12:54 UTC] Attempting database connection with:
+[07-Jan-2025 20:12:54 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:12:54 UTC] Database: sql7754447
+[07-Jan-2025 20:12:54 UTC] Username: sql7754447
+[07-Jan-2025 20:13:02 UTC] Rendering article view with data
+[07-Jan-2025 20:13:37 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:13:37 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:13:37 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:13:37 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:13:37 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:13:37 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:13:37 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:13:37 UTC] Attempting database connection with:
+[07-Jan-2025 20:13:37 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:13:37 UTC] Database: sql7754447
+[07-Jan-2025 20:13:37 UTC] Username: sql7754447
+[07-Jan-2025 20:13:45 UTC] Rendering article view with data
+[07-Jan-2025 20:21:19 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:21:19 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:21:19 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:21:19 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:21:19 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:21:19 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:21:19 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:21:19 UTC] Attempting database connection with:
+[07-Jan-2025 20:21:19 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:21:19 UTC] Database: sql7754447
+[07-Jan-2025 20:21:19 UTC] Username: sql7754447
+[07-Jan-2025 20:21:21 UTC] Rendering article view with data
+[07-Jan-2025 20:23:25 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:23:25 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:23:25 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:23:25 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:23:25 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:23:25 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:23:25 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:23:25 UTC] Attempting database connection with:
+[07-Jan-2025 20:23:25 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:23:25 UTC] Database: sql7754447
+[07-Jan-2025 20:23:25 UTC] Username: sql7754447
+[07-Jan-2025 20:23:25 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:23:25 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:23:25 UTC] ArticleController::viewByTitle Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:23:25 UTC] Processing URL: /
+[07-Jan-2025 20:23:25 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 20:23:25 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 20:23:25 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 20:23:25 UTC] Attempting database connection with:
+[07-Jan-2025 20:23:25 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:23:25 UTC] Database: sql7754447
+[07-Jan-2025 20:23:25 UTC] Username: sql7754447
+[07-Jan-2025 20:23:33 UTC] Category World News: 1 articles found
+[07-Jan-2025 20:25:00 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:25:00 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:25:00 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:25:00 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:25:00 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:25:00 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:25:00 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:25:00 UTC] Attempting database connection with:
+[07-Jan-2025 20:25:00 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:25:00 UTC] Database: sql7754447
+[07-Jan-2025 20:25:00 UTC] Username: sql7754447
+[07-Jan-2025 20:25:00 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:25:00 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:25:00 UTC] ArticleController::viewByTitle Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:25:01 UTC] Processing URL: /
+[07-Jan-2025 20:25:01 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 20:25:01 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 20:25:01 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 20:25:01 UTC] Attempting database connection with:
+[07-Jan-2025 20:25:01 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:25:01 UTC] Database: sql7754447
+[07-Jan-2025 20:25:01 UTC] Username: sql7754447
+[07-Jan-2025 20:25:01 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:25:01 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:25:01 UTC] Home Controller Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:25:01 UTC] Attempting database connection with:
+[07-Jan-2025 20:25:01 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:25:01 UTC] Database: sql7754447
+[07-Jan-2025 20:25:01 UTC] Username: sql7754447
+[07-Jan-2025 20:25:01 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:25:01 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:25:01 UTC] Header Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Undefined variable $currentPage in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 40
+[07-Jan-2025 20:25:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 40
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Undefined array key "meta_description" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 41
+[07-Jan-2025 20:25:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 41
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Undefined array key "meta_keywords" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 42
+[07-Jan-2025 20:25:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 42
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Undefined array key "meta_description" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 48
+[07-Jan-2025 20:25:01 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 48
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 49
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 49
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 50
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 50
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 52
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 52
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 53
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 53
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 57
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 57
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 59
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 59
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Undefined variable $currentPage in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 140
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Undefined variable $currentPage in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 150
+[07-Jan-2025 20:25:01 UTC] PHP Warning:  Undefined variable $currentPage in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 152
+[07-Jan-2025 20:25:01 UTC] Attempting database connection with:
+[07-Jan-2025 20:25:01 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:25:01 UTC] Database: sql7754447
+[07-Jan-2025 20:25:01 UTC] Username: sql7754447
+[07-Jan-2025 20:25:03 UTC] Category World News: 1 articles found
+[07-Jan-2025 20:25:03 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/sidebar.php on line 129
+[07-Jan-2025 20:25:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/sidebar.php on line 129
+[07-Jan-2025 20:25:03 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/sidebar.php on line 225
+[07-Jan-2025 20:25:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/sidebar.php on line 225
+[07-Jan-2025 20:25:14 UTC] Processing URL: /
+[07-Jan-2025 20:25:14 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 20:25:14 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 20:25:14 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 20:25:14 UTC] Attempting database connection with:
+[07-Jan-2025 20:25:14 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:25:14 UTC] Database: sql7754447
+[07-Jan-2025 20:25:14 UTC] Username: sql7754447
+[07-Jan-2025 20:25:14 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:25:14 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:25:14 UTC] Home Controller Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:25:14 UTC] Attempting database connection with:
+[07-Jan-2025 20:25:14 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:25:14 UTC] Database: sql7754447
+[07-Jan-2025 20:25:14 UTC] Username: sql7754447
+[07-Jan-2025 20:25:15 UTC] Category World News: 1 articles found
+[07-Jan-2025 20:25:28 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:25:28 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:25:28 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:25:28 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:25:28 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:25:28 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:25:28 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:25:28 UTC] Attempting database connection with:
+[07-Jan-2025 20:25:28 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:25:28 UTC] Database: sql7754447
+[07-Jan-2025 20:25:28 UTC] Username: sql7754447
+[07-Jan-2025 20:25:29 UTC] Rendering article view with data
+[07-Jan-2025 20:27:05 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:27:05 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:27:05 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:27:05 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:27:05 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:27:05 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:27:05 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:27:05 UTC] Attempting database connection with:
+[07-Jan-2025 20:27:05 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:27:05 UTC] Database: sql7754447
+[07-Jan-2025 20:27:05 UTC] Username: sql7754447
+[07-Jan-2025 20:27:07 UTC] Rendering article view with data
+[07-Jan-2025 20:27:36 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:27:36 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:27:36 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:27:36 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:27:36 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:27:36 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:27:36 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:27:36 UTC] Attempting database connection with:
+[07-Jan-2025 20:27:36 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:27:36 UTC] Database: sql7754447
+[07-Jan-2025 20:27:36 UTC] Username: sql7754447
+[07-Jan-2025 20:27:38 UTC] Rendering article view with data
+[07-Jan-2025 20:31:56 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:31:56 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:31:56 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:31:56 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:31:56 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:31:56 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:31:56 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:31:56 UTC] Attempting database connection with:
+[07-Jan-2025 20:31:56 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:31:56 UTC] Database: sql7754447
+[07-Jan-2025 20:31:56 UTC] Username: sql7754447
+[07-Jan-2025 20:32:04 UTC] Rendering article view with data
+[07-Jan-2025 20:32:38 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:32:38 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:32:38 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:32:38 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:32:38 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:32:38 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:32:38 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:32:38 UTC] Attempting database connection with:
+[07-Jan-2025 20:32:38 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:32:38 UTC] Database: sql7754447
+[07-Jan-2025 20:32:38 UTC] Username: sql7754447
+[07-Jan-2025 20:32:41 UTC] Rendering article view with data
+[07-Jan-2025 20:34:31 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:34:31 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:34:31 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:34:31 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:34:31 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:34:31 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:34:31 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:34:31 UTC] Attempting database connection with:
+[07-Jan-2025 20:34:31 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:34:31 UTC] Database: sql7754447
+[07-Jan-2025 20:34:31 UTC] Username: sql7754447
+[07-Jan-2025 20:34:33 UTC] Rendering article view with data
+[07-Jan-2025 20:35:55 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:35:55 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:35:55 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:35:55 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:35:55 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:35:55 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:35:55 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:35:55 UTC] Attempting database connection with:
+[07-Jan-2025 20:35:55 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:35:55 UTC] Database: sql7754447
+[07-Jan-2025 20:35:55 UTC] Username: sql7754447
+[07-Jan-2025 20:35:58 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:35:58 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:35:58 UTC] ArticleController::viewByTitle Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:35:58 UTC] Processing URL: /
+[07-Jan-2025 20:35:58 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 20:35:58 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 20:35:58 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 20:35:58 UTC] Attempting database connection with:
+[07-Jan-2025 20:35:58 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:35:58 UTC] Database: sql7754447
+[07-Jan-2025 20:35:58 UTC] Username: sql7754447
+[07-Jan-2025 20:36:06 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:36:06 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:36:06 UTC] Home Controller Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:36:06 UTC] Attempting database connection with:
+[07-Jan-2025 20:36:06 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:36:06 UTC] Database: sql7754447
+[07-Jan-2025 20:36:06 UTC] Username: sql7754447
+[07-Jan-2025 20:36:14 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:36:14 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:36:14 UTC] Header Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Undefined variable $currentPage in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 40
+[07-Jan-2025 20:36:14 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 40
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Undefined array key "meta_description" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 41
+[07-Jan-2025 20:36:14 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 41
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Undefined array key "meta_keywords" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 42
+[07-Jan-2025 20:36:14 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 42
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Undefined array key "meta_description" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 48
+[07-Jan-2025 20:36:14 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 48
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 49
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 49
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 50
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 50
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 52
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 52
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 53
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 53
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 57
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 57
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 59
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 59
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Undefined variable $currentPage in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 140
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Undefined variable $currentPage in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 150
+[07-Jan-2025 20:36:14 UTC] PHP Warning:  Undefined variable $currentPage in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 152
+[07-Jan-2025 20:36:14 UTC] Attempting database connection with:
+[07-Jan-2025 20:36:14 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:36:14 UTC] Database: sql7754447
+[07-Jan-2025 20:36:14 UTC] Username: sql7754447
+[07-Jan-2025 20:36:19 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:36:19 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:36:19 UTC] Application Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:36:33 UTC] Processing URL: /
+[07-Jan-2025 20:36:33 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 20:36:33 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 20:36:33 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 20:36:33 UTC] Attempting database connection with:
+[07-Jan-2025 20:36:33 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:36:33 UTC] Database: sql7754447
+[07-Jan-2025 20:36:33 UTC] Username: sql7754447
+[07-Jan-2025 20:36:36 UTC] Category World News: 1 articles found
+[07-Jan-2025 20:37:06 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:37:06 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:37:06 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:37:06 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:37:06 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:37:06 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:37:06 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:37:06 UTC] Attempting database connection with:
+[07-Jan-2025 20:37:06 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:37:06 UTC] Database: sql7754447
+[07-Jan-2025 20:37:06 UTC] Username: sql7754447
+[07-Jan-2025 20:37:06 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:37:06 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:37:06 UTC] ArticleController::viewByTitle Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:37:06 UTC] Processing URL: /
+[07-Jan-2025 20:37:06 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 20:37:06 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 20:37:06 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 20:37:06 UTC] Attempting database connection with:
+[07-Jan-2025 20:37:06 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:37:06 UTC] Database: sql7754447
+[07-Jan-2025 20:37:06 UTC] Username: sql7754447
+[07-Jan-2025 20:37:12 UTC] Category World News: 1 articles found
+[07-Jan-2025 20:37:18 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:37:18 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:37:18 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:37:18 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:37:18 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:37:18 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:37:18 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:37:18 UTC] Attempting database connection with:
+[07-Jan-2025 20:37:18 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:37:18 UTC] Database: sql7754447
+[07-Jan-2025 20:37:18 UTC] Username: sql7754447
+[07-Jan-2025 20:37:19 UTC] Rendering article view with data
+[07-Jan-2025 20:39:13 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:39:13 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:39:13 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:39:13 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:39:13 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:39:13 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:39:13 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:39:13 UTC] Attempting database connection with:
+[07-Jan-2025 20:39:13 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:39:13 UTC] Database: sql7754447
+[07-Jan-2025 20:39:13 UTC] Username: sql7754447
+[07-Jan-2025 20:39:13 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:39:13 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:39:13 UTC] ArticleController::viewByTitle Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:39:13 UTC] Processing URL: /
+[07-Jan-2025 20:39:13 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 20:39:13 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 20:39:13 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 20:39:13 UTC] Attempting database connection with:
+[07-Jan-2025 20:39:13 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:39:13 UTC] Database: sql7754447
+[07-Jan-2025 20:39:13 UTC] Username: sql7754447
+[07-Jan-2025 20:39:17 UTC] Category World News: 1 articles found
+[07-Jan-2025 20:39:23 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:39:23 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:39:23 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:39:23 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:39:23 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:39:23 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:39:23 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:39:23 UTC] Attempting database connection with:
+[07-Jan-2025 20:39:23 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:39:23 UTC] Database: sql7754447
+[07-Jan-2025 20:39:23 UTC] Username: sql7754447
+[07-Jan-2025 20:39:24 UTC] Rendering article view with data
+[07-Jan-2025 20:40:42 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:40:42 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:40:42 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:40:42 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:40:42 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:40:42 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:40:42 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:40:42 UTC] Attempting database connection with:
+[07-Jan-2025 20:40:42 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:40:42 UTC] Database: sql7754447
+[07-Jan-2025 20:40:42 UTC] Username: sql7754447
+[07-Jan-2025 20:40:42 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:40:42 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:40:42 UTC] ArticleController::viewByTitle Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 20:40:42 UTC] Processing URL: /
+[07-Jan-2025 20:40:42 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 20:40:42 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 20:40:42 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 20:40:42 UTC] Attempting database connection with:
+[07-Jan-2025 20:40:42 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:40:42 UTC] Database: sql7754447
+[07-Jan-2025 20:40:42 UTC] Username: sql7754447
+[07-Jan-2025 20:40:45 UTC] Category World News: 1 articles found
+[07-Jan-2025 20:40:53 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:40:53 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:40:53 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:40:53 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:40:53 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:40:53 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:40:53 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:40:53 UTC] Attempting database connection with:
+[07-Jan-2025 20:40:53 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:40:53 UTC] Database: sql7754447
+[07-Jan-2025 20:40:53 UTC] Username: sql7754447
+[07-Jan-2025 20:40:56 UTC] Rendering article view with data
+[07-Jan-2025 20:42:21 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:42:21 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:42:21 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:42:21 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:42:21 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 20:42:21 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 20:42:21 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 20:42:21 UTC] Attempting database connection with:
+[07-Jan-2025 20:42:21 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 20:42:21 UTC] Database: sql7754447
+[07-Jan-2025 20:42:21 UTC] Username: sql7754447
+[07-Jan-2025 20:42:23 UTC] Rendering article view with data
+[07-Jan-2025 21:11:29 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:11:29 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:11:29 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:11:29 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:11:29 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 21:11:29 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 21:11:29 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:11:29 UTC] Attempting database connection with:
+[07-Jan-2025 21:11:29 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 21:11:29 UTC] Database: sql7754447
+[07-Jan-2025 21:11:29 UTC] Username: sql7754447
+[07-Jan-2025 21:11:34 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 21:11:34 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 21:11:34 UTC] ArticleController::viewByTitle Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 21:11:35 UTC] Processing URL: /
+[07-Jan-2025 21:11:35 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 21:11:35 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 21:11:35 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 21:11:35 UTC] Attempting database connection with:
+[07-Jan-2025 21:11:35 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 21:11:35 UTC] Database: sql7754447
+[07-Jan-2025 21:11:35 UTC] Username: sql7754447
+[07-Jan-2025 21:11:38 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 21:11:38 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 21:11:38 UTC] Home Controller Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 21:11:38 UTC] Attempting database connection with:
+[07-Jan-2025 21:11:38 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 21:11:38 UTC] Database: sql7754447
+[07-Jan-2025 21:11:38 UTC] Username: sql7754447
+[07-Jan-2025 21:11:57 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 21:11:57 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 21:11:57 UTC] Header Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Undefined variable $currentPage in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 40
+[07-Jan-2025 21:11:57 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 40
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Undefined array key "meta_description" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 41
+[07-Jan-2025 21:11:57 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 41
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Undefined array key "meta_keywords" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 42
+[07-Jan-2025 21:11:57 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 42
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Undefined array key "meta_description" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 48
+[07-Jan-2025 21:11:57 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 48
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 49
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 49
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 50
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 50
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 52
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 52
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 53
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 53
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 57
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 57
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 59
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 59
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Undefined variable $currentPage in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 140
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Undefined variable $currentPage in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 150
+[07-Jan-2025 21:11:57 UTC] PHP Warning:  Undefined variable $currentPage in /home/brahim/Desktop/newproject/back/views/layouts/header.php on line 152
+[07-Jan-2025 21:11:57 UTC] Attempting database connection with:
+[07-Jan-2025 21:11:57 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 21:11:57 UTC] Database: sql7754447
+[07-Jan-2025 21:11:57 UTC] Username: sql7754447
+[07-Jan-2025 21:12:04 UTC] Category World News: 1 articles found
+[07-Jan-2025 21:12:06 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/sidebar.php on line 129
+[07-Jan-2025 21:12:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/sidebar.php on line 129
+[07-Jan-2025 21:12:06 UTC] PHP Warning:  Undefined array key "constants" in /home/brahim/Desktop/newproject/back/views/layouts/sidebar.php on line 225
+[07-Jan-2025 21:12:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/brahim/Desktop/newproject/back/views/layouts/sidebar.php on line 225
+[07-Jan-2025 21:12:12 UTC] Processing URL: /
+[07-Jan-2025 21:12:12 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 21:12:12 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 21:12:12 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 21:12:12 UTC] Attempting database connection with:
+[07-Jan-2025 21:12:12 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 21:12:12 UTC] Database: sql7754447
+[07-Jan-2025 21:12:12 UTC] Username: sql7754447
+[07-Jan-2025 21:12:18 UTC] Category World News: 1 articles found
+[07-Jan-2025 21:12:24 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:12:24 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:12:24 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:12:24 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:12:24 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 21:12:24 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 21:12:24 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:12:24 UTC] Attempting database connection with:
+[07-Jan-2025 21:12:24 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 21:12:24 UTC] Database: sql7754447
+[07-Jan-2025 21:12:24 UTC] Username: sql7754447
+[07-Jan-2025 21:12:35 UTC] Rendering article view with data
+[07-Jan-2025 21:14:13 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:14:13 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:14:13 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:14:13 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:14:13 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 21:14:13 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 21:14:13 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:14:13 UTC] Attempting database connection with:
+[07-Jan-2025 21:14:13 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 21:14:13 UTC] Database: sql7754447
+[07-Jan-2025 21:14:13 UTC] Username: sql7754447
+[07-Jan-2025 21:14:23 UTC] Rendering article view with data
+[07-Jan-2025 21:31:37 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:31:37 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:31:37 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:31:37 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:31:37 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 21:31:37 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 21:31:37 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 21:31:37 UTC] Attempting database connection with:
+[07-Jan-2025 21:31:37 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 21:31:37 UTC] Database: sql7754447
+[07-Jan-2025 21:31:37 UTC] Username: sql7754447
+[07-Jan-2025 21:31:43 UTC] Rendering article view with data
+[07-Jan-2025 22:31:13 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:31:13 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:31:13 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:31:13 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:31:13 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 22:31:13 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 22:31:13 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:31:13 UTC] Attempting database connection with:
+[07-Jan-2025 22:31:13 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 22:31:13 UTC] Database: sql7754447
+[07-Jan-2025 22:31:13 UTC] Username: sql7754447
+[07-Jan-2025 22:31:15 UTC] Rendering article view with data
+[07-Jan-2025 22:39:32 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:39:32 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:39:32 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:39:32 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:39:32 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 22:39:32 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 22:39:32 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:39:32 UTC] Attempting database connection with:
+[07-Jan-2025 22:39:32 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 22:39:32 UTC] Database: sql7754447
+[07-Jan-2025 22:39:32 UTC] Username: sql7754447
+[07-Jan-2025 22:39:45 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 22:39:45 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 22:39:45 UTC] ArticleController::viewByTitle Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 22:39:45 UTC] Processing URL: /
+[07-Jan-2025 22:39:45 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 22:39:45 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 22:39:45 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 22:39:45 UTC] Attempting database connection with:
+[07-Jan-2025 22:39:45 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 22:39:45 UTC] Database: sql7754447
+[07-Jan-2025 22:39:45 UTC] Username: sql7754447
+[07-Jan-2025 22:39:56 UTC] Database connection failed: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 22:39:56 UTC] Model Connection Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 22:39:56 UTC] Home Controller Error: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo for sql7.freemysqlhosting.net failed: Name or service not known
+[07-Jan-2025 22:39:56 UTC] Attempting database connection with:
+[07-Jan-2025 22:39:56 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 22:39:56 UTC] Database: sql7754447
+[07-Jan-2025 22:39:56 UTC] Username: sql7754447
+[07-Jan-2025 22:41:02 UTC] Application Error: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+[07-Jan-2025 22:41:59 UTC] Processing URL: /
+[07-Jan-2025 22:41:59 UTC] Checking pattern: /^\/$/ against path: /
+[07-Jan-2025 22:41:59 UTC] Route matched. Controller action: HomeController@index
+[07-Jan-2025 22:41:59 UTC] Parameters: Array
+(
+)
+
+[07-Jan-2025 22:41:59 UTC] Attempting database connection with:
+[07-Jan-2025 22:41:59 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 22:41:59 UTC] Database: sql7754447
+[07-Jan-2025 22:41:59 UTC] Username: sql7754447
+[07-Jan-2025 22:42:01 UTC] Category World News: 1 articles found
+[07-Jan-2025 22:46:03 UTC] Processing URL: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:46:03 UTC] Checking pattern: /^\/$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:46:03 UTC] Checking pattern: /^\/article$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:46:03 UTC] Checking pattern: /^\/article\/([^\/]+)$/ against path: /article/%D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:46:03 UTC] Route matched. Controller action: ArticleController@viewByTitle
+[07-Jan-2025 22:46:03 UTC] Parameters: Array
+(
+    [0] => %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+)
+
+[07-Jan-2025 22:46:03 UTC] viewByTitle called with title: %D9%87%D9%84+%D9%88%D8%B5%D9%84+%D9%86%D9%85%D9%88%D8%B0%D8%AC+o3+%D8%A5%D9%84%D9%89+%D9%85%D8%B1%D8%AD%D9%84%D8%A9+%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1+%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A+%D8%A7%D9%84%D8%B9%D8%A7%D9%85+%D9%88%D9%85%D8%A7%D8%B0%D8%A7+%D9%8A%D8%B9%D9%86%D9%8A+%D8%B0%D9%84%D9%83%D8%9F
+[07-Jan-2025 22:46:03 UTC] Attempting database connection with:
+[07-Jan-2025 22:46:03 UTC] Host: sql7.freemysqlhosting.net
+[07-Jan-2025 22:46:03 UTC] Database: sql7754447
+[07-Jan-2025 22:46:03 UTC] Username: sql7754447
+[07-Jan-2025 22:46:05 UTC] Rendering article view with data
