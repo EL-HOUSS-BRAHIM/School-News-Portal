@@ -9,12 +9,13 @@ $featuredArticles = $articleModel->getFeatured(5);
 $categories = $categoryModel->getAll();
 ?>
 
-<!-- Featured News Slider Start -->
+<!-- Main Content Start -->
 <div class="container-fluid py-3">
     <div class="container">
-        <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
-            <h3 class="m-0">Featured</h3>
-            <a class="text-secondary font-weight-medium text-decoration-none" href="/articles">View All</a>
+        <!-- Featured News Slider Start -->
+        <div dir="<?php echo Translate::getCurrentLang() === 'ar' ? 'rtl' : 'ltr'; ?>" class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+            <h3 class="m-0"><?php echo Translate::get('featured'); ?></h3>
+            <a class="text-secondary font-weight-medium text-decoration-none" href="/articles"><?php echo Translate::get('view_all'); ?></a>
         </div>
         <?php if (!empty($featuredArticles)): ?>
             <div class="owl-carousel owl-carousel-2 carousel-item-4 position-relative">
@@ -26,7 +27,7 @@ $categories = $categoryModel->getAll();
                         <div class="overlay">
                             <div class="mb-1" style="font-size: 13px;">
                                 <?php
-                                $categoryName = $article['category_name'] ?? 'Uncategorized';
+                                $categoryName = $article['category'] ?? 'Uncategorized';
                                 ?>
                                 <a class="text-white" href="/category/<?php echo htmlspecialchars($article['category_id']); ?>">
                                     <?php echo htmlspecialchars($categoryName); ?>
@@ -47,15 +48,11 @@ $categories = $categoryModel->getAll();
                 <?php endforeach; ?>
             </div>
         <?php else: ?>
-            <p>No featured articles available at the moment.</p>
+            <p><?php echo Translate::get('no_featured_articles'); ?></p>
         <?php endif; ?>
-    </div>
-</div>
-<!-- Featured News Slider End -->
+        <!-- Featured News Slider End -->
 
-<!-- Category News Slider Start -->
-<div class="container-fluid">
-    <div class="container">
+        <!-- Category News Slider Start -->
         <div class="row">
             <?php if (!empty($categories)): ?>
                 <?php foreach ($categories as $category): ?>
@@ -101,22 +98,23 @@ $categories = $categoryModel->getAll();
                                 <?php endforeach; ?>
                             </div>
                         <?php else: ?>
-                            <p>No articles available in <?php echo htmlspecialchars($category['name']); ?></p>
+                            <p><?php echo Translate::get('no_articles_in_category'); ?></p>
                         <?php endif; ?>
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>
-                <p>No categories available at the moment.</p>
+                <p><?php echo Translate::get('no_categories'); ?></p>
             <?php endif; ?>
         </div>
+        <!-- Category News Slider End -->
+
+        <!-- News With Sidebar Start -->
+        <div class="container-fluid py-3">
+            <?php require_once __DIR__ . '/../layouts/sidebar.php'; ?>
+        </div>
+        <!-- News With Sidebar End -->
     </div>
 </div>
-<!-- Category News Slider End -->
-
-<!-- News With Sidebar Start -->
-<div class="container-fluid py-3">
-    <?php require_once __DIR__ . '/../layouts/sidebar.php'; ?>
-</div>
-<!-- News With Sidebar End -->
+<!-- Main Content End -->
 
 <?php require_once __DIR__ . '/../layouts/footer.php'; ?>
