@@ -8,3 +8,7 @@
 .idea
 .vscode.env
 .log
+*.pem
+vendor/
+node_modules/
+
