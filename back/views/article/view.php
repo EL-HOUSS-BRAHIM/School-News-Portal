@@ -13,8 +13,8 @@ try {
     
     // Debug database connection
     if (!$articleModel->hasConnection()) {
-        error_log("Pas de connexion à la base de données");
-        throw new Exception("Échec de la connexion à la base de données");
+        error_log("No database connection");
+        throw new Exception("Database connection failed");
     }
     
     // Get latest articles
@@ -57,11 +57,11 @@ try {
     }
     
     if (empty($latestArticles)) {
-        error_log("Aucun article trouvé");
+        error_log("No articles found");
     }
     
 } catch (Exception $e) {
-    error_log("Erreur de la barre latérale : " . $e->getMessage());
+    error_log("Sidebar error: " . $e->getMessage());
     $latestArticles = [];
     $trendingArticles = [];
     $formattedSocialLinks = [];
@@ -185,35 +185,51 @@ try {
                 </div>
                 <!-- Tags End -->
             </div>
-            
+
             <div class="col-lg-8">
                 <?php if (isset($article) && $article): ?>
                 <!-- News Detail Start -->
                 <div class="position-relative mb-3">
+                    <?php
+    // Get article from session or current data
+    $displayArticle = $currentArticle ?? null;
+    
+    if ($displayArticle): 
+        error_log("Displaying article - ID: {$displayArticle['id']}, Language: {$displayArticle['language']}");
+    ?>
                     <img class="img-fluid w-100"
-                        src="<?php echo htmlspecialchars($article['image'] ?? '/img/default.jpg'); ?>"
+                        src="<?php echo htmlspecialchars($displayArticle['image'] ?? '/img/default.jpg'); ?>"
                         style="object-fit: cover;">
                     <div class="overlay position-relative bg-light">
                         <div class="mb-3">
-                            <a href="/category/<?php echo htmlspecialchars($article['category_id']); ?>">
-                                <?php echo htmlspecialchars($article['category']); ?>
+                            <a href="/category/<?php echo htmlspecialchars($displayArticle['category_id']); ?>">
+                                <?php echo htmlspecialchars($displayArticle['category']); ?>
                             </a>
                             <span class="px-1">/</span>
-                            <span><?php echo date('F d, Y', strtotime($article['created_at'])); ?></span>
+                            <span><?php echo date('F d, Y', strtotime($displayArticle['created_at'])); ?></span>
                         </div>
-                        <div <?php echo $article['language'] === 'ar' ? 'dir="rtl"' : 'dir="ltr"'; ?>>
-                            <h3 class="mb-3">
-                                <?php echo htmlspecialchars($article['title']); ?>
-                            </h3>
-                            <div class="article-content">
-                                <?php 
-                                    $content = html_entity_decode($article['content'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
-                                    $content = trim($content);
-                                    echo $content; 
-                                    ?>
-                            </div>
+
+                        <!-- Article Content -->
+                        <div class="article-content"
+                            dir="<?php echo $displayArticle['language'] === 'ar' ? 'rtl' : 'ltr'; ?>">
+                            <h3 class="mb-3"><?php echo htmlspecialchars($displayArticle['title']); ?></h3>
+                            <?php 
+                if (isset($displayArticle['content'])):
+                    // Decode content
+                    $content = html_entity_decode($displayArticle['content'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+                    echo $content;
+                else:
+                    echo '<p>Article content not available</p>';
+                endif;
+                ?>
                         </div>
                     </div>
+                    <?php 
+    else:
+        error_log("No article data available to display");
+        echo '<p>Article not found</p>';
+    endif;
+    ?>
                 </div>
                 <!-- News Detail End -->
 
@@ -271,7 +287,115 @@ try {
                 <div class="alert alert-warning">Article not found</div>
                 <?php endif; ?>
             </div>
-            <?php require_once __DIR__ . '/../layouts/article_sidebar.php'; ?>
+            <div class="container" dir="<?php echo Translate::getCurrentLang() === 'ar' ? 'rtl' : 'ltr'; ?>">
+                <div class="row">
+                    <div class="col-lg-8"
+                        style="<?php echo Translate::getCurrentLang() === 'ar' ? 'right: 33.5%;' : 'left: 33.7%;' ?>">
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+                                    <h3 class="m-0"><?php echo Translate::get('popular'); ?></h3>
+                                    <a class="text-secondary font-weight-medium text-decoration-none"
+                                        href="/articles"><?php echo Translate::get('view_all'); ?></a>
+                                </div>
+                            </div>
+                            <?php if (!empty($trendingArticles)): ?>
+                            <?php foreach ($trendingArticles as $article): ?>
+                            <div class="col-lg-6">
+                                <div class="position-relative mb-3">
+                                    <img class="img-fluid w-100"
+                                        src="<?php echo htmlspecialchars($article['image'] ?? $app['constants']['ASSETS_URL'] . '/img/default.jpg'); ?>"
+                                        style="object-fit: cover;">
+                                    <div class="overlay position-relative bg-light">
+                                        <div class="mb-2" style="font-size: 14px;">
+                                            <a
+                                                href="/category/<?php echo htmlspecialchars($article['category_id']); ?>"><?php echo htmlspecialchars($article['category']); ?></a>
+                                            <span class="px-1">/</span>
+                                            <span><?php echo date('F d, Y', strtotime($article['created_at'])); ?></span>
+                                        </div>
+                                        <div
+                                            <?php echo isset($article['language']) && $article['language'] === 'ar' ? 'dir="rtl"' : 'dir="ltr"'; ?>>
+                                            <a class="h6 m-0"
+                                                href="/article/<?php echo urlencode($article['title']); ?>">
+                                                <?php 
+                                                $title = html_entity_decode(
+                                                    html_entity_decode($article['title'], ENT_QUOTES | ENT_HTML5, 'UTF-8'),
+                                                    ENT_QUOTES | ENT_HTML5, 
+                                                    'UTF-8'
+                                                );
+                                                echo htmlspecialchars($title); 
+                                                ?>
+                                            </a>
+                                            <p class="m-0">
+                                                <?php 
+                                                $content = html_entity_decode(
+                                                    html_entity_decode($article['content'], ENT_QUOTES | ENT_HTML5, 'UTF-8'),
+                                                    ENT_QUOTES | ENT_HTML5, 
+                                                    'UTF-8'
+                                                );
+                                                $content = strip_tags($content);
+                                                echo htmlspecialchars(substr($content, 0, 100)) . '...'; 
+                                                ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endforeach; ?>
+                            <?php else: ?>
+                            <p><?php echo Translate::get('no_popular_articles'); ?></p>
+                            <?php endif; ?>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
+                                    <h3 class="m-0"><?php echo Translate::get('latest'); ?></h3>
+                                    <a class="text-secondary font-weight-medium text-decoration-none"
+                                        href="/articles"><?php echo Translate::get('view_all'); ?></a>
+                                </div>
+                            </div>
+                            <?php if (!empty($latestArticles)): ?>
+                            <?php foreach ($latestArticles as $article): ?>
+                            <div class="col-lg-6">
+                                <div class="position-relative mb-3">
+                                    <img class="img-fluid w-100"
+                                        src="<?php echo htmlspecialchars($article['image'] ?? $app['constants']['ASSETS_URL'] . '/img/default.jpg'); ?>"
+                                        style="object-fit: cover;">
+                                    <div class="overlay position-relative bg-light">
+                                        <div class="mb-2" style="font-size: 14px;">
+                                            <a
+                                                href="/category/<?php echo htmlspecialchars($article['category_id']); ?>"><?php echo htmlspecialchars($article['category']); ?></a>
+                                            <span class="px-1">/</span>
+                                            <span><?php echo date('F d, Y', strtotime($article['created_at'])); ?></span>
+                                        </div>
+                                        <div
+                                            <?php echo isset($article['language']) && $article['language'] === 'ar' ? 'dir="rtl"' : 'dir="ltr"'; ?>>
+                                            <a class="h4" href="/article/<?php echo urlencode($article['title']); ?>">
+                                                <?php echo htmlspecialchars($article['title']); ?>
+                                            </a>
+                                            <p class="m-0">
+                                                <?php 
+                                                $content = html_entity_decode(
+                                                    html_entity_decode($article['content'], ENT_QUOTES | ENT_HTML5, 'UTF-8'),
+                                                    ENT_QUOTES | ENT_HTML5, 
+                                                    'UTF-8'
+                                                );
+                                                $content = strip_tags($content);
+                                                echo htmlspecialchars(substr($content, 0, 100)) . '...'; 
+                                                ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endforeach; ?>
+                            <?php else: ?>
+                            <p><?php echo Translate::get('no_latest_articles'); ?></p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
@@ -285,6 +409,7 @@ try {
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <!-- News Article Schema -->
+
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -308,7 +433,6 @@ try {
     "description": "<?php echo htmlspecialchars($article['description'] ?? ''); ?>"
 }
 </script>
-
 <!-- Add CSS for article content -->
 <style>
 .article-content {
@@ -343,3 +467,10 @@ try {
     margin-top: 0.5em;
 }
 </style>
+<!-- Add at the end of the file -->
+<?php
+// Clear the current article session
+if (isset($_SESSION['current_article_id'])) {
+    unset($_SESSION['current_article_id']);
+}
+?>

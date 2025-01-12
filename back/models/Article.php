@@ -45,21 +45,35 @@ public static function getAllStatuses()
 
 public function getByTitle($title) {
     try {
+        error_log("Starting getByTitle with title: " . $title);
+        
+        // Add BINARY for exact case-sensitive match
         $sql = "SELECT a.*, 
                    c.name as category, 
+                   c.id as category_id,
                    u.username as author,
                    COALESCE(a.views, 0) as views,
                    COALESCE(a.likes, 0) as likes
             FROM {$this->table} a
             LEFT JOIN categories c ON a.category_id = c.id
             LEFT JOIN users u ON a.user_id = u.id
-            WHERE a.title = ?";
+            WHERE BINARY a.title = ? AND a.status = ?
+            LIMIT 1";
         
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$title]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->execute([$title, self::STATUS_PUBLISHED]);
+        $article = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if ($article) {
+            error_log("Found exact article match - ID: {$article['id']}, Language: {$article['language']}, Title: {$article['title']}");
+            return $article;
+        }
+        
+        error_log("No exact match found for title: {$title}");
+        return null;
+        
     } catch (PDOException $e) {
-        error_log("Error getting article by title: " . $e->getMessage());
+        error_log("GetByTitle Error: " . $e->getMessage());
         return null;
     }
 }
@@ -548,9 +562,18 @@ public function getWithDetails($id) {
             LEFT JOIN categories c ON a.category_id = c.id 
             LEFT JOIN users u ON a.user_id = u.id 
             WHERE a.id = ?";
+            
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$id]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if ($result) {
+            error_log("Article found with ID: " . $id);
+        } else {
+            error_log("No article found with ID: " . $id);
+        }
+        
+        return $result;
     } catch (PDOException $e) {
         error_log("Error getting article details: " . $e->getMessage());
         return null;
@@ -558,3 +581,4 @@ public function getWithDetails($id) {
 }
 }
 ?>
+

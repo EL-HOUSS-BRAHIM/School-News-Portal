@@ -7,6 +7,13 @@ require_once __DIR__ . '/../../config/app.php';
 require_once __DIR__ . '/../../models/Category.php';
 require_once __DIR__ . '/../../models/Article.php';
 require_once __DIR__ . '/../../core/Helpers.php';
+require_once __DIR__ . '/../../core/Session.php';
+
+// Start output buffering at the very beginning
+ob_start();
+
+// Start session properly
+Session::start();
 
 // Initialize Translate
 Translate::init();

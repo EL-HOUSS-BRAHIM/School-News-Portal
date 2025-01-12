@@ -20,55 +20,43 @@ class ArticleController extends Controller
         $this->renderView('article/create');
     }
 
-public function viewByTitle($title) {
-    try {
-        error_log("viewByTitle called with title: {$title}");
-        $decodedTitle = urldecode($title);
-        
-        $articleModel = new Article();
-        $article = $articleModel->getByTitle($decodedTitle);
+    public function viewByTitle($title) {
+        try {
+            // Remove session_start() call
+            $decodedTitle = urldecode($title);
+            $articleModel = new Article();
+            $article = $articleModel->getByTitle($decodedTitle);
 
-        if (!$article) {
-            error_log("Article not found for title: {$decodedTitle}");
+            if (!$article) {
+            error_log("No article found with title: {$decodedTitle}");
             $this->redirect('/');
             return;
-        }
+            }
 
-        // Set page language based on article language
-        if (isset($article['language']) && in_array($article['language'], ['ar', 'fr', 'en'])) {
+            // Use Session class instead 
+            Session::set('current_article', $article);
+            
+            if (isset($article['language'])) {
             Translate::setLang($article['language']);
-        }
+            }
 
-        // Check if article status is published or user is admin
-        if ($article['status'] !== 'published' && 
-            (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin')) {
-            error_log("Article not published and user not admin");
-            $this->redirect('/');
-            return;
-        }
-
-        // Increment view counter
-        $articleModel->incrementViews($article['id']);
-
-        // Get additional data
-        $commentModel = new Comment();
-        $data = [
-            'article' => $article,
-            'comments' => $commentModel->getByArticle($article['id']),
+            $data = [
+            'currentArticle' => $article,  // Changed from 'article' to 'currentArticle'
+            'comments' => (new Comment())->getByArticle($article['id']),
             'breakingNews' => $articleModel->getBreakingNews(5),
             'popularArticles' => $articleModel->getPopular(5),
-            'relatedArticles' => $articleModel->getByCategory($article['category_id'], 3),
-            'language' => $article['language']
-        ];
+            'relatedArticles' => $articleModel->getByCategory($article['category_id'], 3)
+            ];
 
-        error_log("Rendering article view with data");
-        $this->renderView('article/view', $data);
-
-    } catch (Exception $e) {
-        error_log("ArticleController::viewByTitle Error: " . $e->getMessage());
-        $this->redirect('/');
+            error_log("Sending article to view - ID: {$article['id']}, Language: {$article['language']}");
+            
+            $this->renderView('article/view', $data);
+            
+        } catch (Exception $e) {
+            error_log("ViewByTitle Error: " . $e->getMessage());
+            $this->redirect('/');
+        }
     }
-}
 
     public function store(){
         try {
@@ -163,41 +151,55 @@ public function viewByTitle($title) {
         }
     }
 
-public function view($id) {
-    try {
-        $articleModel = new Article();
-        $article = $articleModel->getWithDetails($id);
-
-        if (!$article) {
-            return $this->renderView('article/view', ['article' => null]);
+    public function view() {
+        try {
+            $id = isset($_GET['id']) ? (int)$_GET['id'] : null;
+            
+            if (!$id) {
+                error_log("No article ID provided");
+                $this->redirect('/');
+                return;
+            }
+    
+            $articleModel = new Article();
+            $article = $articleModel->getWithDetails($id);
+    
+            if (!$article) {
+                error_log("Article not found with ID: " . $id);
+                $this->renderView('article/view', ['article' => null]);
+                return;
+            }
+    
+            // Set language
+            if (isset($article['language'])) {
+                Translate::setLang($article['language']);
+            }
+    
+            // Check article status
+            if ($article['status'] !== Article::STATUS_PUBLISHED && 
+                (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin')) {
+                $this->renderView('article/view', ['article' => null]);
+                return;
+            }
+    
+            // Get comments and related data
+            $commentModel = new Comment();
+            $data = [
+                'article' => $article,
+                'comments' => $commentModel->getByArticle($article['id']),
+                'breakingNews' => $articleModel->getBreakingNews(5),
+                'popularArticles' => $articleModel->getPopular(5),
+                'relatedArticles' => $articleModel->getByCategory($article['category_id'], 3)
+            ];
+    
+            // Increment views
+            $articleModel->incrementViews($article['id']);
+    
+            $this->renderView('article/view', $data);
+    
+        } catch (Exception $e) {
+            error_log("ArticleController::view Error: " . $e->getMessage());
+            $this->redirect('/');
         }
-
-        // Set page language based on article language
-        if (isset($article['language']) && in_array($article['language'], ['ar', 'fr', 'en'])) {
-            Translate::setLang($article['language']);
-        }
-
-        // Check article status
-        if ($article['status'] !== Article::STATUS_PUBLISHED && 
-            (!isset($_SESSION['user_role']) || $_SESSION['user_role'] !== 'admin')) {
-            return $this->renderView('article/view', ['article' => null]);
-        }
-
-        $commentModel = new Comment();
-        $data = [
-            'article' => $article,
-            'comments' => $commentModel->getByArticle($article['id']),
-            'breakingNews' => $articleModel->getBreakingNews(5),
-            'popularArticles' => $articleModel->getPopular(5),
-            'relatedArticles' => $articleModel->getByCategory($article['category_id'], 3)
-        ];
-
-        $articleModel->incrementViews($article['id']);
-
-        $this->renderView('article/view', $data);
-    } catch (Exception $e) {
-        error_log("ArticleController::view Error: " . $e->getMessage());
-        $this->redirect('/');
     }
-}
 }
