@@ -14,18 +14,26 @@ class Database {
 
     private function connect() {
         try {
-            // Debug connection parameters
-            error_log("Attempting database connection with:");
-            error_log("Host: " . $this->config['host']);
-            error_log("Database: " . $this->config['dbname']);
-            error_log("Username: " . $this->config['username']);
+            error_log("Attempting database connection with SSL");
             
             $dsn = sprintf(
-                "mysql:host=%s;port=3306;dbname=%s;charset=%s",
+                "mysql:host=%s;port=%s;dbname=%s;charset=%s",
                 $this->config['host'],
+                $this->config['port'],
                 $this->config['dbname'],
                 $this->config['charset']
             );
+    
+            // Verify SSL certificate exists
+            if (!file_exists($this->config['ssl']['ca'])) {
+                throw new Exception("SSL Certificate not found at: " . $this->config['ssl']['ca']);
+            }
+    
+            // Set SSL options
+            $this->config['options'][PDO::MYSQL_ATTR_SSL_CA] = $this->config['ssl']['ca'];
+            $this->config['options'][PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT] = false;
+    
+            error_log("Connecting with SSL CA: " . $this->config['ssl']['ca']);
     
             $this->pdo = new PDO(
                 $dsn,
@@ -34,7 +42,9 @@ class Database {
                 $this->config['options']
             );
     
+            error_log("Database connection successful");
             return true;
+    
         } catch (PDOException $e) {
             error_log("Database connection failed: " . $e->getMessage());
             throw $e;

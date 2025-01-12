@@ -1,9 +1,10 @@
 <?php
 return [
-    'host' => $_ENV['DB_HOST'] ?? 'sql307.infinityfree.com',
-    'dbname' => $_ENV['DB_NAME'] ?? 'if0_38006148_news',
-    'username' => $_ENV['DB_USER'] ?? 'if0_38006148',
-    'password' => $_ENV['DB_PASS'] ?? 'bffbst2TfR3',
+    'host' => $_ENV['DB_HOST'] ?? '',
+    'dbname' => $_ENV['DB_NAME'] ?? '',
+    'username' => $_ENV['DB_USER'] ?? '',
+    'password' => $_ENV['DB_PASS'] ?? '',
+    'port' => $_ENV['DB_PORT'] ?? '',
     'charset' => 'utf8mb4',
     'options' => [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -13,6 +14,14 @@ return [
         PDO::ATTR_PERSISTENT => false,
         PDO::MYSQL_ATTR_FOUND_ROWS => true,
         PDO::ATTR_TIMEOUT => 3,
-        PDO::ATTR_STRINGIFY_FETCHES => false
+        PDO::ATTR_STRINGIFY_FETCHES => false,
+        PDO::MYSQL_ATTR_SSL_CA => __DIR__ . '/../storage/sessions/ca.pem',
+        PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false
+    ],
+    'ssl' => [
+        'enabled' => true,
+        'required' => true,
+        'ca' => __DIR__ . '/../storage/sessions/ca.pem',
+        'verify_server_cert' => false
     ]
 ];
