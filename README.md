@@ -26,7 +26,7 @@ A dynamic news portal built with PHP that allows schools to manage and publish n
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ELGOUMRIYASSINE/newproject
+git clone https://github.com/EL-HOUSS-BRAHIM/School-News-Portal
 ```
 
 Here's a complete 
@@ -64,7 +64,7 @@ A dynamic news portal built with PHP that allows schools to manage and publish n
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/school-news-portal.git
+git clone https://github.com/EL-HOUSS-BRAHIM/School-News-Portal
 ```
 
 2. Install dependencies:
@@ -150,5 +150,5 @@ Permission is not granted to any person to use, copy, modify, merge, publish, di
 
 BRAHIM EL HOUSS/FULL STACK SOFTWEAR ENGINEER - [@EL-HOUSS-BRAHIM](https://github.com/EL-HOUSS-BRAHIM/)
 
-Project Link: []()
+Project Link: [https://github.com/EL-HOUSS-BRAHIM/School-News-Portal](https://github.com/EL-HOUSS-BRAHIM/School-News-Portal)
 ```
